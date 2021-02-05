@@ -15,8 +15,8 @@ disini untuk mengisi proses kerja kita teman <3
 Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-syntax/).
 
 ## Back-end
-- Setting Migrasi dan Model (sek proses hehehe) "Commit Penambahan Konfigurasi Migrasi dan Model pt 2"
-- Controller & Route gawe testingan "Commit Penambahan Konfigurasi Migrasi dan Model pt 2"
+- Setting Migrasi, Model dan Factory (sek proses hehehe) 
+- Controller & Route gawe testingan 
 
 ## Front-end
 - Iseng" nambah test hehhe
