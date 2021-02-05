@@ -15,9 +15,9 @@ class TblArtikel extends Migration
     {
         Schema::create('tbl_artikel', function (Blueprint $table){
             $table->uuid('id_artikel')->primary();
-            $table->string('id_ketentuan')->index();
+            $table->string('id_ketentuan', 20)->index();
             $table->string('nama_artikel', 100);
-            $table->string('sampul_artikel', 100);
+            $table->string('sampul_artikel');
             $table->mediumText('isi_artikel');
             $table->string('slug');
             $table->timestamps();

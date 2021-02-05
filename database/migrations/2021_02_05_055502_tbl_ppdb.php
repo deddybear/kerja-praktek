@@ -15,8 +15,8 @@ class TblPpdb extends Migration
     {
         Schema::create('tbl_ppdb', function (Blueprint $table) {
             $table->uuid('id_pendaftaran')->primary();
-            $table->uuid('data_ayah')->index();
-            $table->uuid('data_ibu')->index();
+            $table->uuid('id_info_ayah')->index();
+            $table->uuid('id_info_ibu')->index();
             $table->timestamps();
         });
     }

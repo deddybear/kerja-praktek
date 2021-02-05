@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,4 +11,6 @@ class Ketentuan extends Model
     protected $primaryKey = 'id_ketentuan';
     protected $keyType    = 'string';
     public $incrementing  = false;
+    protected $guarded = [];
+
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,5 +11,5 @@ class Ayah extends Model
     protected $primaryKey = 'id_info_ayah';
     protected $keyType    = 'string';
     public $incrementing  = false;
-
+    protected $guarded = [];
 }

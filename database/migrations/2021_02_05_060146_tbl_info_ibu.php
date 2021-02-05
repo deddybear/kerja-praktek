@@ -13,7 +13,10 @@ class TblInfoIbu extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_info_ibu', function (Blueprint $table){
+            $table->uuid('id_info_ibu')->primary();
+            $table->string('nama_ibu');
+        });
     }
 
     /**

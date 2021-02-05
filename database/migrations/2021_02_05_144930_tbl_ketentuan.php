@@ -14,8 +14,8 @@ class TblKetentuan extends Migration
     public function up()
     {
         Schema::create('tbl_ketentuan', function (Blueprint $table) {
-            $table->string('id_ketentuan')->primary();
-            $table->string('keterangan', 20);
+            $table->string('id_ketentuan', 20)->primary();
+            $table->string('keterangan', 30);
         });
     }
 

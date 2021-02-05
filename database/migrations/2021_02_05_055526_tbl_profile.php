@@ -16,7 +16,7 @@ class TblProfile extends Migration
         Schema::create('tbl_profile', function (Blueprint $table){
             $table->uuid('id_profile')->primary();
             $table->mediumText('isi_artikel');
-            $table->string('slug', 5);
+            $table->string('slug');
             $table->timestamps();
         });
     }

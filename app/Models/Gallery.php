@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,4 +11,5 @@ class Gallery extends Model
     protected $primaryKey = 'id_gallery';
     protected $keyType    = 'string';
     public $incrementing  = false;
+    protected $guarded = [];
 }
