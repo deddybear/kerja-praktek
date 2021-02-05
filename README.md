@@ -11,7 +11,8 @@
 
 ## About Update Project Kerja Rodi
 disini untuk mengisi proses kerja kita teman <3  
-**jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3** Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-syntax/).
+**jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3**   
+Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-syntax/).
 
 ## Back-end
 - Setting Migrasi dan Model (sek proses hehehe) "Commit Penambahan Konfigurasi Migrasi dan Model pt 2"
