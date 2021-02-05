@@ -11,5 +11,5 @@ class Profile extends Model
     protected $primaryKey   = 'id_profile';
     protected $keyType      = 'string';
     public $incrementing    = false;
-    protected $guarded = [];
+    protected $guarded      = [];
 }

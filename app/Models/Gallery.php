@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Gallery extends Model
 {
     //* Konfigurasi Database
-    protected $table      = 'tbl_gallery';
-    protected $primaryKey = 'id_gallery';
-    protected $keyType    = 'string';
-    public $incrementing  = false;
-    protected $guarded = [];
+    protected $table        = 'tbl_gallery';
+    protected $primaryKey   = 'id_gallery';
+    protected $keyType      = 'string';
+    public $incrementing    = false;
+    protected $guarded      = [];
 }

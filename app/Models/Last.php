@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Last extends Model
 {
     ///* Konfigurasi Database 
-    protected $table    = 'tbl_ahkir_nama';
-    protected $primaryKey = 'id_ahkir_nama';
-    protected $guarded  = [];
+    protected $table        = 'tbl_ahkir_nama';
+    protected $primaryKey   = 'id_ahkir_nama';
+    protected $guarded      = [];
 }

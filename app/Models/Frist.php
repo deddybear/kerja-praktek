@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 class Frist extends Model
 {
     //* Konfigurasi Database 
-    protected $table    = 'tbl_nama_awal';
-    protected $primaryKey = 'id_nama_awal';
-    protected $guarded  = [];
+    protected $table        = 'tbl_nama_awal';
+    protected $primaryKey   = 'id_nama_awal';
+    protected $guarded      = [];
 
     public function last_name(){
         /*
