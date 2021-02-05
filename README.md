@@ -19,3 +19,18 @@ jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3
 
 ## Front-end
 - Iseng" nambah test hehhe
+
+
+## Update Repo Local 
+
+Cara mendapatkan update dari repository cloud ke repository local 
+
+1. git fetch link repository cloud (ex: git fetch https://github.com/deddybear/kerja-rodi.git)
+2. git merge namaremote/namabranch (ex: git merge origin/master)
+3. git pull namaremote namabranch (ex: git pull origin master)
+
+## Push Ke Repo Cloud
+
+1. git add -A
+2. git commit -m "Isi Pesan"
+3. git push nama_remote nama_branch
