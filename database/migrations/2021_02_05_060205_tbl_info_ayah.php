@@ -11,9 +11,12 @@ class TblInfoAyah extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        //
+    public function up(){
+        Schema::create('tbl_info_ayah', function (Blueprint $table){
+            $table->uuid('id_info_ayah')->primary();
+            $table->string('nama_ayah');
+            
+        });
     }
 
     /**

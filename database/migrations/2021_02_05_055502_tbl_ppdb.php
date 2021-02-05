@@ -13,7 +13,12 @@ class TblPpdb extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_ppdb', function (Blueprint $table) {
+            $table->uuid('id_pendaftaran')->primary();
+            $table->uuid('data_ayah')->index();
+            $table->uuid('data_ibu')->index();
+            $table->timestamps();
+        });
     }
 
     /**
