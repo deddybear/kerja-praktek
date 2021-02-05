@@ -9,7 +9,7 @@
 
 ## HEEEELPPPP MEEE !!!!
 
-## About Update Projec Kerja Rodi
+## About Update Project Kerja Rodi
 disini untuk mengisi proses kerja kita teman <3
 jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3
 
