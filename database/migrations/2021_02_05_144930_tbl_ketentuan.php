@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TblUser extends Migration
+class TblKetentuan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class TblUser extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_user', function (Blueprint $table){
-            $table->uuid('id_user')->primary();
-            $table->string('username', 15)->unique();
-            $table->string('password');
-            $table->string('nama', 50);
-            $table->boolean('status_users');
-            $table->timestamps();
+        Schema::create('tbl_ketentuan', function (Blueprint $table) {
+            $table->string('id_ketentuan')->primary();
+            $table->string('keterangan', 20);
         });
     }
 

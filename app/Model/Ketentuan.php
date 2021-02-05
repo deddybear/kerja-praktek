@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Artikel extends Model {
+class Ketentuan extends Model
+{
     //* Konfigurasi Database
-    protected $table      = 'tbl_artikel';
-    protected $primaryKey = 'id_artikel';
+    protected $table      = 'tbl_ketentuan';
+    protected $primaryKey = 'id_ketentuan';
     protected $keyType    = 'string';
     public $incrementing  = false;
-    
 }
