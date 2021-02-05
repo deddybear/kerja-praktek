@@ -19,6 +19,7 @@ class TblKetentuan extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

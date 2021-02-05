@@ -23,6 +23,7 @@ class TblArtikel extends Migration
             $table->timestamps();
         });
     }
+    
 
     /**
      * Reverse the migrations.

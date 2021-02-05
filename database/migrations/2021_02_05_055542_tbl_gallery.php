@@ -22,6 +22,7 @@ class TblGallery extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

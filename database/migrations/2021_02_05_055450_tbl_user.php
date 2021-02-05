@@ -23,6 +23,7 @@ class TblUser extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

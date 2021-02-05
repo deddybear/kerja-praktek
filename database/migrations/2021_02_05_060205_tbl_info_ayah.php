@@ -18,6 +18,7 @@ class TblInfoAyah extends Migration
             
         });
     }
+    
 
     /**
      * Reverse the migrations.

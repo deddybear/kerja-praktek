@@ -21,6 +21,7 @@ class TblPpdb extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

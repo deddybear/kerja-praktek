@@ -19,6 +19,7 @@ class TblInfoIbu extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

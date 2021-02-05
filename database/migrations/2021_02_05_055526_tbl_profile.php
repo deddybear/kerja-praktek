@@ -21,6 +21,7 @@ class TblProfile extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *
