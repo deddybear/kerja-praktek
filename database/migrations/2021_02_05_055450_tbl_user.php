@@ -18,6 +18,7 @@ class TblUser extends Migration
             $table->string('username', 15)->unique();
             $table->string('password');
             $table->string('nama', 50);
+            $table->string('jabatan', 6);
             $table->boolean('status_users');
             $table->timestamps();
         });

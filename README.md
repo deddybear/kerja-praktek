@@ -15,8 +15,11 @@ disini untuk mengisi proses kerja kita teman <3
 Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-syntax/).
 
 ## Back-end
+###### Patch v0.1
 - Setting Migrasi, Model dan Factory (sek proses hehehe) 
 - Controller & Route gawe testingan 
+###### Patch v0.2
+- Finishing Set-up Migrasi, Model dan Factory
 
 ## Front-end
 - Iseng" nambah test hehhe
