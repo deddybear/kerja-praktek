@@ -10,10 +10,16 @@
 ## HEEEELPPPP MEEE !!!!
 
 ## About Update Project Kerja Rodi
-disini untuk mengisi proses kerja kita teman <3  
-**jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3**  
+disini untuk mengisi proses kerja kita teman <3.
+**jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3**.
 Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-syntax/).
+**Harap untuk memasukkan commend dibawah ini**.
+`composer update`
+`composer install`
 
+
+
+# Progress Project
 ## Back-end
 ###### Patch v0.1
 - Setting Migrasi, Model dan Factory (sek proses hehehe) 
