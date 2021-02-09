@@ -10,10 +10,10 @@
 ## HEEEELPPPP MEEE !!!!
 
 ## About Update Project Kerja Rodi
-Disini untuk mengisi proses kerja kita teman <3.
-**Jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3**.
-Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-syntax/).
-**Harap untuk memasukkan commend dibawah ini**.
+Disini untuk mengisi proses kerja kita teman <3.<br>
+**Jangan lupa setiap mau commit harus di-isi update di readme.md ! please <3**.<br>
+Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-syntax/).<br>
+**Harap untuk memasukkan commend dibawah ini**.<br>
 `composer update`
 `composer install`
 
