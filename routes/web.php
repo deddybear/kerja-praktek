@@ -12,10 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'halamanController@indexPage');
 
 // ! Sebelum Buka link gawe database sek !!
 Route::get('/test', 'testController@test');
