@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'halamanController@indexPage');
 
-// ! Sebelum Buka link gawe database sek !!
+/* 
+
+TODO: Route Test Dev
+! Sebelum Buka link gawe database sek !! 
+
+*/
 Route::get('/test', 'testController@test');
 Route::get('/select', 'testController@select');
+
+Route::get('/navbar', function () {
+    return view('layouts/master');
+});
