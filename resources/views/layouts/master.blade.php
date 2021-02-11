@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">Profile Sekolah</a>
+                        <a class="nav-link" href="/profil-sekolah">Profile Sekolah</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
@@ -43,10 +43,10 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/register">Fasilitas</a>
+                        <a class="nav-link" href="/fasilitas">Fasilitas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/hai">Gallery</a>
+                        <a class="nav-link" href="/gallery">Gallery</a>
                     </li>
                 </ul>
             </div>
