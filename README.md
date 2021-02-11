@@ -31,6 +31,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Desain Prototype UI via Draw.io
 - Setting Up Bootstrap & Fontawesome
 - Pembuatan Navbar Master & testing halaman utama
+###### Patch v0.2
+- Edit Halaman utama dan Penambahan Library
 
 
 ## Update Repo Local 
