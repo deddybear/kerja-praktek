@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<div class="header my-5" style="padding: 50px 15px">
+<div class="header" style="padding: 50px 15px">
     <div class="container">
         <div class="col-lg-12 col-xl-10">
             <div class="row">

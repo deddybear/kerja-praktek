@@ -32,7 +32,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Setting Up Bootstrap & Fontawesome
 - Pembuatan Navbar Master & testing halaman utama
 ###### Patch v0.2
-- Edit Halaman utama dan Penambahan Library
+- Perbaikan Versi BS dan Navbar tidak berfungsi
+- Edit Halaman utama dan Penambahan Library Owl Crousel
 
 
 ## Update Repo Local 
