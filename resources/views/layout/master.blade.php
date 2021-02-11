@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('afdol')</title>
+    <title>@yield('title')</title>
 
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
@@ -21,7 +21,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-success">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Hai Ganteng</a>
+            <a class="navbar-brand" href="#">SD DIPONEGORO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,27 +32,24 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">Profile Saya</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">Pendaftaran</a>
+                        <a class="nav-link" href="/about">Profile Sekolah</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown link
+                            data-bs-toggle="dropdown" aria-expanded="true">
+                            Informasi Akademik
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Pendaftaran Siswa Baru</a></li>
+                            <li><a class="dropdown-item" href="#">Pengumuman PPDB</a></li>
+                            <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/hai">Hai</a>
+                        <a class="nav-link" href="/register">Fasilitas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/table">Tabel</a>
+                        <a class="nav-link" href="/hai">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +57,7 @@
     </nav>
 
     {{-- ISI KONTEN --}}
-    @yield('wildan')
+    @yield('content')
 </body>
      {{-- Script --}}
      <script src="{{ asset('jquery-3.5.1.js') }}"></script>
