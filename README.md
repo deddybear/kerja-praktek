@@ -27,7 +27,9 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Finishing Set-up Migrasi, Model dan Factory
 
 ## Front-end
-- Iseng" nambah test hehhe
+###### Patch v0.1
+- Desain Prototype UI via Draw.io
+- Setting Up Bootstrap & Fontawesome
 
 
 ## Update Repo Local 
