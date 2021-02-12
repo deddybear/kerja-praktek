@@ -14,7 +14,7 @@
 @endsection
 
 @section('content')
-<div class="shadow p-3 mb-5 bg-white rounded">
+<div class="shadow p-3 bg-white rounded">
     <section class="row after-carousel">
         <section class="news-section">
             <section class="news-section-title">
@@ -22,7 +22,7 @@
                     <i class="fa fa-newspaper"></i>
                     TULISAN TERBARU
                 </h3>
-                <div class="text-right">
+                <div class="text-right mr-3">
                     <a href="/artikel" class="text-dark">
                         <i class="fa fa-chevron-right"></i>
                     Selengkapnya</a>

@@ -35,7 +35,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan Versi BS dan Navbar tidak berfungsi
 - Update Tampilan Halaman dan Penambahan Library Owl Carousel
 - Perbaikan Tampilan Owl Careousel
-
+- Penambahan Footer dan Halaman Pendaftaran
 
 ## Update Repo Local 
 

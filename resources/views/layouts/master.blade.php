@@ -71,11 +71,18 @@
     </div>
     {{-- ISI KONTEN --}}
     <div class="container">
-        <div class="col-lg-12 col-xl-10">
+        <div class="col-xl-12">
             <div class="row">
-                @yield('content')  
+                <div class="my-4">
+                    @yield('content')  
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="footer">
+        Admin@JD<br>
+        2020 - 2021
     </div>
    
 </body>

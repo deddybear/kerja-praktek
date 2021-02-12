@@ -12,3 +12,11 @@ a {
 .content {
     font-size: 100% !important;
 }
+
+.footer{
+    background-color: #276678;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
