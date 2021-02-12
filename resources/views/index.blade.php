@@ -9,15 +9,14 @@
 @endsection
 
 @section('script')
-<script src="{{ asset('halaman/index/index.js') }}"></script>
 <script src="{{ asset('owlcarousel/js/owl.carousel.js') }}"></script>
+<script src="{{ asset('halaman/index/index.js') }}"></script>
 @endsection
 
 @section('content')
-
 <div class="shadow p-3 mb-5 bg-white rounded">
     <section class="row after-carousel">
-        <section class="col-12 news-section">
+        <section class="news-section">
             <section class="news-section-title">
                 <h3>
                     <i class="fa fa-newspaper"></i>
@@ -29,18 +28,116 @@
                     Selengkapnya</a>
                 </div>
             </section>
-            <section class="owl-carousel owl-theme owl-loaded owl-drag">
+            <div class="owl-carousel owl-theme owl-loaded">
                 <div class="owl-stage-outer">
                     <div class="owl-stage">
-                        
-                        <div class="owl-item mx-3">
-                            <div class="kotak bg-secondary mx-3" style="width:250px; height:250px;"></div>
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar1.jpeg') }}" >
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar2.jpeg') }}">
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar3.jpeg') }}">
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar4.jpeg') }}">
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item">
+                            <div class="card-container">
+                                <div class="card-image">
+                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                    <div class="card-details">
+                                        <div class="created-at">14 July 2019</div>
+                                        <div class="post-link">
+                                            <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </section>
 </div>

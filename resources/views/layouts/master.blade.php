@@ -73,7 +73,7 @@
     <div class="container">
         <div class="col-lg-12 col-xl-10">
             <div class="row">
-                @yield('content')
+                @yield('content')  
             </div>
         </div>
     </div>

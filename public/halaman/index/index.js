@@ -1,24 +1,22 @@
-$(document).ready(function(){
-    console.log("Hallo");
-
+$(document).ready(function () {
     $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        responsiveClass:true,
+        stagePadding: 25,
+        loop: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 4e3,
+        autoplayHoverPause: true,
         responsive:{
             0:{
-                items:1,
-                nav:true
+                items:1
             },
             600:{
-                items:3,
-                nav:false
+                items:3
             },
             1000:{
-                items:4,
-                nav:true,
-                loop:false
+                items:4
             }
         }
-    })
+    });
+
 });
