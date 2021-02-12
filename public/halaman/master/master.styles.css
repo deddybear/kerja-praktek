@@ -1,3 +1,7 @@
+a {
+    text-decoration: none !important;
+}
+
 .header{
     background-color: #75cfb8   ;
     font-size: 17px;

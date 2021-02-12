@@ -6,6 +6,11 @@
     display: grid !important;
 }
 
+.img-fluid {
+    height: 250px;
+    width: 350px;
+}
+
 .news-section-title, .announcement-section-title, .info-section-title {
     position: relative;
     display: grid;
