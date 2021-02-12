@@ -10,4 +10,14 @@ class halamanController extends Controller
     {
         return view('index');
     }
+
+    public function ProfilPage()
+    {
+        return view('profil');   
+    }
+
+    public function PendaftaranPage()
+    {
+        return view('pendaftaran');
+    }
 }

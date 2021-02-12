@@ -3,5 +3,9 @@
 @section('title', 'Pendaftaran Siswa Baru')
 
 @section('content')
-    <div></div>
+    <div class="container">
+        <div class="row">
+            <h1>Form Pendaftaran Siswa</h1>
+        </div>
+    </div>
 @endsection

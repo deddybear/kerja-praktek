@@ -1,6 +1,15 @@
-.header{
-    background-color: #75cfb8   ;
-    font-size: 17px;
-    color: black;
-    margin-bottom: 5px;
+.news-section-title {
+    background: linear-gradient(135deg, #0d9aac 60%, transparent 40%);
+}
+
+.news-section-title, .announcement-section-title, .info-section-title {
+    position: relative;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    color: #fff;
+    margin-left: -35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 8px 10px 8px 35px;
 }

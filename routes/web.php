@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'halamanController@indexPage');
+Route::get('/profil-sekolah', 'halamanController@profilPage');
+Route::get('/pendaftaran', 'halamanController@pendaftaranPage');
+
 
 /* 
 

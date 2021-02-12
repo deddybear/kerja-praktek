@@ -34,7 +34,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 ###### Patch v0.2
 - Perbaikan Versi BS dan Navbar tidak berfungsi
 - Edit Halaman utama dan Penambahan Library Owl Crousel
-
+- Update Tampilan Halaman dan Penambahan Library Owl Carousel
 
 ## Update Repo Local 
 
