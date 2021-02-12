@@ -11,11 +11,7 @@
 <div class="shadow p-3 bg-white rounded">
     <div class="registration-section">
         <section class="registration-section-title">
-            <div class="container">
-                <div class="row">
-                    <h1>Form Pendaftaran Siswa</h1>
-                </div>
-            </div>
+            <h1>Form Pendaftaran Siswa</h1>
         </section>
         <form>
             <div class="form-group">

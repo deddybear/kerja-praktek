@@ -1,7 +1,3 @@
-.news-section-title {
-    background: linear-gradient(135deg, #0d9aac 60%, transparent 40%);
-}
-
 .owl-carousel.owl-loaded {
     display: grid !important;
 }
@@ -21,6 +17,14 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 8px 10px 8px 35px;
+}
+
+.news-section-title {
+    background: linear-gradient(135deg, #0d9aac 60%, transparent 40%);
+}
+
+.announcement-section-title {
+    background: linear-gradient(135deg, #0d9aac 60%, transparent 40%);
 }
 
 .card-container {
@@ -61,4 +65,9 @@
     left: 0;
     right: 0;
     text-align: center;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
 }

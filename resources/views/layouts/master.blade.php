@@ -72,10 +72,8 @@
     {{-- ISI KONTEN --}}
     <div class="container">
         <div class="col-xl-12">
-            <div class="row">
-                <div class="my-4">
-                    @yield('content')  
-                </div>
+            <div class="my-4">
+                @yield('content')  
             </div>
         </div>
     </div>

@@ -18,10 +18,10 @@
     <section class="row after-carousel">
         <section class="news-section">
             <section class="news-section-title">
-                <h3>
+                <h4>
                     <i class="fa fa-newspaper"></i>
-                    TULISAN TERBARU
-                </h3>
+                    <strong>TULISAN TERBARU</strong>
+                </h4>
                 <div class="text-right mr-3">
                     <a href="/artikel" class="text-dark">
                         <i class="fa fa-chevron-right"></i>
@@ -130,6 +130,85 @@
                                         <div class="created-at">14 July 2019</div>
                                         <div class="post-link">
                                             <a href="#">Judul</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="announcement-section">
+            <section class="announcement-section-title">
+                <h4>
+                    <i class="fa fa-list"></i>
+                    <strong>PENGUMUMAN</strong>
+                </h4>
+                <div class="text-right mr-3">
+                    <a href="/artikel" class="text-dark">
+                        <i class="fa fa-chevron-right"></i>
+                    Selengkapnya</a>
+                </div>
+            </section>
+            <div class="announcement-list">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="shadow my-2 p-3 bg-white rounded">
+                                <div class="row"> 
+                                    <div class="col-6">
+                                        <div class="img-announcement">
+                                            <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-announcement">
+                                            <a href="#">Give away Panlok</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow my-2 p-3 bg-white rounded">
+                                <div class="row"> 
+                                    <div class="col-6">
+                                        <div class="img-announcement">
+                                            <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-announcement">
+                                            <a href="#">Give away Panlok</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="shadow my-2 p-3 bg-white rounded">
+                                <div class="row"> 
+                                    <div class="col-6">
+                                        <div class="img-announcement">
+                                            <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-announcement">
+                                            <a href="#">Give away Panlok</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shadow my-2 p-3 bg-white rounded">
+                                <div class="row"> 
+                                    <div class="col-6">
+                                        <div class="img-announcement">
+                                            <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-announcement">
+                                            <a href="#">Give away Panlok</a>
                                         </div>
                                     </div>
                                 </div>
