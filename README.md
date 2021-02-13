@@ -20,24 +20,29 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 
 # Progress Project
 ## Back-end
-###### Patch v0.1
-- Setting Migrasi, Model dan Factory (sek proses hehehe) 
-- Controller & Route gawe testingan 
+
 ###### Patch v0.2
 - Finishing Set-up Migrasi, Model dan Factory
 - Penambahan Router dan controller untuk views
 
+###### Patch v0.3
+- Penghapusan halamanController
+- Penambahan Controller untuk setiap view digunakan untuk mempermudahkan maintance source code
+- Perubahan Route 
+
 ## Front-end
-###### Patch v0.1
-- Desain Prototype UI via Draw.io
-- Setting Up Bootstrap & Fontawesome
-- Pembuatan Navbar Master & testing halaman utama
+
 ###### Patch v0.2
 - Perbaikan Versi BS dan Navbar tidak berfungsi
 - Update Tampilan Halaman dan Penambahan Library Owl Carousel
 - Perbaikan Tampilan Owl Careousel
 - Penambahan Footer, Halaman Pendaftaran, Component Pengumuman dihalaman index
-- Penambahan Halaman Galeri
+
+
+###### Patch v0.3
+- Perubahan directory untuk view guest
+- Penambahan Folder untuk views admin
+- Penambahan Halaman Galeri & Berita
 
 ## Update Repo Local 
 

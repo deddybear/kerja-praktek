@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 // TODO : ROUTE HALAMAN GUEST
-Route::get('/', 'halamanController@indexPage');
-Route::get('/profil-sekolah', 'halamanController@profilPage');
-Route::get('/pendaftaran', 'halamanController@pendaftaranPage');
-Route::get('/galeri-foto', 'halamanController@GaleriFotoPage');
-Route::get('/galeri-video','halamanController@GaleriVideoPage');
+Route::get('/', 'IndexController@guestPage');
+Route::get('/profil-sekolah', 'ProfileController@guestPage');
+Route::get('/pendaftaran', 'PPDBController@guestPage');
+Route::get('/galeri-foto', 'GaleriFotoController@guestPage');
+Route::get('/galeri-video','GaleriVideoController@guestPage');
 
 
 /* 
