@@ -25,6 +25,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Controller & Route gawe testingan 
 ###### Patch v0.2
 - Finishing Set-up Migrasi, Model dan Factory
+- Penambahan Router dan controller untuk views
 
 ## Front-end
 ###### Patch v0.1
