@@ -12,9 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// TODO : ROUTE HALAMAN GUEST
 Route::get('/', 'halamanController@indexPage');
 Route::get('/profil-sekolah', 'halamanController@profilPage');
 Route::get('/pendaftaran', 'halamanController@pendaftaranPage');
+Route::get('/galeri-foto', 'halamanController@GaleriFotoPage');
+Route::get('/galeri-video','halamanController@GaleriVideoPage');
 
 
 /* 

@@ -20,4 +20,14 @@ class halamanController extends Controller
     {
         return view('pendaftaran');
     }
+
+    public function GaleriFotoPage()
+    {
+       return view('galeri-foto');
+    }
+
+    public function GaleriVideoPage()
+    {
+       return view('galeri-video');
+    }
 }

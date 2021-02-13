@@ -36,6 +36,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Tampilan Halaman dan Penambahan Library Owl Carousel
 - Perbaikan Tampilan Owl Careousel
 - Penambahan Footer, Halaman Pendaftaran, Component Pengumuman dihalaman index
+- Penambahan Halaman Galeri
 
 ## Update Repo Local 
 
