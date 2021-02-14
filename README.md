@@ -43,6 +43,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perubahan directory untuk view guest
 - Penambahan Folder untuk views admin
 - Penambahan Halaman Galeri & Berita
+- Penambahan Halaman Login Admin & Modal
+
 
 ## Update Repo Local 
 

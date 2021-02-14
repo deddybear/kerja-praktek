@@ -25,9 +25,8 @@ Route::get('/galeri-video','GaleriVideoController@guestPage');
 
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
-
 */
-Route::get('/test', 'testController@test');
+Route::get('/test', 'IndexController@adminPage');
 Route::get('/select', 'testController@select');
 
 Route::get('/navbar', function () {
