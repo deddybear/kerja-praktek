@@ -29,6 +29,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penghapusan halamanController
 - Penambahan Controller untuk setiap view digunakan untuk mempermudahkan maintance source code
 - Perubahan Route 
+- Penambahan Controller Akun untuk views dan fungsi register & login
 
 ## Front-end
 
@@ -37,6 +38,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Tampilan Halaman dan Penambahan Library Owl Carousel
 - Perbaikan Tampilan Owl Careousel
 - Penambahan Footer, Halaman Pendaftaran, Component Pengumuman dihalaman index
+- Penambahan Halaman untuk admin (login, dashboard) WIP
 
 
 ###### Patch v0.3
