@@ -23,7 +23,9 @@ Route::get('/galeri-video','GaleriVideoController@guestPage');
 
 // TODO : ROUTE HALAMAN ADMIN
 Route::get('/panel-admin/login', 'AkunController@loginPage');
-
+Route::post('/panel-admin/masuk', 'AkunController@masuk');
+Route::post('/panel-admin/masuk', 'AkunController@daftar');
+Route::post('/panel-admin/daftar', 'AkunController@lupaPassword');
 
 /* 
 TODO: Route Test Dev

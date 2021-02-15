@@ -46,6 +46,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan Folder untuk views admin
 - Penambahan Halaman Galeri & Berita
 - Penambahan Halaman Login Admin & Modal
+- Penambahan Isi Modal Daftar, Lupa Password, dan AkunController 
 
 
 ## Update Repo Local 
