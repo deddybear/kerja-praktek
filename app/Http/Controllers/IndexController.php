@@ -10,8 +10,4 @@ class IndexController extends Controller {
         return view('guest/index');
     }
 
-    public function adminPage()
-    {
-        return view('admin/test');
-    }
 }

@@ -1,8 +1,17 @@
-@extends('layouts/master')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - Panel Admin</title>
 
-@section('title', 'Login Admin')
-
-@section('content')
+    <link rel="stylesheet" href="{{ asset('halaman/master/master.styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
+</head>
+<body>
+    
 <div class="login-box">
     <div class="card">
         <div class="card-body login-card-body">
@@ -41,7 +50,7 @@
                 </div>
             </form>
             <p class="mb-1">
-                <a href="forgot-password.html">Lupa Password</a>
+                <a href="forgot-password.html" data-toggle="modal" data-target="#modal-lupa-password">Lupa Password</a>
             </p>
             <p class="mb-0">
                 <a id="register" href="#" class="text-center" data-toggle="modal" data-target="#modal-daftar">Daftar</a>
@@ -49,21 +58,56 @@
         </div>
     </div>
 </div>
-<div class="modal-dialog">
-    <div class="modal-content">
+
+{{-- Modal-Daftar Start --}}
+<div class="modal fade" id="modal-daftar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
         <div class="modal-header">
-            <h4 class="modal-title">Default Modal</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
+          <h5 class="modal-title" id="exampleModalLabel">HU HAA KACANG GARUDA</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
         <div class="modal-body">
-            <p>One fine body…</p>
+          ISI COK
         </div>
-        <div class="modal-footer justify-content-between">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
+      </div>
     </div>
-</div>
-@endsection
+  </div>
+{{-- Modal-Daftar End --}}
+
+{{-- Modal Lupa Password Start --}}
+<div class="modal fade" id="modal-lupa-password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">HU HAA KACANG ATOM</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          AKU LUPA COK
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{{-- Modal Lupa Password End --}}
+
+
+</body>
+<script src="{{ asset('jquery-3.5.1.js') }}"></script>
+<script src="{{ asset('fontawesome/js/all.js') }}"></script>
+<script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ asset('popper.min.js') }}"></script>
+<script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
+</html>

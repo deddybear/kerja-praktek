@@ -21,14 +21,14 @@ Route::get('/galeri-foto', 'GaleriFotoController@guestPage');
 Route::get('/galeri-video','GaleriVideoController@guestPage');
 
 
-/* 
+// TODO : ROUTE HALAMAN ADMIN
+Route::get('/panel-admin/login', 'AkunController@loginPage');
 
+
+/* 
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
-Route::get('/test', 'IndexController@adminPage');
+Route::get('/test', 'testController@dashboard');
 Route::get('/select', 'testController@select');
 
-Route::get('/navbar', function () {
-    return view('layouts/master');
-});
