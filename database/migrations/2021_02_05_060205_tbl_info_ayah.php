@@ -27,6 +27,6 @@ class TblInfoAyah extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_info_ayah');
     }
 }

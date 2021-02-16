@@ -22,15 +22,24 @@ Route::get('/galeri-video','GaleriVideoController@guestPage');
 
 
 // TODO : ROUTE HALAMAN ADMIN
-Route::get('/panel-admin/login', 'AkunController@loginPage');
+Route::get('/panel-admin/login', 'AkunController@loginPage')->name('login');
 Route::post('/panel-admin/masuk', 'AkunController@masuk');
-Route::post('/panel-admin/masuk', 'AkunController@daftar');
-Route::post('/panel-admin/daftar', 'AkunController@lupaPassword');
+Route::post('/panel-admin/daftar', 'AkunController@daftar');
+Route::post('/panel-admin/lupa-password', 'AkunController@lupaPassword');
 
 /* 
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
-Route::get('/test', 'testController@dashboard');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/test', 'testController@dashboard')->name('home');
+    
+});
+
+// Route::get('/test', 'testController@dashboard');
 Route::get('/select', 'testController@select');
 
+
+
+// Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');

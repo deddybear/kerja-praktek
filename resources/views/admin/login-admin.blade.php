@@ -18,6 +18,15 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Login</p>
+                @if ($errors->any())
+                <div class="alert alert-danger text-sm">
+                    <ul style="padding: 0 !important">
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <form action="/panel-admin/masuk" method="post">
                     @csrf
                     <div class="input-group mb-3">
@@ -74,7 +83,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="register-box">
-                        <form action="/panel-admin/masuk" method="post">
+                        <form action="/panel-admin/daftar" method="post">
                             @csrf
                             <div class="input-group mb-3">
                                 <input name="namalengkap" type="text" class="form-control" placeholder="Full name">
@@ -108,24 +117,24 @@
                                     </div>
                                 </div>
                             </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input name="confirmpassword" type="password" class="form-control"
-                            placeholder="Retype password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                            <div class="input-group mb-3">
+                                <input name="password_confirmation" type="password" class="form-control"
+                                    placeholder="Retype password">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span class="fas fa-lock"></span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="row">
+                                <!-- /.col -->
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                        </form>
                     </div>
-                    <div class="row">
-                        <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Register</button>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    </form>
                 </div> <!-- /.form-box -->
             </div><!-- /.card -->
         </div>
@@ -145,7 +154,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="register-box">
-                        <form action="/panel-admin/daftar" method="post">
+                        <form action="/panel-admin/lupa-password" method="post">
                             @csrf
                             <p class="mb-3"> Kamu Lupa Password? Silahkan Masukkan E-mail dibawah.... </p>
                             <div class="input-group mb-3">

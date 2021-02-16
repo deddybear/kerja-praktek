@@ -30,6 +30,6 @@ class TblGallery extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_gallery');
     }
 }

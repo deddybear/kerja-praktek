@@ -31,6 +31,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perubahan Route 
 - Penambahan Controller Akun untuk views dan fungsi register & login
 - Perubahan Controller Berita ke Controller Artikel
+- Perubahan Migrasi User ke Akun
 
 ## Front-end
 
