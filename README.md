@@ -21,10 +21,6 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 # Progress Project
 ## Back-end
 
-###### Patch v0.2
-- Finishing Set-up Migrasi, Model dan Factory
-- Penambahan Router dan controller untuk views
-
 ###### Patch v0.3
 - Penghapusan halamanController
 - Penambahan Controller untuk setiap view digunakan untuk mempermudahkan maintance source code
@@ -32,6 +28,9 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan Controller Akun untuk views dan fungsi register & login
 - Perubahan Controller Berita ke Controller Artikel
 - Perubahan Migrasi User ke Akun
+
+###### Patch v0.4
+- Penambahan Fiture Regis,login,lupa password
 
 ## Front-end
 
