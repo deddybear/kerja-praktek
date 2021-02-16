@@ -15,11 +15,6 @@
                     <i class="fa fa-list"></i>
                     <strong>PENGUMUMAN PPDB</strong>
                 </h4>
-                <div class="text-right mr-3">
-                    <a href="/artikel" class="text-dark">
-                        <i class="fa fa-chevron-right"></i>
-                        Selengkapnya</a>
-                </div>
             </section>
             <div class="announcement-list">
                 <div class="container">
