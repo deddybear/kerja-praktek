@@ -30,6 +30,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan Controller untuk setiap view digunakan untuk mempermudahkan maintance source code
 - Perubahan Route 
 - Penambahan Controller Akun untuk views dan fungsi register & login
+- Perubahan Controller Berita ke Controller Artikel
 
 ## Front-end
 
