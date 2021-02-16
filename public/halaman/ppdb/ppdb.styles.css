@@ -1,27 +1,8 @@
-.owl-carousel.owl-loaded {
-    display: grid !important;
-}
-
 .img-fluid {
     height: 250px;
     width: 350px;
 }
 
-.news-section-title, .announcement-section-title, .info-section-title {
-    position: relative;
-    display: grid;
-    grid-template-columns: 60% 40%;
-    align-items: center;
-    color: #fff;
-    margin-left: -35px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 8px 10px 8px 35px;
-}
-
-.news-section-title {
-    background: linear-gradient(135deg, #0d9aac 60%, transparent 40%);
-}
 
 .announcement-section-title {
     background: linear-gradient(135deg, #0d9aac 60%, transparent 40%);

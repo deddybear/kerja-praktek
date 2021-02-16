@@ -50,6 +50,9 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan Halaman Login Admin & Modal
 - Penambahan Isi Modal Daftar, Lupa Password, dan AkunController 
 
+###### Patch v0.4
+- Penambahan isi Halaman Utama
+- Penambahan Halaman PPDB, Struktur Organisasi, dan Berita
 
 ## Update Repo Local 
 

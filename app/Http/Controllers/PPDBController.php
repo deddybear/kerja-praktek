@@ -11,4 +11,9 @@ class PPDBController extends Controller
         return view('guest/pendaftaran');
     }
 
+    public function ppdbPage()
+    {
+        return view('guest/ppdb');
+    }
+
 }

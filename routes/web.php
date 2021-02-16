@@ -19,6 +19,9 @@ Route::get('/profil-sekolah', 'ProfileController@guestPage');
 Route::get('/pendaftaran', 'PPDBController@guestPage');
 Route::get('/galeri-foto', 'GaleriFotoController@guestPage');
 Route::get('/galeri-video','GaleriVideoController@guestPage');
+Route::get('/ppdb', 'PPDBController@ppdbPage');
+Route::get('/struktur-organisasi', 'StrukturalController@guestPage');
+Route::get('/berita', 'ArtikelController@guestPage');
 
 
 // TODO : ROUTE HALAMAN ADMIN

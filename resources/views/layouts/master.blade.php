@@ -57,16 +57,8 @@
                         <a class="dropdown-item" href="/galeri-video">Galeri Video</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Berita Sekolah
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">?</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">?</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/berita">Berita Sekolah</a>
                 </li>
             </ul>
             {{-- <form class="form-inline my-2 my-lg-0">
@@ -95,7 +87,7 @@
     <div class="container">
         <div class="col-xl-12">
             <div class="my-4">
-                @yield('content')  
+                @yield('content')
             </div>
         </div>
     </div>
@@ -104,7 +96,7 @@
         Admin@JD<br>
         2020 - 2021
     </div>
-   
+
 </body>
 {{-- Script --}}
 
