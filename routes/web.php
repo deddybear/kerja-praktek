@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Mail\Markdown;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,24 +26,26 @@ Route::get('/berita', 'ArtikelController@guestPage');
 
 
 // TODO : ROUTE HALAMAN ADMIN
-Route::get('/panel-admin/login', 'AkunController@loginPage')->name('login');
-Route::post('/panel-admin/masuk', 'AkunController@masuk');
-Route::post('/panel-admin/daftar', 'AkunController@daftar');
+Auth::routes();
+Auth::routes(['verify' => true]);   
+
 Route::post('/panel-admin/lupa-password', 'AkunController@lupaPassword');
 
 /* 
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/test', 'testController@dashboard')->name('home');
-    
-});
 
-// Route::get('/test', 'testController@dashboard');
+
+Route::get('/dashboard', 'testController@dashboard');
 Route::get('/select', 'testController@select');
 
+Route::get('/surat', function (){
+    $markdown = new Markdown(view(), config('mail.markdown'));
+    return $markdown->render('vendor/mail/html/message', ['slot' => 'test']);
+});
 
 
-// Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
+
+
+

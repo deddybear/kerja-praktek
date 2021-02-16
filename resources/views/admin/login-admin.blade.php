@@ -27,7 +27,12 @@
                     </ul>
                 </div>
                 @endif
-                <form action="/panel-admin/masuk" method="post">
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
+                <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="input-group mb-3">
                         <input name="email" type="email" class="form-control" placeholder="Email">
@@ -83,7 +88,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="register-box">
-                        <form action="/panel-admin/daftar" method="post">
+                        <form action="{{ route('register') }}" method="POST">
                             @csrf
                             <div class="input-group mb-3">
                                 <input name="namalengkap" type="text" class="form-control" placeholder="Full name">
@@ -92,6 +97,11 @@
                                         <span class="fas fa-user"></span>
                                     </div>
                                 </div>
+                                @error('namalengkap')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="input-group mb-3">
                                 <input name="username" type="text" class="form-control" placeholder="Username">
@@ -100,6 +110,11 @@
                                         <span class="fas fa-id-badge"></span>
                                     </div>
                                 </div>
+                                @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="input-group mb-3">
                                 <input name="email" type="email" class="form-control" placeholder="Email">
@@ -108,6 +123,11 @@
                                         <span class="fas fa-envelope"></span>
                                     </div>
                                 </div>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="input-group mb-3">
                                 <input name="password" type="password" class="form-control" placeholder="Password">
@@ -116,6 +136,11 @@
                                         <span class="fas fa-lock"></span>
                                     </div>
                                 </div>
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="input-group mb-3">
                                 <input name="password_confirmation" type="password" class="form-control"
@@ -125,6 +150,11 @@
                                         <span class="fas fa-lock"></span>
                                     </div>
                                 </div>
+                                @error('namalengkap')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                             <div class="row">
                                 <!-- /.col -->
@@ -154,7 +184,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="register-box">
-                        <form action="/panel-admin/lupa-password" method="post">
+                        <form action="{{ route('password.email') }}" method="POST">
                             @csrf
                             <p class="mb-3"> Kamu Lupa Password? Silahkan Masukkan E-mail dibawah.... </p>
                             <div class="input-group mb-3">
@@ -164,6 +194,11 @@
                                         <span class="fas fa-envelope"></span>
                                     </div>
                                 </div>
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                     </div>
                 </div>
