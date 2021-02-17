@@ -178,7 +178,7 @@
                     <strong>PENGUMUMAN</strong>
                 </h4>
                 <div class="text-right mr-3">
-                    <a href="/artikel" class="text-dark">
+                    <a href="/ppdb" class="text-dark">
                         <i class="fa fa-chevron-right"></i>
                         Selengkapnya</a>
                     </div>

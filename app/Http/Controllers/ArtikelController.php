@@ -8,6 +8,6 @@ class ArtikelController extends Controller
 {
     public function guestPage()
     {
-        return view('guest/berita');
+        return view('guest/artikel');
     }
 }

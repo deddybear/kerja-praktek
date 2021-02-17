@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ asset('halaman/index/index.styles.css') }}">
 @endsection
 
-@section('title', 'Berita Sekolah')
+@section('title', 'Artikel Sekolah')
 
 @section('content')
 <div class="shadow p-3 bg-white rounded">
@@ -13,7 +13,7 @@
             <section class="announcement-section-title">
                 <h4>
                     <i class="fa fa-list"></i>
-                    <strong>BERITA SEKOLAH</strong>
+                    <strong>ARTIKEL SEKOLAH</strong>
                 </h4>
             </section>
             <div class="announcement-list">

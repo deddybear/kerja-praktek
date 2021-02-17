@@ -27,7 +27,7 @@
 
     {{-- Main Sidebar Container --}}
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <a href="#" class="brand-link">
+        <a href="/dashboard" class="brand-link">
             <span class="brand-text font-weight-light">Panel Admin</span>
         </a>
 
@@ -38,27 +38,27 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-bed"></i>
                             <p>
-                                Berita Tidur
+                                Artikel Sekolah
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/dashboard/artikel-sekolah" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
-                                  <p>Berita Tidur Sekolah</p>
+                                  <p>Artikel Sekolah</p>
                                 </a>
                               </li>
                               <li class="nav-item">
                                 <a href="#" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
-                                  <p>Berita Tidur Siswa</p>
+                                  <p>Artikel Siswa</p>
                                 </a>
                               </li>
                               <li class="nav-item">
                                 <a href="#" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
-                                  <p>Berita Tidur Guru</p>
+                                  <p>Artikel Guru</p>
                                 </a>
                               </li>
                         </ul>
@@ -66,9 +66,9 @@
                     
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            {{-- <i class=""></i> --}}
+                            <i class="nav-icon fas fa-bed"></i>
                             <p>
-                                Isi en dewe
+                                PPDB
                             </p>
                         </a>
                     </li>
@@ -114,7 +114,7 @@
         <div class="content-header">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark"> Ini Judul Isi</h1>
+                    <h1 class="m-0 text-dark"> @yield('content-title')</h1>
                 </div>
             </div>
         </div>

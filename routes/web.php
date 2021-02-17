@@ -22,13 +22,13 @@ Route::get('/galeri-foto', 'GaleriFotoController@guestPage');
 Route::get('/galeri-video','GaleriVideoController@guestPage');
 Route::get('/ppdb', 'PPDBController@ppdbPage');
 Route::get('/struktur-organisasi', 'StrukturalController@guestPage');
-Route::get('/berita', 'ArtikelController@guestPage');
+Route::get('/artikel', 'ArtikelController@guestPage');
 
 
 // TODO : ROUTE HALAMAN ADMIN
 Auth::routes();
 Auth::routes(['verify' => true]);   
-
+Route::get('/dashboard/artikel-sekolah', 'testController@rtz');
 Route::post('/panel-admin/lupa-password', 'AkunController@lupaPassword');
 
 /* 

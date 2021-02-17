@@ -27,4 +27,9 @@ class testController extends Controller {
     public function dashboard(){
         return view('admin/coba');
     }
+
+    public function rtz()
+    {
+        return view('admin/artikel-sekolah');
+    }
 }
