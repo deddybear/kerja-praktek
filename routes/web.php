@@ -44,10 +44,14 @@ TODO: Route Test Dev
 
 Route::get('/select', 'testController@select');
 
-    Route::get('/surat', function (){
-        $markdown = new Markdown(view(), config('mail.markdown'));
-        return $markdown->render('vendor/mail/html/message', ['slot' => 'test']);
-    });
+Route::get('/kontol', function() {
+    return view('layouts.coba');
+});
+
+Route::get('/surat', function (){
+    $markdown = new Markdown(view(), config('mail.markdown'));
+    return $markdown->render('vendor/mail/html/message', ['slot' => 'test']);
+});
 
 
 

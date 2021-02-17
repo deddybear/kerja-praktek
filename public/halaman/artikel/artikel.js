@@ -1,14 +1,14 @@
 $(document).ready( function () {
 
-    // var id;
-    // var method;
-    // var url;
+    var id;
+    var method;
+    var url;
 
-    // $.ajaxSetup({
-    //     headers: {
-    //         'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
-    //     }
-    // });
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
+        }
+    });
   
     // getData();
     // setInterval(getData, 1000);

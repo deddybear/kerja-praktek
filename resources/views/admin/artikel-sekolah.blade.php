@@ -15,9 +15,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Responsive Hover Table</h3>
+                    <h3 class="card-title">Title</h3>
                     <div class="card-tools">
-                        <a id="tambah-data" href="#" class="btn btn-success" data-toggle="modal" data-bs-target="#modal-artikel">Tambah Data</a>
+                        <a id="tambah-data" href="#" class="btn btn-success" data-toggle="modal" data-target="#modal-artikel">Tambah Data</a>
                     </div>
                 </div>
 
@@ -27,16 +27,25 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Umur</th>
-                                <th>Status User</th>
+                                <th>Nama Artikel</th>
+                                <th>Artikel Untuk</th>
                                 <th>Data Dibuat</th>
                                 <th>Data Terakhir Update</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody id="artikel">
+                            <tr>
+                                <td>1</td>
+                                <td>bla bla bla</td>
+                                <td>Sekolah</td>
+                                <td>2020-01-20</td>
+                                <td>2020-01-20</td>
+                                <td>
+                                    <a href="javascript:;" id="tombol-edit" class="btn btn-info" data="'+ row.id_users+'" > Edit Data</a>
+                                    <a href="javascript:;" id="tombol-hapus" class="btn btn-warning" data="'+ row.id_users+'" > Hapus Data</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -50,10 +59,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Tambah Artikel</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
             </div>
             <form method="post" id="form">
-                @csrf
                 <div class="modal-body">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
