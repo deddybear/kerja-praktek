@@ -54,7 +54,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan isi Halaman Utama
 - Penambahan Halaman PPDB, Struktur Organisasi, dan Berita
 - Penambahan isi Halaman Berita dan Perubahan isi Halaman Profil Sekolah
-- Penambahan Dashboard Admin dan isi Halaman Artikel Sekolah
+- Penambahan Dashboard Admin dan isi Halaman Artikel Sekolah 
+- Penambahan isi Halaman Artikel Sekolah
 
 ## Update Repo Local 
 
