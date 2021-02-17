@@ -21,7 +21,20 @@
             <li class="nav-item">
               <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
-          </ul>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    {{ Auth::user()->username }}
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <a href="#" class="dropdown-item">   
+                        <p>asda</p>                     
+                    </a>
+                </div>
+            </li>
+        </ul>
+          
     </nav>
     {{-- End Navbar --}}
 
@@ -30,38 +43,24 @@
         <a href="/dashboard" class="brand-link">
             <span class="brand-text font-weight-light">Panel Admin</span>
         </a>
-
         <div class="sidebar">
             <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link">
+                <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item">
+                        <a href="/dashboard" class="nav-link">
                             <i class="nav-icon fas fa-bed"></i>
                             <p>
-                                Artikel Sekolah
-                                <i class="right fas fa-angle-left"></i>
+                                Menu Dashboard
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/dashboard/artikel-sekolah" class="nav-link">
-                                  <i class="far fa-circle nav-icon"></i>
-                                  <p>Artikel Sekolah</p>
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                  <i class="far fa-circle nav-icon"></i>
-                                  <p>Artikel Siswa</p>
-                                </a>
-                              </li>
-                              <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                  <i class="far fa-circle nav-icon"></i>
-                                  <p>Artikel Guru</p>
-                                </a>
-                              </li>
-                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/dashboard/artikel-sekolah" class="nav-link">
+                            <i class="nav-icon fas fa-bed"></i>
+                            <p>
+                                Master Artikel  
+                            </p>
+                        </a>
                     </li>
                     
                     <li class="nav-item">
@@ -114,6 +113,7 @@
         <div class="content-header">
             <div class="row mb-2">
                 <div class="col-sm-6">
+                  
                     <h1 class="m-0 text-dark"> @yield('content-title')</h1>
                 </div>
             </div>
@@ -132,6 +132,7 @@
 </body>
 <script src="{{ asset('jquery-3.5.1.js') }}"></script>
 <script src="{{ asset('fontawesome/js/all.js') }}"></script>
+<script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
 <script src="{{ asset('adminlte/js/adminlte.js') }}"></script>
 @yield('script')
 </html>

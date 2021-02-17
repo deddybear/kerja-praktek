@@ -10,4 +10,7 @@ class IndexController extends Controller {
         return view('guest/index');
     }
 
+    public function dashboard(){
+        return view('admin/dashboard');
+    }
 }

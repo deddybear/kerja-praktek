@@ -31,6 +31,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 
 ###### Patch v0.4
 - Penambahan Fiture Regis,login,lupa password
+- Perbaikan Route, Controller dan views
 
 ## Front-end
 

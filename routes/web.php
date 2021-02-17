@@ -28,22 +28,30 @@ Route::get('/artikel', 'ArtikelController@guestPage');
 // TODO : ROUTE HALAMAN ADMIN
 Auth::routes();
 Auth::routes(['verify' => true]);   
-Route::get('/dashboard/artikel-sekolah', 'testController@rtz');
-Route::post('/panel-admin/lupa-password', 'AkunController@lupaPassword');
+
+Route::middleware(['auth','verified'])->group(function (){
+    
+    Route::get('/dashboard', 'IndexController@dashboard');
+    Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
+    Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
+    
+});
 
 /* 
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
 
-
-Route::get('/dashboard', 'testController@dashboard');
 Route::get('/select', 'testController@select');
 
-Route::get('/surat', function (){
-    $markdown = new Markdown(view(), config('mail.markdown'));
-    return $markdown->render('vendor/mail/html/message', ['slot' => 'test']);
-});
+    Route::get('/surat', function (){
+        $markdown = new Markdown(view(), config('mail.markdown'));
+        return $markdown->render('vendor/mail/html/message', ['slot' => 'test']);
+    });
+
+
+
+
 
 
 

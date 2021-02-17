@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 //TODO : Gawe test test an
 class testController extends Controller {
-    
-    public function __construct() {
-        $this->middleware(['auth','verified']);
-    }
-
 
     public function test(){
         $data = Frist::select('*')->with('last_name')->get();
@@ -24,12 +19,5 @@ class testController extends Controller {
         return $data;
     }
 
-    public function dashboard(){
-        return view('admin/coba');
-    }
-
-    public function rtz()
-    {
-        return view('admin/artikel-sekolah');
-    }
+    
 }
