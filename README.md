@@ -33,6 +33,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan Fiture Regis,login,lupa password
 - Perbaikan Route, Controller dan views
 - Perubahan Struktur Migrasi
+- Setup ajax dan fungsi controller artikel
 
 ## Front-end
 
