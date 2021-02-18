@@ -35,11 +35,14 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
         Route::post('/admin/artikel/add-artikel', 'ArtikelController@createArtikel');
         Route::post('/admin/artikel/edit-artikel', 'ArtikelController@editArtikel');
-     
-    //* End-Artikel
-    Route::get('/dashboard', 'IndexController@dashboard');
-   
-    Route::get('/dashboard/pengumuman-ppdb', 'testController@ppdbAdmin');
+
+        
+        //* End-Artikel
+        Route::get('/dashboard', 'IndexController@dashboard');
+        
+        Route::get('/dashboard/pengumuman-ppdb', 'testController@ppdbAdmin');
+        Route::get('/dashboard/galeri-foto', 'testController@galeriFoto');
+        Route::get('/dashboard/galeri-video', 'testController@galeriVideo');
     Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
     
 });

@@ -1,7 +1,7 @@
 @extends('layouts/master')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('halaman/index/index.styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('halaman/guest/index/index.styles.css') }}">
 @endsection
 
 @section('title', 'Artikel Sekolah')
