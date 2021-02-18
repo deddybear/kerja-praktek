@@ -4,21 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TblInfoAyah extends Migration
+class TblDataBeasiswaPesertaDidik extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up(){
-        Schema::create('tbl_info_ayah', function (Blueprint $table){
-            $table->uuid('id_info_ayah')->primary();
-            $table->string('nama_ayah');
-            
-        });
+    public function up()
+    {
+        //
     }
-    
 
     /**
      * Reverse the migrations.
@@ -27,6 +23,6 @@ class TblInfoAyah extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_info_ayah');
+        //
     }
 }

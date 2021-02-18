@@ -16,78 +16,151 @@
                         <strong>PROFILE SEKOLAH</strong>
                     </h4>
                 </section>
-            <div class="card card-primary card-tabs">
-                <div class="card-header p-0 pt-1">
-                    <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
-                                href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home"
-                                aria-selected="true">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill"
-                                href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile"
-                                aria-selected="false">Visi dan Misi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill"
-                                href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages"
-                                aria-selected="false">Fasilitas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill"
-                                href="#custom-tabs-one-settings" role="tab" aria-controls="custom-tabs-one-settings"
-                                aria-selected="false">Prestasi</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <div class="tab-content" id="custom-tabs-one-tabContent">
-                        <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel"
-                            aria-labelledby="custom-tabs-one-home-tab">
-                            <table class="table-borderless">
-                                <tbody>
-                                    <tr>
-                                        <td>NSS</td>
-                                        <td>:</td>
-                                        <td>102056005059</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel"
-                            aria-labelledby="custom-tabs-one-profile-tab">
-                            Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut
-                            ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                            cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis
-                            posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere
-                            nec nunc. Nunc euismod pellentesque diam.
-                        </div>
-                        <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel"
-                            aria-labelledby="custom-tabs-one-messages-tab">
-                            Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat
-                            augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit
-                            sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut
-                            velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus
-                            tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet
-                            sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum
-                            gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt
-                            eleifend ac ornare magna.
-                        </div>
-                        <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel"
-                            aria-labelledby="custom-tabs-one-settings-tab">
-                            Pellentesque vestibulum commodo nibh nec blandit. Maecenas neque magna, iaculis tempus
-                            turpis ac, ornare sodales tellus. Mauris eget blandit dolor. Quisque tincidunt venenatis
-                            vulputate. Morbi euismod molestie tristique. Vestibulum consectetur dolor a vestibulum
-                            pharetra. Donec interdum placerat urna nec pharetra. Etiam eget dapibus orci, eget aliquet
-                            urna. Nunc at consequat diam. Nunc et felis ut nisl commodo dignissim. In hac habitasse
-                            platea dictumst. Praesent imperdiet accumsan ex sit amet facilisis.
+                <div class="card card-primary card-tabs">
+                    <div class="card-header p-0 pt-1">
+                        <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill"
+                                    href="#profil" role="tab" aria-controls="custom-tabs-one-home"
+                                    aria-selected="true">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill"
+                                    href="#visi-misi" role="tab" aria-controls="custom-tabs-one-profile"
+                                    aria-selected="false">Visi dan Misi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill"
+                                    href="#fasilitas" role="tab" aria-controls="custom-tabs-one-messages"
+                                    aria-selected="false">Fasilitas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill"
+                                    href="#prestasi" role="tab" aria-controls="custom-tabs-one-settings"
+                                    aria-selected="false">Prestasi</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="custom-tabs-one-tabContent">
+                            <div class="tab-pane fade show active" id="profil" role="tabpanel"
+                                aria-labelledby="custom-tabs-one-home-tab">
+                                <table class="table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 200">NSS</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">102056005059</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Nama Sekolah</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">SD DIPONEGORO SURABAYA</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Tanggal Pendirian</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">24 Maret 1973</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Status Sekolah</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">Swasta</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Akreditasi</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">B</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Sertifikasi</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">200/BAP-S/M/SK/X/2016</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Kepala Sekolah</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">Sri Wahyu Maikaningrum, ST</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="visi-misi" role="tabpanel"
+                                aria-labelledby="custom-tabs-one-profile-tab">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="container">
+                                                <h3 style="text-align: center">Visi</h3>
+                                                <p>Mengembangkan IMTAQ DAN IPTEK, Mandiri,Kreatif dan berkualitas</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="container">
+                                                <h3 style="text-align: center">Misi</h3>
+                                                <p>1. Memberi layanan pendidikan dasar lanjutan berdasarkan nilai –
+                                                    nilai islami. </p>
+                                                <p>2. Meningkatkan kemampuan anak didik dengan memberikan pengetahuan
+                                                    dan ketrampilan.</p>
+                                                <p>3. Melatih anak didik untuk bisa mengambil keputusan sendiri dalam
+                                                    meningkatkan kualitas diri di pendidikan lanjutan dan kebudayaan di
+                                                    masyarakat dan lingkungan sekitarnya.</p>
+                                                <p>4. Mempersiapkan kader – kader muslim dan muslimah yang berkualitas
+                                                    dalam pembentukan Al Mar’atus Sholihah yang berbudi tinggi dan
+                                                    berbadan sehat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="fasilitas" role="tabpanel"
+                                aria-labelledby="custom-tabs-one-messages-tab">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>No</td>
+                                            <td>Jenis</td>
+                                            <td>Nama</td>
+                                            <td>Jumlah</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Sarana</td>
+                                            <td>Meja Siswa</td>
+                                            <td>80 unit</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="prestasi" role="tabpanel"
+                                aria-labelledby="custom-tabs-one-settings-tab">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>No</td>
+                                            <td>Peringkat</td>
+                                            <td>Lomba</td>
+                                            <td>Penyelenggara</td>
+                                            <td>Waktu</td>
+                                            <td>Jenis</td>
+                                            <td>Oleh</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>JUARA 1</td>
+                                            <td>Tartil Al-Qur'an</td>
+                                            <td>Kec. Tambaksari</td>
+                                            <td>2013-06-04</td>
+                                            <td>Tartil Al-Qur'an</td>
+                                            <td>Rifkiyanti Nuriyah</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+                    <!-- /.card -->
                 </div>
-                <!-- /.card -->
-            </div>
         </div>
         {{-- <section class="col-12 profil-section">
                 <section class="profil-section-title">

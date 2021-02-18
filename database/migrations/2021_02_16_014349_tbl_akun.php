@@ -32,6 +32,6 @@ class TblAkun extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_akun');
     }
 }

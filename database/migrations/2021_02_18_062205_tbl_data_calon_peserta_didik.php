@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TblPpdb extends Migration
+class TblDataPesertaDidik extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class TblPpdb extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_ppdb', function (Blueprint $table) {
-            $table->uuid('id_pendaftaran')->primary();
-            $table->uuid('id_info_ayah')->index();
-            $table->uuid('id_info_ibu')->index();
+        Schema::create('tbl_data_calon_peserta_didik', function(Blueprint $table){
+            $table->uuid('id_data_calon_peserta_didik')->primary();
+            $table->uuid('id_data_ayah')->index();
             $table->timestamps();
         });
     }
 
-    
     /**
      * Reverse the migrations.
      *
@@ -29,6 +27,6 @@ class TblPpdb extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_ppdb');
+        Schema::dropIfExists('tbl_data_calon_peserta_didik');
     }
 }

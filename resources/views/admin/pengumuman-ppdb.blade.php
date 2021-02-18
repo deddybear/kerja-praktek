@@ -1,19 +1,17 @@
 @extends('layouts/master-admin')
-
-@section('title', 'Artikel Sekolah')
-
-{{-- @section('content-title', 'Artikel Sekolah') --}}
+    
+@section('title', 'Pengumuman PPDB')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('summernote/summernote-bs4.css') }}">
-<link rel="stylesheet" href="{{ asset('sweetalert2/sweetalert2.css') }}">
+    <link rel="stylesheet" href="{{ asset('summernote/summernote-bs4.css') }}">
+    <link rel="stylesheet" href="{{ asset('sweetalert2/sweetalert2.css') }}">
 @endsection
 
 @section('script')
 <script src="{{ asset('summernote/summernote-bs4.js') }}"></script>
 <script src="{{ asset('sweetalert2/sweetalert.min.js') }}"></script>
 
-<script src="{{ asset('halaman/artikel/artikel.js') }}"></script>
+<script src="{{ asset('halaman/pengumuman-ppdb/pengumuman-ppdb.js') }}"></script>    
 @endsection
 
 @section('content')
@@ -22,10 +20,10 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="card-title">Artikel</h2>
+                    <h2 class="card-title">Pengumuman PPDB</h2>
                     <div class="card-tools">
-                        <a id="tambah-artikel" href="#" class="btn btn-success" data-toggle="modal"
-                            data-target="#modal-artikel">Tambah Artikel</a>
+                        <a id="tambah-pengumuman" href="#" class="btn btn-success" data-toggle="modal"
+                            data-target="#modal-pengumuman">Buat Pengumuman</a>
                     </div>
                 </div>
 
@@ -35,18 +33,16 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama Artikel</th>
-                                <th>Artikel Untuk</th>
+                                <th>Judul</th>
                                 <th>Data Dibuat</th>
                                 <th>Data Terakhir Update</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        <tbody id="data-artikel">
+                        <tbody id="data-pengumuman-ppdb">
                             <tr>
                                 <td>1</td>
                                 <td>bla bla bla</td>
-                                <td>Sekolah</td>
                                 <td>2020-01-20</td>
                                 <td>2020-01-20</td>
                                 <td>
@@ -64,7 +60,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="modal-artikel" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-pengumuman" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
         <div class="modal-content">
             <div class="modal-header">
@@ -79,27 +75,17 @@
                         <div class="col-5">                
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Judul Artikel</span>
+                                    <span class="input-group-text">Judul Pengumuman</span>
                                 </div>
-                                <input name="judul_artikel" id="judul_artikel" type="text" class="form-control"
+                                <input name="judul_pengumuman" id="judul_pengumuman" type="text" class="form-control"
                                     aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                            </div>
+                            </div>            
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Jenis Artikel</span>
-                                </div>
-                                <select name="jenis_artikel" class="form-control">
-                                    <option selected>Artikel Sekolah</option>
-                                    <option>Artikel Siswa</option>
-                                    <option>Artikel Guru</option>
-                                </select>
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Cover Artikel</span>
+                                    <span class="input-group-text">Cover Pengumuman</span>
                                 </div>
                                 <div class="custom-file">
-                                    <input name="cover_artikel" type="file" class="custom-file-input" id="exampleInputFile">
+                                    <input name="cover_pengumuman" type="file" class="custom-file-input" id="exampleInputFile">
                                     <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                 </div>
                             </div>

@@ -19,5 +19,9 @@ class testController extends Controller {
         return $data;
     }
 
+    public function ppdbAdmin()
+    {
+        return view('admin/pengumuman-ppdb');
+    }
     
 }

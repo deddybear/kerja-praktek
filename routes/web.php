@@ -33,6 +33,7 @@ Route::middleware(['auth','verified'])->group(function (){
     
     Route::get('/dashboard', 'IndexController@dashboard');
     Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
+    Route::get('/dashboard/pengumuman-ppdb', 'testController@ppdbAdmin');
     Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
     
 });

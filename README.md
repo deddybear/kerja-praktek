@@ -32,6 +32,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 ###### Patch v0.4
 - Penambahan Fiture Regis,login,lupa password
 - Perbaikan Route, Controller dan views
+- Perubahan Struktur Migrasi
 
 ## Front-end
 
@@ -57,6 +58,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan Dashboard Admin dan isi Halaman Artikel Sekolah 
 - Penambahan isi Halaman Artikel Sekolah (Admin)
 - Penambahan Modal Halaman Artikel Sekolah (Admin)
+- Penambahan isi Profil Sekolah (Guest)
 
 ## Update Repo Local 
 
