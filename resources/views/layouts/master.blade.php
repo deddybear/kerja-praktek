@@ -10,8 +10,8 @@
 
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('halaman/master/master.styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugin/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugin/fontawesome/css/all.css') }}">
     @yield('css')
 
 
@@ -95,11 +95,11 @@
 </body>
 {{-- Script --}}
 
-<script src="{{ asset('jquery-3.5.1.js') }}"></script>
-<script src="{{ asset('fontawesome/js/all.js') }}"></script>
-<script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
-<script src="{{ asset('popper.min.js') }}"></script>
-<script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
+<script src="{{ asset('plugin/jquery-3.5.1.js') }}"></script>
+<script src="{{ asset('plugin/fontawesome/js/all.js') }}"></script>
+<script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ asset('plugin/popper.min.js') }}"></script>
+<script src="{{ asset('plugin/bootstrap/js/bootstrap.js') }}"></script>
 @yield('script')
 
 </html>

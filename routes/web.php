@@ -31,8 +31,14 @@ Auth::routes(['verify' => true]);
 
 Route::middleware(['auth','verified'])->group(function (){
     
+    //* Route-Artikel
+        Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
+        Route::post('/admin/artikel/add-artikel', 'ArtikelController@createArtikel');
+        Route::post('/admin/artikel/edit-artikel', 'ArtikelController@editArtikel');
+     
+    //* End-Artikel
     Route::get('/dashboard', 'IndexController@dashboard');
-    Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
+   
     Route::get('/dashboard/pengumuman-ppdb', 'testController@ppdbAdmin');
     Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
     

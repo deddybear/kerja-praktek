@@ -5,15 +5,15 @@
 {{-- @section('content-title', 'Artikel Sekolah') --}}
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('summernote/summernote-bs4.css') }}">
-<link rel="stylesheet" href="{{ asset('sweetalert2/sweetalert2.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/summernote/summernote-bs4.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
 @endsection
 
 @section('script')
-<script src="{{ asset('summernote/summernote-bs4.js') }}"></script>
-<script src="{{ asset('sweetalert2/sweetalert.min.js') }}"></script>
+<script src="{{ asset('plugin/summernote/summernote-bs4.js') }}"></script>
+<script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
 
-<script src="{{ asset('halaman/artikel/artikel.js') }}"></script>
+<script src="{{ asset('halaman/admin/artikel/artikel.js') }}"></script>
 @endsection
 
 @section('content')
@@ -65,7 +65,7 @@
 </div>
 
 <div class="modal fade" id="modal-artikel" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" >
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"></h5>
@@ -89,9 +89,9 @@
                                     <span class="input-group-text">Jenis Artikel</span>
                                 </div>
                                 <select name="jenis_artikel" class="form-control">
-                                    <option selected>Artikel Sekolah</option>
-                                    <option>Artikel Siswa</option>
-                                    <option>Artikel Guru</option>
+                                    <option value="Ar-1" selected>Artikel Sekolah</option>
+                                    <option value="Ar-2">Artikel Guru</option>
+                                    <option value="Ar-3">Artikel Siswa</option>
                                 </select>
                             </div>
                             <div class="input-group mb-3">
@@ -105,7 +105,7 @@
                             </div>
                         </div> 
                         <div class="col-7">
-                            <textarea id="summernote" ></textarea>
+                            <textarea name="isi_artikel" id="summernote" ></textarea>
                         </div>                  
                     </div>
                 </div>

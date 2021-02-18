@@ -1,7 +1,7 @@
 @extends('layouts/master')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('halaman/pendaftaran/pendaftaran.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('halaman/guest/pendaftaran/pendaftaran.styles.css') }}">
 @endsection
 
 @section('title', 'Pendaftaran Siswa Baru')

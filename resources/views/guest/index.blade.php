@@ -3,14 +3,14 @@
 @section('title', 'Welcome')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('halaman/index/index.styles.css') }}">
-<link rel="stylesheet" href="{{ asset('owlcarousel/css/owl.carousel.css') }}">
-<link rel="stylesheet" href="{{ asset('owlcarousel/css/owl.theme.default.css') }}">
+<link rel="stylesheet" href="{{ asset('halaman/guest/index/index.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/owlcarousel/css/owl.carousel.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/owlcarousel/css/owl.theme.default.css') }}">
 @endsection
 
 @section('script')
-<script src="{{ asset('owlcarousel/js/owl.carousel.js') }}"></script>
-<script src="{{ asset('halaman/index/index.js') }}"></script>
+<script src="{{ asset('plugin/owlcarousel/js/owl.carousel.js') }}"></script>
+<script src="{{ asset('halaman/guest/index/index.js') }}"></script>
 @endsection
 
 @section('content')

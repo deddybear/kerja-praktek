@@ -10,8 +10,8 @@
     <title>@yield('title')</title>
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
-    <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugin/fontawesome/css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugin/adminlte/css/adminlte.css') }}">
     @yield('css')
 </head>
 
@@ -93,7 +93,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item has-treeview menu-open">
+                        <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-bed"></i>
                                 <p>
@@ -153,10 +153,10 @@
 
 
 </body>
-<script src="{{ asset('jquery-3.5.1.js') }}"></script>
-<script src="{{ asset('fontawesome/js/all.js') }}"></script>
-<script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
-<script src="{{ asset('adminlte/js/adminlte.js') }}"></script>
+<script src="{{ asset('plugin/jquery-3.5.1.js') }}"></script>
+<script src="{{ asset('plugin/fontawesome/js/all.js') }}"></script>
+<script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.js') }}"></script>
+<script src="{{ asset('plugin/adminlte/js/adminlte.js') }}"></script>
 @yield('script')
 
 </html>
