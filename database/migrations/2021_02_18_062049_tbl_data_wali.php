@@ -20,7 +20,7 @@ class TblDataWali extends Migration
             $table->string('pendidikan_wali', 20);
             $table->string('pekerjaan_wali', 20);
             $table->string('penghasilan_bulanan_wali', 30);
-            $table->timestamps();
+
         });
     }
 

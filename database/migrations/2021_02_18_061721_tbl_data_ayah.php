@@ -21,7 +21,6 @@ class TblDataAyah extends Migration
             $table->string('pekerjaan_ayah', 20);
             $table->string('penghasilan_bulanan_ayah', 30);
             $table->string('kebutuhan_khusus_ayah', 20);
-            $table->timestamps();
         });
     }
 

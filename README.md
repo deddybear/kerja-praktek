@@ -60,6 +60,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan isi Halaman Artikel Sekolah (Admin)
 - Penambahan Modal Halaman Artikel Sekolah (Admin)
 - Penambahan isi Profil Sekolah (Guest)
+- Penambahan isi Galeri Foto dan Video (Admin) dan isi Halaman Struktur Organisasi (Guest)
 
 ## Update Repo Local 
 

@@ -3,7 +3,7 @@
 @section('title', 'Profil Sekolah')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('halaman/index/index.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('halaman/guest/index/index.styles.css') }}">
 
 @section('content')
 <div class="shadow p-3 mb-5 bg-white rounded">
