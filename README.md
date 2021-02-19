@@ -62,6 +62,11 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan isi Profil Sekolah (Guest)
 - Penambahan isi Galeri Foto dan Video (Admin) dan isi Halaman Struktur Organisasi (Guest)
 
+###### Patch v0.5
+- Penambahan isi Halaman Profil (Guest) 
+- Penambahan Panel Data Pendaftar, Data Siswa dan Pegawai (Admin)
+
+
 ## Update Repo Local 
 
 Cara mendapatkan update dari repository cloud ke repository local 

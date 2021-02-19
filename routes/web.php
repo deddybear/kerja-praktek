@@ -43,6 +43,11 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::get('/dashboard/pengumuman-ppdb', 'testController@ppdbAdmin');
         Route::get('/dashboard/galeri-foto', 'testController@galeriFoto');
         Route::get('/dashboard/galeri-video', 'testController@galeriVideo');
+
+        Route::get('/dashboard/data-siswa', 'testController@dataSiswa');
+        Route::get('/dashboard/data-pegawai', 'testController@dataPegawai');
+        Route::get('/dashboard/data-pendaftar', 'testController@dataPendaftar');
+
     Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
     
 });

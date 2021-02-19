@@ -14,7 +14,7 @@
                     <section class="announcement-section-title">
                     <h4>
                         <i class="fa fa-user"></i>
-                        <strong>SAMBUTAN</strong>
+                        <strong>STRUKTUR ORGANISASI</strong>
 
                     </h4>
                 </section>

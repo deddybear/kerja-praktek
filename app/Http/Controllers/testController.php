@@ -34,4 +34,18 @@ class testController extends Controller {
         return view('admin/galeri-video');
     }
     
+    public function dataSiswa()
+    {
+        return view('admin/data-siswa');
+    }
+
+    public function dataPegawai()
+    {
+        return view('admin/data-pegawai');
+    }
+
+    public function dataPendaftar()
+    {
+        return view('admin/data-pendaftar');    
+    }
 }

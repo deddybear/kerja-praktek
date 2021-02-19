@@ -86,7 +86,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="/dashboard/data-pendaftar" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data Pendaftar</p>
                                     </a>
@@ -112,6 +112,29 @@
                                     <a href="/dashboard/galeri-video" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Galeri Video</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-tree">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-bed"></i>
+                                <p>
+                                    Data Sekolah
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/dashboard/data-siswa" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Siswa</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/data-pegawai" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Data Pegawai</p>
                                     </a>
                                 </li>
                             </ul>
