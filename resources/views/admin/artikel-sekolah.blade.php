@@ -5,14 +5,15 @@
 {{-- @section('content-title', 'Artikel Sekolah') --}}
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('plugin/summernote/summernote-bs4.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/summernote/summernote.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
 @endsection
 
 @section('script')
-<script src="{{ asset('plugin/summernote/summernote-bs4.js') }}"></script>
+<script src="{{ asset('plugin/summernote/summernote.js') }}"></script>
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
-
+<script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
 <script src="{{ asset('halaman/admin/artikel/artikel.js') }}"></script>
 @endsection
 
@@ -28,36 +29,24 @@
                             data-target="#modal-artikel">Tambah Artikel</a>
                     </div>
                 </div>
-
-                <!-- /.card-header -->
-                <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Nama Artikel</th>
-                                <th>Artikel Untuk</th>
-                                <th>Data Dibuat</th>
-                                <th>Data Terakhir Update</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="data-artikel">
-                            <tr>
-                                <td>1</td>
-                                <td>bla bla bla</td>
-                                <td>Sekolah</td>
-                                <td>2020-01-20</td>
-                                <td>2020-01-20</td>
-                                <td>
-                                    <a href="javascript:;" id="tombol-edit" class="btn btn-info"
-                                        data="'+ row.id_users+'"> Edit Data</a>
-                                    <a href="javascript:;" id="tombol-hapus" class="btn btn-warning"
-                                        data="'+ row.id_users+'"> Hapus Data</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card-body">
+                    
+                   <div class="table-responsive">
+                        <table class="table table-hover text-nowrap" id="tableArtikel">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Artikel</th>
+                                    <th>Artikel Untuk</th>
+                                    <th>Data Dibuat</th>
+                                    <th>Data Terakhir Update</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-artikel">
+                            </tbody>
+                        </table>
+                   </div>
                 </div>
             </div>
         </div>
@@ -89,9 +78,9 @@
                                     <span class="input-group-text">Jenis Artikel</span>
                                 </div>
                                 <select name="jenis_artikel" class="form-control">
-                                    <option value="Ar-1" selected>Artikel Sekolah</option>
-                                    <option value="Ar-2">Artikel Guru</option>
-                                    <option value="Ar-3">Artikel Siswa</option>
+                                    <option value="A1" selected>Artikel Sekolah</option>
+                                    <option value="A2">Artikel Guru</option>
+                                    <option value="A3">Artikel Siswa</option>
                                 </select>
                             </div>
                             <div class="input-group mb-3">
@@ -99,7 +88,7 @@
                                     <span class="input-group-text">Cover Artikel</span>
                                 </div>
                                 <div class="custom-file">
-                                    <input name="cover_artikel" type="file" class="custom-file-input" id="exampleInputFile">
+                                    <input name="cover_artikel" type="file" class="custom-file-input">
                                     <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                 </div>
                             </div>

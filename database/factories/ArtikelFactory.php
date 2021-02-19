@@ -7,14 +7,14 @@ use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
 $factory->define(Artikel::class, function (Faker $faker) {
-    $isi = $faker->title;
+    $nama = $faker->name();
     return [
         'id_artikel' => Str::random(24),
         'id_ketentuan' => Str::random(15),
-        'nama_artikel' => $isi,
-        'sampul_artikel' => $isi,
+        'nama_artikel' => $nama,
+        'sampul_artikel' => $nama,
         'isi_artikel'   => $faker->paragraph,
-        'slug' => Str::slug($isi),
+        'slug' => Str::slug($nama),
         'created_at' => now(),
         'updated_at' => now()
     ];

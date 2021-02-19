@@ -33,6 +33,7 @@ Route::middleware(['auth','verified'])->group(function (){
     
     //* Route-Artikel
         Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
+        Route::get('/admin/artikel/read-artikel','ArtikelController@dataArtikel');
         Route::post('/admin/artikel/add-artikel', 'ArtikelController@createArtikel');
         Route::post('/admin/artikel/edit-artikel', 'ArtikelController@editArtikel');
      

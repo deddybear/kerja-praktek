@@ -154,6 +154,7 @@
 
 </body>
 <script src="{{ asset('plugin/jquery-3.5.1.js') }}"></script>
+<script src="{{ asset('plugin/moment-with-locales.js') }}"></script>
 <script src="{{ asset('plugin/fontawesome/js/all.js') }}"></script>
 <script src="{{ asset('plugin/bootstrap/js/bootstrap.bundle.js') }}"></script>
 <script src="{{ asset('plugin/adminlte/js/adminlte.js') }}"></script>
