@@ -34,16 +34,10 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan Route, Controller dan views
 - Perubahan Struktur Migrasi
 - Setup ajax dan fungsi controller artikel
+- Perubahan Controller Test dibagi jadi 2 (agar tidak terjadi conflict merge)
+
 
 ## Front-end
-
-###### Patch v0.2
-- Perbaikan Versi BS dan Navbar tidak berfungsi
-- Update Tampilan Halaman dan Penambahan Library Owl Carousel
-- Perbaikan Tampilan Owl Careousel
-- Penambahan Footer, Halaman Pendaftaran, Component Pengumuman dihalaman index
-- Penambahan Halaman untuk admin (login, dashboard) WIP
-
 
 ###### Patch v0.3
 - Perubahan directory untuk view guest
