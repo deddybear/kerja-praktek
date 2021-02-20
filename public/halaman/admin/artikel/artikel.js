@@ -36,7 +36,7 @@ $(document).ready( function () {
   }
 
   getData();
-  setInterval(getData, 1000);
+  setInterval(getData, 5000);
 
   function getData(){
     $.ajax({
@@ -53,9 +53,9 @@ $(document).ready( function () {
           html += '<tr>'
               html += '<td>'+ nomer +'</td>'
               html += '<td>'+ row.nama_artikel +'</td>'
-              if (row.id_ketentuan == 'Ar-1') {
+              if (row.id_ketentuan == 'A1') {
                 html += '<td> Artikel Sekolah </td>'
-              } else if (row.id_ketentuan == 'Ar-2') {
+              } else if (row.id_ketentuan == 'A2') {
                 html += '<td> Artikel Guru </td>'
                 
               } else {
@@ -69,11 +69,11 @@ $(document).ready( function () {
               html +='</td>'
           html += '</tr>'
         })
+        $('#tableArtikel').DataTable().destroy()
         $('#data-artikel').html(html)
         $('#tableArtikel').DataTable();
       },
       error :function(response){
-
         notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
       }
     })
@@ -122,7 +122,7 @@ $(document).ready( function () {
 
         } else if (method == 'edit'){
 
-          url = '/admin/artikel/edit-artikel';
+          url = '/admin/artikel/edit-artikel/' + id;
 
         }
 
@@ -138,13 +138,14 @@ $(document).ready( function () {
             
           },
           success:function(data) {
-
             if (data.sukses){
               notifSwal('success', 'Yeeeey Berhasil', data.sukses);
               clearModal();
+              getData();
             } else if(data.gagal) {
               notifSwal('error', 'Whoooppss ada Kesalahan', data.gagal);
               clearModal();
+              getData();
             } else {
               data.validasi.map(
                 isiValidasi => notifSwal('warning', 'Whoooppss ada Kesalahan', isiValidasi)
@@ -153,31 +154,50 @@ $(document).ready( function () {
             }
           },
           error: function(response) {
-            swal({
-              icon: 'error',
-              title: 'Whoopss ada kesalahan',
-              text: 'Error : ' + response.responseJSON.message,
-            })
+            notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
           }
         })
     })  
 
 
     $('#data-artikel').on('click', '#tombol-hapus', function(){
+      id = $(this).attr('data')
       swal({
-        title: "Apakah kamu yakin ingin menghapus Data ?",
-        text: "Data yang telah dihapus tidak dapat dikembalikan",
+        title: "PERHATIAN ?",
+        text: "Data yang telah dihapus tidak dapat dikembalikan lagi !",
         icon: "warning",
         buttons: true,
         dangerMode: true,
       })
       .then((willDelete) => {
         if(willDelete){
-          swal("Data telah terhapus", {
-            icon: "success",
-          });
+          $.ajax({
+            type: 'POST',
+            url: '/admin/artikel/delete-artikel/' + id,
+            dataType: 'JSON',
+            beforeSend: function() {
+          
+              // $('#loader-wrapper').show();
+            },
+            complete: function() {
+                // $('#loader-wrapper').hide();
+            },
+            success: function(data) {
+              if (data.sukses) {
+                notifSwal('success', 'Yeeeey Berhasil', data.sukses)
+                getData();
+              } else if (data.warning) {
+                notifSwal('warning', 'PERHATIAN', data.warning)
+                getData();
+              } else {
+                notifSwal('gagal', 'PERHATIAN', data.gagal)
+              }
+             
+            }
+           
+          })
         }else{
-          swal("Gagal menghapus Data")
+          notifSwal('warning', 'PERHATIAN', 'Penghapusan Atikel dibatalkan')
         }
       })
 

@@ -35,18 +35,19 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
         Route::get('/admin/artikel/read-artikel','ArtikelController@dataArtikel');
         Route::post('/admin/artikel/add-artikel', 'ArtikelController@createArtikel');
-        Route::post('/admin/artikel/edit-artikel', 'ArtikelController@editArtikel');
         Route::get('/admin/artikel/select-artikel/{id}', 'ArtikelController@selectArtikel');    
+        Route::post('/admin/artikel/edit-artikel/{id}', 'ArtikelController@editArtikel');
+        Route::post('/admin/artikel/delete-artikel/{id}', 'ArtikelController@deleteArtikel');
     //* End-Artikel
         Route::get('/dashboard', 'IndexController@dashboard');
         
-        Route::get('/dashboard/pengumuman-ppdb', 'testController@ppdbAdmin');
-        Route::get('/dashboard/galeri-foto', 'testController@galeriFoto');
-        Route::get('/dashboard/galeri-video', 'testController@galeriVideo');
+        Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
+        Route::get('/dashboard/galeri-foto', 'junController@galeriFoto');
+        Route::get('/dashboard/galeri-video', 'junController@galeriVideo');
 
-        Route::get('/dashboard/data-siswa', 'testController@dataSiswa');
-        Route::get('/dashboard/data-pegawai', 'testController@dataPegawai');
-        Route::get('/dashboard/data-pendaftar', 'testController@dataPendaftar');
+        Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
+        Route::get('/dashboard/data-pegawai', 'junController@dataPegawai');
+        Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');
 
     Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
     
@@ -56,7 +57,7 @@ Route::middleware(['auth','verified'])->group(function (){
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
-Route::get('/ckeditor', 'devController@ckeditor');
+Route::get('/test', 'dedController@test');
 Route::get('/select', 'junController@select');
 
 Route::get('/kontol', function() {
