@@ -3,11 +3,13 @@
 @section('title', 'Pengumuman PPDB')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
 @endsection
 
 @section('script')
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
+<script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
 
 <script src="{{ asset('halaman/admin/data-sekolah/data-pendaftar.js') }}"></script>    
 @endsection

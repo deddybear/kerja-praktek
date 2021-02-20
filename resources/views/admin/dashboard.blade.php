@@ -1,6 +1,6 @@
 @extends('layouts/master-admin')
 
-@section('title', 'Halaman Coba Coba')
+@section('title', 'Hi, Admin')
 
 @section('content-title', 'Dashboard')
 

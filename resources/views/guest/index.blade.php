@@ -29,7 +29,7 @@
                         <div class="col-6">
                             <div class="img-announcement">
                                 <img class="img-responsive"
-                                    src="{{ asset('images/test-dev/hai.jpg') }}">
+                                    src="{{ asset('images-dummy/test-dev/hai.jpg') }}">
                             </div>
                         </div>
                         <div class="col-6">
@@ -66,7 +66,7 @@
                                 <div class="owl-item">
                                     <div class="card-container">
                                         <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                             <div class="card-details">
                                                 <div class="created-at">14 July 2019</div>
                                                 <div class="post-link">
@@ -79,7 +79,7 @@
                                 <div class="owl-item">
                                     <div class="card-container">
                                         <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images/test-dev/gambar2.jpeg') }}">
+                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar2.jpeg') }}">
                                             <div class="card-details">
                                                 <div class="created-at">14 July 2019</div>
                                                 <div class="post-link">
@@ -92,7 +92,7 @@
                                 <div class="owl-item">
                                     <div class="card-container">
                                         <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images/test-dev/gambar3.jpeg') }}">
+                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar3.jpeg') }}">
                                             <div class="card-details">
                                                 <div class="created-at">14 July 2019</div>
                                                 <div class="post-link">
@@ -105,7 +105,7 @@
                                 <div class="owl-item">
                                     <div class="card-container">
                                         <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images/test-dev/gambar4.jpeg') }}">
+                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar4.jpeg') }}">
                                             <div class="card-details">
                                                 <div class="created-at">14 July 2019</div>
                                                 <div class="post-link">
@@ -118,7 +118,7 @@
                                 <div class="owl-item">
                                     <div class="card-container">
                                         <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
                                     <div class="card-details">
                                         <div class="created-at">14 July 2019</div>
                                         <div class="post-link">
@@ -131,7 +131,7 @@
                         <div class="owl-item">
                             <div class="card-container">
                                 <div class="card-image">
-                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                    <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
                                     <div class="card-details">
                                         <div class="created-at">14 July 2019</div>
                                         <div class="post-link">
@@ -144,7 +144,7 @@
                         <div class="owl-item">
                             <div class="card-container">
                                 <div class="card-image">
-                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                    <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
                                     <div class="card-details">
                                         <div class="created-at">14 July 2019</div>
                                         <div class="post-link">
@@ -157,7 +157,7 @@
                         <div class="owl-item">
                             <div class="card-container">
                                 <div class="card-image">
-                                    <img class="img-fluid" src="{{ asset('images/test-dev/gambar5.jpeg') }}">
+                                    <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
                                     <div class="card-details">
                                         <div class="created-at">14 July 2019</div>
                                         <div class="post-link">
@@ -192,7 +192,7 @@
                                         <div class="col-6">
                                             <div class="img-announcement">
                                                 <img class="img-responsive"
-                                                src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -207,7 +207,7 @@
                                     <div class="col-6">
                                         <div class="img-announcement">
                                             <img class="img-responsive"
-                                            src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                            src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -224,7 +224,7 @@
                                     <div class="col-6">
                                         <div class="img-announcement">
                                             <img class="img-responsive"
-                                            src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                            src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -239,7 +239,7 @@
                                     <div class="col-6">
                                         <div class="img-announcement">
                                             <img class="img-responsive"
-                                            src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                            src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                         </div>
                                     </div>
                                     <div class="col-6">

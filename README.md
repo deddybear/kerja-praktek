@@ -61,6 +61,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 ###### Patch v0.5
 - Penambahan isi Halaman Profil (Guest) 
 - Penambahan Panel Data Pendaftar, Data Siswa dan Pegawai (Admin)
+- Perubahan isi Halaman Admin dan Guest
+- Penambahan Halaman Setting Akun (Admin)
 
 
 ## Update Repo Local 

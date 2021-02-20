@@ -149,9 +149,9 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="/dashboard/setting" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Edit Akun</p>
+                                        <p>Setting Akun</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

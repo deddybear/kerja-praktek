@@ -24,7 +24,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="img-announcement">
-                                        <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        <img class="img-responsive" src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -39,7 +39,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="img-announcement">
-                                        <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        <img class="img-responsive" src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -54,7 +54,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="img-announcement">
-                                        <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        <img class="img-responsive" src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -69,7 +69,7 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="img-announcement">
-                                        <img class="img-responsive" src="{{ asset('images/test-dev/gambar1.jpeg') }}">
+                                        <img class="img-responsive" src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
                                     </div>
                                 </div>
                                 <div class="col-6">
