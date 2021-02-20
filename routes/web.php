@@ -30,7 +30,8 @@ Auth::routes();
 Auth::routes(['verify' => true]);   
 
 Route::middleware(['auth','verified'])->group(function (){
-    
+
+        Route::get('/dashboard', 'IndexController@dashboard');
     //* Route-Artikel
         Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
         Route::get('/admin/artikel/read-artikel','ArtikelController@dataArtikel');
@@ -39,10 +40,19 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/artikel/edit-artikel/{id}', 'ArtikelController@editArtikel');
         Route::post('/admin/artikel/delete-artikel/{id}', 'ArtikelController@deleteArtikel');
     //* End-Artikel
-        Route::get('/dashboard', 'IndexController@dashboard');
+    //* Route-Galeri-Foto
+        Route::get('/dashboard/galeri-foto', 'GaleriFotoController@masterFoto');
+        Route::get('/admin/galeri/read-foto', 'GaleriFotoController@dataFoto');
+        Route::post('/admin/galeri/add-foto', 'GaleriFotoController@uploadFoto');
+        Route::get('/admin/galeri/select-foto/{id}', 'GaleriFotoController@selectDataFoto');
+        Route::post('/admin/galeri/edit-foto/{id}', 'GaleriFotoController@editDataFoto');
+        Route::post('/admin/galeri/delete-foto/{id}', 'GaleriFotoController@deleteDataFoto');
+
+
+    //* End-Galeri-Foto
         
         Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
-        Route::get('/dashboard/galeri-foto', 'junController@galeriFoto');
+        
         Route::get('/dashboard/galeri-video', 'junController@galeriVideo');
 
         Route::get('/dashboard/data-siswa', 'junController@dataSiswa');

@@ -34,9 +34,10 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan Route, Controller dan views
 - Perubahan Struktur Migrasi
 - Setup ajax dan fungsi controller artikel
-- Perubahan Controller Test dibagi jadi 2 (agar tidak terjadi conflict merge)
+
 
 ###### Patch v0.5
+- Perubahan Controller Test dibagi jadi 2 (agar tidak terjadi conflict merge)
 - Finishing Ajax & Fungsional Fitur Artikel
 
 ## Front-end

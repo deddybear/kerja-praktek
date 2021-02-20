@@ -54,8 +54,11 @@ class ArtikelController extends Controller
 
     public function createArtikel(Request $request){
 
-        $id = Generate::uuid4();
-        $path = '/public/images/artikel/' . $id;
+        $id       = Generate::uuid4();
+        $path     = '/images/artikel/' . $id;
+        $file     = $request->file('cover_artikel');
+        $namaFile = $file->getClientOriginalName();
+
         $valid = Validator::make($request->all(), [
             'judul_artikel' => 'required|min:5|max:100|unique:tbl_artikel,nama_artikel',
             'jenis_artikel' => 'required|max:2|alpha_dash',
@@ -67,14 +70,14 @@ class ArtikelController extends Controller
             return response()->json(['validasi' => $valid->errors()->all()]);
         }
 
-        if( $link = Storage::putFile($path, $request->file('cover_artikel')) ){
+        if(Storage::putFileAs('public'.$path, $file, $namaFile)){
             $hasilProses = $this->prosesSummernote($request->isi_artikel, $id);
         
             $data = array (
                 'id_artikel'     => $id,
                 'id_ketentuan'   => $request->jenis_artikel,
                 'nama_artikel'   => $request->judul_artikel,
-                'sampul_artikel' => $link,
+                'sampul_artikel' => $path .'/'. $namaFile,
                 'isi_artikel'    => $hasilProses,
                 'slug'           => Str::slug($request->judul_artikel),
             );
@@ -89,6 +92,8 @@ class ArtikelController extends Controller
             }
             
 
+        } else {
+            return response()->json(['gagal' => "Artikel gagal ditambahkan, mohon untuk dicoba/check lagi"]);
         }
 
     }
@@ -98,7 +103,11 @@ class ArtikelController extends Controller
     }
 
     public function editArtikel(Request $request, $id){
-        $path = '/public/images/artikel/' . $id;
+        
+        $path     = '/images/artikel/' . $id;
+        $file     = $request->file('cover_artikel');
+        $namaFile = $file->getClientOriginalName();
+
         $valid = Validator::make($request->all(), [
             'judul_artikel' => 'required|min:5|max:100', Rule::unique('tbl_artikel', 'nama_artikel')->ignore($id),
             'jenis_artikel' => 'required|max:2|alpha_dash',
@@ -110,21 +119,20 @@ class ArtikelController extends Controller
             return response()->json(['validasi' => $valid->errors()->all()]);
         }
 
-        if(Storage::exists($path)){
-            Storage::deleteDirectory($path);
-            if( $link = Storage::putFile($path, $request->file('cover_artikel')) ){
-                $hasilProses = $this->prosesSummernote($request->isi_artikel, $id);
-            }
+        if(Storage::exists('public'.$path)){
+            Storage::deleteDirectory('public'.$path);
+            Storage::putFileAs('public'.$path, $file, $namaFile) 
+            $hasilProses = $this->prosesSummernote($request->isi_artikel, $id);
+            
         } else {
-            if( $link = Storage::putFile($path, $request->file('cover_artikel')) ){
-                $hasilProses = $this->prosesSummernote($request->isi_artikel, $id);
-            }
+            Storage::putFileAs('public'.$path, $file, $namaFile) 
+            $hasilProses = $this->prosesSummernote($request->isi_artikel, $id);
         }
 
         $data = array (
             'id_ketentuan'   => $request->jenis_artikel,
             'nama_artikel'   => $request->judul_artikel,
-            'sampul_artikel' => $link,
+            'sampul_artikel' => $path . '/' . $namaFile,
             'isi_artikel'    => $hasilProses,
             'slug'           => Str::slug($request->judul_artikel),
         );

@@ -24,11 +24,6 @@ class junController extends Controller {
         return view('admin/pengumuman-ppdb');
     }
 
-    public function galeriFoto()
-    {
-        return view('admin/galeri-foto');
-    }
-
     public function galeriVideo()
     {
         return view('admin/galeri-video');

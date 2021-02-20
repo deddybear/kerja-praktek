@@ -19,7 +19,6 @@ $(document).ready( function () {
     placeholder: 'Silahkan artikel apa yang anda ingin posting',
   });
 
-
   function clearModal() {
     $('#summernote').summernote('reset');
     $('#form')[0].reset();
@@ -89,7 +88,7 @@ $(document).ready( function () {
     $('#data-artikel').on('click', '#tombol-edit', function(){
       clearModal()
       method = "edit";
-      $('#tombol-submit').html('Tambah Artikel')
+
       id = $(this).attr('data')
       $.ajax({
         url: '/admin/artikel/select-artikel/' + id,
@@ -103,14 +102,13 @@ $(document).ready( function () {
         },
         success: function(data) {
           $('.modal-title').html('Edit ' + data.nama_artikel)
+          $('#tombol-submit').html('Edit Data')
+          $('#modal-artikel').modal('show')
         },
         error: function (response) {
           notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
         }
       })
-      $('.modal-title').html('Edit Artikel')
-      $('#tombol-submit').html('Edit Data')
-      $('#modal-artikel').modal('show')
     })
 
     $('#form').on('submit', function(e) {
@@ -163,7 +161,7 @@ $(document).ready( function () {
     $('#data-artikel').on('click', '#tombol-hapus', function(){
       id = $(this).attr('data')
       swal({
-        title: "PERHATIAN ?",
+        title: "PERHATIAN !",
         text: "Data yang telah dihapus tidak dapat dikembalikan lagi !",
         icon: "warning",
         buttons: true,
@@ -196,7 +194,7 @@ $(document).ready( function () {
             }
            
           })
-        }else{
+        } else {
           notifSwal('warning', 'PERHATIAN', 'Penghapusan Atikel dibatalkan')
         }
       })

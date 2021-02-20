@@ -2,18 +2,18 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Models\Gallery as Gallery;
+use App\Models\Galeri;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
 
-$factory->define(Gallery::class, function (Faker $faker) {
+$factory->define(Galeri::class, function (Faker $faker) {
     return [
-        'id_gallery' => Str::random(24),
-        'judul'      => $faker->title,
-        'src_gamber' => 'Link',
-        'src_video'  => 'Link',
-        'created_at' => now(),
-        'updated_at' => now()
+        'id_gallery'   => Str::random(24),
+        'id_ketentuan' => 'G1',
+        'judul'        => $faker->title,
+        'source'       => $faker->name(),
+        'created_at'   => now(),
+        'updated_at'   => now()
     ];
 });

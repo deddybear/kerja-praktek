@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Gallery extends Model
+class Galeri extends Model
 {
     //* Konfigurasi Database
     protected $table        = 'tbl_gallery';
