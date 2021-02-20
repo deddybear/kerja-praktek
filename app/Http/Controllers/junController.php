@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 
 //TODO : Gawe test test an
-class testController extends Controller {
+class junController extends Controller {
 
     public function test(){
         $data = Frist::select('*')->with('last_name')->get();
@@ -34,11 +34,18 @@ class testController extends Controller {
         return view('admin/galeri-video');
     }
     
-    public function ckeditor(){
-        return view('dev-test/halaman-test');
+    public function dataSiswa()
+    {
+        return view('admin/data-siswa');
     }
 
-    public function postArtikel(Request $request){
-        dd($request);
+    public function dataPegawai()
+    {
+        return view('admin/data-pegawai');
+    }
+
+    public function dataPendaftar()
+    {
+        return view('admin/data-pendaftar');    
     }
 }

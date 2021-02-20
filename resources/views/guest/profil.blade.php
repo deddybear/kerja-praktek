@@ -12,7 +12,7 @@
             <section class="announcement-section">
                 <section class="announcement-section-title">
                     <h4>
-                        <i class="fa fa-list"></i>
+                        <i class="fa fa-school"></i>
                         <strong>PROFILE SEKOLAH</strong>
                     </h4>
                 </section>
@@ -50,37 +50,82 @@
                                         <tr>
                                             <td style="width: 200">NSS</td>
                                             <td style="width: 10">:</td>
-                                            <td style="width: 250">102056005059</td>
+                                            <td style="width: 350">102056005059</td>
                                         </tr>
                                         <tr>
                                             <td style="width: 200">Nama Sekolah</td>
                                             <td style="width: 10">:</td>
-                                            <td style="width: 250">SD DIPONEGORO SURABAYA</td>
+                                            <td style="width: 350">SD DIPONEGORO SURABAYA</td>
                                         </tr>
                                         <tr>
                                             <td style="width: 200">Tanggal Pendirian</td>
                                             <td style="width: 10">:</td>
-                                            <td style="width: 250">24 Maret 1973</td>
+                                            <td style="width: 350">24 Maret 1973</td>
                                         </tr>
                                         <tr>
                                             <td style="width: 200">Status Sekolah</td>
                                             <td style="width: 10">:</td>
-                                            <td style="width: 250">Swasta</td>
+                                            <td style="width: 350">Swasta</td>
                                         </tr>
                                         <tr>
                                             <td style="width: 200">Akreditasi</td>
                                             <td style="width: 10">:</td>
-                                            <td style="width: 250">B</td>
+                                            <td style="width: 350">B</td>
                                         </tr>
                                         <tr>
                                             <td style="width: 200">Sertifikasi</td>
                                             <td style="width: 10">:</td>
-                                            <td style="width: 250">200/BAP-S/M/SK/X/2016</td>
+                                            <td style="width: 350">200/BAP-S/M/SK/X/2016</td>
                                         </tr>
                                         <tr>
                                             <td style="width: 200">Kepala Sekolah</td>
                                             <td style="width: 10">:</td>
-                                            <td style="width: 250">Sri Wahyu Maikaningrum, ST</td>
+                                            <td style="width: 350">Sri Wahyu Maikaningrum, ST</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Yayasan</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 600">TAMAN PENDIDIKAN HARAPAN BANGSA DIPONEGORO</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200"></td>
+                                            <td style="width: 10"></td>
+                                            <td style="width: 250">Alamat : JL. Tambang Boyo 36</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200"></td>
+                                            <td style="width: 10"></td>
+                                            <td style="width: 250">Pimpinan : Drs. Ir. Moch. Shofiyulhadi, SH. MBA</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">Alamat</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 350">Jl. Kedung Sroko V / 15 - 21 Surabaya</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200"></td>
+                                            <td style="width: 10"></td>
+                                            <td style="width: 250">Kecamatan : Kec. Tambaksari</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200"></td>
+                                            <td style="width: 10"></td>
+                                            <td style="width: 250">Kelurahan : Kel. Pacar Kembang</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200"></td>
+                                            <td style="width: 10"></td>
+                                            <td style="width: 250"> Kode Pos  : 60132</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200"></td>
+                                            <td style="width: 10"></td>
+                                            <td style="width: 250"> No. Telp  : 081586795252</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 200">E-mail</td>
+                                            <td style="width: 10">:</td>
+                                            <td style="width: 250">diponegoro15@gmail.com</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -92,7 +137,7 @@
                                         <div class="col-6">
                                             <div class="container">
                                                 <h3 style="text-align: center">Visi</h3>
-                                                <p>Mengembangkan IMTAQ DAN IPTEK, Mandiri,Kreatif dan berkualitas</p>
+                                                <p>Mengembangkan IMTAQ DAN IPTEK, Mandiri, Kreatif dan berkualitas</p>
                                             </div>
                                         </div>
                                         <div class="col-6">
