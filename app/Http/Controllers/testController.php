@@ -34,4 +34,11 @@ class testController extends Controller {
         return view('admin/galeri-video');
     }
     
+    public function ckeditor(){
+        return view('dev-test/halaman-test');
+    }
+
+    public function postArtikel(Request $request){
+        dd($request);
+    }
 }

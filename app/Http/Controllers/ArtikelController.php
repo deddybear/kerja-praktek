@@ -30,29 +30,22 @@ class ArtikelController extends Controller
     public function createArtikel(Request $request){
 
         $id = Generate::uuid4();
+        $path = '/public/images/artikel/' . $id;
         $valid = Validator::make($request->all(), [
             'judul_artikel' => 'required|min:5|max:100|unique:tbl_artikel,nama_artikel',
             'jenis_artikel' => 'required|max:2|alpha_dash',
-            'cover_artikel' => 'file|mimes:jpeg,png,jpg|max:1048',
-            'isi_artikel'   => 'required'
+            'cover_artikel' => 'required|file|mimes:jpeg,png,jpg|max:1048',
+            'isi_artikel'   => 'required|min:12'
         ]);
 
         if($valid->fails()){
-            return response()->json(['errors' => $valid->errors()->all()]);
-        }
-
-        if ($request->jenis_artikel == 'A1') {
-            $path = '/public/images/artikel/sekolah/'.$id;
-        } elseif ($request->jenis_artikel == 'A2') {
-            $path = '/public/images/artikel/guru/'.$id;
-        } else {
-            $path = '/public/images/artikel/siswa/'.$id;
+            return response()->json(['validasi' => $valid->errors()->all()]);
         }
 
         if( $link = Storage::putFile($path, $request->file('cover_artikel')) ){
-            
+            $isiArtikel = $request->isi_artikel;
             $dom = new \DOMDocument();
-            $dom->loadHTML($request->isi_artikel, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+            $dom->loadHTML($isiArtikel, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
             $imageList = $dom->getElementsByTagName('img');
             
             foreach ($imageList as $key => $image) {
@@ -64,10 +57,10 @@ class ArtikelController extends Controller
                     $data = base64_decode($data);
 
                     //error
-                    file_put_contents(asset($path.'/'.$fileName), $data);
+                    file_put_contents('images/artikel/'.$id.'/'.$fileName, $data);
 
                     $image->removeAttribute('src');
-                    $image->setAttribute('src', '/'.$path.$fileName);
+                    $image->setAttribute('src', '/images/artikel/'.$id.'/'.$fileName);
                 }
 
                 $isiArtikel = $dom->savehtml();
@@ -77,12 +70,20 @@ class ArtikelController extends Controller
                 'id_artikel'     => $id,
                 'id_ketentuan'   => $request->jenis_artikel,
                 'nama_artikel'   => $request->judul_artikel,
-                'sampul_artikel' => $request->$link,
-                'isi_artikel'    => $request->$isiArtikel,
+                'sampul_artikel' => $link,
+                'isi_artikel'    => $isiArtikel,
                 'slug'           => Str::slug($request->judul_artikel),
             );
 
-            return response()->json(['sukses' => 'Data berhasil diupload']);
+            if (Artikel::create($data)) {
+
+                return response()->json(['sukses' => $data]);
+            
+            } else {
+
+                return response()->json(['gagal' => "Artikel gagal ditambahkan, mohon untuk dicoba/check lagi"]);
+            }
+            
 
         }
 

@@ -36,9 +36,8 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::get('/admin/artikel/read-artikel','ArtikelController@dataArtikel');
         Route::post('/admin/artikel/add-artikel', 'ArtikelController@createArtikel');
         Route::post('/admin/artikel/edit-artikel', 'ArtikelController@editArtikel');
-
-        
-        //* End-Artikel
+        Route::get('/admin/artikel/select-artikel/{id}', 'ArtikelController@selectArtikel');    
+    //* End-Artikel
         Route::get('/dashboard', 'IndexController@dashboard');
         
         Route::get('/dashboard/pengumuman-ppdb', 'testController@ppdbAdmin');
@@ -52,12 +51,14 @@ Route::middleware(['auth','verified'])->group(function (){
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
-
+Route::get('/ckeditor', 'testController@ckeditor');
 Route::get('/select', 'testController@select');
 
 Route::get('/kontol', function() {
     return view('layouts.coba');
 });
+
+Route::post('/post-artikel', 'testController@postArtikel')->name('wildan');
 
 Route::get('/surat', function (){
     $markdown = new Markdown(view(), config('mail.markdown'));
