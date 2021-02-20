@@ -43,4 +43,9 @@ class junController extends Controller {
     {
         return view('admin/data-pendaftar');    
     }
+
+    public function settingAkun()
+    {
+        return view('admin/setting');
+    }
 }

@@ -38,7 +38,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 
 ###### Patch v0.5
 - Perubahan Controller Test dibagi jadi 2 (agar tidak terjadi conflict merge)
-- Finishing Ajax & Fungsional Fitur Artikel
+- Finishing Ajax & Fungsional Fitur Artikel & Galeri Video
 
 ## Front-end
 

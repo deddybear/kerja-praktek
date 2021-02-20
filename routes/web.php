@@ -59,6 +59,8 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::get('/dashboard/data-pegawai', 'junController@dataPegawai');
         Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');
 
+        Route::get('/dashboard/setting', 'junController@settingAkun');
+
     Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
     
 });

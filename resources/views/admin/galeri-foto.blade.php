@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{{ asset('plugin/summernote/summernote-bs4.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
+<link rel="stylesheet" href="{{ asset('halaman/admin/galeri-foto/galeri-foto.styles.css') }}">
 @endsection
 
 @section('script')
