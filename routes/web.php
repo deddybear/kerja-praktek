@@ -47,16 +47,30 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::get('/admin/galeri/select-foto/{id}', 'GaleriFotoController@selectDataFoto');
         Route::post('/admin/galeri/edit-foto/{id}', 'GaleriFotoController@editDataFoto');
         Route::post('/admin/galeri/delete-foto/{id}', 'GaleriFotoController@deleteDataFoto');
-
-
     //* End-Galeri-Foto
-        
+    //* Route-Galeri-Video
+        Route::get('/dashboard/galeri-video', 'GaleriVideoController@masterVideo');
+        Route::get('/admin/galeri/read-video', 'GaleriVideoController@dataVideo');
+        Route::post('/admin/galeri/add-video', 'GaleriVideoController@embedLinkVideo');
+        Route::get('/admin/galeri/select-video/{id}', 'GaleriVideoController@selectLinkVideo');
+        Route::post('/admin/galeri/edit-video/{id}', 'GaleriVideoController@editLinkVideo');
+        Route::post('/admin/galeri/delete-video/{id}', 'GaleriVideoController@deleteLinkVideo');
+    //* End-Galeri-Video
+    //* Route-Pegawai
+        Route::get('/dashboard/data-pegawai', 'PegawaiController@masterPegawai');
+        Route::get('/admin/data-pegawai/read-data','PegawaiController@dataPegawai');
+        Route::post('/admin/data-pegawai/add-data', 'PegawaiController@addDataPegawai');
+        Route::get('/admin/data-pegawai/select-data/{id}', 'PegawaiController@selectDataPegawai'); 
+        Route::post('/admin/data-pegawai/edit-data/{id}', 'PegawaiController@editDataPegawai');
+        Route::post('/admin/data-pegawai/delete-data/{id}', 'PegawaiController@deleteDataPegawai');
+    //* End-Pegawai
+
         Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
         
-        Route::get('/dashboard/galeri-video', 'junController@galeriVideo');
+        
 
         Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
-        Route::get('/dashboard/data-pegawai', 'junController@dataPegawai');
+  
         Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');
 
         Route::get('/dashboard/setting', 'junController@settingAkun');

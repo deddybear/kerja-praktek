@@ -28,11 +28,6 @@ class GaleriFotoController extends Controller
 
     public function uploadFoto(Request $request){
 
-        $id       = Generate::uuid4();
-        $path     = '/images/galeri/' . $id;
-        $file     = $request->file('galeri-foto');
-        $namaFile = $file->getClientOriginalName();
-
         $valid = Validator::make($request->all(), [
             'judul_foto'  => 'required|between:5,30',
             'galeri-foto' => 'required|file|mimes:jpeg,png,jpg|max:1048',
@@ -41,6 +36,11 @@ class GaleriFotoController extends Controller
         if($valid->fails()){
             return response()->json(['validasi' => $valid->errors()->all()]);
         }
+
+        $id       = Generate::uuid4();
+        $path     = '/images/galeri/' . $id;
+        $file     = $request->file('galeri-foto');
+        $namaFile = $file->getClientOriginalName();
 
         if (Storage::putFileAs('public'.$path, $file, $namaFile)) {
             $data = array(
@@ -65,10 +65,6 @@ class GaleriFotoController extends Controller
     }
 
     public function editDataFoto(Request $request, $id){
-        
-        $path     = '/images/galeri/' . $id;
-        $file     = $request->file('galeri-foto');
-        $namaFile = $file->getClientOriginalName();
 
         $valid = Validator::make($request->all(), [
             'judul_foto'  => 'required|between:5,30',
@@ -78,6 +74,10 @@ class GaleriFotoController extends Controller
         if($valid->fails()){
             return response()->json(['validasi' => $valid->errors()->all()]);
         }
+
+        $path     = '/images/galeri/' . $id;
+        $file     = $request->file('galeri-foto');
+        $namaFile = $file->getClientOriginalName();
 
         if(Storage::exists('public'.$path)){
             Storage::deleteDirectory('public'.$path);

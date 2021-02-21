@@ -21,33 +21,22 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 # Progress Project
 ## Back-end
 
-###### Patch v0.3
-- Penghapusan halamanController
-- Penambahan Controller untuk setiap view digunakan untuk mempermudahkan maintance source code
-- Perubahan Route 
-- Penambahan Controller Akun untuk views dan fungsi register & login
-- Perubahan Controller Berita ke Controller Artikel
-- Perubahan Migrasi User ke Akun
-
 ###### Patch v0.4
 - Penambahan Fiture Regis,login,lupa password
 - Perbaikan Route, Controller dan views
 - Perubahan Struktur Migrasi
 - Setup ajax dan fungsi controller artikel
 
-
 ###### Patch v0.5
-- Perubahan Controller Test dibagi jadi 2 (agar tidak terjadi conflict merge)
+- Perubahan Contoller Test dibagi jadi 2 (agar tidak terjadi conflict merge)
 - Finishing Ajax & Fungsional Fitur Artikel & Galeri Video
 
-## Front-end
+###### Patch v0.6
+- Penambahan Fungsional didalam Controller, Ajax, dan Router
+- Perbaikan DataTables Bug
+- Penatahan ulang Struktur Folder
 
-###### Patch v0.3
-- Perubahan directory untuk view guest
-- Penambahan Folder untuk views admin
-- Penambahan Halaman Galeri & Berita
-- Penambahan Halaman Login Admin & Modal
-- Penambahan Isi Modal Daftar, Lupa Password, dan AkunController 
+## Front-end
 
 ###### Patch v0.4
 - Penambahan isi Halaman Utama
@@ -63,6 +52,10 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan isi Halaman Profil (Guest) 
 - Penambahan Panel Data Pendaftar, Data Siswa dan Pegawai (Admin)
 
+##### Patch v0.6
+- Perbaikan Views Fitur didalam Dashboard 
+- Perbaikan DOMJS didalam untuk tampilan
+- Perbaikan Beberapa Struktur HTML 
 
 ## Update Repo Local 
 

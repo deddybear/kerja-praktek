@@ -121,11 +121,11 @@ class ArtikelController extends Controller
 
         if(Storage::exists('public'.$path)){
             Storage::deleteDirectory('public'.$path);
-            Storage::putFileAs('public'.$path, $file, $namaFile) 
+            Storage::putFileAs('public'.$path, $file, $namaFile);
             $hasilProses = $this->prosesSummernote($request->isi_artikel, $id);
             
         } else {
-            Storage::putFileAs('public'.$path, $file, $namaFile) 
+            Storage::putFileAs('public'.$path, $file, $namaFile);
             $hasilProses = $this->prosesSummernote($request->isi_artikel, $id);
         }
 

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Galeri;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Ramsey\Uuid\Uuid as Generate;
 
 class GaleriVideoController extends Controller
 {
@@ -13,26 +16,71 @@ class GaleriVideoController extends Controller
     //TODO: Halaman admin dan fungsi
 
     public function masterVideo(){
-        # code...
+        return view('admin/galeri-video');
     }
 
     public function dataVideo(){
-        # code...
+        return json_encode(Galeri::all()->where('id_ketentuan', 'G2'));
     }
 
     public function embedLinkVideo(Request $request){
-        # code...
+        
+        $valid = Validator::make($request->all(), [
+            'judul_video' => 'required|between:5,30',
+            'link_embed'  => 'required|max:255'
+        ]);
+        
+        if($valid->fails()){
+            return response()->json(['validasi' => $valid->errors()->all()]);
+        }
+
+        $data = array(
+            'id_galeri'    => Generate::uuid4(),
+            'id_ketentuan' => 'G2',
+            'judul'        => $request->judul_video,
+            'source'       => $request->link_embed
+        );
+
+        if (Galeri::create($data)) {
+            return response()->json(['sukses' => "Berhasil Embed Link Video"]);
+        } else {
+            return response()->json(['gagal' => "Gagal Embed Link Video"]);
+        }
+        
+
     }
 
     public function selectLinkVideo($id){
-        # code...
+        return json_encode(Galeri::select('judul', 'source')->where('id_galeri', $id)->first());
     }
 
     public function editLinkVideo(Request $request, $id){
-        # code...
+
+        $valid = Validator::make($request->all(), [
+            'judul_video' => 'required|between:5,30',
+            'link_embed'  => 'required|max:255'
+        ]);
+        
+        if($valid->fails()){
+            return response()->json(['validasi' => $valid->errors()->all()]);
+        }
+
+        $data = array(
+            'judul'        => $request->judul_video,
+            'source'       => $request->link_embed
+        );
+
+        if (Galeri::where('id_galeri', $id)->update($data)) {
+            return response()->json(['sukses' => "Berhasil Mengedit Embed Link Video"]);
+        } else {
+            return response()->json(['gagal' => "Gagal Mengedit Embed Link Video"]);
+        }
     }
 
     public function deleteLinkVideo($id){
-        # code...
+        if(Galeri::where('id_galeri', $id)->delete()){
+            return response()->json(['sukses' => "Berhasil Menghapus Embed Link Video"]);
+        }
+        return response()->json(['gagal' => "Gagal Menghapus Embed Link Video"]);
     }
 }

@@ -20,7 +20,7 @@ $(document).ready( function () {
     });
 
     function clearModal() {
-      $('#summernote').summernote('reset');
+
       $('#form')[0].reset();
       $('.custom-file-label').html('');
       $('#modal_artikel').modal('hide');
@@ -51,10 +51,10 @@ $(document).ready( function () {
         },
         success: function(data) {
           let html ;
+          let nomer = 1;
           $.each(data, function (index, row) {
-            let nomer = index + 1;
             html += '<tr>'
-              html += '<td>'+ nomer +'</td>'
+              html += '<td>'+ nomer++ +'</td>'
               html += '<td>'+ row.judul +'</td>'
               html += '<td>'+ '<img class="w-100 h-100" src='+ row.source +'></td>'
               html += '<td>'+ moment(row.created_at).format("D MMMM YYYY, H:mm:ss ") +'</td>'
@@ -65,12 +65,12 @@ $(document).ready( function () {
               html +='</td>'
           html += '</tr>'
           })
-         $('#tableGaleri').DataTable().destroy()
+         $('#tableGaleri').DataTable().clear().destroy()
          $('#data-galeri-foto').html(html)
-         $('#tableGaleri').DataTable();
+         $('#tableGaleri').DataTable()
         },
-        error: function(resposen) {
-
+        error: function(response) {
+          notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
         }
       })
     }

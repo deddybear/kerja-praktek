@@ -1,5 +1,5 @@
 $(document).ready( function () {
- 
+
     let id;
     let method;
     let url;
@@ -11,7 +11,6 @@ $(document).ready( function () {
     });
 
     function clearModal() {
-
       $('#form')[0].reset();
       $('.custom-file-label').html('');
       $('#modal_artikel').modal('hide');
@@ -24,60 +23,67 @@ $(document).ready( function () {
         text: text,
       })
     }
-  
+
     getData();
-    setInterval(getData, 1000);
+
     function getData() {
       $.ajax({
-        url: '/admin/galeri/read-video',
-        type: 'GET',
+        url: '/admin/data-pegawai/read-data',
+        method: 'GET',
         async: true,
         dataType: 'JSON',
-        beforeSend :function () {
-          
-        },
-        complete: function() {
+        beforeSend: function () {
 
         },
-        success: function(data) {
-          let html ;
+        complete: function () {
+
+        },
+        success: function (data) {
+
+          let html ; 
           let nomer = 1;
-          $.each(data, function (index, row) {
-            html += '<tr>'
+          $.each(data, function(index, row){
+            html += '<tr>' 
               html += '<td>'+ nomer++ +'</td>'
-              html += '<td>'+ row.judul +'</td>'
-              html += '<td>'+ row.source +'</td>'
+              html += '<td>'+ row.akun[0].nama +'</td>'
+              html += '<td>'+ row.nip +'</td>'
+              html += '<td>'+ row.nama_pegawai +'</td>'
+              html += '<td>'+ row.alamat_pegawai +'</td>'
+              html += '<td>'+ row.pendidikan_terakhir +'</td>'
+              html += '<td>'+ row.jabatan +'</td>'
               html += '<td>'+ moment(row.created_at).format("D MMMM YYYY, H:mm:ss ") +'</td>'
               html += '<td>'+ moment(row.updated_at).format("D MMMM YYYY, H:mm:ss ") +'</td>'
               html += '<td>'
-                  html += '<a href="javascript:;" id="tombol-edit" class="btn btn-xs btn-info mr-1" data="'+ row.id_galeri+'"> Edit Data</a>'
-                  html += '<a href="javascript:;" id="tombol-hapus" class="btn btn-xs btn-warning ml-1" data="'+ row.id_galeri+'"> Hapus Data</a>'
+                  html += '<a href="javascript:;" id="tombol-edit" class="btn btn-xs btn-info mr-1" data="'+ row.id_pegawai+'"> Edit Data</a>'
+                  html += '<a href="javascript:;" id="tombol-hapus" class="btn btn-xs btn-warning ml-1" data="'+ row.id_pegawai+'"> Hapus Data</a>'
               html +='</td>'
-          html += '</tr>'
+            html +='</tr>'
+            
           })
-         $('#tableGaleri').DataTable().clear().destroy()
-         $('#data-galeri-video').html(html)
-         $('#tableGaleri').DataTable()
+          $('#tablePegawai').DataTable().clear().destroy()
+          $('#data-pegawai').html(html)
+          $('#tablePegawai').DataTable()
         },
-        error: function(response) {
+        error: function (response) {
           notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
         }
       });
     }
-
-    $('#tambah-video').click(function(){
+  
+    $('#tambah-pegawai').click(function(){
       method = "tambah";
       clearModal()
-      $('#tombol-submit').html('Tambah Video')
-      $('.modal-title').html('Tambah Video')
+      $('#tombol-submit').html('Tambah Pegawai')
+      $('.modal-title').html('Tambah Pegawai')
     })
 
-    $('#data-galeri-video').on('click', '#tombol-edit', function(){
+    $('#data-pegawai').on('click', '#tombol-edit', function(){
       method = "edit";
       clearModal()
       id = $(this).attr('data')
+
       $.ajax({
-        url: '/admin/galeri/select-video/' + id,
+        url: '/admin/data-pegawai/select-data/' + id,
         type: 'GET',
         dataType: 'JSON',
         beforeSend: function() {
@@ -87,18 +93,18 @@ $(document).ready( function () {
 
         },
         success: function(data) {
-         
-          $('.modal-title').html('Edit ' + data.judul)
-          $('#judul_video').val(data.judul)
-          $('#link_video').val(data.source)
-          $('#tombol-submit').html('Edit Video')
-          $('#modal-galeri-video').modal('show')
+
+          $('.modal-title').html('Edit Data : '+ data.nama_pegawai)
+          $('#nip').val(data.nip)
+          $('#nama_lengkap').val(data.nama_pegawai)
+          $('#alamat').val(data.alamat_pegawai)
+          $('#tombol-submit').html('Edit Data')
+          $('#modal-pegawai').modal('show')
         },
-        error: function(response) {
+        error: function (response) {
           notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
         }
       })
-      
     })
 
     $('#form').on('submit', function(e) {
@@ -106,11 +112,11 @@ $(document).ready( function () {
 
         if (method == 'tambah') {
 
-          url = '/admin/galeri/add-video';
+          url = '/admin/data-pegawai/add-data';
 
         } else if (method == 'edit'){
 
-          url = '/admin/galeri/edit-video/' + id;
+          url = '/admin/data-pegawai/edit-data/' + id;
 
         }
 
@@ -120,10 +126,10 @@ $(document).ready( function () {
           dataType: 'JSON',
           data:$('#form').serialize(),
           beforeSend: function() {
-
+           
           },
           complete: function() {
-
+            
           },
           success:function(data) {
             if (data.sukses){
@@ -148,7 +154,7 @@ $(document).ready( function () {
     })  
 
 
-    $('#data-galeri-video').on('click', '#tombol-hapus', function(){
+    $('#data-pegawai').on('click', '#tombol-hapus', function(){
       id = $(this).attr('data')
       swal({
         title: "Apakah kamu yakin ingin menghapus Data ?",
@@ -161,7 +167,7 @@ $(document).ready( function () {
         if(willDelete){
           $.ajax({
             type: 'POST',
-            url: '/admin/galeri/delete-video/' + id,
+            url: '/admin/data-pegawai/delete-data/' + id,
             dataType: 'JSON',
             beforeSend: function() {
           
@@ -173,15 +179,14 @@ $(document).ready( function () {
             success: function(data) {
               if (data.sukses) {
                 notifSwal('success', 'Yeeeey Berhasil', data.sukses)
-                getData()
+                getData();
               } else {
                 notifSwal('gagal', 'PERHATIAN', data.gagal)
-                getData()
               }
             }
           })
-        } else {
-          notifSwal('warning', 'PERHATIAN', 'Penghapusan Atikel dibatalkan')
+        }else{
+          notifSwal('warning', 'PERHATIAN', 'Penghapusan Data Pegawai dibatalkan')
         }
       })
 

@@ -47,10 +47,10 @@ $(document).ready( function () {
       },
       success :function(data){
         let html ;
+        let nomer = 1;
         $.each(data, function(index, row) {
-          let nomer = index + 1;
           html += '<tr>'
-              html += '<td>'+ nomer +'</td>'
+              html += '<td>'+ nomer++ +'</td>'
               html += '<td>'+ row.nama_artikel +'</td>'
               if (row.id_ketentuan == 'A1') {
                 html += '<td> Artikel Sekolah </td>'
@@ -68,7 +68,7 @@ $(document).ready( function () {
               html +='</td>'
           html += '</tr>'
         })
-        $('#tableArtikel').DataTable().destroy()
+        $('#tableArtikel').DataTable().clear().destroy()
         $('#data-artikel').html(html)
         $('#tableArtikel').DataTable();
       },

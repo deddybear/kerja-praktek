@@ -10,12 +10,12 @@
 @section('script')
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
 <script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
-
-<script src="{{ asset('halaman/admin/data-sekolah/data-pegawai.js') }}"></script>
+<script src="{{ asset('halaman/admin/data-pegawai/data-pegawai.js') }}"></script>
 @endsection
 
 @section('content')
 <div class="mx-auto">
+    {{ Auth::id() }}
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -27,41 +27,28 @@
                     </div>
                 </div>
 
-                <!-- /.card-header -->
-                <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>NIP</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Pendidikan Terakhir</th>
-                                <th>Jabatan</th>
-                                <th>Data Dibuat</th>
-                                <th>Data Terakhir Update</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="data-pegawai">
-                            <tr>
-                                <td>1</td>
-                                <td>555</td>
-                                <td>Bahlul</td>
-                                <td>Jl. Jagiran Selatan No. 15</td>
-                                <td>S-1</td>
-                                <td>Guru Tetap</td>
-                                <td>2020-01-20</td>
-                                <td>2020-01-27</td>
-                                <td>
-                                    <a href="javascript:;" id="tombol-edit" class="btn btn-info"
-                                        data="'+ row.id_users+'"> Edit Data</a>
-                                    <a href="javascript:;" id="tombol-hapus" class="btn btn-warning"
-                                        data="'+ row.id_users+'"> Hapus Data</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card-body">
+                    <div class="table-responsive p-0">
+                        <table id="tablePegawai" class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Dibuat oleh</th>
+                                    <th>NIP</th>
+                                    <th>Nama</th>
+                                    <th>Alamat</th>
+                                    <th>Pendidikan Terakhir</th>
+                                    <th>Jabatan</th>
+                                    <th>Data Dibuat</th>
+                                    <th>Data Terakhir Update</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-pegawai">
+                                
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,14 +74,14 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Nama</span>
+                            <span class="input-group-text">Nama Lengkap</span>
                         </div>
                         <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Alamat</span>
+                            <span class="input-group-text">Alamat Pegawai</span>
                         </div>
                         <input name="alamat" id="alamat" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
@@ -103,28 +90,29 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Pendidikan Terakhir</span>
                         </div>
-                        <select name="jenis_artikel" class="form-control">
-                            <option value="Ar-1" selected>SMA/SMK</option>
-                            <option value="Ar-2">D-1</option>
-                            <option value="Ar-3">D-2</option>
-                            <option value="Ar-4">D-3</option>
-                            <option value="Ar-5">D-4/S-1</option>
-                            <option value="Ar-6">S-2</option>
-                            <option value="Ar-7">S-3</option>
+                        <select name="pendidikan_terakhir" class="form-control">
+                            <option value="" selected>-- Silahkan Dipilih --</option>
+                            <option value="SMA">SMA</option>
+                            <option value="SMK">SMK</option>
+                            <option value="D-1">D-1</option>
+                            <option value="D-2">D-2</option>
+                            <option value="D-3">D-3</option>
+                            <option value="D-4">D-4</option>
+                            <option value="S-1">S-1</option>
+                            <option value="S-2">S-2</option>
+                            <option value="S-3">S-3</option>
                         </select>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Jabatan</span>
                         </div>
-                        <select name="jenis_artikel" class="form-control">
-                            <option value="Ar-1">Kepala Sekolah</option>
-                            <option value="Ar-2" selected>Guru Tetap</option>
-                            <option value="Ar-3">Guru Honorer</option>
-                            <option value="Ar-4">Guru Agama</option>
-                            <option value="Ar-5">Guru Olahraga</option>
-                            <option value="Ar-6">Guru Bahasa Inggris</option>
-                            <option value="Ar-7">Pesuruh</option>
+                        <select name="jabatan" class="form-control">
+                            <option value="" selected>-- Silahkan Dipilih --</option>
+                            <option value="Kepala Sekolah">Kepala Sekolah</option>
+                            <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
+                            <option value="Guru Pengajar">Guru Pengajar</option>
+                            <option value="">?</option>
                         </select>
                     </div>
                 </div>
