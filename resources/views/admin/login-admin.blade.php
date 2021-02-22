@@ -35,7 +35,7 @@
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="input-group mb-3">
-                        <input name="email" type="email" class="form-control" placeholder="Email">
+                        <input required name="email" type="email" class="form-control" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input name="password" type="password" class="form-control" placeholder="Password">
+                        <input required name="password" type="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -91,7 +91,7 @@
                         <form action="{{ route('register') }}" method="POST">
                             @csrf
                             <div class="input-group mb-3">
-                                <input name="namalengkap" type="text" class="form-control" placeholder="Full name">
+                                <input required name="namalengkap" type="text" class="form-control" placeholder="Full name">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <span class="fas fa-user"></span>
@@ -104,7 +104,7 @@
                                 @enderror
                             </div>
                             <div class="input-group mb-3">
-                                <input name="username" type="text" class="form-control" placeholder="Username">
+                                <input required name="username" type="text" class="form-control" placeholder="Username">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <span class="fas fa-id-badge"></span>
@@ -117,7 +117,7 @@
                                 @enderror
                             </div>
                             <div class="input-group mb-3">
-                                <input name="email" type="email" class="form-control" placeholder="Email">
+                                <input required name="email" type="email" class="form-control" placeholder="Email">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <span class="fas fa-envelope"></span>
@@ -130,7 +130,7 @@
                                 @enderror
                             </div>
                             <div class="input-group mb-3">
-                                <input name="password" type="password" class="form-control" placeholder="Password">
+                                <input required name="password" type="password" class="form-control" placeholder="Password">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <span class="fas fa-lock"></span>
@@ -143,7 +143,7 @@
                                 @enderror
                             </div>
                             <div class="input-group mb-3">
-                                <input name="password_confirmation" type="password" class="form-control"
+                                <input required name="password_confirmation" type="password" class="form-control"
                                     placeholder="Retype password">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
@@ -188,7 +188,7 @@
                             @csrf
                             <p class="mb-3"> Kamu Lupa Password? Silahkan Masukkan E-mail dibawah.... </p>
                             <div class="input-group mb-3">
-                                <input name="email" type="email" class="form-control" placeholder="Email">
+                                <input required name="email" type="email" class="form-control" placeholder="Email">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <span class="fas fa-envelope"></span>

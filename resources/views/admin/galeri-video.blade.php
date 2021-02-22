@@ -66,12 +66,12 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Judul</span>
                         </div>
-                        <input name="judul_video" id="judul_video" type="text" class="form-control"
+                        <input required name="judul_video" id="judul_video" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="form-group">
                         <label for="label-textArea">Link Embed</label>
-                        <textarea name="link_embed" id="link_video" class="form-control" id="label-textArea" rows="3"></textarea>
+                        <textarea required name="link_embed" id="link_video" class="form-control" id="label-textArea" rows="3"></textarea>
                     </div>
                     <span>
                         <a href="#" data-toggle="modal" data-target="#modal-tutor"> Cara Mendapatkan Link Embed</a>

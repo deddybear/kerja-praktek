@@ -79,7 +79,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Judul Pengumuman</span>
                                 </div>
-                                <input name="judul_pengumuman" id="judul_pengumuman" type="text" class="form-control"
+                                <input required name="judul_pengumuman" id="judul_pengumuman" type="text" class="form-control"
                                     aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                             </div>            
                             <div class="input-group mb-3">
@@ -87,7 +87,7 @@
                                     <span class="input-group-text">Cover Pengumuman</span>
                                 </div>
                                 <div class="custom-file">
-                                    <input name="cover_pengumuman" type="file" class="custom-file-input" id="exampleInputFile">
+                                    <input required name="cover_pengumuman" type="file" class="custom-file-input" id="exampleInputFile">
                                     <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                 </div>
                             </div>

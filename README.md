@@ -58,6 +58,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan Beberapa Struktur HTML 
 - Perbaikan isi Halaman Galeri (Guest)
 - Penambahan Menu Halaman Utama dan Dashboard (Admin)
+- Perbaikan isi Halaman Pendaftaran (Admin dan Guest)
 
 ## Update Repo Local 
 

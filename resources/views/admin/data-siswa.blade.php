@@ -75,28 +75,28 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">NIS</span>
                         </div>
-                        <input name="nis" id="nis" type="text" class="form-control" aria-label="Sizing example input"
+                        <input required name="nis" id="nis" type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Nama Lengkap</span>
                         </div>
-                        <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
+                        <input required name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Alamat</span>
                         </div>
-                        <input name="alamat" id="alamat" type="text" class="form-control"
+                        <input required name="alamat" id="alamat" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Agama</span>
                         </div>
-                        <select name="jenis_artikel" class="form-control">
+                        <select required name="jenis_artikel" class="form-control">
                             <option value="Ar-1" selected>Islam</option>
                             <option value="Ar-2">Kristen</option>
                             <option value="Ar-3">Katolik</option>

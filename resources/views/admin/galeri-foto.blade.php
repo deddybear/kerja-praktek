@@ -70,7 +70,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Judul</span>
                         </div>
-                        <input name="judul_foto" id="judul_foto" type="text" class="form-control"
+                        <input required name="judul_foto" id="judul_foto" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
@@ -78,7 +78,7 @@
                             <span class="input-group-text">File Foto</span>
                         </div>
                         <div class="custom-file">
-                            <input name="galeri-foto" type="file" class="custom-file-input" id="file-upload-form">
+                            <input required name="galeri-foto" type="file" class="custom-file-input" id="file-upload-form">
                             <label class="custom-file-label" for="file-upload-form">Choose file</label>
                         </div>
                     </div>

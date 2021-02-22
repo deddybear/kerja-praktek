@@ -69,28 +69,28 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">NIP</span>
                         </div>
-                        <input name="nip" id="nip" type="text" class="form-control" aria-label="Sizing example input"
+                        <input required name="nip" id="nip" type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Nama Lengkap</span>
                         </div>
-                        <input name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
+                        <input required name="nama_lengkap" id="nama_lengkap" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Alamat Pegawai</span>
                         </div>
-                        <input name="alamat" id="alamat" type="text" class="form-control"
+                        <input required name="alamat" id="alamat" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Pendidikan Terakhir</span>
                         </div>
-                        <select name="pendidikan_terakhir" class="form-control">
+                        <select required name="pendidikan_terakhir" class="form-control">
                             <option value="" selected>-- Silahkan Dipilih --</option>
                             <option value="SMA">SMA</option>
                             <option value="SMK">SMK</option>
@@ -107,7 +107,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Jabatan</span>
                         </div>
-                        <select name="jabatan" class="form-control">
+                        <select required name="jabatan" class="form-control">
                             <option value="" selected>-- Silahkan Dipilih --</option>
                             <option value="Kepala Sekolah">Kepala Sekolah</option>
                             <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
