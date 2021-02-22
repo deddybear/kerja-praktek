@@ -16,7 +16,7 @@ $(document).ready( function () {
 
   $('#summernote').summernote({
     height: 300,
-    placeholder: 'Silahkan artikel apa yang anda ingin posting',
+    placeholder: 'Silahkan di-isi apa yang anda ingin posting',
   });
 
   function clearModal() {
@@ -53,12 +53,20 @@ $(document).ready( function () {
               html += '<td>'+ nomer++ +'</td>'
               html += '<td>'+ row.nama_artikel +'</td>'
               if (row.id_ketentuan == 'A1') {
+
                 html += '<td> Artikel Sekolah </td>'
+
               } else if (row.id_ketentuan == 'A2') {
+
                 html += '<td> Artikel Guru </td>'
                 
-              } else {
+              } else if (row.id_ketentuan == 'A3'){
+
                 html += '<td> Artikel Siswa </td>'
+                
+              } else {
+
+                html += '<td> Info PPDB </td>'
               }
               html += '<td>'+ moment(row.created_at).format("D MMMM YYYY, H:mm:ss ") +'</td>'
               html += '<td>'+ moment(row.updated_at).format("D MMMM YYYY, H:mm:ss ") +'</td>'

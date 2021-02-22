@@ -35,6 +35,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan Fungsional didalam Controller, Ajax, dan Router
 - Perbaikan DataTables Bug
 - Penatahan ulang Struktur Folder
+- Perbaikan Controller Akun dan beberapa Route
 
 ## Front-end
 

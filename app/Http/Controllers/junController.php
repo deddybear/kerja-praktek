@@ -26,8 +26,4 @@ class junController extends Controller {
         return view('admin/data-pendaftar');    
     }
 
-    public function editAkun()
-    {
-        return view('admin/edit-akun');
-    }
 }

@@ -12,6 +12,7 @@
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ asset('plugin/fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('plugin/adminlte/css/adminlte.css') }}">
+    <link rel="stylesheet" href="{{ asset('halaman/master/master-admin.styles.css') }}">
     @yield('css')
 </head>
 
@@ -187,20 +188,18 @@
 
         <div class="content-wrapper">
             <div class="content-header">
-                <div class="row mb-2">
+                <div class="row m-2">
                     <div class="col-sm-6">
-
                         <h1 class="m-0 text-dark"> @yield('content-title')</h1>
+                        <div class="dropdown-divider @yield('warna-divider')"></div>
                     </div>
                 </div>
             </div>
-
             <section class="content">
                 <div class="container-fluid">
                     @yield('content')
                 </div>
             </section>
-
         </div>
     </div>
 

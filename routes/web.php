@@ -21,7 +21,7 @@ Route::get('/pendaftaran', 'PPDBController@guestPage');
 Route::get('/galeri-foto', 'GaleriFotoController@guestPage');
 Route::get('/galeri-video','GaleriVideoController@guestPage');
 Route::get('/ppdb', 'PPDBController@ppdbPage');
-Route::get('/struktur-organisasi', 'StrukturalController@guestPage');
+Route::get('/struktur-organisasi', 'PegawaiController@guestPage');
 Route::get('/artikel', 'ArtikelController@guestPage');
 
 
@@ -40,6 +40,7 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/artikel/edit-artikel/{id}', 'ArtikelController@editArtikel');
         Route::post('/admin/artikel/delete-artikel/{id}', 'ArtikelController@deleteArtikel');
     //* End-Artikel
+
     //* Route-Galeri-Foto
         Route::get('/dashboard/galeri-foto', 'GaleriFotoController@masterFoto');
         Route::get('/admin/galeri/read-foto', 'GaleriFotoController@dataFoto');
@@ -48,6 +49,7 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/galeri/edit-foto/{id}', 'GaleriFotoController@editDataFoto');
         Route::post('/admin/galeri/delete-foto/{id}', 'GaleriFotoController@deleteDataFoto');
     //* End-Galeri-Foto
+
     //* Route-Galeri-Video
         Route::get('/dashboard/galeri-video', 'GaleriVideoController@masterVideo');
         Route::get('/admin/galeri/read-video', 'GaleriVideoController@dataVideo');
@@ -56,6 +58,7 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/galeri/edit-video/{id}', 'GaleriVideoController@editLinkVideo');
         Route::post('/admin/galeri/delete-video/{id}', 'GaleriVideoController@deleteLinkVideo');
     //* End-Galeri-Video
+
     //* Route-Pegawai
         Route::get('/dashboard/data-pegawai', 'PegawaiController@masterPegawai');
         Route::get('/admin/data-pegawai/read-data','PegawaiController@dataPegawai');
@@ -65,6 +68,11 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/data-pegawai/delete-data/{id}', 'PegawaiController@deleteDataPegawai');
     //* End-Pegawai
 
+    //* Route Pengaturan Akun
+        Route::get('/dashboard/edit-akun', 'AkunController@settingAkun');
+
+    //* End Penganturan AKun
+    
         Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
         
         
@@ -73,7 +81,7 @@ Route::middleware(['auth','verified'])->group(function (){
   
         Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');
 
-        Route::get('/dashboard/edit-akun', 'junController@editAkun');
+        
 
     Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
     
