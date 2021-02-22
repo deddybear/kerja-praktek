@@ -72,9 +72,9 @@
                     <div class="form-group">
                         <label for="label-textArea">Link Embed</label>
                         <textarea name="link_embed" id="link_video" class="form-control" id="label-textArea" rows="3"></textarea>
-                      </div>
+                    </div>
                     <span>
-                        <a href="#" data-toggle="modal" data-target="#modal-tutor"> Cara Mendapatakan Link Embed</a>
+                        <a href="#" data-toggle="modal" data-target="#modal-tutor"> Cara Mendapatkan Link Embed</a>
                     </span>
                 </div>
                 <div class="modal-footer">
@@ -97,7 +97,12 @@ aria-hidden="true">
                 </button>
             </div>
             <div class="modal-body">
-                Isiii tutorial mendapatkan link embed dyucub
+                <p>1. Cari video yang ingin ditambahkan dari youtube</p>
+                <p>2. Pause video dan kembalikan ke menit 0:00 apabila video sedang berjalan</p>
+                <p>3. Klik tombol share di bawah video</p>
+                <p>4. Dari banyaknya pilihan share, pilih embed / sematkan</p>
+                <p>5. Copy isi code html yang disedikan</p>
+                <p>6. Paste kan code ke dalam form link embed</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

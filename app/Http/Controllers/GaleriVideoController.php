@@ -10,7 +10,9 @@ use Ramsey\Uuid\Uuid as Generate;
 class GaleriVideoController extends Controller
 {
     public function guestPage(){
-        return view('guest/galeri-video');
+        $galerivideo = Galeri::all()->where('id_ketentuan', 'G2');
+
+        return view('guest/galeri-video', ['galerivideo' => $galerivideo]);
     }
 
     //TODO: Halaman admin dan fungsi

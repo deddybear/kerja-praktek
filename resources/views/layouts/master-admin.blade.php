@@ -62,6 +62,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="/" class="nav-link">
+                                <i class="nav-icon fas fa-bed"></i>
+                                <p>
+                                    Halaman Utama
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="/dashboard/artikel-sekolah" class="nav-link">
                                 <i class="nav-icon fas fa-bed"></i>
                                 <p>
@@ -69,7 +77,6 @@
                                 </p>
                             </a>
                         </li>
-
                         <li class="nav-item has-tree">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-bed"></i>
@@ -149,9 +156,9 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/dashboard/setting" class="nav-link">
+                                    <a href="/dashboard/edit-akun" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Setting Akun</p>
+                                        <p>Edit Akun</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

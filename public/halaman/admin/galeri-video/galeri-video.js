@@ -26,7 +26,6 @@ $(document).ready( function () {
     }
   
     getData();
-    setInterval(getData, 1000);
     function getData() {
       $.ajax({
         url: '/admin/galeri/read-video',

@@ -56,7 +56,7 @@ $(document).ready( function () {
             html += '<tr>'
               html += '<td>'+ nomer++ +'</td>'
               html += '<td>'+ row.judul +'</td>'
-              html += '<td>'+ '<img class="w-100 h-100" src='+ row.source +'></td>'
+              html += '<td>'+ '<img class="img" src='+ row.source +'></td>'
               html += '<td>'+ moment(row.created_at).format("D MMMM YYYY, H:mm:ss ") +'</td>'
               html += '<td>'+ moment(row.updated_at).format("D MMMM YYYY, H:mm:ss ") +'</td>'
               html += '<td>'

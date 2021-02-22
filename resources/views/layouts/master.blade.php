@@ -59,6 +59,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/artikel">Artikel Sekolah</a>
                 </li>
+                @if (Auth::user())
+                    <li>
+                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                    </li>
+                @endif
             </ul>
         </div>
     </nav>

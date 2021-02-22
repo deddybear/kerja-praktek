@@ -11,7 +11,7 @@
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
 <script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
 
-<script src="{{ asset('halaman/admin/data-sekolah/data-pendaftar.js') }}"></script>    
+<script src="{{ asset('halaman/admin/data-siswa/data-pendaftar.js') }}"></script>    
 @endsection
 
 @section('content')

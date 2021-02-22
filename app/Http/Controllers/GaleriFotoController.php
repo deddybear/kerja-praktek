@@ -13,7 +13,9 @@ class GaleriFotoController extends Controller
 {
     
     public function guestPage(){
-        return view('guest/galeri-foto');
+        $galerifoto = Galeri::all()->where('id_ketentuan', 'G1');
+
+        return view('guest/galeri-foto', ['galerifoto' => $galerifoto]);
     }
 
     //TODO : Halaman Admin dan fungsi

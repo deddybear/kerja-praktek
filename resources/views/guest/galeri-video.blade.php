@@ -1,23 +1,24 @@
 @extends('layouts/master')
 
 @section('title', 'Galeri Video')
-    
+
 @section('css')
-    
+<link rel="stylesheet" href="{{ asset('halaman/guest/galeri-video/galeri-video.styles.css') }}">
 @endsection
 
 @section('script')
-    
+
 @endsection
 
-
 @section('content')
-    <div class="row">
-        @for ($i = 0; $i < 5; $i++)
-            <div class="card m-3" style="width: 18rem;">
-                <img src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}" class="card-img-top" alt="...">
-                
-              </div>
-          @endfor
-    </div>    
+<div class="row">
+    @foreach ($galerivideo as $item)
+    <div class="col-4 mb-3">
+       <div class="embed-responsive embed-responsive-16by9">
+           {!! $item->source !!}
+       </div>
+    </div>
+    @endforeach
+
+</div>
 @endsection

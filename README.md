@@ -56,6 +56,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan Views Fitur didalam Dashboard 
 - Perbaikan DOMJS didalam untuk tampilan
 - Perbaikan Beberapa Struktur HTML 
+- Perbaikan isi Halaman Galeri (Guest)
+- Penambahan Menu Halaman Utama dan Dashboard (Admin)
 
 ## Update Repo Local 
 

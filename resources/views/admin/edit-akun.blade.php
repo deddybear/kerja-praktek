@@ -1,11 +1,11 @@
 @extends('layouts/master-admin')
 
-@section('title', 'Setting')
+@section('title', 'Edit Akun')
 
-@section('content-title', 'Setting')
+@section('content-title', 'Edit Akun')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('halaman/admin/setting/setting.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('halaman/admin/edit-akun/edit-akun.styles.css') }}">
 @endsection
 
 @section('content')
