@@ -60,6 +60,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan isi Halaman Galeri (Guest)
 - Penambahan Menu Halaman Utama dan Dashboard (Admin)
 - Perbaikan isi Halaman Pendaftaran (Admin dan Guest)
+- Perbaikan isi Halaman Setting Akun
 
 ## Update Repo Local 
 
