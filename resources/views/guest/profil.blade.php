@@ -3,7 +3,14 @@
 @section('title', 'Profil Sekolah')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('halaman/guest/index/index.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
+<link rel="stylesheet" href="{{ asset('halaman/guest/profile/profile.styles.css') }}">
+@endsection
+
+@section('script')
+<script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
+<script src="{{ asset('halaman/guest/profile/profile.js') }}"></script>
+@endsection
 
 @section('content')
 <div class="shadow p-3 mb-5 bg-white rounded">
@@ -160,14 +167,16 @@
                             </div>
                             <div class="tab-pane fade" id="fasilitas" role="tabpanel"
                                 aria-labelledby="custom-tabs-one-messages-tab">
-                                <table class="table">
-                                    <tbody>
+                                <table id="table-fasilitas" class="table table-responsive">
+                                    <thead>
                                         <tr>
-                                            <td>No</td>
-                                            <td>Jenis</td>
-                                            <td>Nama</td>
-                                            <td>Jumlah</td>
+                                            <th>No</th>
+                                            <th>Jenis</th>
+                                            <th>Nama</th>
+                                            <th>Jumlah</th>
                                         </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>Sarana</td>
@@ -179,17 +188,19 @@
                             </div>
                             <div class="tab-pane fade" id="prestasi" role="tabpanel"
                                 aria-labelledby="custom-tabs-one-settings-tab">
-                                <table class="table">
-                                    <tbody>
+                                <table id="table-prestasi" class="table table-responsive">
+                                    <thead>
                                         <tr>
-                                            <td>No</td>
-                                            <td>Peringkat</td>
-                                            <td>Lomba</td>
-                                            <td>Penyelenggara</td>
-                                            <td>Waktu</td>
-                                            <td>Jenis</td>
-                                            <td>Oleh</td>
+                                            <th>No</th>
+                                            <th>Peringkat</th>
+                                            <th>Lomba</th>
+                                            <th>Penyelenggara</th>
+                                            <th>Waktu</th>
+                                            <th>Jenis</th>
+                                            <th>Oleh</th>
                                         </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td>JUARA 1</td>

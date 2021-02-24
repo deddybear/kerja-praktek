@@ -26,28 +26,23 @@
             <div class="announcement-list">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6 mb-2">
                             <div class="img-announcement">
                                 <img class="img-responsive"
                                     src="{{ asset('images-dummy/test-dev/hai.jpg') }}">
                             </div>
                         </div>
-                        <div class="col-6">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="text-announcement">
-                                            <p>Assalamu'alaikum Wr. Wb</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                            Laboriosam nisi, expedita aut maxime delectus magni perferendis quod 
-                                            inventore dolor officia ducimus minus vel est, dolore repudiandae sint. Ad, ullam quidem.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-12 col-sm-6 ">    
+                            <div class="text-announcement">
+                                <p>Assalamu'alaikum Wr. Wb</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Laboriosam nisi, expedita aut maxime delectus magni perferendis quod 
+                                inventore dolor officia ducimus minus vel est, dolore repudiandae sint. Ad, ullam quidem.</p>
+                            </div>        
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <section class="news-section">
                 <section class="news-section-title">
                     <h4>
@@ -55,7 +50,7 @@
                         <strong>TULISAN TERBARU</strong>
                     </h4>
                     <div class="text-right mr-3">
-                        <a href="/artikel" class="text-dark">
+                        <a href="/artikel" class="next text-dark">
                             <i class="fa fa-chevron-right"></i>
                             Selengkapnya</a>
                         </div>
@@ -178,7 +173,7 @@
                     <strong>PENGUMUMAN</strong>
                 </h4>
                 <div class="text-right mr-3">
-                    <a href="/ppdb" class="text-dark">
+                    <a href="/ppdb" class="next text-dark">
                         <i class="fa fa-chevron-right"></i>
                         Selengkapnya</a>
                     </div>
@@ -186,7 +181,7 @@
                 <div class="announcement-list">
                     <div class="container">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12 col-lg-6">
                                 <div class="shadow my-2 p-3 bg-white rounded">
                                     <div class="row">
                                         <div class="col-6">
@@ -204,47 +199,48 @@
                                 </div>
                                 <div class="shadow my-2 p-3 bg-white rounded">
                                     <div class="row">
-                                    <div class="col-6">
-                                        <div class="img-announcement">
-                                            <img class="img-responsive"
-                                            src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
+                                        <div class="col-6">
+                                            <div class="img-announcement">
+                                                <img class="img-responsive"
+                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="text-announcement">
-                                            <a href="#">Give away Panlok</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="shadow my-2 p-3 bg-white rounded">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="img-announcement">
-                                            <img class="img-responsive"
-                                            src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="text-announcement">
-                                            <a href="#">Give away Panlok</a>
+                                        <div class="col-6">
+                                            <div class="text-announcement">
+                                                <a href="#">Give away Panlok</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="shadow my-2 p-3 bg-white rounded">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <div class="img-announcement">
-                                            <img class="img-responsive"
-                                            src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
+                            <div class="col-12 col-lg-6">
+                                <div class="shadow my-2 p-3 bg-white rounded">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="img-announcement">
+                                                <img class="img-responsive"
+                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-announcement">
+                                                <a href="#">Give away Panlok</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="text-announcement">
-                                            <a href="#">Give away Panlok</a>
+                                </div>
+                                <div class="shadow my-2 p-3 bg-white rounded">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="img-announcement">
+                                                <img class="img-responsive"
+                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-announcement">
+                                                <a href="#">Give away Panlok</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </section>
     </section>
 </div>
