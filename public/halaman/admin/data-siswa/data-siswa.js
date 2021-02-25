@@ -10,6 +10,8 @@ $(document).ready( function () {
         }
     });
 
+    $('#tabel-siswa').DataTable()
+
     $('#data-siswa').on('click', '#tombol-edit', function(){
       $('.modal-title').html('Edit Data')
       $('#tombol-submit').html('Edit Data')
