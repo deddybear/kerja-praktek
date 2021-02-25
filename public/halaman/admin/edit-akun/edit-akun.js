@@ -1,8 +1,15 @@
 $(document).ready( function () {
+    
     var open = {
         panelNama     : false,
         panelUsername : false,
         panelPassword : false,
+        panelEmail    : false
+    }
+
+    let pesan = {
+        panelNama     : false,
+        panelUsername : false,
         panelEmail    : false
     }
 
@@ -11,7 +18,10 @@ $(document).ready( function () {
         
         if (!open.panelNama) {
             $('#setting-nama').show('slow', function () {
-                $('.text_panelNama').prepend(name)
+                if (!pesan.panelNama) {
+                    $('.text_panelNama').prepend(name)
+                    pesan.panelNama  = true;
+                }
                 open.panelNama = true;
             })
         } 
@@ -22,6 +32,7 @@ $(document).ready( function () {
             $('#setting-nama').hide('slow', function(){
                 $('span.text_panelNama').find('span.txt-prepend').remove()
                 open.panelNama = false;
+                pesan.panelNama = false;
             })
         }
         
@@ -32,7 +43,10 @@ $(document).ready( function () {
 
         if (!open.panelUsername) {
             $('#setting-username').show('slow', function() {
-                $('.text_panelUsername').prepend(name)
+                if (!pesan.panelUsername) {
+                    $('.text_panelUsername').prepend(name)
+                    pesan.panelUsername = true
+                }
                 open.panelUsername = true;
             })
         }
@@ -43,6 +57,7 @@ $(document).ready( function () {
             $('#setting-username').hide('slow', function() {
                 $('span.text_panelUsername').find('span.txt-prepend').remove()
                 open.panelUsername = false;
+                pesan.panelUsername = false;
             })
         }
     })
@@ -72,7 +87,10 @@ $(document).ready( function () {
 
         if (!open.panelEmail) {
             $('#setting-email').show('slow', function() {
-                $('.text_panelEmail').prepend(name)
+                if (!pesan.panelEmail) {
+                    $('.text_panelEmail').prepend(name)
+                    pesan.panelEmail = true;
+                }
                 open.panelEmail = true;
             })
         }
@@ -84,16 +102,8 @@ $(document).ready( function () {
             $('#setting-email').hide('slow', function() {
                 $('span.text_panelEmail').find('span.txt-prepend').remove()
                 open.panelEmail = false;
+                pesan.panelEmail = false;
             })
         }
     })
 })
-
-
-// if($(this).is(":visible")){
-//     $('.text_username').addClass('ml-4 strong')
-//     $('.text_username').prepend($name)
-// } else {
-//     $('.text_username').removeClass('ml-4 strong')
-//     $('span.text_username').find('span.txt-prepend').remove()
-// }

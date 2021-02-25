@@ -40,7 +40,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/pendaftaran">Pendaftaran Siswa</a>
-                        <a class="dropdown-item" href="/ppdb">Pengumuman PPDB</a>
+                        <a class="dropdown-item" href="/pengumuman-ppdb">Pengumuman PPDB</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/struktur-organisasi">Struktur Organisasi</a>
                     </div>

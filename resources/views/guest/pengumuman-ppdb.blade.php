@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="{{ asset('halaman/guest/index/index.styles.css') }}">
 @endsection
 
+@section('script')
+
+@endsection
+
 @section('title', 'Pengumuman PPDB')
 
 @section('content')

@@ -7,13 +7,12 @@ use Illuminate\Http\Request;
 class PPDBController extends Controller
 {
     
-    public function guestPage(){
+    public function pendaftaranPage() {
         return view('guest/pendaftaran');
     }
 
-    public function ppdbPage()
-    {
-        return view('guest/ppdb');
+    public function pengumumanPage() {
+        return view('guest/pengumuman-ppdb');
     }
 
 }

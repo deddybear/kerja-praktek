@@ -17,10 +17,10 @@ use Illuminate\Mail\Markdown;
 // TODO : ROUTE HALAMAN GUEST
 Route::get('/', 'IndexController@guestPage');
 Route::get('/profil-sekolah', 'ProfileController@guestPage');
-Route::get('/pendaftaran', 'PPDBController@guestPage');
+Route::get('/pendaftaran', 'PPDBController@pendaftaranPage');
 Route::get('/galeri-foto', 'GaleriFotoController@guestPage');
 Route::get('/galeri-video','GaleriVideoController@guestPage');
-Route::get('/ppdb', 'PPDBController@ppdbPage');
+Route::get('/pengumuman-ppdb', 'PPDBController@pengumumanPage');
 Route::get('/struktur-organisasi', 'PegawaiController@guestPage');
 Route::get('/artikel', 'ArtikelController@guestPage');
 

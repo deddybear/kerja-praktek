@@ -30,4 +30,8 @@ class dedController extends Controller
         $data = Frist::select('*')->where('id', 2)->with('last_name')->first();
         return $data;
     }
+
+    public function check(){
+        # code...
+    }
 }

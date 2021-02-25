@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="{{ asset('halaman/guest/pendaftaran/pendaftaran.styles.css') }}">
 @endsection
 
+@section('script')
+<script src="{{ asset('halaman/guest/pendaftaran/pendaftaran.js') }}"></script>
+@endsection
 @section('title', 'Pendaftaran Siswa Baru')
 
 @section('content')
@@ -12,7 +15,7 @@
         <section class="registration-section-title">
             <h1>Form Pendaftaran Siswa</h1>
         </section>
-        <form></form>
+        <form id="form">
         <div class="card">
             <div class="card-header">
                 <h2>Registrasi Peserta Didik</h2>
@@ -49,7 +52,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="hobi">Hobi</label>
-                        <select required id="inputState" class="form-control">
+                        <select required id="hobi" class="form-control">
                             <option selected>Olah Raga</option>
                             <option>Kesenian</option>
                             <option>Membaca</option>
@@ -58,9 +61,15 @@
                             <option>Lainnya</option>
                         </select>
                     </div>
+                    <div id="tambahan_hobi" class="form-group col-md-6" style="display: none">
+                        <label for="hobi">Hobi Lainnya</label>
+                        <input type="text" class="form-control" id="form_tambahan_hobi" placeholder="Mohon diisi Hobi anda" disabled>
+                    </div>
+                </div>
+                <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="cita_cita">Cita - Cita</label>
-                        <select required id="inputState" class="form-control">
+                        <select required id="cita_cita" class="form-control">
                             <option selected>PNS</option>
                             <option>TNI / POLRI</option>
                             <option>Guru / Dosen</option>
@@ -71,9 +80,14 @@
                             <option>Lainnya</option>
                         </select>
                     </div>
+                    <div id="tambahan_cita_cita" class="form-group col-md-6" style="display: none">
+                        <label for="hobi">Cita Cita Lainnya</label>
+                        <input type="text" class="form-control" id="form_tambahan_cita_cita" placeholder="Mohon diisi Hobi anda" disabled>
+                    </div>
                 </div>
             </div>
         </div>
+    </form>
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Data Pribadi</h2>
@@ -183,7 +197,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="tempat_tinggal">Tempat Tinggal</label>
-                        <select required id="inputState" class="form-control">
+                        <select required id="tempat_tinggal" class="form-control">
                             <option selected>Bersama Orang Tua</option>
                             <option>Wali</option>
                             <option>Kos</option>
@@ -192,9 +206,15 @@
                             <option>Lainnya</option>
                         </select>
                     </div>
+                    <div id="tambahan_tempat_tinggal" class="form-group col-md-6" style="display: none">
+                        <label for="form_tambahan_tempat_tinggal">Cita Cita Lainnya</label>
+                        <input type="text" class="form-control" id="form_tambahan_tempat_tinggal" placeholder="Mohon diisi Hobi anda" disabled>
+                    </div>
+                </div>
+                <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="moda_transportasi">Moda Transportasi</label>
-                        <select required id="inputState" class="form-control">
+                        <select required id="moda_transportasi" class="form-control">
                             <option selected>Jalan Kaki</option>
                             <option>Kendaraan Pribadi</option>
                             <option>Kendaraan Umum / Angkot / Pete - pete</option>
@@ -205,6 +225,10 @@
                             <option>Perahu Penyebrangan / Rakit / Getek</option>
                             <option>Lainnya</option>
                         </select>
+                    </div>
+                    <div id="tambahan_moda_transportasi" class="form-group col-md-6" style="display: none">
+                        <label for="form_tambahan_tempat_tinggal">Mohon diisi</label>
+                        <input required type="text" class="form-control" id="form_moda_transportasi" placeholder="Mohon diisi Hobi anda" disabled>
                     </div>
                 </div>
                 <div class="form-row">
