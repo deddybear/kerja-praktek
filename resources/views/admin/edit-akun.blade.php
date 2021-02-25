@@ -19,8 +19,21 @@
 @endsection
 
 @section('content')
-
 <div class="container">
+    {{-- @if ()
+        
+    @else
+        
+    @endif --}}
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <div class="mx-3">
         <ul class="list-group list-group-flush">
            @if ($dataAkun)
@@ -34,11 +47,17 @@
                             <span class="text_panelNama"> {{ $dataAkun->nama }} </span>
                             <div id="setting-nama" style="display: none">
                                 <div class="col-8 p-0">
-                                    <form action="" method="">
+                                    <form action="/admin/akun/ubah-nama/{{ Auth::id() }}" method="POST">
+                                        @csrf
                                         <div class="form-group row">
                                             <label for="namaakun" class="col-sm-4 col-form-label col-form-label-sm py-2">Nama Lengkap</label>
                                             <div class="col-sm-8 py-2">
-                                              <input type="text" class="form-control form-control-sm" name="nama_akun" placeholder="Nama Lengkap Asli Anda">
+                                              <input type="text" class="form-control form-control-sm @error('nama_akun') is-invalid @enderror" name="nama_akun" placeholder="Nama Lengkap Asli Anda">
+                                            @error('nama_akun')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
                                             </div>
                                         </div>
                                         <p class="alert alert-secondary" role="alert">
@@ -69,11 +88,17 @@
                             <span class="text_panelUsername"> {{ $dataAkun->username }} </span>
                             <div id="setting-username" style="display: none">
                                 <div class="col-8 p-0">
-                                    <form action="" method="">
+                                    <form action="/admin/akun/ubah-username/{{ Auth::id() }}" method="POST">
+                                        @csrf
                                         <div class="form-group row">
                                             <label for="username" class="col-sm-4 col-form-label col-form-label-sm">Username</label>
                                             <div class="col-sm-8 py-2">
-                                              <input type="text" class="form-control form-control-sm" name="username" placeholder="Username Baru Anda">
+                                              <input type="text" class="form-control form-control-sm  @error('username') is-invalid @enderror" name="username" placeholder="Username Baru Anda">
+                                              @error('username')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                              @enderror
                                             </div>
                                         </div>
                                         <div class="alert alert-secondary" role="alert">
@@ -103,17 +128,28 @@
                         <div class="col-8">
                             <div id="setting-password" style="display: none">
                                 <div class="col-8 p-0">
-                                    <form action="" method="">
+                                    <form action="/admin/akun/ganti-password/{{ Auth::id() }}" method="POST">
+                                        @csrf
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label col-form-label-sm py-2">Password Baru</label>
                                             <div class="col-sm-8 py-2">
-                                              <input type="password" class="form-control form-control-sm" name="password" placeholder="Password Baru">
+                                              <input type="password" class="form-control form-control-sm @error('password') is-invalid @enderror" name="password" placeholder="Password Baru">
+                                              @error('password')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label col-form-label-sm py-2">Konfrimasi Password</label>
                                             <div class="col-sm-8 py-2">
-                                              <input type="password" class="form-control form-control-sm" name="confrimasi_password" placeholder="Ulangi Password Baru">
+                                              <input type="password" class="form-control form-control-sm @error('password_confirmation') is-invalid @enderror" name="password_confirmation" placeholder="Ulangi Password Baru">
+                                              @error('password_confirmation')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                             </div>
                                         </div>
                                         <p class="alert alert-secondary" role="alert">
@@ -144,11 +180,16 @@
                             <span class="text_panelEmail"> {{ $dataAkun->email }} </span>
                             <div id="setting-email" style="display: none">
                                 <div class="col-8 p-0">
-                                    <form action="" method="">
+                                    <form action="/admin/akun/ubah-email/{{ Auth::id() }}" method="POST">
                                         <div class="form-group row">
                                             <label for="namaakun" class="col-sm-4 col-form-label col-form-label-sm py-2">Email Baru</label>
                                             <div class="col-sm-8 py-2">
-                                              <input type="email" class="form-control form-control-sm" name="email" placeholder="Nama Lengkap Asli Anda">
+                                              <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" name="email" placeholder="Nama Lengkap Asli Anda">
+                                              @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                              @enderror
                                             </div>
                                         </div>
                                         <p class="alert alert-secondary" role="alert">

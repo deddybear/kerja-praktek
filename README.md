@@ -36,6 +36,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan DataTables Bug
 - Penatahan ulang Struktur Folder
 - Perbaikan Controller Akun dan beberapa Route
+- Penambahan Sistem validasi pada saaat setting akun 
 
 ## Front-end
 
@@ -60,8 +61,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan isi Halaman Galeri (Guest)
 - Penambahan Menu Halaman Utama dan Dashboard (Admin)
 - Perbaikan isi Halaman Pendaftaran (Admin dan Guest)
-- Perbaikan isi Halaman Setting Akun
 - Perbaikan isi Halaman Pendaftaran (Guest)
+- Perbaikan isi Halaman Setting Akun (Admin)
 
 ## Update Repo Local 
 

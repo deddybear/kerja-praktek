@@ -69,7 +69,11 @@ Route::middleware(['auth','verified'])->group(function (){
     //* End-Pegawai
 
     //* Route Pengaturan Akun
-        Route::get('/dashboard/edit-akun', 'AkunController@settingAkun');
+        Route::get('/dashboard/edit-akun', 'AkunController@settingAkunPage');
+        Route::post('/admin/akun/ubah-nama/{id}', 'AkunController@ubahNama');
+        Route::post('/admin/akun/ubah-username/{id}', 'AkunController@ubahUsername');
+        Route::post('/admin/akun/ganti-password/{id}', 'AkunController@gantiPassword');
+        Route::post('/admin/akun/ubah-email/{id}', 'AkunController@ubahEmail');
 
     //* End Penganturan AKun
     
