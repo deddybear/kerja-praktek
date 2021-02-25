@@ -14,6 +14,8 @@ $(document).ready(function () {
         }
     });
 
+    $('#tabel-ppdb').DataTable()
+
     $('#tambah-pengumuman').click(function () {
         $('#tombol-submit').html('Tambah Pengumuman')
         $('.modal-title').html('Tambah Pengumuman')

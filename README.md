@@ -65,7 +65,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan isi Halaman Setting Akun (Admin)
 - Perbaikan isi Halaman Profil (Guest)
 - Penambahan Halaman Profil Sekolah (Admin)
-
+- Perbaikan isi Halaman Data Siswa dan Pengumuman PPDB (Admin)
+- Penambahan isi Halaman Profil Sekolah (Admin)
 ## Update Repo Local 
 
 Cara mendapatkan update dari repository cloud ke repository local 

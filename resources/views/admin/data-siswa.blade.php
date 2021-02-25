@@ -4,12 +4,14 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
 @endsection
 
 @section('script')
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
+<script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
 
-<script src="{{ asset('halaman/admin/data-sekolah/data-siswa.js') }}"></script>
+<script src="{{ asset('halaman/admin/data-siswa/data-siswa.js') }}"></script>
 @endsection
 
 @section('content')
@@ -23,7 +25,7 @@
 
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap">
+                    <table id="tabel-siswa" class="table table-hover text-nowrap">
                         <thead>
                             <tr>
                                 <th>No</th>
