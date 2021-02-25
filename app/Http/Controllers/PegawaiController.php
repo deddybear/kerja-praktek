@@ -11,7 +11,9 @@ class PegawaiController extends Controller
 {
     public function guestPage()
     {
-        return view('guest/struktur-organisasi');
+        $pegawai = Pegawai::select('nip', 'nama_pegawai', 'pendidikan_terakhir', 'jabatan')->get();
+
+        return view('guest/struktur-organisasi', ['pegawai' => $pegawai]);
     }
 
     //TODO : Halaman Admin dan fungsinya 
@@ -31,7 +33,7 @@ class PegawaiController extends Controller
              'nip'                 => 'required|alpha_num|max:30',
              'nama_lengkap'        => 'required|string|between:5,50',
              'alamat'              => 'required|string|between:5,100',
-             'pendidikan_terakhir' => 'required|string|size:3',
+             'pendidikan_terakhir' => 'required|string|between:2,3',
              'jabatan'             => 'required|between:5,20'
         ]);
 
@@ -66,7 +68,7 @@ class PegawaiController extends Controller
             'nip'                 => 'required|alpha_num|max:30',
             'nama_lengkap'        => 'required|string|between:5,50',
             'alamat'              => 'required|string|between:5,100',
-            'pendidikan_terakhir' => 'required|string|size:3',
+            'pendidikan_terakhir' => 'required|string|between:2,3',
             'jabatan'             => 'required|between:5,20'
        ]);
 

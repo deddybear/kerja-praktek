@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Mail\Markdown;
+use Monolog\Handler\RotatingFileHandler;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,6 +78,8 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/akun/ubah-email/{id}', 'AkunController@ubahEmail');
 
     //* End Penganturan AKun
+
+        Route::get('/dashboard/profil-sekolah', 'junController@profilSekolah');
     
         Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
         
