@@ -20,18 +20,38 @@
 
 @section('content')
 <div class="container">
-    {{-- @if ()
-        
-    @else
-        
-    @endif --}}
+    @if ($pesan = Session::get('sukses'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ $pesan }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @elseif ($pesan = Session::get('gagal'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ $pesan }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @elseif ($pesan = Session::get('password_sekarang'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{ $pesan }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
     @if ($errors->any())
-    <div class="alert alert-danger">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     @endif
     <div class="mx-3">
@@ -41,7 +61,7 @@
                 <a href="javascript:;" id="panelNama" class="no-decoration">
                     <div class="row">
                         <div class="col-3">
-                            <strong>Nama</strong>
+                            <strong>Nama Akun</strong>
                         </div>
                         <div class="col-8">
                             <span class="text_panelNama"> {{ $dataAkun->nama }} </span>
@@ -130,6 +150,17 @@
                                 <div class="col-8 p-0">
                                     <form action="/admin/akun/ganti-password/{{ Auth::id() }}" method="POST">
                                         @csrf
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label col-form-label-sm py-2">Password Sekarang</label>
+                                            <div class="col-sm-8 py-2">
+                                              <input type="password" class="form-control form-control-sm @if(Session::get('password_sekarang')) is-invalid @endif" name="password_sekarang" placeholder="Password Baru">
+                                              @if($message = Session::get('password_sekarang'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @endif
+                                            </div>
+                                        </div>
                                         <div class="form-group row">
                                             <label class="col-sm-4 col-form-label col-form-label-sm py-2">Password Baru</label>
                                             <div class="col-sm-8 py-2">

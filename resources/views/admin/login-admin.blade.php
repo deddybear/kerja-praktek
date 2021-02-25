@@ -27,9 +27,9 @@
                     </ul>
                 </div>
                 @endif
-                @if (session('status'))
+                @if ($pesan = Session::get('sukses'))
                     <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
+                        {{ $pesan }}
                     </div>
                 @endif
                 <form action="{{ route('login') }}" method="POST">
