@@ -21,17 +21,23 @@
                 <div class="container">
                     <div class="announcement-list">
                         <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>NIP</th>
+                                    <th>Nama</th>
+                                    <th>Pendidikan Terakhir</th>
+                                    <th>Jabatan</th>
+                                </tr>
+                            </thead>
                             <tbody>
+                                @foreach ($pegawai as $item)
                                 <tr>
-                                    <td>No</td>
-                                    <td>Nama</td>
-                                    <td>Jabatan</td>
+                                    <td>{{ $item->nip }}</td>
+                                    <td>{{ $item->nama_pegawai }}</td>
+                                    <td>{{ $item->pendidikan_terakhir }}</td>
+                                    <td>{{ $item->jabatan }}</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Dedi</td>
-                                    <td>Kepala Sekolah</td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

@@ -81,7 +81,6 @@
                                     <option value="A1" selected>Artikel Sekolah</option>
                                     <option value="A2">Artikel Guru</option>
                                     <option value="A3">Artikel Siswa</option>
-                                    <option value="P1">Info PPDB</option>
                                 </select>
                             </div>
                             <div class="input-group mb-3">

@@ -26,4 +26,8 @@ class junController extends Controller {
         return view('admin/data-pendaftar');    
     }
 
+    public function profilSekolah()
+    {
+        return view('admin/profil-sekolah');
+    }
 }

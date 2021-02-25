@@ -249,14 +249,14 @@
                     <div class="form-group col-md-3">
                         <label for="penerima_bantuan">Penerima KPS / PKH / KIP</label>
                         <select required id="inputState" class="form-control">
-                            <option selected>Ya</option>
-                            <option>Tidak</option>
+                            <option selected>Tidak</option>
+                            <option>Ya</option>
                         </select>
                     </div>
                     <div class="form-group col-md-9">
                         <label for="no_bantuan">Nomor KPS / PKH / KIP</label>
-                        <input required type="text" class="form-control" id="tanggal_masuk_sekolah"
-                            placeholder="Tanggal Masuk Sekolah">
+                        <input required type="text" class="form-control" id="no_bantuan"
+                            placeholder="Nomor KPS / PKH / KIP">
                     </div>
                 </div>
                 <div class="form-row">
@@ -351,7 +351,13 @@
                             <option>Lain - lain</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-8">
+                        <label for="nama_pekerjaan_ayah">Nama Pekerjaan</label>
+                        <input required type="text" class="form-control" id="nama_pekerjaan_ayah" placeholder="Nama Pekerjaan">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
                         <label for="penghasilan_ayah">Penghasilan Bulanan</label>
                         <select required id="inputState" class="form-control">
                             <option selected></option>
@@ -364,7 +370,7 @@
                             <option>> 20.000.000</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                         <label for="kebutuhan_khusus_ayah">Berkebutuhan Khusus</label>
                         <select required id="inputState" class="form-control">
                             <option selected>Tidak</option>
@@ -442,7 +448,13 @@
                             <option>Lain - lain</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-8">
+                        <label for="nama_pekerjaan_ibu">Nama Pekerjaan</label>
+                        <input required type="text" class="form-control" id="nama_pekerjaan_ibu" placeholder="Nama Pekerjaan">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
                         <label for="penghasilan_ibu">Penghasilan Bulanan</label>
                         <select required id="inputState" class="form-control">
                             <option selected></option>
@@ -455,7 +467,7 @@
                             <option>> 20.000.000</option>
                         </select>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                         <label for="kebutuhan_khusus_ibu">Berkebutuhan Khusus</label>
                         <select required id="inputState" class="form-control">
                             <option selected>Tidak</option>
@@ -514,7 +526,7 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                         <label for="pekerjaan_wali">Pekerjaan</label>
                         <select required id="inputState" class="form-control">
                             <option selected></option>
@@ -533,6 +545,12 @@
                             <option>Lain - lain</option>
                         </select>
                     </div>
+                    <div class="form-group col-md-8">
+                        <label for="nama_pekerjaan_wali">Nama Pekerjaan</label>
+                        <input required type="text" class="form-control" id="nama_pekerjaan_wali" placeholder="Nama Pekerjaan">
+                    </div>
+                </div>
+                <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="penghasilan_wali">Penghasilan Bulanan</label>
                         <select required id="inputState" class="form-control">

@@ -26,7 +26,6 @@
                             data-target="#modal-pegawai">Tambah Pegawai</a>
                     </div>
                 </div>
-
                 <div class="card-body">
                     <div class="table-responsive p-0">
                         <table id="tablePegawai" class="table table-hover text-nowrap">
@@ -94,13 +93,12 @@
                             <option value="" selected>-- Silahkan Dipilih --</option>
                             <option value="SMA">SMA</option>
                             <option value="SMK">SMK</option>
-                            <option value="D-1">D-1</option>
-                            <option value="D-2">D-2</option>
-                            <option value="D-3">D-3</option>
-                            <option value="D-4">D-4</option>
-                            <option value="S-1">S-1</option>
-                            <option value="S-2">S-2</option>
-                            <option value="S-3">S-3</option>
+                            <option value="D1">D1</option>
+                            <option value="D2">D2</option>
+                            <option value="D3">D3</option>
+                            <option value="D4 / S1">D4 / S1</option>
+                            <option value="S2">S2</option>
+                            <option value="S3">S3</option>
                         </select>
                     </div>
                     <div class="input-group mb-3">
@@ -112,7 +110,8 @@
                             <option value="Kepala Sekolah">Kepala Sekolah</option>
                             <option value="Wakil Kepala Sekolah">Wakil Kepala Sekolah</option>
                             <option value="Guru Pengajar">Guru Pengajar</option>
-                            <option value="">?</option>
+                            <option value="Tata Usaha">Tata Usaha</option>
+                            <option value="Penjaga Sekolah">Penjaga Sekolah</option>
                         </select>
                     </div>
                 </div>
