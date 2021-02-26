@@ -4,6 +4,13 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('halaman/guest/index/index.styles.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
+@endsection
+
+@section('script')
+<script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
+
+<script src="{{ asset('halaman/guest/struktur-organisasi/struktur-organisasi.js') }}"></script>
 @endsection
 
 @section('content')
@@ -20,7 +27,7 @@
                 </section>
                 <div class="container">
                     <div class="announcement-list">
-                        <table class="table">
+                        <table id="tabel-organisasi" class="table">
                             <thead>
                                 <tr>
                                     <th>NIP</th>
