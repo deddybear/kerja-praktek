@@ -38,18 +38,10 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan Controller Akun dan beberapa Route
 - Penambahan Sistem validasi pada saaat setting akun 
 - perbaikan bug 
+- Penambahan 
 
 ## Front-end
 
-###### Patch v0.4
-- Penambahan isi Halaman Utama
-- Penambahan Halaman PPDB, Struktur Organisasi, dan Berita
-- Penambahan isi Halaman Berita dan Perubahan isi Halaman Profil Sekolah
-- Penambahan Dashboard Admin dan isi Halaman Artikel Sekolah 
-- Penambahan isi Halaman Artikel Sekolah (Admin)
-- Penambahan Modal Halaman Artikel Sekolah (Admin)
-- Penambahan isi Profil Sekolah (Guest)
-- Penambahan isi Galeri Foto dan Video (Admin) dan isi Halaman Struktur Organisasi (Guest)
 
 ###### Patch v0.5
 - Penambahan isi Halaman Profil (Guest) 
@@ -69,6 +61,11 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Perbaikan isi Halaman Data Siswa dan Pengumuman PPDB (Admin)
 - Penambahan isi Halaman Profil Sekolah (Admin) 
 - Penambahan fungsional view ke halaman pendaftaran
+
+##### Patch v0.7
+- Update Fungsional halaman Pendaftaran
+
+
 ## Update Repo Local 
 
 Cara mendapatkan update dari repository cloud ke repository local 

@@ -1,10 +1,12 @@
 @extends('layouts/master')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('/plugin/datepicker/css/bootstrap-datepicker.css') }}">
 <link rel="stylesheet" href="{{ asset('halaman/guest/pendaftaran/pendaftaran.styles.css') }}">
 @endsection
 
 @section('script')
+<script src="{{ asset('plugin/datepicker/js/bootstrap-datepicker.js') }}"></script>
 <script src="{{ asset('halaman/guest/pendaftaran/pendaftaran.js') }}"></script>
 @endsection
 @section('title', 'Pendaftaran Siswa Baru')
@@ -16,6 +18,8 @@
             <h1>Form Pendaftaran Siswa</h1>
         </section>
         <form id="form">
+
+        {{-- Card Peserta Didik --}}
         <div class="card">
             <div class="card-header">
                 <h2>Registrasi Peserta Didik</h2>
@@ -87,7 +91,10 @@
                 </div>
             </div>
         </div>
+        {{-- End Card Peserta Didik --}}
     </form>
+
+        {{-- Card Data Pribadi --}}
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Data Pribadi</h2>
@@ -297,6 +304,9 @@
                 </div>
             </div>
         </div>
+        {{-- End Card Data Pribadi --}}
+
+        {{-- Card Data Ayah Kandung --}}
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Data Ayah Kandung</h2>
@@ -309,7 +319,7 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label for="tahun_ayah">Tahun Lahir</label>
-                        <input required type="date" class="form-control" id="thn_ayah" placeholder="Tahun Lahir">
+                        <input required type="date" class="form-control tahun-only" id="thn_ayah" placeholder="Tahun Lahir">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="pendidikan_ayah">Pendidikan</label>
@@ -390,6 +400,9 @@
                 </div>
             </div>
         </div>
+        {{-- End Card Data Ayah Kandung --}}
+
+        {{-- Card Data Ibu Kandung --}}
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Data Ibu Kandung</h2>
@@ -402,7 +415,7 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label for="tahun_ibu">Tahun Lahir</label>
-                        <input required type="date" class="form-control" id="thn_ibu" placeholder="Tahun Lahir">
+                        <input required type="date" class="form-control tahun-only" id="thn_ibu" placeholder="Tahun Lahir">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="pendidikan_ibu">Pendidikan</label>
@@ -484,6 +497,9 @@
                 </div>
             </div>
         </div>
+        {{-- End Card Data Ibu Kandung --}}
+
+        {{-- Card Data Wali --}}
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Data Wali</h2>
@@ -496,7 +512,7 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label for="tahun_wali">Tahun Lahir</label>
-                        <input required type="date" class="form-control" id="thn_wali" placeholder="Tahun Lahir">
+                        <input required type="date" class="form-control tahun-only" id="thn_wali" placeholder="Tahun Lahir">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="pendidikan_wali">Pendidikan</label>
@@ -555,6 +571,9 @@
                 </div>
             </div>
         </div>
+        {{-- End Card Data Wali --}}
+
+        {{-- Card Data Periodik --}}
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Data Periodik</h2>
@@ -630,86 +649,35 @@
                 </div>
             </div>
         </div>
+        {{-- End Card Data Periodik --}}
+
+
+        {{-- Prestasi Card --}}
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Prestasi</h2>
             </div>
             <div class="card-body" id="field_prestasi">
-                <div class="form-row">
-                    <div class="form-group col-sm-2">
-                        <label for="jenis_prestasi">Jenis</label>
-                        <select required name="jenis_prestasi0" id="inputState" class="form-control">
-                            <option selected>Sains</option>
-                            <option>Seni</option>
-                            <option>Olahraga</option>
-                            <option>Lainnya</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-sm-2">
-                        <label for="tingkat_prestasi">Tingkat</label>
-                        <select required name="tingkat_prestasi0" id="inputState" class="form-control">
-                            <option selected>Sekolah</option>
-                            <option>Kecamatan</option>
-                            <option>Kabupaten</option>
-                            <option>Provinsi</option>
-                            <option>Nasional</option>
-                            <option>Internasional</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="nama_prestasi">Nama Prestasi</label>
-                        <input required type="text" class="form-control" name="nama_prestasi0" id="nama_prestasi" placeholder="Nama Prestasi">
-                    </div>
-                    <div class="form-group col-sm-2">
-                        <label for="tahun_prestasi">Tahun</label>
-                        <input required type="date" class="form-control" name="tahun_prestasi0" id="tahun_prestasi" placeholder="Tahun">
-                    </div>
-                    <div class="form-group col-sm-3">
-                        <label for="nama_penyelenggara">Nama Penyelenggara</label>
-                        <input required type="text" class="form-control" name="penyelenggara" id="nama_penyelenggara"
-                            placeholder="Nama Penyelenggara">
-                    </div>
-                </div>
-                
             </div>
             <div class="card-body">
-                <a href="javascript:;" id="tambah_beasiswa" class="btn btn-primary col-12 mb-3">Tambah Prestasi</a>
+                <a href="javascript:;" id="tambah_prestasi" class="btn btn-primary col-12 mb-3">Tambah Prestasi</a>
             </div>
         </div>
+        {{-- End Prestasi Card --}}
+
+        {{-- Beasiswa Card--}}
         <div class="card mt-4">
             <div class="card-header">
                 <h2>Beasiswa</h2>
             </div>
+            <div class="card-body" id="field_beasiswa">
+            </div>
             <div class="card-body">
-                <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label for="jenis_beasiswa">Jenis</label>
-                        <select required id="inputState" class="form-control">
-                            <option selected>Anak Berprestasi</option>
-                            <option>Anak Miskin</option>
-                            <option>Pendidikan</option>
-                            <option>Unggulan</option>
-                            <option>Lainnya</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="keterangan_beasiswa">Keterangan</label>
-                        <input type="text" class="form-control" id="keterangan_beasiswa" placeholder="Keterangan">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="tahun_mulai_beasiswa">Tahun Mulai</label>
-                        <input required type="date" class="form-control" id="tahun_mulai_beasiswa"
-                            placeholder="Tahun Mulai">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="tahun_akhir_beasiswa">Tahun Selesai</label>
-                        <input required type="date" class="form-control" id="tahun_akhir_beasiswa"
-                            placeholder="Tahun Selesai">
-                    </div>
-                </div>
                 <a href="javascript:;" id="tambah_beasiswa" class="btn btn-primary col-12 mb-3">Tambah Beasiswa</a>
             </div>
         </div>
+         {{-- End Beasiswa Card--}}
+
         <div class="form-group mt-4">
             <label for="inputAddress">Asal Sekolah</label>
             <input required type="text" class="form-control" id="asalsekolah" placeholder="Asal Sekolah">
@@ -727,5 +695,4 @@
     </form>
 </div>
 
-</div>
 @endsection

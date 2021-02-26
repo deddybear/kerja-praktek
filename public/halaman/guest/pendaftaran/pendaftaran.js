@@ -1,5 +1,17 @@
 $(document).ready(function(){
-    var count = 1;
+    let countFieldPrestasi = 1;
+    let countFieldBeasiswa = 1;
+
+    tahunOnly()
+
+    function tahunOnly() {
+     $('.tahun-only').datepicker({
+         format: "yyyy",
+         viewMode: "years", 
+         minViewMode: "years"
+     });
+    }
+
 
     $('#form')[0].reset()
     $('#hobi').change(function(){
@@ -122,22 +134,57 @@ $(document).ready(function(){
         })
     })
 
-    $('#tambah_beasiswa').click(function(){
-        var formRow         = $('<div class="form-row" />');
-        var formGroupSM2    = $('<div class="form-group col-sm-2" />')
-        let jenisPrestasi   = $('<select required name="jenis_prestasi'+count+'" id="inputState" class="form-control"><option selected>Sains</option><option>Seni</option><option>Olahraga</option><option>Lainnya</option></select>')
-        let tingkatPrestasi = $('<select required name="tingkat_prestasi'+count+'" id="inputState" class="form-control"><option selected>Sekolah</option><option>Kecamatan</option><option>Kabupaten</option><option>Provinsi</option><option>Nasional</option><option>Internasional</option></select>')
-        var formGroupSM3    = $('<div class="form-group col-sm-3" />')
-        var formGroupMD3    = $('<div class="form-group col-md-3" />')
-        let namaPrestasi    = $('<input required type="text" class="form-control" name="nama_prestasi'+count+'" id="nama_prestasi" placeholder="Nama Prestasi">')
-        let tahunPrestasi   = $('<input required type="date" class="form-control" name="tahun_prestasi'+count+'" id="tahun_prestasi" placeholder="Tahun">')
-        let penyelenggara   = $('<input required type="text" class="form-control" name="penyelenggara'+count+'" id="nama_penyelenggara" placeholder="Nama Penyelenggara">')
-        if (count < 3) {
-            $("#field_prestasi").append(formRow.append(formGroupSM2.clone().append(jenisPrestasi), formGroupSM2.clone().append(tingkatPrestasi), formGroupMD3.append(namaPrestasi), formGroupSM2.clone().append(tahunPrestasi), formGroupSM3.append(penyelenggara)))
-            count ++;
-        } else {
-            
+    $('#tambah_prestasi').click(function(){
+
+        var formRow                 = $('<div class="form-row my-1" />');
+        var formGroupLG1            = $('<div class="form-group col-lg-1" />')
+        var formGroupLG2            = $('<div class="form-group col-lg-2" />')
+        let jenisPrestasi           = $('<label for="jenis_prestasi">Jenis</label> <select required name="jenis_prestasi'+countFieldPrestasi+'" id="inputState" class="form-control"><option selected>Sains</option><option>Seni</option><option>Olahraga</option><option>Lainnya</option></select>')
+        let tingkatPrestasi         = $('<label for="tingkat_prestasi">Tingkat</label> <select required name="tingkat_prestasi'+countFieldPrestasi+'" id="inputState" class="form-control"><option selected>Sekolah</option><option>Kecamatan</option><option>Kabupaten</option><option>Provinsi</option><option>Nasional</option><option>Internasional</option></select>')
+        var formGroupLG3            = $('<div class="form-group col-lg-3" />')
+        var formGroupLG3            = $('<div class="form-group col-lg-3" />')
+        let namaPrestasi            = $('<label for="nama_prestasi">Nama Prestasi</label> <input required type="text" class="form-control" name="nama_prestasi'+countFieldPrestasi+'" id="nama_prestasi" placeholder="Nama Prestasi">')
+        let tahunPrestasi           = $('<label for="tahun_prestasi">Tahun</label> <input required type="text" class="form-control tahun-only" name="tahun_prestasi'+countFieldPrestasi+'" id="tahun_prestasi" placeholder="Tahun">')
+        let penyelenggara           = $('<label for="nama_penyelenggara">Nama Penyelenggara</label> <input required type="text" class="form-control" name="penyelenggara'+countFieldPrestasi+'" id="nama_penyelenggara" placeholder="Nama Penyelenggara">')
+        let buttonHapusPrestasi     = $('<a class="btn btn-danger btn-sm h-25 my-auto"> hapus </a>')
+        
+        if (countFieldPrestasi <= 3) {
+
+            buttonHapusPrestasi.click(function() {
+                $(this).parent().remove();
+                countFieldPrestasi--;
+            });
+
+            $("#field_prestasi").append(formRow.append(formGroupLG2.clone().append(jenisPrestasi), formGroupLG2.clone().append(tingkatPrestasi), formGroupLG3.clone().append(namaPrestasi), formGroupLG1.clone().append(tahunPrestasi), formGroupLG3.clone().append(penyelenggara), buttonHapusPrestasi))
+            tahunOnly()
+            countFieldPrestasi ++;
         }
         
     })
+
+    $('#tambah_beasiswa').click(function(){
+     
+        var formRow             = $('<div class="form-row my-1" />');
+        var formGroupLG2        = $('<div class="form-group col-lg-2" />')
+        var formGroupLG5        = $('<div class="form-group col-lg-5" />')
+        let jenisBeasiswa       = $('<label for="jenis_beasiswa">Jenis</label> <select required id="jenis_beasiswa" name="jenis_beasiswa'+countFieldBeasiswa+'" class="form-control"><option selected>Anak Berprestasi</option><option>Anak Miskin</option><option>Pendidikan</option><option>Unggulan</option><option>Lainnya</option></select>')
+        let keterangan          = $('<label for="keterangan_beasiswa">Keterangan</label> <input type="text" class="form-control" name="keterangan_beasiswa'+countFieldBeasiswa+'" id="keterangan_beasiswa" placeholder="Keterangan">')
+        let tahunMulai          = $('<label for="tahun_mulai_beasiswa">Tahun Mulai</label> <input required type="text" class="form-control tahun-only" name="tahun_mulai_beasiswa'+countFieldBeasiswa+'" id="tahun_mulai_beasiswa" placeholder="Tahun Mulai">')
+        let tahunSelesai        = $('<label for="tahun_akhir_beasiswa">Tahun Selesai</label> <input required type="text" class="form-control tahun-only" name="tahun_selesai_beasiswa'+countFieldBeasiswa+'" id="tahun_akhir_beasiswa" placeholder="Tahun Selesai">')
+        let buttonHapusBeasiswa = $('<a class="btn btn-danger btn-sm h-25 my-auto"> hapus </a>')
+
+        if (countFieldBeasiswa <= 3) {
+            
+            buttonHapusBeasiswa.click(function(){
+                $(this).parent().remove();
+                countFieldBeasiswa--;
+            });
+
+            $('#field_beasiswa').append(formRow.append(formGroupLG2.clone().append(jenisBeasiswa), formGroupLG5.append(keterangan), formGroupLG2.clone().append(tahunMulai), formGroupLG2.clone().append(tahunSelesai), buttonHapusBeasiswa ))
+            tahunOnly()
+            countFieldBeasiswa++;
+        }
+    });
+
+    
 })
