@@ -63,7 +63,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan fungsional view ke halaman pendaftaran
 
 ##### Patch v0.7
-- Update Fungsional halaman Pendaftaran
+- Update Fungsional js halaman Pendaftaran
 
 
 ## Update Repo Local 

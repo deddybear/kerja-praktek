@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class dedController extends Controller
 {
-    public function ckeditor(){
-        return view('dev-test/halaman-test');
-    }
+    
 
     public function postArtikel(Request $request){
         dd($request);
@@ -31,7 +29,7 @@ class dedController extends Controller
         return $data;
     }
 
-    public function check(){
-        # code...
+    public function check(Request $request){
+       dd($request);
     }
 }

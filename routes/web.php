@@ -99,7 +99,7 @@ Route::middleware(['auth','verified'])->group(function (){
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
-Route::get('/test', 'dedController@test');
+Route::post('/check', 'dedController@check');
 Route::get('/select', 'junController@select');
 
 Route::get('/kontol', function() {

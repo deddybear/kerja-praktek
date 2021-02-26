@@ -1,3 +1,13 @@
+function crossCheck(e) {
+    if (!$("#setuju").prop("checked")){
+        swal("PERHATIAN !", "Mohon untuk bla bla bla bla", "error")
+        console.log('no check');
+        return false
+    } 
+
+}
+
+
 $(document).ready(function(){
     let countFieldPrestasi = 1;
     let countFieldBeasiswa = 1;
@@ -11,7 +21,6 @@ $(document).ready(function(){
          minViewMode: "years"
      });
     }
-
 
     $('#form')[0].reset()
     $('#hobi').change(function(){
@@ -139,8 +148,8 @@ $(document).ready(function(){
         var formRow                 = $('<div class="form-row my-1" />');
         var formGroupLG1            = $('<div class="form-group col-lg-1" />')
         var formGroupLG2            = $('<div class="form-group col-lg-2" />')
-        let jenisPrestasi           = $('<label for="jenis_prestasi">Jenis</label> <select required name="jenis_prestasi'+countFieldPrestasi+'" id="inputState" class="form-control"><option selected>Sains</option><option>Seni</option><option>Olahraga</option><option>Lainnya</option></select>')
-        let tingkatPrestasi         = $('<label for="tingkat_prestasi">Tingkat</label> <select required name="tingkat_prestasi'+countFieldPrestasi+'" id="inputState" class="form-control"><option selected>Sekolah</option><option>Kecamatan</option><option>Kabupaten</option><option>Provinsi</option><option>Nasional</option><option>Internasional</option></select>')
+        let jenisPrestasi           = $('<label for="jenis_prestasi">Jenis</label> <select required name="jenis_prestasi'+countFieldPrestasi+'" id="inputState" class="form-control"><option selected></option><option>Sains</option><option>Seni</option><option>Olahraga</option><option>Lainnya</option></select>')
+        let tingkatPrestasi         = $('<label for="tingkat_prestasi">Tingkat</label> <select required name="tingkat_prestasi'+countFieldPrestasi+'" id="inputState" class="form-control"><option selected></option><option>Sekolah</option><option>Kecamatan</option><option>Kabupaten</option><option>Provinsi</option><option>Nasional</option><option>Internasional</option></select>')
         var formGroupLG3            = $('<div class="form-group col-lg-3" />')
         var formGroupLG3            = $('<div class="form-group col-lg-3" />')
         let namaPrestasi            = $('<label for="nama_prestasi">Nama Prestasi</label> <input required type="text" class="form-control" name="nama_prestasi'+countFieldPrestasi+'" id="nama_prestasi" placeholder="Nama Prestasi">')
@@ -167,7 +176,7 @@ $(document).ready(function(){
         var formRow             = $('<div class="form-row my-1" />');
         var formGroupLG2        = $('<div class="form-group col-lg-2" />')
         var formGroupLG5        = $('<div class="form-group col-lg-5" />')
-        let jenisBeasiswa       = $('<label for="jenis_beasiswa">Jenis</label> <select required id="jenis_beasiswa" name="jenis_beasiswa'+countFieldBeasiswa+'" class="form-control"><option selected>Anak Berprestasi</option><option>Anak Miskin</option><option>Pendidikan</option><option>Unggulan</option><option>Lainnya</option></select>')
+        let jenisBeasiswa       = $('<label for="jenis_beasiswa">Jenis</label> <select required id="jenis_beasiswa" name="jenis_beasiswa'+countFieldBeasiswa+'" class="form-control"><option selected></option><option selected>Anak Berprestasi</option><option>Anak Miskin</option><option>Pendidikan</option><option>Unggulan</option><option>Lainnya</option></select>')
         let keterangan          = $('<label for="keterangan_beasiswa">Keterangan</label> <input type="text" class="form-control" name="keterangan_beasiswa'+countFieldBeasiswa+'" id="keterangan_beasiswa" placeholder="Keterangan">')
         let tahunMulai          = $('<label for="tahun_mulai_beasiswa">Tahun Mulai</label> <input required type="text" class="form-control tahun-only" name="tahun_mulai_beasiswa'+countFieldBeasiswa+'" id="tahun_mulai_beasiswa" placeholder="Tahun Mulai">')
         let tahunSelesai        = $('<label for="tahun_akhir_beasiswa">Tahun Selesai</label> <input required type="text" class="form-control tahun-only" name="tahun_selesai_beasiswa'+countFieldBeasiswa+'" id="tahun_akhir_beasiswa" placeholder="Tahun Selesai">')
