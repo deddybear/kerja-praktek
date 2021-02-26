@@ -30,7 +30,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="container">
-                    <a id="edit-profil" href="#" class="btn btn-primary" data-toggle="modal"
+                    <a id="edit-profil" href="#" class="btn btn-primary mb-4" data-toggle="modal"
                         data-target="#modal-profil">Edit Profil</a>
                     <div class="card">
                         <div class="card-body">
@@ -58,7 +58,8 @@
         <div class="card-body">
             <div class="row">
                 <div class="container">
-                    <button class="btn btn-primary mb-4">Edit Visi Misi</button>
+                    <a id="edit-visi-misi" href="#" class="btn btn-primary mb-4" data-toggle="modal"
+                        data-target="#modal-visi-misi">Edit Visi Misi</a>
                     <div class="card">
                         <div class="card-body">
                             <textarea readonly name="" id="" cols="135" rows="10"></textarea>
@@ -85,7 +86,8 @@
         <div class="card-body">
             <div class="row">
                 <div class="container">
-                    <button class="btn btn-primary mb-4">Tambah Fasilitas</button>
+                    <a id="edit-fasilitas" href="#" class="btn btn-primary mb-4" data-toggle="modal"
+                    data-target="#modal-fasilitas">Edit Fasilitas</a>
                     <div class="card">
                         <div class="card-body">
                             <table class="table" id="fasilitas">
@@ -130,7 +132,8 @@
         <div class="card-body">
             <div class="row">
                 <div class="container">
-                    <button class="btn btn-primary mb-4">Tambah Prestasi</button>
+                    <a id="tambah-prestasi" href="#" class="btn btn-primary mb-4" data-toggle="modal"
+                    data-target="#modal-prestasi">Tambah Prestasi</a>
                     <div class="card">
                         <div class="card-body">
                             <table class="table" id="prestasi">
@@ -180,12 +183,155 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form method="post" id="form">
+            <form method="post" id="form-profil">
                 <div class="modal-body">
                     <div class="col-7">
                         <textarea id="summernote"></textarea>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="tombol-submit-profil" class="btn btn-primary"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-visi-misi" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Visi Misi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form method="post" id="form-visi-misi">
+                <div class="modal-body">
+                    <div class="col-7">
+                        <textarea id="summernote"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="tombol-submit-visi-misi" class="btn btn-primary"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-fasilitas" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form method="post" id="form-fasilitas">
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Jenis</span>
+                        </div>
+                        <select required name="jenis_fasilitas" class="form-control">
+                            <option value="" selected>-- Silahkan Dipilih --</option>
+                            <option value="Sarana">Sarana</option>
+                            <option value="Prasarana">Prasarana</option>                    
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Nama</span>
+                        </div>
+                        <input required name="nama_fasilitas" id="nama_fasilitas" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Jumlah Unit</span>
+                        </div>
+                        <input required name="jumlah_fasilitas" id="jumlah_fasilitas" type="number" min="1" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="tombol-submit-fasilitas" class="btn btn-primary"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-prestasi" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <form method="post" id="form-prestasi">
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Peringkat</span>
+                        </div>
+                        <select required name="peringkat_prestasi" class="form-control">
+                            <option value="" selected>-- Silahkan Dipilih --</option>
+                            <option value="Juara 1">Juara 1</option>
+                            <option value="Juara 2">Juara 2</option>
+                            <option value="Juara 3">Juara 3</option>
+                            <option value="Harapan 1">Harapan 1</option>   
+                            <option value="Harapan 2">Harapan 2</option>   
+                            <option value="Harapan 3">Harapan 3</option>            
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Lomba</span>
+                        </div>
+                        <input required name="nama_lomba" id="nama_lomba" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Penyelenggara</span>
+                        </div>
+                        <input required name="penyelenggara_lomba" id="penyelenggara_lomba" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Waktu</span>
+                        </div>
+                        <input required name="waktu_lomba" id="waktu_lomba" type="date" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Jenis</span>
+                        </div>
+                        <select required name="jenis_lomba" class="form-control">
+                            <option value="" selected>-- Silahkan Dipilih --</option>
+                            <option value="Adzan">Adzan</option>
+                            <option value="Cerdas Cermat">Cerdas Cermat</option>
+                            <option value="Khitobah">Khitobah</option>
+                            <option value="Pildacil">Pildacil</option>   
+                            <option value="Puisi">Puisi</option>   
+                            <option value="Tahfid">Tahfid</option>
+                            <option value="Tartil">Tartil</option>
+                            <option value="Wudhu">Wudhu</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Penyelenggara</span>
+                        </div>
+                        <input required name="peraih_prestasi" id="peraih_prestasi" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" id="tombol-submit" class="btn btn-primary"></button>
