@@ -16,6 +16,8 @@
 @endsection
 
 @section('content')
+
+{{-- Profile Sekolah  --}}
 <div class="container">
     <div class="card card-primary collapsed-card ">
         <div class="card-header">
@@ -24,9 +26,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                 </button>
             </div>
-            <!-- /.card-tools -->
         </div>
-        <!-- /.card-header -->
         <div class="card-body">
             <div class="row">
                 <div class="container">
@@ -40,10 +40,11 @@
                 </div>
             </div>
         </div>
-        <!-- /.card-body -->
     </div>
-    <!-- /.card -->
 </div>
+{{-- End Profile Sekolah  --}}
+
+{{-- Visi dan Misi  --}}
 <div class="container">
     <div class="card card-primary collapsed-card ">
         <div class="card-header">
@@ -52,9 +53,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                 </button>
             </div>
-            <!-- /.card-tools -->
         </div>
-        <!-- /.card-header -->
         <div class="card-body">
             <div class="row">
                 <div class="container">
@@ -68,10 +67,11 @@
                 </div>
             </div>
         </div>
-        <!-- /.card-body -->
     </div>
-    <!-- /.card -->
 </div>
+{{-- End Visi dan Misi  --}}
+
+{{-- Fasilitas --}}
 <div class="container">
     <div class="card card-primary collapsed-card ">
         <div class="card-header">
@@ -80,44 +80,41 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                 </button>
             </div>
-            <!-- /.card-tools -->
         </div>
-        <!-- /.card-header -->
-        <div class="card-body">
-            <div class="row">
-                <div class="container">
-                    <a id="edit-fasilitas" href="#" class="btn btn-primary mb-4" data-toggle="modal"
-                    data-target="#modal-fasilitas">Edit Fasilitas</a>
-                    <div class="card">
-                        <div class="card-body">
-                            <table class="table" id="fasilitas">
-                                <thead>
-                                    <th>No</th>
-                                    <th>Jenis</th>
-                                    <th>Nama</th>
-                                    <th>Jumlah</th>
-                                    <th>Aksi</th>
-                                </thead>
-                                <tbody>
-                                    <td>1</td>
-                                    <td>Sarana</td>
-                                    <td>Meja</td>
-                                    <td>80 Unit</td>
-                                    <td>
-                                        <button class="btn btn-primary">Edit Data</button>
-                                        <button class="btn btn-danger">Hapus Data</button>
-                                    </td>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+        <div class="card-body">         
+            <a id="tambah-fasilitas" href="#" class="btn btn-primary mb-4" data-toggle="modal"
+                data-target="#modal-fasilitas">Tambah Fasilitas</a>
+            <div class="table-responsive">
+                <table class="table table-hover text-nowrap" id="fasilitas">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Jenis</th>
+                            <th>Nama</th>
+                            <th>Jumlah</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Sarana</td>
+                            <td>Meja</td>
+                            <td>80 Unit</td>
+                            <td>
+                                <a href="javascript:;" class="btn btn-xs btn-primary">Edit Data</a>
+                                <a href="javascript:;" class="btn btn-xs btn-danger">Hapus Data</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <!-- /.card-body -->
     </div>
-    <!-- /.card -->
 </div>
+{{-- End Fasilitas --}}
+
+{{-- Prestasi --}}
 <div class="container">
     <div class="card card-primary collapsed-card ">
         <div class="card-header">
@@ -126,54 +123,47 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
                 </button>
             </div>
-            <!-- /.card-tools -->
         </div>
-        <!-- /.card-header -->
         <div class="card-body">
-            <div class="row">
-                <div class="container">
-                    <a id="tambah-prestasi" href="#" class="btn btn-primary mb-4" data-toggle="modal"
-                    data-target="#modal-prestasi">Tambah Prestasi</a>
-                    <div class="card">
-                        <div class="card-body">
-                            <table class="table" id="prestasi">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Peringkat</th>
-                                        <th>Lomba</th>
-                                        <th>Penyelenggara</th>
-                                        <th>Waktu</th>
-                                        <th>Jenis</th>
-                                        <th>Oleh</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>JUARA 1</td>
-                                        <td>Tartil Al-Qur'an</td>
-                                        <td>Kec. Tambaksari</td>
-                                        <td>2013-06-04</td>
-                                        <td>Tartil Al-Qur'an</td>
-                                        <td>Rifkiyanti Nuriyah</td>
-                                        <td>
-                                            <button class="btn btn-primary">Edit Data</button>
-                                            <button class="btn btn-danger">Hapus Data</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+            <a id="tambah-prestasi" href="#" class="btn btn-primary mb-4" data-toggle="modal"
+                data-target="#modal-prestasi">Tambah Prestasi</a>
+            <div class="table-responsive">
+                <table class="table table-hover text-nowrap" id="prestasi">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Peringkat</th>
+                            <th>Lomba</th>
+                            <th>Penyelenggara</th>
+                            <th>Waktu</th>
+                            <th>Jenis</th>
+                            <th>Oleh</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>JUARA 1</td>
+                            <td>Tartil Al-Qur'an</td>
+                            <td>Kec. Tambaksari</td>
+                            <td>2013-06-04</td>
+                            <td>Tartil Al-Qur'an</td>
+                            <td>Rifkiyanti Nuriyah</td>
+                            <td>
+                                <a href="javascript:;" class="btn btn-xs btn-primary">Edit Data</a>
+                                <a href="javascript:;" class="btn btn-xs btn-danger">Hapus Data</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <!-- /.card-body -->
     </div>
-    <!-- /.card -->
 </div>
+{{-- End Prestasi --}}
+
+{{-- Modal-Profile --}}
 <div class="modal fade" id="modal-profil" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
         <div class="modal-content">
@@ -197,7 +187,11 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="modal-visi-misi" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+{{-- End Modal Profile --}}
+
+{{-- Modal Visi Misi --}}
+<div class="modal fade" id="modal-visi-misi" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
         <div class="modal-content">
             <div class="modal-header">
@@ -220,6 +214,9 @@
         </div>
     </div>
 </div>
+{{-- End Modal Visi Misi --}}
+
+{{-- Modal Fasilitas --}}
 <div class="modal fade" id="modal-fasilitas" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
@@ -229,8 +226,8 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form method="post" id="form-fasilitas">
-                <div class="modal-body">
+            <div class="modal-body">
+                <form method="post" id="form-fasilitas">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Jenis</span>
@@ -238,7 +235,7 @@
                         <select required name="jenis_fasilitas" class="form-control">
                             <option value="" selected>-- Silahkan Dipilih --</option>
                             <option value="Sarana">Sarana</option>
-                            <option value="Prasarana">Prasarana</option>                    
+                            <option value="Prasarana">Prasarana</option>
                         </select>
                     </div>
                     <div class="input-group mb-3">
@@ -252,17 +249,22 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Jumlah Unit</span>
                         </div>
-                        <input required name="jumlah_fasilitas" id="jumlah_fasilitas" type="number" min="1" class="form-control"
-                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input required name="jumlah_fasilitas" id="jumlah_fasilitas" type="number" min="1"
+                            class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
                     </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" id="tombol-submit-fasilitas" class="btn btn-primary"></button>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" id="tombol-submit-fasilitas" class="btn btn-primary"></button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
+{{-- End Modal Fasilitas --}}
+
+{{-- Modal Prestasi --}}
 <div class="modal fade" id="modal-prestasi" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
@@ -272,8 +274,8 @@
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <form method="post" id="form-prestasi">
-                <div class="modal-body">
+            <div class="modal-body">
+                <form method="post" id="form-prestasi">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Peringkat</span>
@@ -283,9 +285,9 @@
                             <option value="Juara 1">Juara 1</option>
                             <option value="Juara 2">Juara 2</option>
                             <option value="Juara 3">Juara 3</option>
-                            <option value="Harapan 1">Harapan 1</option>   
-                            <option value="Harapan 2">Harapan 2</option>   
-                            <option value="Harapan 3">Harapan 3</option>            
+                            <option value="Harapan 1">Harapan 1</option>
+                            <option value="Harapan 2">Harapan 2</option>
+                            <option value="Harapan 3">Harapan 3</option>
                         </select>
                     </div>
                     <div class="input-group mb-3">
@@ -299,8 +301,9 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Penyelenggara</span>
                         </div>
-                        <input required name="penyelenggara_lomba" id="penyelenggara_lomba" type="text" class="form-control"
-                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input required name="penyelenggara_lomba" id="penyelenggara_lomba" type="text"
+                            class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -318,8 +321,8 @@
                             <option value="Adzan">Adzan</option>
                             <option value="Cerdas Cermat">Cerdas Cermat</option>
                             <option value="Khitobah">Khitobah</option>
-                            <option value="Pildacil">Pildacil</option>   
-                            <option value="Puisi">Puisi</option>   
+                            <option value="Pildacil">Pildacil</option>
+                            <option value="Puisi">Puisi</option>
                             <option value="Tahfid">Tahfid</option>
                             <option value="Tartil">Tartil</option>
                             <option value="Wudhu">Wudhu</option>
@@ -332,12 +335,15 @@
                         <input required name="peraih_prestasi" id="peraih_prestasi" type="text" class="form-control"
                             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" id="tombol-submit" class="btn btn-primary"></button>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" id="tombol-submit" class="btn btn-primary"></button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
+{{-- End Modal Prestasi --}}
+
 @endsection

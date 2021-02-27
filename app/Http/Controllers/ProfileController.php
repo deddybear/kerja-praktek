@@ -9,4 +9,12 @@ class ProfileController extends Controller {
     public function guestPage(){
         return view('guest/profil');  
     }
+
+    // TODO : Halaman Admin & Fungsional
+
+    public function masterProfile(){
+        return view('admin/profil-sekolah');
+    }
+
+    
 }

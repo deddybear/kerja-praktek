@@ -18,7 +18,7 @@ class ArtikelController extends Controller
         return view('guest/artikel');
     }
 
-    //TODO : Halaman Admin
+    //TODO : Halaman Admin & Fungsional
 
     public function masterArtikel() {
         return view('admin/artikel-sekolah');

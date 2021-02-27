@@ -76,22 +76,20 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/akun/ubah-username/{id}', 'AkunController@ubahUsername');
         Route::post('/admin/akun/ganti-password/{id}', 'AkunController@gantiPassword');
         Route::post('/admin/akun/ubah-email/{id}', 'AkunController@ubahEmail');
+        Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
+    //* End Penganturan Akun
 
-    //* End Penganturan AKun
+    //* Route Profile Sekolah
+        Route::get('/dashboard/profil-sekolah', 'ProfileController@masterProfile');
+    //* End-Route Sekolah
 
-        Route::get('/dashboard/profil-sekolah', 'junController@profilSekolah');
-    
         Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
-        
-        
-
         Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
-  
         Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');
 
         
 
-    Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
+    
     
 });
 

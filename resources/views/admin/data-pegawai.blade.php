@@ -15,7 +15,6 @@
 
 @section('content')
 <div class="mx-auto">
-    {{ Auth::id() }}
     <div class="row">
         <div class="col-12">
             <div class="card">

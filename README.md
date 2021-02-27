@@ -20,53 +20,21 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 
 # Progress Project
 ## Back-end
+##### Patch v0.7
+- Penataan Route
+ - Penataan Controller
+- Penataan Fungsional Back-end
+- Pernambahan Blueprint tables untuk Profile,visi misi, fasilitas, prestasi (WIP)
 
-###### Patch v0.4
-- Penambahan Fiture Regis,login,lupa password
-- Perbaikan Route, Controller dan views
-- Perubahan Struktur Migrasi
-- Setup ajax dan fungsi controller artikel
-
-###### Patch v0.5
-- Perubahan Contoller Test dibagi jadi 2 (agar tidak terjadi conflict merge)
-- Finishing Ajax & Fungsional Fitur Artikel & Galeri Video
-
-###### Patch v0.6
-- Penambahan Fungsional didalam Controller, Ajax, dan Router
-- Perbaikan DataTables Bug
-- Penatahan ulang Struktur Folder
-- Perbaikan Controller Akun dan beberapa Route
-- Penambahan Sistem validasi pada saaat setting akun 
-- perbaikan bug 
-- Penambahan 
 
 ## Front-end
-
-
-###### Patch v0.5
-- Penambahan isi Halaman Profil (Guest) 
-- Penambahan Panel Data Pendaftar, Data Siswa dan Pegawai (Admin)
-
-##### Patch v0.6
-- Perbaikan Views Fitur didalam Dashboard 
-- Perbaikan DOMJS didalam untuk tampilan
-- Perbaikan Beberapa Struktur HTML 
-- Perbaikan isi Halaman Galeri (Guest)
-- Penambahan Menu Halaman Utama dan Dashboard (Admin)
-- Perbaikan isi Halaman Pendaftaran (Admin dan Guest)
-- Perbaikan isi Halaman Pendaftaran (Guest)
-- Perbaikan isi Halaman Setting Akun (Admin)
-- Perbaikan isi Halaman Profil (Guest)
-- Penambahan Halaman Profil Sekolah (Admin)
-- Perbaikan isi Halaman Data Siswa dan Pengumuman PPDB (Admin)
-- Penambahan isi Halaman Profil Sekolah (Admin) 
-- Penambahan fungsional view ke halaman pendaftaran
 
 ##### Patch v0.7
 - Update Fungsional halaman Pendaftaran
 - Update Halaman Profil Sekolah (Admin)
 - Update Halaman Struktur Organisasi (Guest)
 - Update Fungsional js halaman Pendaftaran
+- Perbaikan BUG Halaman Profile Sekolah (Admin)
 
 
 ## Update Repo Local 

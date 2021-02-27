@@ -15,6 +15,7 @@ class TblGallery extends Migration
     {
         Schema::create('tbl_gallery', function (Blueprint $table) {
             $table->uuid('id_gallery')->primary();
+            $table->string('id_ketentuan', 20)->index();
             $table->string('judul',50);
             $table->string('source')->nullable();
             $table->timestamps();

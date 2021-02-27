@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TblProfile extends Migration
+class TblFasilitas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,13 @@ class TblProfile extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_profile', function (Blueprint $table){
-            $table->uuid('id_profile')->primary();
-            $table->uuid('id_prestasi')->index();
+        Schema::create('tbl_fasilitas', function (Blueprint $table){
             $table->uuid('id_fasilitas')->index();
-            $table->mediumText('isi_profile');
-            $table->mediumText('isi_visi_misi');
-            $table->string('slug');
-            $table->timestamps();
+            $table->string('sarana', 50);
+            
         });
     }
 
-    
     /**
      * Reverse the migrations.
      *
@@ -32,6 +27,7 @@ class TblProfile extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_profile');
+        
+        Schema::dropIfExists('tbl_fasilitas');
     }
 }
