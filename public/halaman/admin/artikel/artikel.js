@@ -45,6 +45,9 @@ $(document).ready( function () {
       dataType: 'JSON',
       beforeSend :function(){
       },
+      complete :function(){
+
+      },
       success :function(data){
         let html ;
         let nomer = 1;

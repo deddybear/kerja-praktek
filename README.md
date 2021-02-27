@@ -22,10 +22,10 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 ## Back-end
 ##### Patch v0.7
 - Penataan Route
- - Penataan Controller
+- Penataan Controller
 - Penataan Fungsional Back-end
 - Pernambahan Blueprint tables untuk Profile,visi misi, fasilitas, prestasi (WIP)
-
+- Proses Penambahan CRUD AJAX untuk halaman profile 
 
 ## Front-end
 

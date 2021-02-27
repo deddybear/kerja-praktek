@@ -1,0 +1,23 @@
+@media only screen and (max-width : 360px) {
+    .kotak-360 {
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width : 600px) {
+    .kotak-768 {
+        background-color: blue;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+  
+    .kotak-768 {
+        background-color: blue;
+    }
+
+    .kotak-1000 {
+        background-color: pink;
+    }
+    
+}

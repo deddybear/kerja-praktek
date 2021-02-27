@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         //$artikel = factory(\App\Models\Artikel::class, 5)->create();
         // factory(\App\Models\Galeri::class, 5)->create();
        // factory(\App\Models\Pegawai::class, 5)->create();
-        factory(\App\Models\Akun::class, 1)->create();
+        //factory(\App\Models\Akun::class, 1)->create();
+        factory(\App\Models\Profile::class, 1)->create();
     }
 }

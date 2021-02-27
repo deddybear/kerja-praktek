@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Profile;
 
 class ProfileController extends Controller {
     
@@ -16,5 +17,9 @@ class ProfileController extends Controller {
         return view('admin/profil-sekolah');
     }
 
-    
+    public function dataProfile(){
+        return json_encode(Profile::with(['prestasi', 'fasilitas'])->get());
+    }
+
+
 }

@@ -2,6 +2,10 @@
 
 @section('title', 'CK EDITOR')
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('test.css') }}">
+@endsection
+
 @section('script')
     <script src="{{ asset('plugin/ckeditor/ckeditor.js') }}"></script>
     <script>
@@ -11,8 +15,9 @@
     });
     </script>
 @endsection
-@section('content')
-    <h1>Halo</h1>
 
-    <textarea name="content" id="content"></textarea>
+@section('content')
+   <div class="kotak-360 mb-2"  style="width: 100px; height: 100px;" ></div>
+   <div class="kotak-768 mb-2"  style="width: 100px; height: 100px;" ></div>
+   <div class="kotak-1000 mb-2" style="width: 100px; height: 100px;" ></div>
 @endsection

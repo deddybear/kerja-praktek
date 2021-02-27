@@ -81,6 +81,8 @@ Route::middleware(['auth','verified'])->group(function (){
 
     //* Route Profile Sekolah
         Route::get('/dashboard/profil-sekolah', 'ProfileController@masterProfile');
+        Route::get('/admin/profile/read-profile', 'ProfileController@dataProfile');
+
     //* End-Route Sekolah
 
         Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
@@ -97,6 +99,10 @@ Route::middleware(['auth','verified'])->group(function (){
 TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
+
+Route::get('/test', function(){
+    return view('/dev-test/halaman-test');
+});
 Route::post('/check', 'dedController@check');
 Route::get('/select', 'junController@select');
 

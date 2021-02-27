@@ -7,10 +7,14 @@
 @section('warna-divider', 'costume-warna-border-dark')
 
 @section('css')
+<link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/summernote/summernote-bs4.css') }}">
 @endsection
 
 @section('script')
+<script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
+<script src="{{ asset('plugin/summernote/summernote-bs4.js') }}"></script>
 <script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
 <script src="{{ asset('halaman/admin/profil/profil.js') }}"></script>
 @endsection
@@ -27,14 +31,18 @@
                 </button>
             </div>
         </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="container">
-                    <a id="edit-profil" href="#" class="btn btn-primary mb-4" data-toggle="modal"
-                        data-target="#modal-profil">Edit Profil</a>
-                    <div class="card">
-                        <div class="card-body">
-                            <textarea readonly name="" id="" cols="135" rows="10"></textarea>
+        <div class="card-body">   
+            <a id="edit-profil" href="#" class="btn btn-primary mb-4" data-toggle="modal"
+                data-target="#modal-profil">Edit Profil
+            </a>
+            <div class="card">
+                <div class="card-body" >
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                            <h4 class="card-title">View Profil Sekolah</h4>
+                        </div>
+                        <div class="card-body" id="text-profile-sekolah">
+
                         </div>
                     </div>
                 </div>
@@ -54,14 +62,18 @@
                 </button>
             </div>
         </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="container">
-                    <a id="edit-visi-misi" href="#" class="btn btn-primary mb-4" data-toggle="modal"
-                        data-target="#modal-visi-misi">Edit Visi Misi</a>
-                    <div class="card">
-                        <div class="card-body">
-                            <textarea readonly name="" id="" cols="135" rows="10"></textarea>
+        <div class="card-body">    
+            <a id="edit-visi-misi" href="#" class="btn btn-primary mb-4" data-toggle="modal"
+                data-target="#modal-visi-misi">Edit Visi Misi
+            </a>
+            <div class="card">
+                <div class="card-body" >
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                            <h4 class="card-title">View Visi dan Misi</h4>
+                        </div>
+                        <div class="card-body" id="text-visi-misi">
+
                         </div>
                     </div>
                 </div>
@@ -95,17 +107,8 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Sarana</td>
-                            <td>Meja</td>
-                            <td>80 Unit</td>
-                            <td>
-                                <a href="javascript:;" class="btn btn-xs btn-primary">Edit Data</a>
-                                <a href="javascript:;" class="btn btn-xs btn-danger">Hapus Data</a>
-                            </td>
-                        </tr>
+                    <tbody id="data-fasalitas" >
+                        
                     </tbody>
                 </table>
             </div>
@@ -136,25 +139,11 @@
                             <th>Lomba</th>
                             <th>Penyelenggara</th>
                             <th>Waktu</th>
-                            <th>Jenis</th>
                             <th>Oleh</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>JUARA 1</td>
-                            <td>Tartil Al-Qur'an</td>
-                            <td>Kec. Tambaksari</td>
-                            <td>2013-06-04</td>
-                            <td>Tartil Al-Qur'an</td>
-                            <td>Rifkiyanti Nuriyah</td>
-                            <td>
-                                <a href="javascript:;" class="btn btn-xs btn-primary">Edit Data</a>
-                                <a href="javascript:;" class="btn btn-xs btn-danger">Hapus Data</a>
-                            </td>
-                        </tr>
+                    <tbody id="data-prestasi">
                     </tbody>
                 </table>
             </div>
@@ -175,9 +164,8 @@
             </div>
             <form method="post" id="form-profil">
                 <div class="modal-body">
-                    <div class="col-7">
-                        <textarea id="summernote"></textarea>
-                    </div>
+                    <h1>bla bla bla bla ini teks</h1>
+                    <textarea class="summernote"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -202,9 +190,8 @@
             </div>
             <form method="post" id="form-visi-misi">
                 <div class="modal-body">
-                    <div class="col-7">
-                        <textarea id="summernote"></textarea>
-                    </div>
+                    <h1>bla bla bla teks</h1>
+                    <textarea id="visi-misi" class="summernote"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

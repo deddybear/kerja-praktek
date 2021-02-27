@@ -14,12 +14,12 @@ class TblPrestasi extends Migration
     public function up()
     {
         Schema::create('tbl_prestasi', function (Blueprint $table){
-            $table->uuid('id_prestasi')->index();
+            $table->uuid('id_prestasi')->primary();
+            $table->uuid('id_profile')->index();
             $table->string('peringkat', 11);
             $table->string('nama_lomba', 100);
             $table->string('penyelenggara', 100);
-            // $table->string('jenis', 50);
-            $table->string('oleh', 100);
+            $table->string('diperoleh', 100);
             $table->date('waktu');
         });
     }

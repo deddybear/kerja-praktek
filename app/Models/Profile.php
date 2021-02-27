@@ -12,4 +12,12 @@ class Profile extends Model
     protected $keyType      = 'string';
     public $incrementing    = false;
     protected $guarded      = [];
+
+    public function prestasi(){
+        return $this->hasMany('App\Models\Prestasi', 'id_profile', 'id_profile');
+    }
+
+    public function fasilitas(){
+        return $this->hasMany('App\Models\Fasilitas', 'id_profile', 'id_profile');
+    }
 }

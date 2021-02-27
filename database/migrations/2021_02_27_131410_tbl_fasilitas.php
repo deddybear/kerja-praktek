@@ -14,9 +14,11 @@ class TblFasilitas extends Migration
     public function up()
     {
         Schema::create('tbl_fasilitas', function (Blueprint $table){
-            $table->uuid('id_fasilitas')->index();
-            $table->string('sarana', 50);
-            
+            $table->uuid('id_fasilitas')->primary();
+            $table->uuid('id_profile')->index();
+            $table->string('jenis', 50);
+            $table->string('nama', 100);
+            $table->string('jumlah', 11);
         });
     }
 
