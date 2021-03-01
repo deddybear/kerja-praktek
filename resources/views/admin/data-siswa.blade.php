@@ -24,38 +24,40 @@
                 </div>
 
                 <!-- /.card-header -->
-                <div class="card-body table-responsive p-0">
-                    <table id="tabel-siswa" class="table table-hover text-nowrap">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>NIS</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Agama</th>
-                                <th>Data Dibuat</th>
-                                <th>Data Terakhir Update</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="data-siswa">
-                            <tr>
-                                <td>1</td>
-                                <td>555</td>
-                                <td>Bahlul</td>
-                                <td>Jl. Sidosermo IV No. 29</td>
-                                <td>Islam</td>
-                                <td>2020-01-20</td>
-                                <td>2020-01-24</td>
-                                <td>
-                                    <a href="javascript:;" id="tombol-edit" class="btn btn-info"
-                                        data="'+ row.id_users+'"> Edit Data</a>
-                                    <a href="javascript:;" id="tombol-hapus" class="btn btn-warning"
-                                        data="'+ row.id_users+'"> Hapus Data</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card-body">
+                    <div class="table-responsive p-0">
+                        <table id="tabel-siswa" class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>NIS</th>
+                                    <th>Nama</th>
+                                    <th>Alamat</th>
+                                    <th>Agama</th>
+                                    <th>Data Dibuat</th>
+                                    <th>Data Terakhir Update</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-siswa">
+                                <tr>
+                                    <td>1</td>
+                                    <td>555</td>
+                                    <td>Bahlul</td>
+                                    <td>Jl. Sidosermo IV No. 29</td>
+                                    <td>Islam</td>
+                                    <td>2020-01-20</td>
+                                    <td>2020-01-24</td>
+                                    <td>
+                                        <a href="javascript:;" id="tombol-edit" class="btn btn-info"
+                                            data="'+ row.id_users+'"> Edit Data</a>
+                                        <a href="javascript:;" id="tombol-hapus" class="btn btn-warning"
+                                            data="'+ row.id_users+'"> Hapus Data</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,8 +79,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">NIS</span>
                         </div>
-                        <input required name="nis" id="nis" type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default">
+                        <input required name="nis" id="nis" type="text" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
