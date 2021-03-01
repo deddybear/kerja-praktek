@@ -82,6 +82,8 @@ Route::middleware(['auth','verified'])->group(function (){
     //* Route Profile Sekolah
         Route::get('/dashboard/profil-sekolah', 'ProfileController@masterProfile');
         Route::get('/admin/profile/read-profile', 'ProfileController@dataProfile');
+        Route::post('/admin/profile/edit',  'ProfileController@editProfile');
+        Route::post('/admin/visi-misi/edit','ProfileController@editVisiMisi');
 
     //* End-Route Sekolah
 

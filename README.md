@@ -26,6 +26,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penataan Fungsional Back-end
 - Pernambahan Blueprint tables untuk Profile,visi misi, fasilitas, prestasi (WIP)
 - Proses Penambahan CRUD AJAX untuk halaman profile 
+- Penambahan Table pada Database 
 
 ## Front-end
 

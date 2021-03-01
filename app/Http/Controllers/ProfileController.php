@@ -21,5 +21,11 @@ class ProfileController extends Controller {
         return json_encode(Profile::with(['prestasi', 'fasilitas'])->get());
     }
 
+    public function editProfile(Request $request){
+        return json_encode($request->isi_teks_profile);
+    }
 
+    public function editVisiMisi(Request $request){
+        return json_encode($request->isi_teks_vm);
+    }
 }

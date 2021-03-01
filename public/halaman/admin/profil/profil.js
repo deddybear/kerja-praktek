@@ -27,7 +27,7 @@ $(document).ready(function(){
         placeholder: 'Silahkan di-isi apa yang anda ingin posting',
     })
 
-    
+    // TODO: read data profile, fasilitas, prestasi
     function getData() {
         $.ajax({
             url: '/admin/profile/read-profile',
@@ -42,7 +42,7 @@ $(document).ready(function(){
             },
             success :function (data) {
                 var textProfile, textVM, htmlFasilitas, htmlPrestasi, nomer;
-                console.log(data);
+         
                 $.each(data, function (index, row) {
                     textProfile = row.isi_profile;
                     textVM      = row.visi_misi;
@@ -93,4 +93,69 @@ $(document).ready(function(){
             }
         })
     }
+
+    //TODO : Fungsi Edit Profile Sekolah
+
+    $('#edit-profil').click(function(){
+        clearField()
+    })
+
+    $('#form-profil').on('submit', function(e){
+        e.preventDefault()
+
+        $.ajax({
+            url: '/admin/profile/edit',
+            type: 'POST',
+            dataType: 'JSON',
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            beforeSend: function(){
+
+            },
+            complete: function(){
+
+            },
+            success: function(data){
+                console.log(data);
+            },
+            error: function(){
+                notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
+            }
+        })
+    })
+
+    //TODO : Fungsi Edit visi misi 
+
+    $('#edit-visi-misi').click(function(){
+      
+        clearField()
+    })
+
+    $('#form-visi-misi').on('submit', function(e){
+        e.preventDefault()
+
+        $.ajax({
+            url: '/admin/visi-misi/edit',
+            type: 'POST',
+            dataType: 'JSON',
+            data:new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            beforeSend: function(){
+
+            },
+            complete: function(){
+
+            },
+            success: function(data){
+                console.log(data);
+            },
+            error: function(){
+                notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
+            }
+        })
+    })
 })

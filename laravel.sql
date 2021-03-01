@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 21, 2021 at 06:13 PM
+-- Generation Time: Mar 01, 2021 at 04:51 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -40,14 +40,15 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_100000_create_password_resets_table', 1),
 (2, '2021_02_05_055502_tbl_ppdb', 1),
-(3, '2021_02_05_055526_tbl_profile', 1),
 (4, '2021_02_05_055535_tbl_artikel', 1),
 (5, '2021_02_05_055542_tbl_gallery', 1),
 (6, '2021_02_05_060146_tbl_info_ibu', 1),
 (7, '2021_02_05_060205_tbl_info_ayah', 1),
 (8, '2021_02_05_144930_tbl_ketentuan', 1),
 (9, '2021_02_16_014349_tbl_akun', 1),
-(12, '2021_02_21_201323_tbl_pegawai', 2);
+(12, '2021_02_21_201323_tbl_pegawai', 2),
+(16, '2021_02_27_131410_tbl_fasilitas', 3),
+(17, '2021_02_27_130947_tbl_prestasi', 4);
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,8 @@ CREATE TABLE `tbl_akun` (
 INSERT INTO `tbl_akun` (`id_akun`, `username`, `password`, `nama`, `email`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`) VALUES
 ('656a8a16-183f-43dd-8fc5-a549e06b1dde', 'wachidtorico', '$2y$10$NukNurCnpoZYyTc33xUo9uxYfBSDnb2hs3Vg/MMv/IdDkki34JGZ.', 'Wachidto Rico', 'geometri.datar@gmail.com', NULL, NULL, '2021-02-16 08:12:47', '2021-02-16 08:12:47'),
 ('735caad7-fae1-42ed-9bf4-5a61ecfe4304', 'admin', '$2y$10$FIYmgO/BGjETZPKt1E/dkOQUtMFGO8W6vlePdQG2WO5HlZecRfur2', 'Junior Nandivanka', 'inallonebear@gmail.com', NULL, NULL, '2021-02-16 07:45:06', '2021-02-16 07:45:06'),
-('d508b43d-3748-44cb-bdf4-a1edc5352302', 'asdasdasdasd', '$2y$10$7/qWb9yBdMgvBlK8HzdyQeJZKTWWG/xfDC2GhQINrL7dj5RCGPcbK', 'Akun Tester', 'test@test.com', '2021-02-16 07:47:18', '7eLERhNR8d0UiwZzbbUrnXxvD26fXnc0JcokjujG09mMwbbIgXPFDfB3Gyyc', '2021-02-16 07:46:49', '2021-02-16 11:02:28');
+('d508b43d-3748-44cb-bdf4-a1edc5352302', 'infinityx22', '$2y$10$VG7MOXiKC2TtqRteuLQeseW2ZNXy.M4EG.yFX/hcd.QfKPei0WYVi', 'Junior Nandivanka', 'test@test.com', '2021-02-16 07:47:18', 'IVkkudeStZQibcmg5cu3gzkKYAtdhG7grtEgwRDhnSpeGX2DVxKFYOq3QaLT', '2021-02-16 07:46:49', '2021-02-25 05:44:19'),
+('MEsz9q3pPbTkoAnVDQguqiVS', 'babboey', '4fhkPjzdwp', 'Mr. Ewell Wolff', 'bonita94@cummerata.com', '2021-02-24 13:12:41', 'MfAcaq08gl', '2021-02-24 13:12:41', '2021-02-24 13:12:41');
 
 -- --------------------------------------------------------
 
@@ -132,6 +134,30 @@ INSERT INTO `tbl_artikel` (`id_artikel`, `id_ketentuan`, `nama_artikel`, `sampul
 ('7da1012a-e794-47a6-a12c-9fb304f9648d', 'A2', 'Coba Coba artikel', 'public/images/artikel/7da1012a-e794-47a6-a12c-9fb304f9648d/KrwfscOLevimMtcXD7PpSiQ4WtbreTa5XwgRlm5b.jpg', '<p>adadadasdad<br><br><img style=\"width: 243.583px;\" data-filename=\"kk-dummy.jpeg\" src=\"/images/artikel/7da1012a-e794-47a6-a12c-9fb304f9648d/kk-dummy.jpeg\"><br></p>\n', 'coba-coba-artikel', '2021-02-19 17:24:47', '2021-02-19 17:24:47'),
 ('cf89d5a6-b06f-44fe-9957-af1cb432ead6', 'A1', 'asdasd', 'public/images/artikel/cf89d5a6-b06f-44fe-9957-af1cb432ead6/Mf51rN6u2ih5CekKberIauoeymKakXMGKiRVHCd1.png', '<p><br></p>', 'asdasd', '2021-02-19 18:01:14', '2021-02-19 18:01:14'),
 ('db75a25d-f98a-4007-b0d3-c8b3aa4abed3', 'A2', 'edit edit coba', 'public/images/artikel/db75a25d-f98a-4007-b0d3-c8b3aa4abed3/I1iVzUq6GiJ6ABqHM7CPdxENM9PT6aNyiLbU6GeC.jpg', '<p>asdasdasdasdadadasdasdasd<br></p>', 'edit-edit-coba', '2021-02-20 05:53:50', '2021-02-20 06:06:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_fasilitas`
+--
+
+CREATE TABLE `tbl_fasilitas` (
+  `id_fasilitas` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_profile` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jenis` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jumlah` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_fasilitas`
+--
+
+INSERT INTO `tbl_fasilitas` (`id_fasilitas`, `id_profile`, `jenis`, `nama`, `jumlah`) VALUES
+('dda552e0-4ace-4235-9664-591171aee271', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Prasana', 'Wanita Bugil', '50'),
+('dda552e0-4ace-4235-9664-591171aee272', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Sarana', 'Kapur', '100'),
+('dda552e0-4ace-4235-9664-591171aee273', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Prasarana', 'Tempat Clubing 24Hours Non Stop DJTIKTOK', '1'),
+('dda552e0-4ace-4235-9664-591171aee275', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Sarana', 'PC GEMING HIGH END FPS 1K 8K JEDAB JEDUB', '100');
 
 -- --------------------------------------------------------
 
@@ -199,7 +225,8 @@ INSERT INTO `tbl_ketentuan` (`id_ketentuan`, `keterangan`) VALUES
 ('A2', 'Artikel Guru'),
 ('A3', 'Artikel Siswa'),
 ('G1', 'Galeri Foto'),
-('G2', 'Galeri Video');
+('G2', 'Galeri Video'),
+('P1', 'Info PPDB');
 
 -- --------------------------------------------------------
 
@@ -264,16 +291,50 @@ CREATE TABLE `tbl_ppdb` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_prestasi`
+--
+
+CREATE TABLE `tbl_prestasi` (
+  `id_prestasi` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_profile` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `peringkat` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama_lomba` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `penyelenggara` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diperoleh` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `waktu` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_prestasi`
+--
+
+INSERT INTO `tbl_prestasi` (`id_prestasi`, `id_profile`, `peringkat`, `nama_lomba`, `penyelenggara`, `diperoleh`, `waktu`) VALUES
+('862922be-f7c3-4d18-9568-09aa23a91e1c', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Harapan 1', 'Menyanyi sambil mendesah', 'Junior Nandivanka', 'Akbar', '2021-02-09'),
+('862922be-f7c3-4d18-9568-09aa23a91e1f', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Juara 1', 'macol', 'rico', 'rico', '2021-02-27'),
+('862922be-f7c3-4d18-9568-09aa23a91e1x', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Juara 2', 'Lomba Memukul Afdol ', 'Afdol', 'Faisal ', '2021-02-09'),
+('862922be-f7c3-4d18-9568-09aa23a91e1y', '0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Juara 3', 'Berenang di kolam buaya sambil kena kentut', 'Diaz ', 'Arif', '2021-02-07');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_profile`
 --
 
 CREATE TABLE `tbl_profile` (
   `id_profile` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `isi_artikel` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `isi_profile` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `visi_misi` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_profile`
+--
+
+INSERT INTO `tbl_profile` (`id_profile`, `isi_profile`, `visi_misi`, `slug`, `created_at`, `updated_at`) VALUES
+('0112ccb6-4bc4-445f-914d-6b3c50bec461', 'Ea eaque voluptas occaecati nemo et illo. Vel sed nemo quibusdam illum. Explicabo ea natus laudantium corrupti at vel quaerat non. Voluptas et velit nihil iusto dolores quae.', 'Quos autem rerum modi aperiam expedita facere deserunt. Quo quas voluptatem cum explicabo consequuntur. Et ducimus et aut nulla eius et mollitia. Doloribus officia eos quos nesciunt libero qui.', 'marvin-kutch', '2021-02-27 13:02:27', '2021-02-27 13:02:27');
 
 --
 -- Indexes for dumped tables
@@ -310,6 +371,13 @@ ALTER TABLE `tbl_akun`
 ALTER TABLE `tbl_artikel`
   ADD PRIMARY KEY (`id_artikel`),
   ADD KEY `tbl_artikel_id_ketentuan_index` (`id_ketentuan`);
+
+--
+-- Indexes for table `tbl_fasilitas`
+--
+ALTER TABLE `tbl_fasilitas`
+  ADD PRIMARY KEY (`id_fasilitas`),
+  ADD KEY `tbl_fasilitas_id_profile_index` (`id_profile`);
 
 --
 -- Indexes for table `tbl_gallery`
@@ -358,6 +426,13 @@ ALTER TABLE `tbl_ppdb`
   ADD KEY `tbl_ppdb_id_info_ibu_index` (`id_info_ibu`);
 
 --
+-- Indexes for table `tbl_prestasi`
+--
+ALTER TABLE `tbl_prestasi`
+  ADD PRIMARY KEY (`id_prestasi`),
+  ADD KEY `tbl_prestasi_id_profile_index` (`id_profile`);
+
+--
 -- Indexes for table `tbl_profile`
 --
 ALTER TABLE `tbl_profile`
@@ -371,7 +446,7 @@ ALTER TABLE `tbl_profile`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tbl_ahkir_nama`

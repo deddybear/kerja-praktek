@@ -157,7 +157,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Profil</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Bla Bla Bla Bla </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
@@ -165,11 +165,11 @@
             <form method="post" id="form-profil">
                 <div class="modal-body">
                     <h1>bla bla bla bla ini teks</h1>
-                    <textarea class="summernote"></textarea>
+                    <textarea class="summernote" name="isi_teks_profile"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" id="tombol-submit-profil" class="btn btn-primary"></button>
+                    <button type="submit" class="btn btn-primary">Bla Bla Bla Bla</button>
                 </div>
             </form>
         </div>
@@ -191,11 +191,11 @@
             <form method="post" id="form-visi-misi">
                 <div class="modal-body">
                     <h1>bla bla bla teks</h1>
-                    <textarea id="visi-misi" class="summernote"></textarea>
+                    <textarea class="summernote" name="isi_teks_vm"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" id="tombol-submit-visi-misi" class="btn btn-primary"></button>
+                    <button type="submit" class="btn btn-primary">Bla Bla Blas</button>
                 </div>
             </form>
         </div>
