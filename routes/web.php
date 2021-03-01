@@ -84,9 +84,23 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::get('/admin/profile/read-profile', 'ProfileController@dataProfile');
         Route::post('/admin/profile/edit',  'ProfileController@editProfile');
         Route::post('/admin/visi-misi/edit','ProfileController@editVisiMisi');
-
     //* End-Route Sekolah
 
+    //* Route Fasilitas 
+        Route::get('/admin/fasilitas/select-data/{id}', 'FasilitasController@selectData');
+        Route::post('/admin/fasilitas/tambah-data', 'FasilitasController@tambahData');
+        Route::post('/admin/fasilitas/edit-data/{id}', 'FasilitasController@editData');
+        Route::post('/admin/fasilitas/delete-data/{id}', 'FasilitasController@deleteData');
+    //* End-Route Fasilitas
+
+    //* Route Prestasi 
+        Route::get('/admin/prestasi/select-data/{id}', 'PrestasiController@selectData');
+        Route::post('/admin/prestasi/tambah-data', 'PrestasiController@tambahData');
+        Route::post('/admin/prestasi/edit-data/{id}', 'PrestasiController@editData');
+        Route::post('/admin/prestasi/delete-data/{id}', 'PrestasiController@deleteData');
+    //* End-Route Prestasi
+
+    
         Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
         Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
         Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');

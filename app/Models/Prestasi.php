@@ -10,6 +10,7 @@ class Prestasi extends Model
     protected $table        = 'tbl_prestasi';
     protected $primaryKey   = 'id_prestasi';
     protected $keyType      = 'string';
+    protected $guarded      = [];
     public $incrementing    = false;
     public $timestamps      = false;
 }

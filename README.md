@@ -28,6 +28,10 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Proses Penambahan CRUD AJAX untuk halaman profile 
 - Penambahan Table pada Database 
 
+##### Patch v0.8 
+- Finalisaasi Fungsional sistem untuk halaman profile (profile, visi misi, fasilitas, prestasi)
+- Setting up Route 
+
 ## Front-end
 
 ##### Patch v0.7
