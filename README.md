@@ -40,6 +40,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Halaman Struktur Organisasi (Guest)
 - Update Fungsional js halaman Pendaftaran
 - Perbaikan BUG Halaman Profile Sekolah (Admin)
+- Penambahan isi Halaman Pendaftaran (Guest)
 
 
 ## Update Repo Local 

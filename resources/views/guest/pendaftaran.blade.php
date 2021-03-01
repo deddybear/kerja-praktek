@@ -60,12 +60,12 @@
                         <div class="form-group col-md-6">
                             <label for="hobi">Hobi</label>
                             <select required id="hobi" class="form-control">
-                                <option selected></option>
-                                <option>Olah Raga</option>
-                                <option>Kesenian</option>
-                                <option>Membaca</option>
-                                <option>Menulis</option>
-                                <option>Travelin</option>
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="Olahraga">Olah Raga</option>
+                                <option value="Kesenian">Kesenian</option>
+                                <option value="Membaca">Membaca</option>
+                                <option value="Menulis">Menulis</option>
+                                <option value="Travelin">Travelin</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
@@ -78,14 +78,14 @@
                         <div class="form-group col-md-6">
                             <label for="cita_cita">Cita - Cita</label>
                             <select required id="cita_cita" class="form-control">
-                                <option selected></option>
-                                <option>PNS</option>
-                                <option>TNI / POLRI</option>
-                                <option>Guru / Dosen</option>
-                                <option>Dokter</option>
-                                <option>Politikus</option>
-                                <option>Wiraswasta</option>
-                                <option>Seni / Lukis / Artis / Sejenis</option>
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="PNS">PNS</option>
+                                <option value="TNI / POLRI">TNI / POLRI</option>
+                                <option value="Guru / Dosen">Guru / Dosen</option>
+                                <option value="Dokter">Dokter</option>
+                                <option value="Politikus">Politikus</option>
+                                <option value="Wiraswasta">Wiraswasta</option>
+                                <option value="Seni / Lukis / Artis ">Seni / Lukis / Artis / Sejenis</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
@@ -141,37 +141,37 @@
                         <div class="form-group col-md-6">
                             <label for="agama">Agama</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
-                                <option>Islam</option>
-                                <option>Kristen</option>
-                                <option>Katolik</option>
-                                <option>Hindu</option>
-                                <option>Buddha</option>
-                                <option>Konghucu</option>
+                                <option  value="" selected>--Silahkan Pilih--</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Katolik">Katolik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Buddha">Buddha</option>
+                                <option value="Konghucu">Konghucu</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="kebutuhan_khusus">Berkebutuhan Khusus</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
-                                <option>Tidak</option>
-                                <option>Tuna Netra</option>
-                                <option>Tuna Rungu</option>
-                                <option>Grahita Ringan</option>
-                                <option>Grahita Sedang</option>
-                                <option>Daksa Ringan</option>
-                                <option>Daksa Sedang</option>
-                                <option>Laras</option>
-                                <option>Tuna Wicara</option>
-                                <option>Tuna Ganda</option>
-                                <option>Hiper Aktif</option>
-                                <option>Cerdas Istimewa</option>
-                                <option>Bakat Istimewa</option>
-                                <option>Kesulitan Belajar</option>
-                                <option>Narkoba</option>
-                                <option>Indigo</option>
-                                <option>Down Sindrom</option>
-                                <option>Autis</option>
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="Tidak Ada">Tidak</option>
+                                <option value="Tuna Netra">Tuna Netra</option>
+                                <option value="Tuna Tungu">Tuna Rungu</option>
+                                <option value="Tuna Grahita Ringan">Tuna Grahita Ringan</option>
+                                <option value="Tuna Grahita Sedang">Tuna Grahita Sedang</option>
+                                <option value="Tuna Daksa Ringan">Tuna Daksa Ringan</option>
+                                <option value="Tuna Daksa Sedang">Tuna Daksa Sedang</option>
+                                <option value="Tuna Laras">Tuna Laras</option>
+                                <option value="Tuna Wicara">Tuna Wicara</option>
+                                <option value="Tuna Ganda">Tuna Ganda</option>
+                                <option value="Hiper Aktif">Hiper Aktif</option>
+                                <option value="Cerdas Istimewa">Cerdas Istimewa</option>
+                                <option value="Bakat Istimewa">Bakat Istimewa</option>
+                                <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                                <option value="Narkoba">Narkoba</option>
+                                <option value="Indigo">Indigo</option>
+                                <option value="Down Sindrom">Down Sindrom</option>
+                                <option value="Autis">Autis</option>
                             </select>
                         </div>
                     </div>
@@ -211,12 +211,12 @@
                         <div class="form-group col-md-6">
                             <label for="tempat_tinggal">Tempat Tinggal</label>
                             <select required id="tempat_tinggal" class="form-control">
-                                <option selected></option>
-                                <option>Bersama Orang Tua</option>
-                                <option>Wali</option>
-                                <option>Kos</option>
-                                <option>Asrama</option>
-                                <option>Panti Asuhan</option>
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="Bersama Orang Tua">Bersama Orang Tua</option>
+                                <option value="Wali">Wali</option>
+                                <option value="Kos">Kos</option>
+                                <option value="Asrama">Asrama</option>
+                                <option value="Panti Asuhan">Panti Asuhan</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
@@ -229,15 +229,15 @@
                         <div class="form-group col-md-6">
                             <label for="moda_transportasi">Moda Transportasi</label>
                             <select required id="moda_transportasi" class="form-control">
-                                <option selected></option>
-                                <option>Jalan Kaki</option>
-                                <option>Kendaraan Pribadi</option>
-                                <option>Kendaraan Umum / Angkot / Pete - pete</option>
-                                <option>Jemputan Sekolah</option>
-                                <option>Kereta Api</option>
-                                <option>Ojek</option>
-                                <option>Andong / Bendi / Sado / Becak</option>
-                                <option>Perahu Penyebrangan / Rakit / Getek</option>
+                                <option value="" selected>--Silahkan Pilih--</option>
+                                <option value="Jalan Kaki">Jalan Kaki</option>
+                                <option value="Kendaraan Pribadi">Kendaraan Pribadi</option>
+                                <option value="Kendaraan Umum">Kendaraan Umum / Angkot / Pete - pete</option>
+                                <option value="Jemputan Sekolah">Jemputan Sekolah</option>
+                                <option value="Kereta Api">Kereta Api</option>
+                                <option value="Ojek">Ojek</option>
+                                <option value="Becak">Andong / Bendi / Sado / Becak</option>
+                                <option value="Perahu Penyebrangan">Perahu Penyebrangan / Rakit / Getek</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
@@ -264,9 +264,9 @@
                         <div class="form-group col-md-3">
                             <label for="penerima_bantuan">Penerima KPS / PKH / KIP</label>
                             <select required id="status_kps" class="form-control">
-                                <option selected></option>
-                                <option>Tidak</option>
-                                <option>Ya</option>
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="Tidak">Tidak</option>
+                                <option value="Ya">Ya</option>
                             </select>
                         </div>
                         <div id="tambahan_status_kps" class="form-group col-md-9" style="display: none">
@@ -279,9 +279,9 @@
                         <div class="form-group col-md-3">
                             <label for="kewarganegaraan">Kewarganegaraan</label>
                             <select required id="status_warga" class="form-control">
-                                <option selected></option>
-                                <option>WNI</option>
-                                <option>WNA</option>
+                                <option selected>--Silahkan PIlih--</option>
+                                <option value="WNI">WNI</option>
+                                <option value="WNA">WNA</option>
                             </select>
                         </div>
                         <div id="tambahan_status_warga" class="form-group col-md-9" style="display: none">
@@ -293,7 +293,7 @@
                         <div class="form-group col-md-3">
                             <label for="penerima_pip">Layak diusulkan PIP</label>
                             <select required id="status_pip" class="form-control">
-                                <option selected></option>
+                                <option selected>--Silahkan Pilih--</option>
                                 <option>Tidak</option>
                                 <option>Ya</option>
                             </select>
@@ -301,16 +301,16 @@
                         <div id="tambahan_status_pip" class="form-group col-md-9" style="display: none">
                             <label for="alasan_pip">Alasan Layak PIP</label>
                             <select disabled required id="jenis_alasan_pip" class="form-control">
-                                <option selected></option>
-                                <option>Pemegang KPS/ PKH / KIP</option>
-                                <option>Penerima BSM 2014</option>
-                                <option>Yatim Piatu / Panti Asuhan / Panti Sosial</option>
-                                <option>Dampak Bencana Alam</option>
-                                <option>Pernah Drop Out</option>
-                                <option>Siswa Miskin / Rentan Miskin</option>
-                                <option>Daerah Konflik</option>
-                                <option>Keluarga Terpidana / Berada di LAPAS</option>
-                                <option>Kelainan Fisik</option>
+                                <option selected>--Silihkan Pilih--</option>
+                                <option value="Pemegang KPS / PKH / KIP">Pemegang KPS/ PKH / KIP</option>
+                                <option value="Penerima BSM 2014">Penerima BSM 2014</option>
+                                <option value="Yatim Piatu">Yatim Piatu / Panti Asuhan / Panti Sosial</option>
+                                <option value="Dampak Bencana Alam">Dampak Bencana Alam</option>
+                                <option value="Pernah Drop Out">Pernah Drop Out</option>
+                                <option value="Siswa Miskin">Siswa Miskin / Rentan Miskin</option>
+                                <option value="Daerah Konflik">Daerah Konflik</option>
+                                <option value="Kelurga Terpidana / Berada di Lapas">Keluarga Terpidana / Berada di LAPAS</option>
+                                <option value="Kelainan Fisik">Kelainan Fisik</option>
                             </select>
                         </div>
                     </div>
@@ -336,18 +336,18 @@
                         <div class="form-group col-md-2">
                             <label for="pendidikan_ayah">Pendidikan</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
-                                <option>Tidak Sekolah</option>
-                                <option>Putus SD</option>
-                                <option>SD Sederajat</option>
-                                <option>SMP Sederajat</option>
-                                <option>SMA Sederajat</option>
-                                <option>D1</option>
-                                <option>D2</option>
-                                <option>D3</option>
-                                <option>D4 / S1</option>
-                                <option>S2</option>
-                                <option>S3</option>
+                                <option value="" selected>--Silahkan Pilih--</option>
+                                <option value="Tidak Sekolah">Tidak Sekolah</option>
+                                <option value="Putus SD">Putus SD</option>
+                                <option value="SD">SD Sederajat</option>
+                                <option value="SMP">SMP Sederajat</option>
+                                <option value="SMA">SMA Sederajat</option>
+                                <option value="D1">D1</option>
+                                <option value="D2">D2</option>
+                                <option value="D3">D3</option>
+                                <option value="D4 / S1">D4 / S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
                             </select>
                         </div>
                     </div>
@@ -355,19 +355,19 @@
                         <div class="form-group col-md-6">
                             <label for="pekerjaan_ayah">Pekerjaan</label>
                             <select required id="pekerjaan_ayah" class="form-control">
-                                <option selected></option>
-                                <option>Tidak Bekerja</option>
-                                <option>Nelayan</option>
-                                <option>Petani</option>
-                                <option>Peternak</option>
-                                <option>PNS / TNI / POLRI</option>
-                                <option>Karyawan Swasta</option>
-                                <option>Pedagang Kecil</option>
-                                <option>Pedagang Besar</option>
-                                <option>Wiraswasta</option>
-                                <option>Wirausaha</option>
-                                <option>Buruh</option>
-                                <option>Pensiunan</option>
+                                <option selected>--Silihkan Pilih--</option>
+                                <option value="Tidak Bekerja">Tidak Bekerja</option>
+                                <option value="Nelayan">Nelayan</option>
+                                <option value="Petani">Petani</option>
+                                <option value="Peternak">Peternak</option>
+                                <option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>
+                                <option value="Karyawan Swasta">Karyawan Swasta</option>
+                                <option value="Pedagang Kecil">Pedagang Kecil</option>
+                                <option value="Pedagang Besar">Pedagang Besar</option>
+                                <option value="Wiraswatsa">Wiraswasta</option>
+                                <option value="Wirausaha">Wirausaha</option>
+                                <option value="Buruh">Buruh</option>
+                                <option value="Pensiunan">Pensiunan</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
@@ -379,8 +379,8 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="penghasilan_ayah">Penghasilan Bulanan</label>
-                            <select required id="inputState" class="form-control">
-                                <option selected></option>
+                            <select required id="penghasilan_ayah" class="form-control">
+                                <option selected>--Silahkan Pilih--</option>
                                 <option>< 500.000</option> 
                                 <option>500.000 - 999.999</option>
                                 <option>1.000.000 - 1.999.999</option>
@@ -392,25 +392,25 @@
                         <div class="form-group col-md-6">
                             <label for="kebutuhan_khusus_ayah">Berkebutuhan Khusus</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
-                                <option>Tidak</option>
-                                <option>Tuna Netra</option>
-                                <option>Tuna Rungu</option>
-                                <option>Grahita Ringan</option>
-                                <option>Grahita Sedang</option>
-                                <option>Daksa Ringan</option>
-                                <option>Daksa Sedang</option>
-                                <option>Laras</option>
-                                <option>Tuna Wicara</option>
-                                <option>Tuna Ganda</option>
-                                <option>Hiper Aktif</option>
-                                <option>Cerdas Istimewa</option>
-                                <option>Bakat Istimewa</option>
-                                <option>Kesulitan Belajar</option>
-                                <option>Narkoba</option>
-                                <option>Indigo</option>
-                                <option>Down Sindrom</option>
-                                <option>Autis</option>
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="Tidak Ada">Tidak</option>
+                                <option value="Tuna Netra">Tuna Netra</option>
+                                <option value="Tuna Tungu">Tuna Rungu</option>
+                                <option value="Tuna Grahita Ringan">Tuna Grahita Ringan</option>
+                                <option value="Tuna Grahita Sedang">Tuna Grahita Sedang</option>
+                                <option value="Tuna Daksa Ringan">Tuna Daksa Ringan</option>
+                                <option value="Tuna Daksa Sedang">Tuna Daksa Sedang</option>
+                                <option value="Tuna Laras">Tuna Laras</option>
+                                <option value="Tuna Wicara">Tuna Wicara</option>
+                                <option value="Tuna Ganda">Tuna Ganda</option>
+                                <option value="Hiper Aktif">Hiper Aktif</option>
+                                <option value="Cerdas Istimewa">Cerdas Istimewa</option>
+                                <option value="Bakat Istimewa">Bakat Istimewa</option>
+                                <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                                <option value="Narkoba">Narkoba</option>
+                                <option value="Indigo">Indigo</option>
+                                <option value="Down Sindrom">Down Sindrom</option>
+                                <option value="Autis">Autis</option>
                             </select>
                         </div>
                     </div>
@@ -436,18 +436,18 @@
                         <div class="form-group col-md-2">
                             <label for="pendidikan_ibu">Pendidikan</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
-                                <option>Tidak Sekolah</option>
-                                <option>Putus SD</option>
-                                <option>SD Sederajat</option>
-                                <option>SMP Sederajat</option>
-                                <option>SMA Sederajat</option>
-                                <option>D1</option>
-                                <option>D2</option>
-                                <option>D3</option>
-                                <option>D4 / S1</option>
-                                <option>S2</option>
-                                <option>S3</option>
+                                <option value="" selected>--Silahkan PIlih--</option>
+                                <option value="Tidak Sekolah">Tidak Sekolah</option>
+                                <option value="Putus SD">Putus SD</option>
+                                <option value="SD">SD Sederajat</option>
+                                <option value="SMP">SMP Sederajat</option>
+                                <option value="SMA">SMA Sederajat</option>
+                                <option value="D1">D1</option>
+                                <option value="D2">D2</option>
+                                <option value="D3">D3</option>
+                                <option value="D4 / S1">D4 / S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
                             </select>
                         </div>
                     </div>
@@ -455,19 +455,19 @@
                         <div class="form-group col-md-4">
                             <label for="pekerjaan_ibu">Pekerjaan</label>
                             <select required id="pekerjaan_ibu" class="form-control">
-                                <option selected></option>
-                                <option>Tidak Bekerja</option>
-                                <option>Nelayan</option>
-                                <option>Petani</option>
-                                <option>Peternak</option>
-                                <option>PNS / TNI / POLRI</option>
-                                <option>Karyawan Swasta</option>
-                                <option>Pedagang Kecil</option>
-                                <option>Pedagang Besar</option>
-                                <option>Wiraswasta</option>
-                                <option>Wirausaha</option>
-                                <option>Buruh</option>
-                                <option>Pensiunan</option>
+                                <option selected>--Silihkan Pilih--</option>
+                                <option value="Tidak Bekerja">Tidak Bekerja</option>
+                                <option value="Nelayan">Nelayan</option>
+                                <option value="Petani">Petani</option>
+                                <option value="Peternak">Peternak</option>
+                                <option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>
+                                <option value="Karyawan Swasta">Karyawan Swasta</option>
+                                <option value="Pedagang Kecil">Pedagang Kecil</option>
+                                <option value="Pedagang Besar">Pedagang Besar</option>
+                                <option value="Wiraswatsa">Wiraswasta</option>
+                                <option value="Wirausaha">Wirausaha</option>
+                                <option value="Buruh">Buruh</option>
+                                <option value="Pensiunan">Pensiunan</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
@@ -480,7 +480,7 @@
                         <div class="form-group col-md-6">
                             <label for="penghasilan_ibu">Penghasilan Bulanan</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
+                                <option selected>--Silahkan Pilih--</option>
                                 <option>< 500.000</option> 
                                 <option>500.000 - 999.999</option>
                                 <option>1.000.000 - 1.999.999</option>
@@ -492,25 +492,25 @@
                         <div class="form-group col-md-6">
                             <label for="kebutuhan_khusus_ibu">Berkebutuhan Khusus</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
-                                <option>Tidak</option>
-                                <option>Tuna Netra</option>
-                                <option>Tuna Rungu</option>
-                                <option>Grahita Ringan</option>
-                                <option>Grahita Sedang</option>
-                                <option>Daksa Ringan</option>
-                                <option>Daksa Sedang</option>
-                                <option>Laras</option>
-                                <option>Tuna Wicara</option>
-                                <option>Tuna Ganda</option>
-                                <option>Hiper Aktif</option>
-                                <option>Cerdas Istimewa</option>
-                                <option>Bakat Istimewa</option>
-                                <option>Kesulitan Belajar</option>
-                                <option>Narkoba</option>
-                                <option>Indigo</option>
-                                <option>Down Sindrom</option>
-                                <option>Autis</option>
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="Tidak Ada">Tidak</option>
+                                <option value="Tuna Netra">Tuna Netra</option>
+                                <option value="Tuna Tungu">Tuna Rungu</option>
+                                <option value="Tuna Grahita Ringan">Tuna Grahita Ringan</option>
+                                <option value="Tuna Grahita Sedang">Tuna Grahita Sedang</option>
+                                <option value="Tuna Daksa Ringan">Tuna Daksa Ringan</option>
+                                <option value="Tuna Daksa Sedang">Tuna Daksa Sedang</option>
+                                <option value="Tuna Laras">Tuna Laras</option>
+                                <option value="Tuna Wicara">Tuna Wicara</option>
+                                <option value="Tuna Ganda">Tuna Ganda</option>
+                                <option value="Hiper Aktif">Hiper Aktif</option>
+                                <option value="Cerdas Istimewa">Cerdas Istimewa</option>
+                                <option value="Bakat Istimewa">Bakat Istimewa</option>
+                                <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                                <option value="Narkoba">Narkoba</option>
+                                <option value="Indigo">Indigo</option>
+                                <option value="Down Sindrom">Down Sindrom</option>
+                                <option value="Autis">Autis</option>
                             </select>
                         </div>
                     </div>
@@ -536,38 +536,38 @@
                         <div class="form-group col-md-2">
                             <label for="pendidikan_wali">Pendidikan</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
-                                <option>Tidak Sekolah</option>
-                                <option>Putus SD</option>
-                                <option>SD Sederajat</option>
-                                <option>SMP Sederajat</option>
-                                <option>SMA Sederajat</option>
-                                <option>D1</option>
-                                <option>D2</option>
-                                <option>D3</option>
-                                <option>D4 / S1</option>
-                                <option>S2</option>
-                                <option>S3</option>
+                                <option value="" selected></option>
+                                <option value="Tidak Sekolah">Tidak Sekolah</option>
+                                <option value="Putus SD">Putus SD</option>
+                                <option value="SD">SD Sederajat</option>
+                                <option value="SMP">SMP Sederajat</option>
+                                <option value="SMA">SMA Sederajat</option>
+                                <option value="D1">D1</option>
+                                <option value="D2">D2</option>
+                                <option value="D3">D3</option>
+                                <option value="D4 / S1">D4 / S1</option>
+                                <option value="S2">S2</option>
+                                <option value="S3">S3</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="pekerjaan_wali">Pekerjaan</label>
-                            <select required id="perkejaan_wali" class="form-control">
-                                <option selected></option>
-                                <option>Tidak Bekerja</option>
-                                <option>Nelayan</option>
-                                <option>Petani</option>
-                                <option>Peternak</option>
-                                <option>PNS / TNI / POLRI</option>
-                                <option>Karyawan Swasta</option>
-                                <option>Pedagang Kecil</option>
-                                <option>Pedagang Besar</option>
-                                <option>Wiraswasta</option>
-                                <option>Wirausaha</option>
-                                <option>Buruh</option>
-                                <option>Pensiunan</option>
+                            <select required id="pekerjaan_wali" class="form-control">
+                                <option selected>--Silihkan Pilih--</option>
+                                <option value="Tidak Bekerja">Tidak Bekerja</option>
+                                <option value="Nelayan">Nelayan</option>
+                                <option value="Petani">Petani</option>
+                                <option value="Peternak">Peternak</option>
+                                <option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>
+                                <option value="Karyawan Swasta">Karyawan Swasta</option>
+                                <option value="Pedagang Kecil">Pedagang Kecil</option>
+                                <option value="Pedagang Besar">Pedagang Besar</option>
+                                <option value="Wiraswatsa">Wiraswasta</option>
+                                <option value="Wirausaha">Wirausaha</option>
+                                <option value="Buruh">Buruh</option>
+                                <option value="Pensiunan">Pensiunan</option>
                                 <option>Lainnya</option>
                             </select>
                         </div>
@@ -580,7 +580,7 @@
                         <div class="form-group col-md-6">
                             <label for="penghasilan_wali">Penghasilan Bulanan</label>
                             <select required id="inputState" class="form-control">
-                                <option selected></option>
+                                <option selected>--Silahkan Pilih--</option>
                                 <option>< 500.000</option>
                                 <option>500.000 - 999.999</option>
                                 <option>1.000.000 - 1.999.999</option>
@@ -604,7 +604,7 @@
                         <div class="form-group col-md-6">
                             <label for="tinggi_badan">Tinggi Badan</label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="0" class="form-control" id="tinggi_badan"
+                                <input required type="number" min="1" class="form-control" id="tinggi_badan"
                                     placeholder="Tinggi Badan">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="tinggi_badan">cm</span>
@@ -614,7 +614,7 @@
                         <div class="form-group col-md-6">
                             <label for="berat_badan">Berat Badan</label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="0" class="form-control" id="berat_badan"
+                                <input required type="number" min="1" class="form-control" id="berat_badan"
                                     placeholder="Berat Badan">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon3">kg</span>
@@ -626,7 +626,8 @@
                         <div class="form-group col-md-6">
                             <label for="jarak_tempuh">Jarak tempat tinggal ke sekolah</label>
                             <select required id="inputState" class="form-control">
-                                <option selected>< 1 KM</option> 
+                                <option selected>--Silahkan Pilih--</option>
+                                <option>< 1 KM</option> 
                                 <option>> 1 KM </option>
                             </select>
                         </div>
@@ -707,7 +708,7 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="setuju" required>
                     <label class="form-check-label" for="setuju">
-                        Saya Setuju Bahwa data bla bla bla
+                        Saya Setuju Bahwa data yang telah dilampirkan bla bla bla
                     </label>
                 </div>
             </div>
