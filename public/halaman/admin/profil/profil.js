@@ -31,7 +31,7 @@ $(document).ready(function(){
     }
 
     $('.summernote').summernote({
-        height: 300,
+        height: 200,
         placeholder: 'Silahkan di-isi apa yang anda ingin posting',
         toolbar: [
             ['style', ['style']],
@@ -124,6 +124,9 @@ $(document).ready(function(){
             type: 'POST',
             dataType: 'JSON',
             data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
             beforeSend: function(){
 
             },
@@ -166,6 +169,9 @@ $(document).ready(function(){
             type: 'POST',
             dataType: 'JSON',
             data:new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
             beforeSend: function(){
 
             },
@@ -221,7 +227,7 @@ $(document).ready(function(){
               $('.modal-title-fasilitas').html('Edit : '+ data.nama)
               $('#nama_fasilitas').val(data.nama)
               $('#jumlah_fasilitas').val(data.jumlah)
-              $('#tombol-submit-fasilitas').html('Edit Foto')
+              $('#tombol-submit-fasilitas').html('Edit Data')
               $('#modal-fasilitas').modal('show')
             },
             error: function (response) {

@@ -157,19 +157,19 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Bla Bla Bla Bla </h5>
+                <h5 class="modal-title" id="exampleModalLabel">Profil Sekolah</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
             <form id="form-profil">
                 <div class="modal-body">
-                    <h1>bla bla bla bla ini teks</h1>
+                    <h1>Edit Profil Sekolah</h1>
                     <textarea class="summernote" name="isi_teks_profile"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Bla Bla Bla Bla</button>
+                    <button type="submit" class="btn btn-primary">Simpan Data</button>
                 </div>
             </form>
         </div>
@@ -183,19 +183,19 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1000px !important">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Visi Misi</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Visi Misi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
             <form id="form-visi-misi">
                 <div class="modal-body">
-                    <h1>bla bla bla teks</h1>
+                    <h1>Edit Visi Misi</h1>
                     <textarea class="summernote" name="isi_teks_vm"></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Bla Bla Blas</button>
+                    <button type="submit" class="btn btn-primary">Simpan Data</button>
                 </div>
             </form>
         </div>

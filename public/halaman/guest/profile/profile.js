@@ -1,4 +1,4 @@
 $(document).ready(function(){ 
- $('#table-fasilitas').DataTable()
- $('#table-prestasi').DataTable()
+ $('#tabel-fasilitas').DataTable()
+ $('#tabel-prestasi').DataTable()
 })

@@ -41,6 +41,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Fungsional js halaman Pendaftaran
 - Perbaikan BUG Halaman Profile Sekolah (Admin)
 - Penambahan isi Halaman Pendaftaran (Guest)
+- Update Halaman Profil Sekolah (Admin dan Guest)
 
 
 ## Update Repo Local 

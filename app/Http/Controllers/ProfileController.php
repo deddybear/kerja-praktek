@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fasilitas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Profile;
@@ -9,7 +10,9 @@ use App\Models\Profile;
 class ProfileController extends Controller {
     
     public function guestPage(){
-        return view('guest/profil');  
+        $data = Profile::with(['prestasi', 'fasilitas'])->get();
+
+        return view('guest/profil', ['data' => $data]);  
     }
 
     // TODO : Halaman Admin & Fungsional
