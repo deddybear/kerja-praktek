@@ -56,7 +56,7 @@
                         role="menu" data-accordion="false">
                         <li class="nav-item">
                             <a href="/dashboard" class="nav-link">
-                                <i class="nav-icon fas fa-bed"></i>
+                                <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Menu Dashboard
                                 </p>
@@ -64,7 +64,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">
-                                <i class="nav-icon fas fa-bed"></i>
+                                <i class="nav-icon fas fa-house-user"></i>
                                 <p>
                                     Halaman Utama
                                 </p>
@@ -72,7 +72,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="/dashboard/artikel-sekolah" class="nav-link">
-                                <i class="nav-icon fas fa-bed"></i>
+                                <i class="nav-icon fas fa-scroll"></i>
                                 <p>
                                     Master Artikel
                                 </p>
@@ -80,7 +80,7 @@
                         </li>
                         <li class="nav-item has-tree">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-bed"></i>
+                                <i class="nav-icon fas fa-user-graduate"></i>
                                 <p>
                                     PPDB
                                     <i class="right fas fa-angle-left"></i>
@@ -89,13 +89,13 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="/dashboard/pengumuman-ppdb" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-bell nav-icon"></i>
                                         <p>Pengumuman PPDB</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/dashboard/data-pendaftar" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-clipboard-list nav-icon"></i>
                                         <p>Data Pendaftar</p>
                                     </a>
                                 </li>
@@ -103,7 +103,7 @@
                         </li>
                         <li class="nav-item has-tree">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-bed"></i>
+                                <i class="nav-icon fas fa-images"></i>
                                 <p>
                                     Galeri
                                     <i class="right fas fa-angle-left"></i>
@@ -112,13 +112,13 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="/dashboard/galeri-foto" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-camera nav-icon"></i>
                                         <p>Galeri Foto</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/dashboard/galeri-video" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-video nav-icon"></i>
                                         <p>Galeri Video</p>
                                     </a>
                                 </li>
@@ -126,7 +126,7 @@
                         </li>
                         <li class="nav-item has-tree">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-bed"></i>
+                                <i class="nav-icon fas fa-school"></i>
                                 <p>
                                     Data Sekolah
                                     <i class="right fas fa-angle-left"></i>
@@ -135,19 +135,19 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="/dashboard/data-siswa" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-user-graduate nav-icon"></i>
                                         <p>Data Siswa</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/dashboard/data-pegawai" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-users nav-icon"></i>
                                         <p>Data Pegawai</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/dashboard/profil-sekolah" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-id-badge nav-icon"></i>
                                         <p>Profil</p>
                                     </a>
                                 </li>
@@ -155,7 +155,7 @@
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-bed"></i>
+                                <i class="nav-icon fas fa-user"></i>
                                 <p>
                                     Akun
                                     <i class="right fas fa-angle-left"></i>
@@ -164,13 +164,13 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="/dashboard/edit-akun" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-user-edit nav-icon"></i>
                                         <p>Edit Akun</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('password.request') }}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
+                                        <i class="fas fa-wrench nav-icon"></i>
                                         <p>Reset Password</p>
                                     </a>
                                 </li>

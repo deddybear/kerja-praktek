@@ -30,32 +30,34 @@
                 </div>
 
                 <!-- /.card-header -->
-                <div class="card-body table-responsive p-0">
-                    <table id="tabel-ppdb" class="table table-hover text-nowrap">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Judul</th>
-                                <th>Data Dibuat</th>
-                                <th>Data Terakhir Update</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody id="data-pengumuman-ppdb">
-                            <tr>
-                                <td>1</td>
-                                <td>bla bla bla</td>
-                                <td>2020-01-20</td>
-                                <td>2020-01-20</td>
-                                <td>
-                                    <a href="javascript:;" id="tombol-edit" class="btn btn-info"
-                                        data="'+ row.id_users+'"> Edit Data</a>
-                                    <a href="javascript:;" id="tombol-hapus" class="btn btn-warning"
-                                        data="'+ row.id_users+'"> Hapus Data</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="card-body">
+                    <div class="table-responsive p-0">
+                        <table id="tabel-ppdb" class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Judul</th>
+                                    <th>Data Dibuat</th>
+                                    <th>Data Terakhir Update</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-pengumuman-ppdb">
+                                <tr>
+                                    <td>1</td>
+                                    <td>bla bla bla</td>
+                                    <td>2020-01-20</td>
+                                    <td>2020-01-20</td>
+                                    <td>
+                                        <a href="javascript:;" id="tombol-edit" class="btn btn-info"
+                                            data="'+ row.id_users+'"> Edit Data</a>
+                                        <a href="javascript:;" id="tombol-hapus" class="btn btn-warning"
+                                            data="'+ row.id_users+'"> Hapus Data</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

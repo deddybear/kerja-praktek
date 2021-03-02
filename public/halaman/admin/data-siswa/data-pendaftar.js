@@ -10,6 +10,8 @@ $(document).ready( function () {
         }
     });
   
+    $('#data-pendaftar').DataTable()
+
     $('#data-pendaftar').on('click', '#tombol-verifikasi', function(){
         swal({
           title: "Apakah kamu yakin ingin melakukan verifikasi ?",

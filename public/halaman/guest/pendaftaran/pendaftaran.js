@@ -107,42 +107,6 @@ $(document).ready(function(){
         })
     })
 
-    $('#pekerjaan_ayah').change(function(){
-        $('#pekerjaan_ayah option:selected').each(function(){
-            if ($(this).text() === 'Lainnya') {
-                  $('#nama_pekerjaan_ayah').removeAttr('disabled')
-                  $('#tambahan_pekerjaan_ayah').show()
-            } else {
-                  $('#nama_pekerjaan_ayah').attr('disabled')
-                  $('#tambahan_pekerjaan_ayah').hide()
-            }
-        })
-    })
-
-    $('#pekerjaan_ibu').change(function(){
-        $('#pekerjaan_ibu option:selected').each(function(){
-            if ($(this).text() === 'Lainnya') {
-                  $('#nama_pekerjaan_ibu').removeAttr('disabled')
-                  $('#tambahan_pekerjaan_ibu').show()
-            } else {
-                  $('#nama_pekerjaan_ibu').attr('disabled')
-                  $('#tambahan_pekerjaan_ibu').hide()
-            }
-        })
-    })
-
-    $('#perkejaan_wali').change(function(){
-        $('#perkejaan_wali option:selected').each(function(){
-            if ($(this).text() === 'Lainnya') {
-                  $('#nama_pekerjaan_wali').removeAttr('disabled')
-                  $('#tambahan_pekerjaan_wali').show()
-            } else {
-                  $('#nama_pekerjaan_wali').attr('disabled')
-                  $('#tambahan_pekerjaan_wali').hide()
-            }
-        })
-    })
-
     $('#tambah_prestasi').click(function(){
 
         var formRow                 = $('<div class="form-row my-1" />');

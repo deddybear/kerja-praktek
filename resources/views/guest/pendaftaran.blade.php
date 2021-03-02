@@ -20,84 +20,18 @@
         <section class="registration-section-title">
             <h1>Form Pendaftaran Siswa</h1>
         </section>
-        <form id="form"> 
-        
-            {{-- Card Peserta Didik --}}
-            <div class="card">
-                <div class="card-header">
-                    <h2>Registrasi Peserta Didik</h2>
+        <form id="form">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="jenis_pendaftaran">Jenis Pendaftaran</label>
+                    <select required id="inputState" class="form-control">
+                        <option selected>--Silahkan Pilih--</option>
+                        <option>Siswa Baru</option>
+                        <option>Pindahan</option>
+                    </select>
                 </div>
-                <div class="card-body">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="jenis_pendaftaran">Jenis Pendaftaran</label>
-                            <select required id="inputState" class="form-control">
-                                <option selected>Siswa Baru</option>
-                                <option>Pindahan</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="tanggal_masuk_sekolah">Tanggal Masuk Sekolah</label>
-                            <input required type="date" class="form-control" id="tanggal_masuk_sekolah"
-                                placeholder="Tanggal Masuk Sekolah">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="namalengkap">NIS</label>
-                            <input type="text" class="form-control" id="nis" placeholder="NIS">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="namalengkap">No Seri SKHUN</label>
-                            <input type="text" class="form-control" id="no_skhun" placeholder="Nomer SKHUN">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="namalengkap">No Peserta Ujian</label>
-                            <input type="text" class="form-control" id="no_ujian" placeholder="Nomer Ujian">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="hobi">Hobi</label>
-                            <select required id="hobi" class="form-control">
-                                <option selected>--Silahkan Pilih--</option>
-                                <option value="Olahraga">Olah Raga</option>
-                                <option value="Kesenian">Kesenian</option>
-                                <option value="Membaca">Membaca</option>
-                                <option value="Menulis">Menulis</option>
-                                <option value="Travelin">Travelin</option>
-                                <option>Lainnya</option>
-                            </select>
-                        </div>
-                        <div id="tambahan_hobi" class="form-group col-md-6" style="display: none">
-                            <label for="form_tambahan_hobi">?</label>
-                            <input type="text" class="form-control" id="form_tambahan_hobi" placeholder="?" disabled>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="cita_cita">Cita - Cita</label>
-                            <select required id="cita_cita" class="form-control">
-                                <option selected>--Silahkan Pilih--</option>
-                                <option value="PNS">PNS</option>
-                                <option value="TNI / POLRI">TNI / POLRI</option>
-                                <option value="Guru / Dosen">Guru / Dosen</option>
-                                <option value="Dokter">Dokter</option>
-                                <option value="Politikus">Politikus</option>
-                                <option value="Wiraswasta">Wiraswasta</option>
-                                <option value="Seni / Lukis / Artis ">Seni / Lukis / Artis / Sejenis</option>
-                                <option>Lainnya</option>
-                            </select>
-                        </div>
-                        <div id="tambahan_cita_cita" class="form-group col-md-6" style="display: none">
-                            <label for="form_tambahan_cita_cita">?</label>
-                            <input type="text" class="form-control" id="form_tambahan_cita_cita" placeholder="?" disabled>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- End Card Peserta Didik --}}
-        
+            </div>                
+
             {{-- Card Data Pribadi --}}
             <div class="card mt-4">
                 <div class="card-header">
@@ -107,7 +41,8 @@
                     <div class="form-row">
                         <div class="form-group col-md-10">
                             <label for="namalenkgap">Nama Lengkap</label>
-                            <input required type="text" class="form-control" id="namalengkap" placeholder="Nama Lengkap">
+                            <input required type="text" class="form-control" id="namalengkap"
+                                placeholder="Nama Lengkap">
                         </div>
                         <div class="form-group col-lg-2 col-12">
                             <label for="jeniskelamin">Jenis Kelamin</label>
@@ -130,18 +65,20 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="tanggallahir">Tanggal Lahir</label>
-                            <input required type="date" class="form-control" id="tanggallahir" placeholder="Tanggal Lahir">
+                            <input required type="date" class="form-control" id="tanggallahir"
+                                placeholder="Tanggal Lahir">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="tempatlahir">Tempat Lahir</label>
-                            <input required type="text" class="form-control" id="tempatlahir" placeholder="Tempat Lahir">
+                            <input required type="text" class="form-control" id="tempatlahir"
+                                placeholder="Tempat Lahir">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="agama">Agama</label>
                             <select required id="inputState" class="form-control">
-                                <option  value="" selected>--Silahkan Pilih--</option>
+                                <option value="" selected>--Silahkan Pilih--</option>
                                 <option value="Islam">Islam</option>
                                 <option value="Kristen">Kristen</option>
                                 <option value="Katolik">Katolik</option>
@@ -173,6 +110,45 @@
                                 <option value="Down Sindrom">Down Sindrom</option>
                                 <option value="Autis">Autis</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="hobi">Hobi</label>
+                            <select required id="hobi" class="form-control">
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="Olahraga">Olah Raga</option>
+                                <option value="Kesenian">Kesenian</option>
+                                <option value="Membaca">Membaca</option>
+                                <option value="Menulis">Menulis</option>
+                                <option value="Travelin">Travelin</option>
+                                <option>Lainnya</option>
+                            </select>
+                        </div>
+                        <div id="tambahan_hobi" class="form-group col-md-6" style="display: none">
+                            <label for="form_tambahan_hobi">Lainnya, Sebutkan</label>
+                            <input type="text" class="form-control" id="form_tambahan_hobi" placeholder="Hobi" disabled>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="cita_cita">Cita - Cita</label>
+                            <select required id="cita_cita" class="form-control">
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="PNS">PNS</option>
+                                <option value="TNI / POLRI">TNI / POLRI</option>
+                                <option value="Guru / Dosen">Guru / Dosen</option>
+                                <option value="Dokter">Dokter</option>
+                                <option value="Politikus">Politikus</option>
+                                <option value="Wiraswasta">Wiraswasta</option>
+                                <option value="Seni / Lukis / Artis ">Seni / Lukis / Artis / Sejenis</option>
+                                <option>Lainnya</option>
+                            </select>
+                        </div>
+                        <div id="tambahan_cita_cita" class="form-group col-md-6" style="display: none">
+                            <label for="form_tambahan_cita_cita">Lainnya, Sebutkan</label>
+                            <input type="text" class="form-control" id="form_tambahan_cita_cita" placeholder="Cita - Cita"
+                                disabled>
                         </div>
                     </div>
                     <div class="form-row">
@@ -222,7 +198,8 @@
                         </div>
                         <div id="tambahan_tempat_tinggal" class="form-group col-md-6" style="display: none">
                             <label for="form_tambahan_tempat_tinggal">?</label>
-                            <input type="text" class="form-control" id="form_tambahan_tempat_tinggal" placeholder="?" disabled>
+                            <input type="text" class="form-control" id="form_tambahan_tempat_tinggal" placeholder="?"
+                                disabled>
                         </div>
                     </div>
                     <div class="form-row">
@@ -243,7 +220,8 @@
                         </div>
                         <div id="tambahan_moda_transportasi" class="form-group col-md-6" style="display: none">
                             <label for="form_moda_transportasi">?</label>
-                            <input required type="text" class="form-control" id="form_moda_transportasi" placeholder="?" disabled>
+                            <input required type="text" class="form-control" id="form_moda_transportasi" placeholder="?"
+                                disabled>
                         </div>
                     </div>
                     <div class="form-row">
@@ -286,7 +264,8 @@
                         </div>
                         <div id="tambahan_status_warga" class="form-group col-md-9" style="display: none">
                             <label for="wna">Asal Negara</label>
-                            <input required type="text" class="form-control" id="wna" placeholder="Asal Negara" disabled>
+                            <input required type="text" class="form-control" id="wna" placeholder="Asal Negara"
+                                disabled>
                         </div>
                     </div>
                     <div class="form-row">
@@ -309,7 +288,8 @@
                                 <option value="Pernah Drop Out">Pernah Drop Out</option>
                                 <option value="Siswa Miskin">Siswa Miskin / Rentan Miskin</option>
                                 <option value="Daerah Konflik">Daerah Konflik</option>
-                                <option value="Kelurga Terpidana / Berada di Lapas">Keluarga Terpidana / Berada di LAPAS</option>
+                                <option value="Kelurga Terpidana / Berada di Lapas">Keluarga Terpidana / Berada di LAPAS
+                                </option>
                                 <option value="Kelainan Fisik">Kelainan Fisik</option>
                             </select>
                         </div>
@@ -327,11 +307,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-8">
                             <label for="nama_ayah">Nama Ayah Kandung</label>
-                            <input required type="text" class="form-control" id="nama_ayah" placeholder="Nama Ayah Kandung">
+                            <input required type="text" class="form-control" id="nama_ayah"
+                                placeholder="Nama Ayah Kandung">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="tahun_ayah">Tahun Lahir</label>
-                            <input required type="text" class="form-control tahun-only" id="thn_ayah" placeholder="Tahun Lahir">
+                            <input required type="text" class="form-control tahun-only" id="thn_ayah"
+                                placeholder="Tahun Lahir">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="pendidikan_ayah">Pendidikan</label>
@@ -354,41 +336,24 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="pekerjaan_ayah">Pekerjaan</label>
-                            <select required id="pekerjaan_ayah" class="form-control">
-                                <option selected>--Silihkan Pilih--</option>
-                                <option value="Tidak Bekerja">Tidak Bekerja</option>
-                                <option value="Nelayan">Nelayan</option>
-                                <option value="Petani">Petani</option>
-                                <option value="Peternak">Peternak</option>
-                                <option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>
-                                <option value="Karyawan Swasta">Karyawan Swasta</option>
-                                <option value="Pedagang Kecil">Pedagang Kecil</option>
-                                <option value="Pedagang Besar">Pedagang Besar</option>
-                                <option value="Wiraswatsa">Wiraswasta</option>
-                                <option value="Wirausaha">Wirausaha</option>
-                                <option value="Buruh">Buruh</option>
-                                <option value="Pensiunan">Pensiunan</option>
-                                <option>Lainnya</option>
-                            </select>
+                            <input required type="text" class="form-control" id="pekerjaan_ayah"
+                                placeholder="Perkerjaan Ayah">
                         </div>
-                        <div id="tambahan_pekerjaan_ayah" class="form-group col-md-6" style="display: none">
-                            <label for="nama_pekerjaan_ayah">Nama Pekerjaan Ayah</label>
-                            <input required disable type="text" class="form-control" id="nama_pekerjaan_ayah" placeholder="Nama Pekerjaan">
-                        </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="penghasilan_ayah">Penghasilan Bulanan</label>
                             <select required id="penghasilan_ayah" class="form-control">
                                 <option selected>--Silahkan Pilih--</option>
-                                <option>< 500.000</option> 
-                                <option>500.000 - 999.999</option>
+                                <option>
+                                    < 500.000</option> <option>500.000 - 999.999
+                                </option>
                                 <option>1.000.000 - 1.999.999</option>
                                 <option>2.000.000 - 4.999.999</option>
                                 <option>5.000.000 - 20.000.000</option>
                                 <option>> 20.000.000</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="kebutuhan_khusus_ayah">Berkebutuhan Khusus</label>
                             <select required id="inputState" class="form-control">
@@ -427,11 +392,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-8">
                             <label for="nama_ibu">Nama Ibu Kandung</label>
-                            <input required type="text" class="form-control" id="nama_ibu" placeholder="Nama Ibu Kandung">
+                            <input required type="text" class="form-control" id="nama_ibu"
+                                placeholder="Nama Ibu Kandung">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="tahun_ibu">Tahun Lahir</label>
-                            <input required type="text" class="form-control tahun-only" id="thn_ibu" placeholder="Tahun Lahir">
+                            <input required type="text" class="form-control tahun-only" id="thn_ibu"
+                                placeholder="Tahun Lahir">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="pendidikan_ibu">Pendidikan</label>
@@ -452,43 +419,26 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="pekerjaan_ibu">Pekerjaan</label>
-                            <select required id="pekerjaan_ibu" class="form-control">
-                                <option selected>--Silihkan Pilih--</option>
-                                <option value="Tidak Bekerja">Tidak Bekerja</option>
-                                <option value="Nelayan">Nelayan</option>
-                                <option value="Petani">Petani</option>
-                                <option value="Peternak">Peternak</option>
-                                <option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>
-                                <option value="Karyawan Swasta">Karyawan Swasta</option>
-                                <option value="Pedagang Kecil">Pedagang Kecil</option>
-                                <option value="Pedagang Besar">Pedagang Besar</option>
-                                <option value="Wiraswatsa">Wiraswasta</option>
-                                <option value="Wirausaha">Wirausaha</option>
-                                <option value="Buruh">Buruh</option>
-                                <option value="Pensiunan">Pensiunan</option>
-                                <option>Lainnya</option>
-                            </select>
+                            <input required type="text" class="form-control" id="pekerjaan_ibu"
+                                placeholder="Perkerjaan Ibu">
                         </div>
-                        <div id="tambahan_pekerjaan_ibu" class="form-group col-md-8" style="display: none">
-                            <label for="nama_pekerjaan_ibu">Nama Pekerjaan Ibu</label>
-                            <input required type="text" class="form-control" id="nama_pekerjaan_ibu" placeholder="Nama Pekerjaan">
-                        </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="penghasilan_ibu">Penghasilan Bulanan</label>
                             <select required id="inputState" class="form-control">
                                 <option selected>--Silahkan Pilih--</option>
-                                <option>< 500.000</option> 
-                                <option>500.000 - 999.999</option>
+                                <option>
+                                    < 500.000</option> <option>500.000 - 999.999
+                                </option>
                                 <option>1.000.000 - 1.999.999</option>
                                 <option>2.000.000 - 4.999.999</option>
                                 <option>5.000.000 - 20.000.000</option>
                                 <option>> 20.000.000</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="kebutuhan_khusus_ibu">Berkebutuhan Khusus</label>
                             <select required id="inputState" class="form-control">
@@ -531,7 +481,8 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="tahun_wali">Tahun Lahir</label>
-                            <input required type="text" class="form-control tahun-only" id="thn_wali" placeholder="Tahun Lahir">
+                            <input required type="text" class="form-control tahun-only" id="thn_wali"
+                                placeholder="Tahun Lahir">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="pendidikan_wali">Pendidikan</label>
@@ -552,37 +503,18 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-6">
                             <label for="pekerjaan_wali">Pekerjaan</label>
-                            <select required id="pekerjaan_wali" class="form-control">
-                                <option selected>--Silihkan Pilih--</option>
-                                <option value="Tidak Bekerja">Tidak Bekerja</option>
-                                <option value="Nelayan">Nelayan</option>
-                                <option value="Petani">Petani</option>
-                                <option value="Peternak">Peternak</option>
-                                <option value="PNS / TNI / POLRI">PNS / TNI / POLRI</option>
-                                <option value="Karyawan Swasta">Karyawan Swasta</option>
-                                <option value="Pedagang Kecil">Pedagang Kecil</option>
-                                <option value="Pedagang Besar">Pedagang Besar</option>
-                                <option value="Wiraswatsa">Wiraswasta</option>
-                                <option value="Wirausaha">Wirausaha</option>
-                                <option value="Buruh">Buruh</option>
-                                <option value="Pensiunan">Pensiunan</option>
-                                <option>Lainnya</option>
-                            </select>
+                            <input required type="text" class="form-control" id="pekerjaan_wali"
+                                placeholder="Perkerjaan Wali">
                         </div>
-                        <div id="tambahan_pekerjaan_wali" class="form-group col-md-8" style="display: none">
-                            <label for="nama_pekerjaan_wali">Nama Pekerjaan</label>
-                            <input required disabled type="text" class="form-control" id="nama_pekerjaan_wali" placeholder="Nama Pekerjaan">
-                        </div>
-                    </div>
-                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="penghasilan_wali">Penghasilan Bulanan</label>
                             <select required id="inputState" class="form-control">
                                 <option selected>--Silahkan Pilih--</option>
-                                <option>< 500.000</option>
-                                <option>500.000 - 999.999</option>
+                                <option>
+                                    < 500.000</option> <option>500.000 - 999.999
+                                </option>
                                 <option>1.000.000 - 1.999.999</option>
                                 <option>2.000.000 - 4.999.999</option>
                                 <option>5.000.000 - 20.000.000</option>
@@ -627,8 +559,9 @@
                             <label for="jarak_tempuh">Jarak tempat tinggal ke sekolah</label>
                             <select required id="inputState" class="form-control">
                                 <option selected>--Silahkan Pilih--</option>
-                                <option>< 1 KM</option> 
-                                <option>> 1 KM </option>
+                                <option>
+                                    < 1 KM</option> <option>> 1 KM
+                                </option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
@@ -656,8 +589,8 @@
                         <div class="form-group col-md-4">
                             <label for="waktu_tempuh_menit"> <br> </label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="0" max="59" class="form-control" id="waktu_tempuh_menit"
-                                    placeholder="Waktu Tempuh">
+                                <input required type="number" min="0" max="59" class="form-control"
+                                    id="waktu_tempuh_menit" placeholder="Waktu Tempuh">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon3">menit</span>
                                 </div>
@@ -698,7 +631,7 @@
                     <a href="javascript:;" id="tambah_beasiswa" class="btn btn-primary col-12 mb-3">Tambah Beasiswa</a>
                 </div>
             </div>
-             {{-- End Beasiswa Card--}}
+            {{-- End Beasiswa Card--}}
 
             <div class="form-group mt-4">
                 <label for="inputAddress">Asal Sekolah</label>
