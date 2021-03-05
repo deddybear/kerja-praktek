@@ -74,11 +74,15 @@ $(document).ready(function(){
     $('#status_kps').change(function(){
         $('#status_kps option:selected').each(function(){
             if ($(this).text() === 'Ya') {
-                 $('#no_bantuan').removeAttr('disabled')
-                 $('#tambahan_status_kps').show()
+                $('#jenis_bantuan').removeAttr('disabled')
+                $('#tambahan_jenis_bantuan').show()
+                $('#no_bantuan').removeAttr('disabled')
+                $('#tambahan_nomor_bantuan').show()
             } else {
-                 $('#no_bantuan').attr('disabled')
-                 $('#tambahan_status_kps').hide()
+                $('#jenis_bantuan').attr('disabled')
+                $('#tambahan_jenis_bantuan').hide()
+                $('#no_bantuan').attr('disabled')
+                $('#tambahan_nomor_bantuan').hide()
             }
         })
     })

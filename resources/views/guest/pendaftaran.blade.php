@@ -112,6 +112,10 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Asal Sekolah</label>
+                        <input required type="text" class="form-control" id="asalsekolah" placeholder="Asal Sekolah">
+                    </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="hobi">Hobi</label>
@@ -197,8 +201,8 @@
                             </select>
                         </div>
                         <div id="tambahan_tempat_tinggal" class="form-group col-md-6" style="display: none">
-                            <label for="form_tambahan_tempat_tinggal">?</label>
-                            <input type="text" class="form-control" id="form_tambahan_tempat_tinggal" placeholder="?"
+                            <label for="form_tambahan_tempat_tinggal">Sebutkan</label>
+                            <input type="text" class="form-control" id="form_tambahan_tempat_tinggal" placeholder="Tempat Tinggal"
                                 disabled>
                         </div>
                     </div>
@@ -219,8 +223,8 @@
                             </select>
                         </div>
                         <div id="tambahan_moda_transportasi" class="form-group col-md-6" style="display: none">
-                            <label for="form_moda_transportasi">?</label>
-                            <input required type="text" class="form-control" id="form_moda_transportasi" placeholder="?"
+                            <label for="form_moda_transportasi">Sebutkan</label>
+                            <input required type="text" class="form-control" id="form_moda_transportasi" placeholder="Moda Transportasi"
                                 disabled>
                         </div>
                     </div>
@@ -240,14 +244,23 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <label for="penerima_bantuan">Penerima KPS / PKH / KIP</label>
+                            <label for="penerima_bantuan">Penerima Bantuan</label>
                             <select required id="status_kps" class="form-control">
                                 <option selected>--Silahkan Pilih--</option>
                                 <option value="Tidak">Tidak</option>
                                 <option value="Ya">Ya</option>
                             </select>
                         </div>
-                        <div id="tambahan_status_kps" class="form-group col-md-9" style="display: none">
+                        <div id="tambahan_jenis_bantuan" class="form-group col-md-4" style="display: none">
+                            <label for="jenis_bantuan">Jenis Bantuan</label>
+                            <select required id="jenis_bantuan" class="form-control">
+                                <option selected>--Silahkan Pilih--</option>
+                                <option value="KPS">Kartu Perlindugnan Sosial (KPS)</option>
+                                <option value="PKH">Program Keluarga Harapan</option>
+                                <option value="KIP">Kartu Indonesia Pintar</option>
+                            </select>
+                        </div>
+                        <div id="tambahan_nomor_bantuan" class="form-group col-md-5" style="display: none">
                             <label for="no_bantuan">Nomor KPS / PKH / KIP</label>
                             <input required type="number" min="0" class="form-control" id="no_bantuan"
                                 placeholder="Nomor KPS / PKH / KIP" disabled>
@@ -301,7 +314,7 @@
             {{-- Card Data Ayah Kandung --}}
             <div class="card mt-4">
                 <div class="card-header">
-                    <h2>Data Ayah Kandung</h2>
+                    <h2>Data Ayah</h2>
                 </div>
                 <div class="card-body">
                     <div class="form-row">
@@ -354,6 +367,20 @@
                         </div>
                     </div>
                     <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="no_hp_ayah">Nomor HP</label>
+                            <input required type="text" class="form-control" id="nohp_ayah" placeholder="Nomor HP">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="no_tlp_ayah">Nomor Telepon</label>
+                            <input required type="text" class="form-control" id="notlp_ayah" placeholder="Nomor Telepon">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="e-mail_ayah">E-mail</label>
+                            <input required type="email" class="form-control" id="email_ayah" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="kebutuhan_khusus_ayah">Berkebutuhan Khusus</label>
                             <select required id="inputState" class="form-control">
@@ -386,7 +413,7 @@
             {{-- Card Data Ibu Kandung --}}
             <div class="card mt-4">
                 <div class="card-header">
-                    <h2>Data Ibu Kandung</h2>
+                    <h2>Data Ibu</h2>
                 </div>
                 <div class="card-body">
                     <div class="form-row">
@@ -436,6 +463,20 @@
                                 <option>5.000.000 - 20.000.000</option>
                                 <option>> 20.000.000</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="no_hp_ibu">Nomor HP</label>
+                            <input required type="text" class="form-control" id="nohp_ibu" placeholder="Nomor HP">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="no_tlp_ibu">Nomor Telepon</label>
+                            <input required type="text" class="form-control" id="notlp_ibu" placeholder="Nomor Telepon">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="e-mail_ibu">E-mail</label>
+                            <input required type="email" class="form-control" id="email_ibu" placeholder="E-mail">
                         </div>
                     </div>
                     <div class="form-row">
@@ -522,6 +563,20 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="no_hp_wali">Nomor HP</label>
+                            <input required type="text" class="form-control" id="nohp_wali" placeholder="Nomor HP">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="no_tlp_wali">Nomor Telepon</label>
+                            <input required type="text" class="form-control" id="notlp_wali" placeholder="Nomor Telepon">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="e-mail_wali">E-mail</label>
+                            <input required type="email" class="form-control" id="email_wali" placeholder="E-mail">
+                        </div>
+                    </div>
                 </div>
             </div>
             {{-- End Card Data Wali --}}
@@ -555,15 +610,6 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="jarak_tempuh">Jarak tempat tinggal ke sekolah</label>
-                            <select required id="inputState" class="form-control">
-                                <option selected>--Silahkan Pilih--</option>
-                                <option>
-                                    < 1 KM</option> <option>> 1 KM
-                                </option>
-                            </select>
-                        </div>
                         <div class="form-group col-md-6">
                             <label for="jarak_tempuh_angka">Jarak Tempuh (Nilai Angka)</label>
                             <div class="input-group mb-3">
@@ -633,15 +679,11 @@
             </div>
             {{-- End Beasiswa Card--}}
 
-            <div class="form-group mt-4">
-                <label for="inputAddress">Asal Sekolah</label>
-                <input required type="text" class="form-control" id="asalsekolah" placeholder="Asal Sekolah">
-            </div>
-            <div class="form-group">
+            <div class="form-group mt-3">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="setuju" required>
                     <label class="form-check-label" for="setuju">
-                        Saya Setuju Bahwa data yang telah dilampirkan bla bla bla
+                        Saya Setuju Bahwa data yang telah dilampirkan benar adanya
                     </label>
                 </div>
             </div>
