@@ -20,7 +20,7 @@
         <section class="registration-section-title">
             <h1>Form Pendaftaran Siswa</h1>
         </section>
-        <form id="form">
+            {{-- <form action="" method="post"> --}}
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="jenis_pendaftaran">Jenis Pendaftaran</label>
@@ -525,7 +525,8 @@
                 </div>
             </div>
             {{-- End Card Data Wali --}}
-
+            <form id="form" action="/daftar/siswa-baru" method="POST" >
+                @csrf
             {{-- Card Data Periodik --}}
             <div class="card mt-4">
                 <div class="card-header">
@@ -557,11 +558,10 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="jarak_tempuh">Jarak tempat tinggal ke sekolah</label>
-                            <select required id="inputState" class="form-control">
-                                <option selected>--Silahkan Pilih--</option>
-                                <option>
-                                    < 1 KM</option> <option>> 1 KM
-                                </option>
+                            <select required id="inputState" class="form-control" name="jarak_tempat">
+                                <option value="" selected>--Silahkan Pilih--</option>
+                                <option>< 1 KM</option> 
+                                <option> 1 KM</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">

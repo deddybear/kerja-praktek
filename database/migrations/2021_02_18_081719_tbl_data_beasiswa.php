@@ -13,7 +13,13 @@ class TblDataBeasiswaPesertaDidik extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tbl_data_beasiswa', function (Blueprint $table){
+            $table->uuid('id_beasiswa')->index();
+            $table->string('jenis_beasiswa', 20);
+            $table->string('keterangan', 100);
+            $table->year('tahun_mulai');
+            $table->year('tahun_selesai');
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class TblDataBeasiswaPesertaDidik extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('tbl_data_beasiswa');
     }
 }

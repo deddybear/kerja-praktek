@@ -14,13 +14,14 @@ class TblDataIbu extends Migration
     public function up()
     {
         Schema::create('tbl_data_ibu', function(Blueprint $table){
-            $table->uuid('id_data_ibu')->primary();
+            $table->uuid('id_ibu')->primary();
             $table->string('nama_ibu', 100);
-            $table->year('tahun_lahir_ibu');
-            $table->string('pendidikan_ibu', 20);
-            $table->string('pekerjaan_ibu', 20);
-            $table->string('penghasilan_bulanan_ibu', 30);
-            $table->string('kebutuhan_khusus_ibu', 20);
+            $table->string('ttl', 50);
+            $table->string('pendidikan', 20);
+            $table->string('pekerjaan', 20);
+            $table->string('penghasilan', 30);
+            $table->string('kebutuhan_khusus', 20);
+            $table->string('nmr_hp', 13);
         });
     }
 

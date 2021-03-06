@@ -14,13 +14,14 @@ class TblDataAyah extends Migration
     public function up()
     {
         Schema::create('tbl_data_ayah', function(Blueprint $table){
-            $table->uuid('id_data_ayah')->primary();
+            $table->uuid('id_ayah')->primary();
             $table->string('nama_ayah', 100);
-            $table->year('tahun_lahir_ayah');
-            $table->string('pendidikan_ayah', 20);
-            $table->string('pekerjaan_ayah', 20);
-            $table->string('penghasilan_bulanan_ayah', 30);
-            $table->string('kebutuhan_khusus_ayah', 20);
+            $table->string('ttl', 50);
+            $table->string('pendidikan', 20);
+            $table->string('pekerjaan', 20);
+            $table->string('penghasilan', 30);
+            $table->string('kebutuhan_khusus', 20);
+            $table->string('nmr_hp', 13);
         });
     }
 

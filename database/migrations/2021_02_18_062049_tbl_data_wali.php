@@ -14,13 +14,13 @@ class TblDataWali extends Migration
     public function up()
     {
         Schema::create('tbl_data_wali', function(Blueprint $table){
-            $table->uuid('id_data_wali')->primary();
+            $table->uuid('id_wali')->primary();
             $table->string('nama_wali', 100);
-            $table->year('tahun_lahir_wali');
-            $table->string('pendidikan_wali', 20);
-            $table->string('pekerjaan_wali', 20);
-            $table->string('penghasilan_bulanan_wali', 30);
-
+            $table->string('ttl', 50);
+            $table->string('pendidikan', 20);
+            $table->string('pekerjaan', 20);
+            $table->string('penghasilan', 30);
+            $table->string('nmr_hp', 13);
         });
     }
 
