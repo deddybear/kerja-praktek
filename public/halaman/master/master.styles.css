@@ -15,7 +15,7 @@ a {
 
 
 .footer{
-    position: fixed;
+    position: relative;
     background-color: #276678;
     text-align: center;
     color: white;
