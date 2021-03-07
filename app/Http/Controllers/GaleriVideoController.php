@@ -12,7 +12,7 @@ class GaleriVideoController extends Controller
     public function guestPage(){
         $galerivideo = Galeri::all()->where('id_ketentuan', 'G2');
 
-        return view('guest/galeri-video', ['galerivideo' => $galerivideo]);
+        return view('guest/galeri-video', compact('galerivideo'));
     }
 
     //TODO: Halaman admin dan fungsi

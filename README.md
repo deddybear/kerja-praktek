@@ -44,6 +44,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Halaman Profil Sekolah (Admin dan Guest)
 - Update Icon Side Bar (Admin)
 - Perubahan isi Halaman Pendaftaran (Guest)
+- Update Halaman Pendaftaran(Guest)
 
 
 ## Update Repo Local 

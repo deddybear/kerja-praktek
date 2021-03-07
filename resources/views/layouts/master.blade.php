@@ -84,7 +84,7 @@
         </div>
     </div>
     {{-- ISI KONTEN --}}
-    <div class="container">
+    <div class="container bg-image">
         <div class="col-xl-12">
             <div class="my-4">
                 @yield('content')
