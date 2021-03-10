@@ -21,6 +21,15 @@
         <section class="registration-section-title">
             <h1>Form Pendaftaran Siswa</h1>
         </section>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <form id="form" action="/daftar/siswa-baru" method="POST" >
             @csrf
             <div class="card mt-4">
@@ -609,7 +618,8 @@
                 </div>
             </div>
             {{-- End Card Data Wali --}}
-            
+            <button type="submit" class="btn btn-primary" id="submit-data" onclick="return crossCheck()">Daftar</button>
+        </form>
             {{-- Card Data Periodik --}}
             <div class="card mt-4">
                 <div class="card-header">
@@ -707,8 +717,7 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" id="submit-data" onclick="return crossCheck()">Daftar</button>
-        </form>
+            
     </div>
 </div>
 

@@ -95,8 +95,8 @@ class PPDBController extends Controller
             'pekerjaan_wali'    => 'required|string|max:20',
             'pendidikan_wali'   => 'required|string|max:13',
             'penghasilan_wali'  => 'required|string',
-            'nohp_wali'         => 'numeric',
-            'notlp_wali'        => 'numeric',
+            'nohp_wali'         => 'numeric|digits_between:0,13',
+            'notlp_wali'        => 'numeric|digits_between:0,13',
             //Data Wali End
         ]);
 
@@ -192,6 +192,8 @@ class PPDBController extends Controller
         $createPendaftaran->create($dataPendaftaran);
         $createPendaftaran->peserta()->createMany($dataPeserta);
         $createPendaftaran->ayah()->createMany($dataAyah);
+        $createPendaftaran->ibu()->createMany($dataIbu);
+        $createPendaftaran->wali()->createMany($dataWali);
     }
 
 
