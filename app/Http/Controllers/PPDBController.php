@@ -71,9 +71,9 @@ class PPDBController extends Controller
             'pekerjaan_ayah'    => 'required|string|max:20',
             'pendidikan_ayah'   => 'required|string|max:13',
             'penghasilan_ayah'  => 'required|string',
-            'nohp_ayah'         => 'numeric',
-            'notlp_ayah'        => 'numeric',
-            'kebutuhan_khusus_ayah' => 'required|string',
+            'nohp_ayah'         => 'numeric|digits_between:0,13',
+            'notlp_ayah'        => 'numeric|digits_between:0,13',
+            'kebutuhan_khusus_ayah' => 'required|string|max:20',
             //Data Ayah End
 
             //Data Ibu
@@ -83,9 +83,9 @@ class PPDBController extends Controller
             'pekerjaan_ibu'    => 'required|string|max:20',
             'pendidikan_ibu'   => 'required|string|max:13',
             'penghasilan_ibu'  => 'required|string',
-            'nohp_ibu'         => 'numeric',
-            'notlp_ibu'        => 'numeric',
-            'kebutuhan_khusus_ibu' => 'required|string',
+            'nohp_ibu'         => 'numeric|digits_between:0,13',
+            'notlp_ibu'        => 'numeric|digits_between:0,13',
+            'kebutuhan_khusus_ibu' => 'required|string|max:20',
             //Data Ibu End
 
             //Data Wali
@@ -153,9 +153,45 @@ class PPDBController extends Controller
             'email'              => $request->email_peserta,
         ); 
 
-        // $createPendaftaran = new Pendaftaran;
-        // $createPendaftaran->create($dataPendaftaran);
-        // $createPendaftaran->peserta()->createMany($dataPeserta);
+        $dataAyah = array (
+            'id_ayah'          => $idAyah,
+            'nama_ayah'        => $request->nama_ayah,
+            'ttl'              => $request->tempat_lahir_ayah.', '.$request->tanggal_lahir_ayah,
+            'pendidikan'       => $request->pendidikan_ayah,
+            'pekerjaan'        => $request->pekerjaan_ayah,
+            'penghasilan'      => $request->penghasilan_ayah,
+            'kebutuhan_khusus' => $request->kebutuhan_khusus_ayah,
+            'nmr_hp'           => $request->nohp_ayah,
+            'nmr_tlp'          => $request->notlp_ayah
+        );
+
+        $dataIbu = array (
+            'id_ibu'           => $idIbu,
+            'nama_ibu'         => $request->nama_ibu,
+            'ttl'              => $request->tempat_lahir_ibu.', '.$request->tanggal_lahir_ibu,
+            'pendidikan'       => $request->pendidikan_ibu,
+            'pekerjaan'        => $request->pekerjaan_ibu,
+            'penghasilan'      => $request->penghasilan_ibu,
+            'kebutuhan_khusus' => $request->kebutuhan_khusus_ibu,
+            'nmr_hp'           => $request->nohp_ibu,
+            'nmr_tlp'          => $request->notlp_ibu
+        );
+
+        $dataWali = array (
+            'id_wali'          => $idWali,
+            'nama_wali'        => $request->nama_wali,
+            'ttl'              => $request->tempat_lahir_wali.', '.$request->tanggal_lahir_wali,
+            'pendidikan'       => $request->pendidikan_wali,
+            'pekerjaan'        => $request->pekerjaan_wali,
+            'penghasilan'      => $request->penghasilan_wali,
+            'nmr_hp'           => $request->nohp_wali,
+            'nmr_tlp'          => $request->notlp_wali
+        );
+
+        $createPendaftaran = new Pendaftaran;
+        $createPendaftaran->create($dataPendaftaran);
+        $createPendaftaran->peserta()->createMany($dataPeserta);
+        $createPendaftaran->ayah()->createMany($dataAyah);
     }
 
 
