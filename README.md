@@ -48,6 +48,10 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Halaman Pendaftaran(Guest)
 - Update Halaman Pendaftaran v2 (Guest)
 
+##### Patch v0.8 
+- Update Halaman Pendaftaran (Guest)
+- Perbaikan Controller Galeri Foto dan Video (Guest)
+
 
 ## Update Repo Local 
 

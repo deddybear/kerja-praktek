@@ -10,7 +10,7 @@ use Ramsey\Uuid\Uuid as Generate;
 class GaleriVideoController extends Controller
 {
     public function guestPage(){
-        $galerivideo = Galeri::all()->where('id_ketentuan', 'G2');
+        $galerivideo = Galeri::orderBy('created_at')->where('id_ketentuan', 'G2')->get();
 
         return view('guest/galeri-video', compact('galerivideo'));
     }

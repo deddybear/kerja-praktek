@@ -102,7 +102,7 @@ Route::middleware(['auth','verified'])->group(function (){
     //* End-Route Prestasi
 
     
-        Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
+        // Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
         Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
         Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');
 

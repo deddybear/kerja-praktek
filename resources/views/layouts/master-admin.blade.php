@@ -87,12 +87,12 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="/dashboard/pengumuman-ppdb" class="nav-link">
                                         <i class="far fa-bell nav-icon"></i>
                                         <p>Pengumuman PPDB</p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="/dashboard/data-pendaftar" class="nav-link">
                                         <i class="fas fa-clipboard-list nav-icon"></i>
