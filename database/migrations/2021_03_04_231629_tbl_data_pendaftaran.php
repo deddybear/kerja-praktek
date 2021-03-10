@@ -25,6 +25,8 @@ class TblDataPendaftaran extends Migration
             $table->boolean('status_tk');
             $table->string('hobi', 50);
             $table->string('cita', 50);
+            $table->boolean('status_pendaftaran');
+            $table->timestamps();
         });
     }
 

@@ -2,6 +2,10 @@ h1 {
     font-weight: 600;
 }
 
+.tulisan-cilik {
+    font-size: small;
+}
+
 .registration-section-title {
     background: linear-gradient(135deg, #0d9aac 60%, transparent 40%);
 }
@@ -23,6 +27,10 @@ h1 {
         font-size: 1.5rem;
     }
 
+    .tulisan-cilik {
+        font-size: 10px;
+    }
+
     .registration-section-title {
         background: linear-gradient(120deg, #0d9aac 80%, transparent 40%);
     }
@@ -31,6 +39,10 @@ h1 {
 @media only screen and (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
+    }
+
+    .tulisan-cilik {
+        font-size: 12px;
     }
 
     .registration-section-title {

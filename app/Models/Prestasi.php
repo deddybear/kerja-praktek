@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Prestasi extends Model
 {
     //* Konfigurasi Table
-    protected $table        = 'tbl_prestasi';
+    protected $table        = 'tbl_prestasi_sekolah';
     protected $primaryKey   = 'id_prestasi';
     protected $keyType      = 'string';
     protected $guarded      = [];

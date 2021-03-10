@@ -31,6 +31,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 ##### Patch v0.8 
 - Finalisaasi Fungsional sistem untuk halaman profile (profile, visi misi, fasilitas, prestasi)
 - Setting up Route 
+- Setting up Controller 
 
 ## Front-end
 

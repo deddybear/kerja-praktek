@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TblDataBeasiswaPesertaDidik extends Migration
+class TblDataBeasiswa extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class TblDataBeasiswaPesertaDidik extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_data_beasiswa', function (Blueprint $table){
+        Schema::create('tbl_data_beasiswa_perserta', function (Blueprint $table){
             $table->uuid('id_beasiswa')->index();
             $table->string('jenis_beasiswa', 20);
             $table->string('keterangan', 100);

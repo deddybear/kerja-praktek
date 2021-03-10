@@ -22,6 +22,7 @@ class TblDataAyah extends Migration
             $table->string('penghasilan', 30);
             $table->string('kebutuhan_khusus', 20);
             $table->string('nmr_hp', 13);
+            $table->string('nmr_tlp', 13);
         });
     }
 

@@ -21,6 +21,7 @@ class TblDataWali extends Migration
             $table->string('pekerjaan', 20);
             $table->string('penghasilan', 30);
             $table->string('nmr_hp', 13);
+            $table->string('nmr_tlp', 13);
         });
     }
 
