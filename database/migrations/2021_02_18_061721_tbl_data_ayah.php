@@ -18,11 +18,11 @@ class TblDataAyah extends Migration
             $table->string('nama_ayah', 100);
             $table->string('ttl', 50);
             $table->string('pendidikan', 20);
-            $table->string('pekerjaan', 20);
+            $table->string('pekerjaan', 50);
             $table->string('penghasilan', 30);
             $table->string('kebutuhan_khusus', 20);
-            $table->string('nmr_hp', 13);
-            $table->string('nmr_tlp', 13);
+            $table->string('nmr_hp', 13)->nullable();
+            $table->string('nmr_tlp', 13)->nullable();
         });
     }
 

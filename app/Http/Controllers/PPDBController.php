@@ -21,7 +21,9 @@ class PPDBController extends Controller
 
     public function daftarPesertaDidik(Request $request) {
 
+
         $valid = Validator::make($request->all(), [
+    
             'statusPendaftaran' => 'required|string|between:8,10',
             'status_paud'       => 'required|boolean',
             'status_tk'         => 'required|boolean',
@@ -49,54 +51,55 @@ class PPDBController extends Controller
             'kelurahan'         => 'required|string|max:25',
             'kodepos'           => 'required|string|max:5',
             'tempat_tinggal'    => 'required|string|between:3,17',
-            'tempat_tinggal_lainnya' => 'required_if:tempat_tinggal,Lainnya|string|max:18',
+            'tempat_tinggal_lainnya' => 'required_if:tempat_tinggal,Lainnya|string|max:38',
             'moda_transportasi'   => 'required|string|between:4,19',
             'transportasi_lainnya' => 'required_if:moda_transportasi,Lainnya|string|max:30',
-            'nmr_hp_peserta'    => 'numeric|max:12',
-            'nmr_tlp_peserta'   => 'numeric|max:15',
-            'email_peserta'     => 'email|max:50',
-            'status_kps'        => 'required|alpha|between:2,5',
+            'nmr_hp_peserta'    => 'digits_between:0,15',
+            'nmr_tlp_peserta'   => 'digits_between:0,15',
+            'email_peserta'     => 'max:70',
+            'status_kps'        => 'required|alpha_num|digits:1',
             'jenis_bantuan'     => 'required_if:status_kps,1|max:3',
-            'nomer_bantuan'     => 'required_if:status_kps,1|alpha_num|max:30',
-            'status_warga'      => 'required|max:3',
+            'nomer_bantuan'     => 'required_if:status_kps,1|numeric|digits_between:1, 30',
+            'status_warga'      => 'required|string|max:3',
             'negara_asal'       => 'required_if:status_warga,WNA|string|max:30',
-            'status_pip'        => 'required|string|between:2,5',
+            'status_pip'        => 'required|alpha_num|digits:1',
             'alasan_pip'        => 'required_if:status_pip,1|string|max:37',
             //Data Pribadi End
             
             //Data Ayah
             'nama_ayah'         => 'required|string|max:100',
             'tempat_lahir_ayah' => 'required|string|max:35',
-            'tanggal_lahir_ayah'=> 'required|date_format:dd-mm-yyyy',
-            'pekerjaan_ayah'    => 'required|string|max:20',
+            'tanggal_lahir_ayah'=> 'required|date_format:d-m-Y',
+            'pekerjaan_ayah'    => 'required|string|max:50',
             'pendidikan_ayah'   => 'required|string|max:13',
             'penghasilan_ayah'  => 'required|string',
-            'nohp_ayah'         => 'numeric|digits_between:0,13',
-            'notlp_ayah'        => 'numeric|digits_between:0,13',
+            'nohp_ayah'         => 'digits_between:0,13',
+            'notlp_ayah'        => 'digits_between:0,13',
             'kebutuhan_khusus_ayah' => 'required|string|max:20',
             //Data Ayah End
 
             //Data Ibu
             'nama_ibu'         => 'required|string|max:100',
             'tempat_lahir_ibu' => 'required|string|max:35',
-            'tanggal_lahir_ibu'=> 'required|date_format:dd-mm-yyyy',
-            'pekerjaan_ibu'    => 'required|string|max:20',
+            'tanggal_lahir_ibu'=> 'required|date_format:d-m-Y',
+            'pekerjaan_ibu'    => 'required|string|max:50',
             'pendidikan_ibu'   => 'required|string|max:13',
             'penghasilan_ibu'  => 'required|string',
-            'nohp_ibu'         => 'numeric|digits_between:0,13',
-            'notlp_ibu'        => 'numeric|digits_between:0,13',
+            'nohp_ibu'         => 'digits_between:0,13',
+            'notlp_ibu'        => 'digits_between:0,13',
             'kebutuhan_khusus_ibu' => 'required|string|max:20',
             //Data Ibu End
+            
 
             //Data Wali
             'nama_wali'         => 'required|string|max:100',
             'tempat_lahir_wali' => 'required|string|max:35',
-            'tanggal_lahir_wali'=> 'required|date_format:dd-mm-yyyy',
-            'pekerjaan_wali'    => 'required|string|max:20',
+            'tanggal_lahir_wali'=> 'required|date_format:d-m-Y',
+            'pekerjaan_wali'    => 'required|string|max:50',
             'pendidikan_wali'   => 'required|string|max:13',
             'penghasilan_wali'  => 'required|string',
-            'nohp_wali'         => 'numeric|digits_between:0,13',
-            'notlp_wali'        => 'numeric|digits_between:0,13',
+            'nohp_wali'         => 'digits_between:0,13',
+            'notlp_wali'        => 'digits_between:0,13',
             //Data Wali End
         ]);
 
