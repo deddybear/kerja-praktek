@@ -11,10 +11,10 @@ class junController extends Controller {
 
     
 
-    public function ppdbAdmin()
-    {
-        return view('admin/pengumuman-ppdb');
-    }
+    // public function ppdbAdmin()
+    // {
+    //     return view('admin/pengumuman-ppdb');
+    // }
     
     public function dataSiswa()
     {

@@ -13,7 +13,7 @@ class GaleriFotoController extends Controller
 {
     
     public function guestPage(){
-        $galerifoto = Galeri::all()->where('id_ketentuan', 'G1');
+        $galerifoto = Galeri::orderBy('created_at')->where('id_ketentuan', 'G1')->get();
 
         return view('guest/galeri-foto', ['galerifoto' => $galerifoto]);
     }

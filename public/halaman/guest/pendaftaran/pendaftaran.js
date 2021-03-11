@@ -69,20 +69,6 @@ $(document).ready(function(){
         });
        }
 
-  
-
-    $('#statusPendaftaran').change(function(){
-        $('#statusPendaftaran option:selected').each(function () {
-            if ($(this).val() === 'Pindahan') {
-                $('#form-tambahan-pindahan').removeAttr('disabled')
-                $('#form-nisn').show()
-            } else {
-                $('#form-tambahan-pindahan').attr('disabled')
-                $('#form-nisn').hide()
-            }
-        })
-    })
-
     $('#hobi').change(function(){
         $('#hobi option:selected').each(function(){
             if ($(this).text() === 'Lainnya') {
@@ -199,7 +185,7 @@ $(document).ready(function(){
         let namaPrestasi            = $(`<label for="nama_prestasi">Nama Prestasi</label> <input required type="text" class="form-control" name="nama_prestasi_${countFieldPrestasi}" id="nama_prestasi_${countFieldPrestasi}" placeholder="Nama Prestasi">`)
         let tahunPrestasi           = $(`<label for="tahun_prestasi">Tahun</label> <input required type="text" class="form-control tahun-only" name="tahun_prestasi_${countFieldPrestasi}" id="tahun_prestasi_${countFieldPrestasi}" placeholder="Tahun">`)
         let penyelenggara           = $(`<label for="nama_penyelenggara">Nama Penyelenggara</label> <input required type="text" class="form-control" name="penyelenggara_${countFieldPrestasi}" id="penyelenggara_${countFieldPrestasi}" placeholder="Nama Penyelenggara">`)
-        let buttonHapusPrestasi     = $('<a class="btn btn-danger btn-sm h-25 my-auto"> hapus </a>')
+        let buttonHapusPrestasi     = $('<a class="btn btn-danger h-25 my-4"> hapus </a>')
         
         if (countFieldPrestasi <= 3) {
 
@@ -232,7 +218,7 @@ $(document).ready(function(){
         let keterangan          = $(`<label for="keterangan_beasiswa">Keterangan</label> <input type="text" class="form-control" name="keterangan_beasiswa_${countFieldBeasiswa}" id="keterangan_beasiswa_${countFieldBeasiswa}" placeholder="Keterangan">`)
         let tahunMulai          = $(`<label for="tahun_mulai_beasiswa">Tahun Mulai</label> <input required type="text" class="form-control tahun-only" name="tahun_mulai_beasiswa_${countFieldBeasiswa}" id="tahun_mulai_beasiswa_${countFieldBeasiswa}" placeholder="Tahun Mulai">`)
         let tahunSelesai        = $(`<label for="tahun_akhir_beasiswa">Tahun Selesai</label> <input required type="text" class="form-control tahun-only" name="tahun_selesai_beasiswa_${countFieldBeasiswa}" id="tahun_selesai_beasiswa_${countFieldBeasiswa}" placeholder="Tahun Selesai">`)
-        let buttonHapusBeasiswa = $('<a class="btn btn-danger btn-sm h-25 my-auto"> hapus </a>')
+        let buttonHapusBeasiswa = $('<a class="btn btn-danger h-25 my-auto"> hapus </a>')
 
         if (countFieldBeasiswa <= 3) {
             

@@ -32,6 +32,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Finalisaasi Fungsional sistem untuk halaman profile (profile, visi misi, fasilitas, prestasi)
 - Setting up Route 
 - Setting up Fungsional Controller Pendaftaran
+- fixing up validasi server side
 
 ## Front-end
 
@@ -49,6 +50,8 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Halaman Pendaftaran v2 (Guest)
 
 ##### Patch v0.8 
+- Update Halaman Pendaftaran (Guest)
+- Perbaikan Controller Galeri Foto dan Video (Guest)
 - Penambahan view validasi
 
 ## Update Repo Local 
