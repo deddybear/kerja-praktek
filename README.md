@@ -53,6 +53,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Update Halaman Pendaftaran (Guest)
 - Perbaikan Controller Galeri Foto dan Video (Guest)
 - Penambahan view validasi
+- Penambahan isi Halaman Pendaftaran dan view Pendaftaran Sukses (Guest) 
 
 ## Update Repo Local 
 

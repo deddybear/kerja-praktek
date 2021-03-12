@@ -1,8 +1,12 @@
 .box{
+    opacity: inherit;
     margin: auto;
     padding: 150px 150px;
 }
 
 body{
-    background-image: url("/images-dummy/carousel/logo-sekolah.jpg");
+    background-image: url("/images-dummy/test-dev/bglogin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

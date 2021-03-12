@@ -30,6 +30,15 @@
             </ul>
         </div>
         @endif
+
+        <div class="alert alert-primary" role="alert">
+            Sebelum mengisi pendaftaran, siapkan dokumen yang diperlukan seperti : <br>
+            &nbsp; &nbsp;  1. Kartu Keluarga <br>
+            &nbsp; &nbsp;  2. Rapor Siswa <br>
+            &nbsp; &nbsp;  3. Kartu Bantuan Sosial (bila ada) <br>
+            &nbsp; &nbsp;  4. Bukti Prestasi atau Beasiswa siswa (bila ada) <br>            
+        </div>
+
         <form id="form" action="/daftar/siswa-baru" method="POST">
             @csrf
             <div class="card mt-4">
