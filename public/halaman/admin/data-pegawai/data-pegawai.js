@@ -185,7 +185,7 @@ $(document).ready( function () {
               }
             }
           })
-        }else{
+        } else {
           notifSwal('warning', 'PERHATIAN', 'Penghapusan Data Pegawai dibatalkan')
         }
       })

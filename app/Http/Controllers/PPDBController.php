@@ -7,6 +7,7 @@ use App\Models\BeasiswaPeserta as Beasiswa;
 use App\Models\PrestasiPeserta as Prestasi;
 use App\Models\Pendaftaran;
 use App\Models\Peserta;
+use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Ramsey\Uuid\Uuid as Generate;
@@ -284,12 +285,34 @@ class PPDBController extends Controller
        
     }
 
+    //TODO : Halaman Admin & Fugsional Admin
+    
+    public function masterPendaftaran(){
+        return view('admin/data-pendaftaran');
+    }
+    //'nik', 'nama', 'jenis_kelamin', 'agama', 'alamat_lengkap', 'nama_ayah', 'nama_ibu', 
+    public function getData(){
+        return json_encode(Pendaftaran::orderBy('created_at')
+        ->with('ayah:id_ayah,nama_ayah', 'ibu:id_ibu,nama_ibu', 'peserta:id_peserta,nama,nik,jenis_kelamin,agama,alamat_lengkap')
+        ->get());
+    }
 
-    public function FunctionName(Request $request){
+    public function changeStatusPendaftaran($id){
+        return response()->json(['id' => $id]);
+    }
+
+    public function downloadDataPendaftaran($id){
         
-        if($request->field1 && $request->field2 && $request->field3 && $request->field4){
-            // code validasi
-        }
         
+        // $pdf = PDF::loadView('hai');
+        // return $pdf->download('laporan-pegawai-pdf');
+    }
+
+    public function migrateDataPendaftaran($id){
+        return response()->json(['id' => $id]);
+    }
+
+    public function hapuDataPendaftaran($id){
+        return response()->json(['id' => $id]);
     }
 }
