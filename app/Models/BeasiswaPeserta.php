@@ -8,7 +8,7 @@ class BeasiswaPeserta extends Model
 {
     //Konfigurasi Table
 
-    protected $table        = 'tbl_data_beasiswa_perserta';
+    protected $table        = 'tbl_data_beasiswa_peserta';
     protected $primaryKey   = 'id_beasiswa';
     protected $keyType      = 'string';
     protected $guarded      = [];

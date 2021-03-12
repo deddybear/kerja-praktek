@@ -117,9 +117,8 @@ TODO: Route Test Dev
 ! Sebelum Buka link gawe database sek !! 
 */
 
-Route::get('/test', function(){
-    return view('/dev-test/halaman-test');
-});
+
+Route::get('/test', 'dedController@id');
 Route::post('/check', 'dedController@check');
 Route::get('/select', 'junController@select');
 

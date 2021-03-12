@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pendaftaran;
 use App\Models\Frist as Frist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Ramsey\Uuid\Uuid as Generate;
 
 class dedController extends Controller
 {
     
+    public function id(){
+        return Pendaftaran::select('*')->with(['ibu', 'ayah', 'peserta', 'peserta.beasiswa' ])->get();
+    }
 
     public function postArtikel(Request $request){
         dd($request);

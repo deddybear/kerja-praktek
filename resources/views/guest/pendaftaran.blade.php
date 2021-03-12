@@ -121,8 +121,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="tanggallahir">Tanggal Lahir</label>
-                            <input required type="date" class="form-control format-date" name="tanggallahir"
-                                placeholder="Tanggal Lahir">
+                            <input required type="text" class="form-control format-date" name="tanggallahir" placeholder="Tanggal Lahir">
                         </div>
                     </div>
                     <div class="form-row">
@@ -413,9 +412,8 @@
                             <label for="penghasilan_ayah">Penghasilan Bulanan</label>
                             <select required name="penghasilan_ayah" class="form-control">
                                 <option value="" selected>--Silakan Pilih--</option>
-                                <option value="< 500.000">
-                                    < 500.000</option> <option value="500.000 - 999.999">500.000 - 999.999
-                                </option>
+                                <option value="< 500.000">< 500.000</option>
+                                <option value="500.000 - 999.999">500.000 - 999.999</option>
                                 <option value="1.000.000 - 1.999.999">1.000.000 - 1.999.999</option>
                                 <option value="2.000.000 - 4.999.999">2.000.000 - 4.999.999</option>
                                 <option value="5.000.000 - 20.000.000">5.000.000 - 20.000.000</option>
@@ -522,9 +520,8 @@
                             <label for="penghasilan_ibu">Penghasilan Bulanan</label>
                             <select required name="penghasilan_ibu" class="form-control">
                                 <option value="" selected>--Silakan Pilih--</option>
-                                <option value="> 500.000">
-                                    < 500.000</option> <option value="500.000 - 999.999">500.000 - 999.999
-                                </option>
+                                <option value="> 500.000">< 500.000</option>
+                                <option value="500.000 - 999.999">500.000 - 999.999</option>
                                 <option value="1.000.000 - 1.999.999">1.000.000 - 1.999.999</option>
                                 <option value="2.000.000 - 4.999.999">2.000.000 - 4.999.999</option>
                                 <option value="5.000.000 - 20.000.000">5.000.000 - 20.000.000</option>
@@ -631,9 +628,8 @@
                             <label for="penghasilan_wali">Penghasilan Bulanan</label>
                             <select required name="penghasilan_wali" class="form-control">
                                 <option value="" selected>--Silahkan Pilih--</option>
-                                <option value="< 500.000">
-                                    < 500.000</option> <option value="500.000 - 999.999">500.000 - 999.999
-                                </option>
+                                <option value="< 500.000">< 500.000</option> 
+                                <option value="500.000 - 999.999">500.000 - 999.999</option>
                                 <option value="1.000.000 - 1.999.999">1.000.000 - 1.999.999</option>
                                 <option value="2.000.000 - 4.999.999">2.000.000 - 4.999.999</option>
                                 <option value="5.000.000 - 20.000.000">5.000.000 - 20.000.000</option>
@@ -670,8 +666,7 @@
                         <div class="form-group col-md-6">
                             <label for="tinggi_badan">Tinggi Badan</label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="1" class="form-control" name="tinggi_badan"
-                                    placeholder="Tinggi Badan">
+                                <input required type="number" min="1" max="999" class="form-control" name="tinggi_badan" placeholder="Tinggi Badan">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="tinggi_badan">cm</span>
                                 </div>
@@ -681,8 +676,7 @@
                         <div class="form-group col-md-6">
                             <label for="berat_badan">Berat Badan</label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="1" class="form-control" name="berat_badan"
-                                    placeholder="Berat Badan">
+                                <input required type="number" min="1" max="999" class="form-control" name="berat_badan" placeholder="Berat Badan">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon3">kg</span>
                                 </div>
@@ -694,14 +688,13 @@
                         <div class="form-group col-md-3">
                             <label class="tulisan-cilik" for="jarak_tempuh_angka">Jarak Tempuh</label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="0" class="form-control" name="jarak_tempuh"
-                                    placeholder="Jarak Tempuh">
+                                <input required type="number" min="0" max="9999" class="form-control" name="jarak_tempuh" placeholder="Jarak Tempuh">
                                 <span class="tulisan-cilik">Contoh : 1 (untuk KM) / 100 (untuk M)</span>
                             </div>
                         </div>
                         <div class="form-group col-md-3">
                             <label class="tulisan-cilik" for="satuan_jarak_tempuh">Satuan Jarak Tempuh</label>
-                            <select required id="satuan_jarak_tempuh" class="form-control">
+                            <select required id="satuan_jarak_tempuh" name="satuan_jarak_tempuh" class="form-control">
                                 <option value="">--Silakan Pilih--</option>
                                 <option value="M">M (Meter)</option>
                                 <option value="KM">KM (Kilometer)</option>
@@ -710,19 +703,17 @@
                         <div class="form-group col-md-3">
                             <label for="waktu_tempuh_jam">Waktu Tempuh</label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="0" class="form-control" name="waktu_tempuh_jam"
-                                    placeholder="Jam">
+                                <input required type="number" min="0"  class="form-control" name="waktu_tempuh_jam" placeholder="Jam">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon3">Jam</span>
                                 </div>
                             </div>
-                            <span class="tulisan-cilik">Contoh : 0 / 1</span>
+                            <span class="tulisan-cilik">Contoh : 0 / 1..dst</span>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="waktu_tempuh_menit"> <br> </label>
                             <div class="input-group mb-3">
-                                <input required type="number" min="0" max="59" class="form-control"
-                                    name="waktu_tempuh_menit" placeholder="Menit">
+                                <input required type="number" min="0" max="59" class="form-control" name="waktu_tempuh_menit" placeholder="Menit">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon3">Menit</span>
                                 </div>
@@ -733,7 +724,7 @@
                 </div>
             </div>
             {{-- End Card Data Periodik --}}
-
+            
             {{-- Prestasi Card --}}
             <div class="card mt-4">
                 <div class="card-header">
@@ -767,8 +758,8 @@
                     </label>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary" id="submit-data" onclick="return crossCheck()">Daftar</button>
         </form>
-        <button type="submit" class="btn btn-primary" id="submit-data" onclick="return crossCheck()">Daftar</button>
         {{-- Card Data Periodik --}}
 
     </div>
