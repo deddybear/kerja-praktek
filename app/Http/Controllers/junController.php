@@ -16,6 +16,11 @@ class junController extends Controller {
         return view('guest/pendaftaran-sukses');
     }
     
+    public function daftarGagal()
+    {
+        return view('guest/pendaftaran-gagal');
+    }
+
     public function dataSiswa()
     {
         return view('admin/data-siswa');

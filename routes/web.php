@@ -27,6 +27,7 @@ Route::get('/struktur-organisasi', 'PegawaiController@guestPage');
 Route::get('/artikel', 'ArtikelController@guestPage');
 Route::post('/daftar/siswa-baru', 'PPDBController@daftarPesertaDidik');
 Route::get('/pendaftaran/sukses', 'junController@daftarSukses');
+Route::get('/pendaftaran/gagal', 'junController@daftarGagal');
 
 
 // TODO : ROUTE HALAMAN ADMIN
