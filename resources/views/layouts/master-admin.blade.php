@@ -94,7 +94,7 @@
                                     </a>
                                 </li> --}}
                                 <li class="nav-item">
-                                    <a href="/dashboard/data-pendaftar" class="nav-link">
+                                    <a href="/dashboard/data-pendaftaran" class="nav-link">
                                         <i class="fas fa-clipboard-list nav-icon"></i>
                                         <p>Data Pendaftar</p>
                                     </a>

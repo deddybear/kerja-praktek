@@ -103,10 +103,19 @@ Route::middleware(['auth','verified'])->group(function (){
         Route::post('/admin/prestasi/delete-data/{id}', 'PrestasiController@deleteData');
     //* End-Route Prestasi
 
-    
-        // Route::get('/dashboard/pengumuman-ppdb', 'junController@ppdbAdmin');
+    //* Route Pendaftaran
+        Route::get('/dashboard/data-pendaftaran', 'PPDBController@masterPendaftaran');
+        Route::get('/admin/pendaftaran/read-data', 'PPDBController@getData');
+        Route::post('/admin/pendaftaran/change-data/{id}', 'PPDBController@changeStatusPendaftaran');
+        Route::get('/admin/pendaftaran/download-data/{id}', 'PPDBController@downloadDataPendaftaran');
+        Route::post('/admin/pendaftaran/migrate-data/{id}', 'PPDBController@migrateDataPendaftaran');
+        Route::post('/admin/pendaftaran/hapus-data/{id}', 'PPDBController@hapuDataPendaftaran');
+    //* End-Route Pendaftaran
+
+    //* Route Data Siswa
+
+    //* End-Route Data Siswa
         Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
-        Route::get('/dashboard/data-pendaftar', 'junController@dataPendaftar');
 
         
 
