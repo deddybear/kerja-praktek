@@ -50,12 +50,13 @@ $(document).ready(function () {
                         }
                         html += '<td>'
                             html += `<a href="javascript:;" id="tombol-verifikasi" class="btn btn-xs btn-info mr-1" data="${row.id_pendaftaran}"> Ubah Status </a>`
-                            html += `<a href="/admin/pendaftaran/download-data/${row.id_pendaftaran}" class="btn btn-xs btn-secondary mr-1" >Download Data</a>`
-                        html += '</td>'
-                        html += '<td>'
+                            html += `<a href="/pendaftaran/download-data/${row.id_pendaftaran}" class="btn btn-xs btn-secondary mr-1" >Download Data</a>`
                             html += `<a href="javascript:;" id="tombol-hapus" class="btn btn-xs btn-danger mr-1" data="${row.id_pendaftaran}"> Hapus Data</a>`
-                            html += `<a href="javascript:;" id="tombol-migrate" class="btn btn-xs bg-olive color-palette" data="${row.id_pendaftaran}"> Migrasi Data</a>`
                         html += '</td>'
+                        // html += '<td>'
+                           
+                        //     html += `<a href="javascript:;" id="tombol-migrate" class="btn btn-xs bg-olive color-palette" data="${row.id_pendaftaran}"> Migrasi Data</a>`
+                        // html += '</td>'
                     html += '</tr>'
                 })
                 $('#table-pendaftaran').DataTable().clear().destroy()
@@ -69,10 +70,9 @@ $(document).ready(function () {
     }
 
     $('#data-pendaftaran').on('click', '#tombol-verifikasi', function(){
-        let id = $(this).attr('data')
-        
+    
         swal({
-            title: "Apakah kamu yakin ingin memverifikasi Data Pendaftaran ini?",
+            title: "Apakah kamu yakin merubah status Data Pendaftaran ini?",
             text: "Ini akan merubah Status Pendaftaran tersebut",
             icon: "warning",
             buttons: true,
@@ -80,7 +80,33 @@ $(document).ready(function () {
         })
         .then((willDelete) => {
             if (willDelete) {
-                notifSwal('warning', 'Tombol Verifikasi dipencet', `ID : ${id}`)
+                $.ajax({
+                    url: '/admin/pendaftaran/verify-data',
+                    type: 'POST',
+                    data: {id :  $(this).attr('data')},
+                    beforeSend :function () {
+          
+                    },
+                    complete: function() {
+            
+                    },
+                    success: function (data) {
+                   
+                        if (data.sukses) {
+                            notifSwal('success', 'Yeeey Berhasil', data.sukses)
+                            getData()
+                        } else if (data.gagal){
+                            notifSwal('error', 'Whoooppss ada Kesalahan', data.sukses)
+                            getData()
+                        } else {
+                            notifSwal('error', 'Whoooppss ada Kesalahan', data.validasi)
+                        }
+                    },
+                    error: function (response) {
+                        notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
+                    }
+                })
+                
             } else {
                 notifSwal('warning', 'PERHATIAN', 'Aksi dibatalkan')
             }
@@ -89,7 +115,6 @@ $(document).ready(function () {
     });
 
     $('#data-pendaftaran').on('click', '#tombol-hapus', function(){
-        let id = $(this).attr('data')
 
         swal({
             title: "Apakah kamu yakin ingin menghapus Data ?",
@@ -100,7 +125,31 @@ $(document).ready(function () {
         })
         .then((willDelete) => {
             if (willDelete) {
-                notifSwal('warning', 'Tombol Hapus dipencet', `ID : ${id}`)
+                $.ajax({
+                    url: '/admin/pendaftaran/hapus-data',
+                    type: 'POST',
+                    data: {id : $(this).attr('data')},
+                    beforeSend :function () {
+          
+                    },
+                    complete: function() {
+            
+                    },
+                    success: function (data) {
+                        if (data.sukses) {
+                            notifSwal('success', 'Yeeey Berhasil', data.sukses)
+                            getData()
+                        } else if (data.gagal){
+                            notifSwal('error', 'Whoooppss ada Kesalahan', data.gagal)
+                            getData()
+                        } else {
+                            notifSwal('error', 'Whoooppss ada Kesalahan', data.validasi)
+                        }
+                    },
+                    error: function (response) {
+                        notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
+                    }
+                })
             } else {
                 notifSwal('warning', 'PERHATIAN', 'Aksi dibatalkan')
             }
@@ -109,7 +158,6 @@ $(document).ready(function () {
     });
 
     $('#data-pendaftaran').on('click', '#tombol-migrate', function(){
-        let id = $(this).attr('data')
 
         swal({
             title: "Apakah kamu yakin ingin migrasi ke data siswa ?",
@@ -120,6 +168,23 @@ $(document).ready(function () {
         })
         .then((willDelete) => {
             if (willDelete) {
+                $.ajax({
+                    url: '',
+                    type: 'POST',
+                    data: {id : $(this).attr('data')},
+                    beforeSend :function () {
+          
+                    },
+                    complete: function() {
+            
+                    },
+                    success: function (data) {
+                        
+                    },
+                    error: function (response) {
+                        notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
+                    }
+                })
                 notifSwal('warning', 'Tombol Migrate dipencet', `ID : ${id}`)
             } else {
                 notifSwal('warning', 'PERHATIAN', 'Aksi dibatalkan')

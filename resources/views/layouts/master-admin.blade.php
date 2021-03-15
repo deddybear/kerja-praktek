@@ -133,12 +133,12 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
+                                {{-- <li class="nav-item">
                                     <a href="/dashboard/data-siswa" class="nav-link">
                                         <i class="fas fa-user-graduate nav-icon"></i>
                                         <p>Data Siswa</p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="/dashboard/data-pegawai" class="nav-link">
                                         <i class="fas fa-users nav-icon"></i>

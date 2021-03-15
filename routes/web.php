@@ -26,7 +26,8 @@ Route::get('/pengumuman-ppdb', 'PPDBController@pengumumanPage');
 Route::get('/struktur-organisasi', 'PegawaiController@guestPage');
 Route::get('/artikel', 'ArtikelController@guestPage');
 Route::post('/daftar/siswa-baru', 'PPDBController@daftarPesertaDidik');
-Route::get('/pendaftaran/sukses', 'junController@daftarSukses');
+Route::get('/pendaftaran/download-data/{id}', 'PPDBController@downloadDataPendaftaran');
+Route::get('/pendaftaran/sukses/{id}', 'PPDBController@pendaftaranSukses');
 
 
 // TODO : ROUTE HALAMAN ADMIN
@@ -105,10 +106,9 @@ Route::middleware(['auth','verified'])->group(function (){
     //* Route Pendaftaran
         Route::get('/dashboard/data-pendaftaran', 'PPDBController@masterPendaftaran');
         Route::get('/admin/pendaftaran/read-data', 'PPDBController@getData');
-        Route::post('/admin/pendaftaran/change-data/{id}', 'PPDBController@changeStatusPendaftaran');
-        Route::get('/admin/pendaftaran/download-data/{id}', 'PPDBController@downloadDataPendaftaran');
-        Route::post('/admin/pendaftaran/migrate-data/{id}', 'PPDBController@migrateDataPendaftaran');
-        Route::post('/admin/pendaftaran/hapus-data/{id}', 'PPDBController@hapuDataPendaftaran');
+        Route::post('/admin/pendaftaran/verify-data', 'PPDBController@changeStatusPendaftaran');
+        // Route::post('/admin/pendaftaran/migrate-data/{id}', 'PPDBController@migrateDataPendaftaran');
+        Route::post('/admin/pendaftaran/hapus-data', 'PPDBController@hapuDataPendaftaran');
     //* End-Route Pendaftaran
 
     //* Route Data Siswa
@@ -130,7 +130,6 @@ TODO: Route Test Dev
 
 Route::get('/test', 'dedController@id');
 Route::post('/check', 'dedController@check');
-Route::get('/select', 'junController@select');
 
 Route::get('/kontol', function() {
     return view('layouts.coba');

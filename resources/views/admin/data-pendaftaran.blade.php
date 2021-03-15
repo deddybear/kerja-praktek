@@ -39,8 +39,7 @@
                                     <th>Nama Ibu</th>
                                     <th>Waktu Pendaftaran</th>
                                     <th>Status Pendaftaran</th>
-                                    <th>Aksi 1</th>
-                                    <th>Aksi 2</th>
+                                    {{-- <th>Aksi</th> --}}
                                 </tr>
                             </thead>
                             <tbody id="data-pendaftaran"></tbody>

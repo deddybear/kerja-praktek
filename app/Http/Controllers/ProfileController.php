@@ -11,7 +11,6 @@ class ProfileController extends Controller {
     
     public function guestPage(){
         $data = Profile::with(['prestasi', 'fasilitas'])->get();
-
         return view('guest/profil', ['data' => $data]);  
     }
 
