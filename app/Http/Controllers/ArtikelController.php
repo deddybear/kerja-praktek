@@ -15,6 +15,8 @@ class ArtikelController extends Controller
 {
 
     public function listArtikel(){
+
+        //! PAGINATION
         if (url()->current() == url('/pengumuman-ppdb')) {
 
             $data = Artikel::where('id_ketentuan', 'P1')->get();

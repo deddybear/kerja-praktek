@@ -37,89 +37,89 @@ Auth::routes(['verify' => true]);
 
 Route::middleware(['auth','verified'])->group(function (){
 
-        Route::get('/dashboard', 'IndexController@dashboard');
-    //* Route-Artikel
-        Route::get('/dashboard/artikel-sekolah', 'ArtikelController@masterArtikel');
-        Route::get('/admin/artikel/read-artikel','ArtikelController@dataArtikel');
-        Route::post('/admin/artikel/add-artikel', 'ArtikelController@createArtikel');
-        Route::get('/admin/artikel/select-artikel/{id}', 'ArtikelController@selectArtikel');    
-        Route::post('/admin/artikel/edit-artikel/{id}', 'ArtikelController@editArtikel');
-        Route::post('/admin/artikel/delete-artikel/{id}', 'ArtikelController@deleteArtikel');
-    //* End-Artikel
+        Route::prefix('dashboard')->group(function (){
+            Route::get('panel-admin', 'IndexController@dashboard');
+            Route::get('galeri-foto', 'GaleriFotoController@masterFoto');
+            Route::get('galeri-video', 'GaleriVideoController@masterVideo');
+            Route::get('data-pegawai', 'PegawaiController@masterPegawai');
+            Route::get('edit-akun', 'AkunController@settingAkunPage');
+            Route::get('profil-sekolah', 'ProfileController@masterProfile');
+            Route::get('data-pendaftaran', 'PPDBController@masterPendaftaran');
+            Route::get('artikel-sekolah', 'ArtikelController@masterArtikel');
+        });
+        
+        Route::prefix('admin')->group(function (){
+            //* Route-Artikel
+            Route::get('artikel/read-artikel','ArtikelController@dataArtikel');
+            Route::post('artikel/add-artikel', 'ArtikelController@createArtikel');
+            Route::get('artikel/select-artikel/{id}', 'ArtikelController@selectArtikel');    
+            Route::post('artikel/edit-artikel/{id}', 'ArtikelController@editArtikel');
+            Route::post('artikel/delete-artikel/{id}', 'ArtikelController@deleteArtikel');
+            //* End-Artikel
 
-    //* Route-Galeri-Foto
-        Route::get('/dashboard/galeri-foto', 'GaleriFotoController@masterFoto');
-        Route::get('/admin/galeri/read-foto', 'GaleriFotoController@dataFoto');
-        Route::post('/admin/galeri/add-foto', 'GaleriFotoController@uploadFoto');
-        Route::get('/admin/galeri/select-foto/{id}', 'GaleriFotoController@selectDataFoto');
-        Route::post('/admin/galeri/edit-foto/{id}', 'GaleriFotoController@editDataFoto');
-        Route::post('/admin/galeri/delete-foto/{id}', 'GaleriFotoController@deleteDataFoto');
-    //* End-Galeri-Foto
+            //* Route Pengaturan Akun
+            Route::post('akun/ubah-nama/{id}', 'AkunController@ubahNama');
+            Route::post('akun/ubah-username/{id}', 'AkunController@ubahUsername');
+            Route::post('akun/ganti-password/{id}', 'AkunController@gantiPassword');
+            Route::post('akun/ubah-email/{id}', 'AkunController@ubahEmail');
+            //* End Penganturan Akun
 
-    //* Route-Galeri-Video
-        Route::get('/dashboard/galeri-video', 'GaleriVideoController@masterVideo');
-        Route::get('/admin/galeri/read-video', 'GaleriVideoController@dataVideo');
-        Route::post('/admin/galeri/add-video', 'GaleriVideoController@embedLinkVideo');
-        Route::get('/admin/galeri/select-video/{id}', 'GaleriVideoController@selectLinkVideo');
-        Route::post('/admin/galeri/edit-video/{id}', 'GaleriVideoController@editLinkVideo');
-        Route::post('/admin/galeri/delete-video/{id}', 'GaleriVideoController@deleteLinkVideo');
-    //* End-Galeri-Video
+            //* Route-Pegawai
+            Route::get('data-pegawai/read-data','PegawaiController@dataPegawai');
+            Route::post('data-pegawai/add-data', 'PegawaiController@addDataPegawai');
+            Route::get('data-pegawai/select-data/{id}', 'PegawaiController@selectDataPegawai'); 
+            Route::post('data-pegawai/edit-data/{id}', 'PegawaiController@editDataPegawai');
+            Route::post('data-pegawai/delete-data/{id}', 'PegawaiController@deleteDataPegawai');
+            //* End-Pegawai
 
-    //* Route-Pegawai
-        Route::get('/dashboard/data-pegawai', 'PegawaiController@masterPegawai');
-        Route::get('/admin/data-pegawai/read-data','PegawaiController@dataPegawai');
-        Route::post('/admin/data-pegawai/add-data', 'PegawaiController@addDataPegawai');
-        Route::get('/admin/data-pegawai/select-data/{id}', 'PegawaiController@selectDataPegawai'); 
-        Route::post('/admin/data-pegawai/edit-data/{id}', 'PegawaiController@editDataPegawai');
-        Route::post('/admin/data-pegawai/delete-data/{id}', 'PegawaiController@deleteDataPegawai');
-    //* End-Pegawai
+            //* Route Profile Sekolah
+            Route::get('profile/read-profile', 'ProfileController@dataProfile');
+            Route::post('profile/edit',  'ProfileController@editProfile');
+            Route::post('visi-misi/edit','ProfileController@editVisiMisi');
+            //* End-Route Profile Sekolah
 
-    //* Route Pengaturan Akun
-        Route::get('/dashboard/edit-akun', 'AkunController@settingAkunPage');
-        Route::post('/admin/akun/ubah-nama/{id}', 'AkunController@ubahNama');
-        Route::post('/admin/akun/ubah-username/{id}', 'AkunController@ubahUsername');
-        Route::post('/admin/akun/ganti-password/{id}', 'AkunController@gantiPassword');
-        Route::post('/admin/akun/ubah-email/{id}', 'AkunController@ubahEmail');
-        Route::post('/admin/lupa-password', 'AkunController@lupaPassword');
-    //* End Penganturan Akun
+            //* Route Fasilitas 
+            Route::get('fasilitas/select-data/{id}', 'FasilitasController@selectData');
+            Route::post('fasilitas/tambah-data', 'FasilitasController@tambahData');
+            Route::post('fasilitas/edit-data/{id}', 'FasilitasController@editData');
+            Route::post('fasilitas/delete-data/{id}', 'FasilitasController@deleteData');
+            //* End-Route Fasilitas
 
-    //* Route Profile Sekolah
-        Route::get('/dashboard/profil-sekolah', 'ProfileController@masterProfile');
-        Route::get('/admin/profile/read-profile', 'ProfileController@dataProfile');
-        Route::post('/admin/profile/edit',  'ProfileController@editProfile');
-        Route::post('/admin/visi-misi/edit','ProfileController@editVisiMisi');
-    //* End-Route Sekolah
+            //* Route Prestasi 
+            Route::get('prestasi/select-data/{id}', 'PrestasiController@selectData');
+            Route::post('prestasi/tambah-data', 'PrestasiController@tambahData');
+            Route::post('prestasi/edit-data/{id}', 'PrestasiController@editData');
+            Route::post('prestasi/delete-data/{id}', 'PrestasiController@deleteData');
+            //* End-Route Prestasi
 
-    //* Route Fasilitas 
-        Route::get('/admin/fasilitas/select-data/{id}', 'FasilitasController@selectData');
-        Route::post('/admin/fasilitas/tambah-data', 'FasilitasController@tambahData');
-        Route::post('/admin/fasilitas/edit-data/{id}', 'FasilitasController@editData');
-        Route::post('/admin/fasilitas/delete-data/{id}', 'FasilitasController@deleteData');
-    //* End-Route Fasilitas
+            //* Route Pendaftaran
+            Route::get('pendaftaran/read-data', 'PPDBController@getData');
+            Route::post('pendaftaran/verify-data', 'PPDBController@changeStatusPendaftaran');
+            Route::post('pendaftaran/hapus-data', 'PPDBController@hapuDataPendaftaran');
+            //* End-Route Pendaftaran
 
-    //* Route Prestasi 
-        Route::get('/admin/prestasi/select-data/{id}', 'PrestasiController@selectData');
-        Route::post('/admin/prestasi/tambah-data', 'PrestasiController@tambahData');
-        Route::post('/admin/prestasi/edit-data/{id}', 'PrestasiController@editData');
-        Route::post('/admin/prestasi/delete-data/{id}', 'PrestasiController@deleteData');
-    //* End-Route Prestasi
+            Route::prefix('galeri')->group(function (){
+                //* Route-Galeri-Foto
+                Route::get('read-foto', 'GaleriFotoController@dataFoto');
+                Route::post('add-foto', 'GaleriFotoController@uploadFoto');
+                Route::get('select-foto/{id}', 'GaleriFotoController@selectDataFoto');
+                Route::post('edit-foto/{id}', 'GaleriFotoController@editDataFoto');
+                Route::post('delete-foto/{id}', 'GaleriFotoController@deleteDataFoto');
+                //* End-Galeri-Foto
 
-    //* Route Pendaftaran
-        Route::get('/dashboard/data-pendaftaran', 'PPDBController@masterPendaftaran');
-        Route::get('/admin/pendaftaran/read-data', 'PPDBController@getData');
-        Route::post('/admin/pendaftaran/verify-data', 'PPDBController@changeStatusPendaftaran');
-        // Route::post('/admin/pendaftaran/migrate-data/{id}', 'PPDBController@migrateDataPendaftaran');
-        Route::post('/admin/pendaftaran/hapus-data', 'PPDBController@hapuDataPendaftaran');
-    //* End-Route Pendaftaran
+                //* Route-Galeri-Video
+                Route::get('read-video', 'GaleriVideoController@dataVideo');
+                Route::post('add-video', 'GaleriVideoController@embedLinkVideo');
+                Route::get('select-video/{id}', 'GaleriVideoController@selectLinkVideo');
+                Route::post('edit-video/{id}', 'GaleriVideoController@editLinkVideo');
+                Route::post('delete-video/{id}', 'GaleriVideoController@deleteLinkVideo');
+                //* End-Galeri-Video
+            });
+        });
 
     //* Route Data Siswa
-
+    Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
     //* End-Route Data Siswa
-        Route::get('/dashboard/data-siswa', 'junController@dataSiswa');
-
-        
-
-    
     
 });
 
@@ -131,10 +131,6 @@ TODO: Route Test Dev
 
 Route::get('/test', 'dedController@id');
 Route::post('/check', 'dedController@check');
-
-Route::get('/kontol', function() {
-    return view('layouts.coba');
-});
 
 Route::post('/post-artikel', 'junController@postArtikel')->name('wildan');
 

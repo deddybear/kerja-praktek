@@ -3,14 +3,14 @@
 @section('title', 'Galeri Foto')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('plugin/summernote/summernote-bs4.css') }}">
+
 <link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
 <link rel="stylesheet" href="{{ asset('halaman/admin/galeri-foto/galeri-foto.styles.css') }}">
 @endsection
 
 @section('script')
-<script src="{{ asset('plugin/summernote/summernote-bs4.js') }}"></script>
+
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
 <script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
 <script src="{{ asset('halaman/admin/galeri-foto/galeri-foto.js') }}"></script>

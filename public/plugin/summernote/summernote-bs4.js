@@ -9844,8 +9844,8 @@ external_root_jQuery_commonjs2_jquery_commonjs_jquery_amd_jquery_default.a.summe
     lineHeights: ['1.0', '1.2', '1.4', '1.5', '1.6', '1.8', '2.0', '3.0'],
     tableClassName: 'table table-bordered',
     insertTableMaxSize: {
-      col: 10,
-      row: 10
+      col: 5,
+      row: 5
     },
     // By default, dialogs are attached in container.
     dialogsInBody: false,

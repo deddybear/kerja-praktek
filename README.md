@@ -27,6 +27,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Setting up Fungsional Controller Pendaftaran v2
 - fixing up validasi server side
 - Fixing Fungsional Pendaftaran Peserta
+- Penambahan Pengiriman data ke view index (guest)
 
 ## Front-end
 

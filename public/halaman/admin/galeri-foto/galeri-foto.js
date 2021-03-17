@@ -14,10 +14,6 @@ $(document).ready( function () {
       $(this).next('.custom-file-label').html($(this).val());
     })
 
-    $('#summernote').summernote({
-      height: 300,
-      placeholder: 'Silahkan artikel apa yang anda ingin posting',
-    });
 
     function clearModal() {
 

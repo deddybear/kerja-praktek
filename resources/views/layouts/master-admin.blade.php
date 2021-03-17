@@ -55,7 +55,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview"
                         role="menu" data-accordion="false">
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link">
+                            <a href="/dashboard/panel-admin" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Menu Dashboard

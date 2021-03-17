@@ -5,13 +5,13 @@
 {{-- @section('content-title', 'Artikel Sekolah') --}}
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('plugin/summernote/summernote.css') }}">
+<link rel="stylesheet" href="{{ asset('plugin/summernote/summernote-bs4.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/sweetalert2/sweetalert2.css') }}">
 <link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
 @endsection
 
 @section('script')
-<script src="{{ asset('plugin/summernote/summernote.js') }}"></script>
+<script src="{{ asset('plugin/summernote/summernote-bs4.js') }}"></script>
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
 <script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
 <script src="{{ asset('halaman/admin/artikel/artikel.js') }}"></script>

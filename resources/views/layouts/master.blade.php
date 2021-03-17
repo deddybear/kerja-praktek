@@ -61,7 +61,7 @@
                 </li>
                 @if (Auth::user())
                     <li>
-                        <a class="nav-link" href="/dashboard">Dashboard</a>
+                        <a class="nav-link" href="/dashboard/panel-admin">Dashboard</a>
                     </li>
                 @endif
             </ul>
