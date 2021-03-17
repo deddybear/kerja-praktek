@@ -183,7 +183,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="shadow my-2 p-3 bg-white rounded">
-                                    <div class="row">
+                                    <div class="row">                                        
                                         <div class="col-6">
                                             <div class="img-announcement">
                                                 <img class="img-responsive"

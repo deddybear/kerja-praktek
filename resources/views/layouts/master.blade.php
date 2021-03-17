@@ -57,7 +57,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/artikel">Artikel Sekolah</a>
+                    <a class="nav-link" href="/list-artikel">Artikel Sekolah</a>
                 </li>
                 @if (Auth::user())
                     <li>

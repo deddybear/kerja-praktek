@@ -13,9 +13,22 @@ use Ramsey\Uuid\Uuid as Generate;
 
 class ArtikelController extends Controller
 {
-    public function guestPage()
-    {
-        return view('guest/artikel');
+
+    public function listArtikel(){
+        if (url()->current() == url('/pengumuman-ppdb')) {
+
+            $data = Artikel::where('id_ketentuan', 'P1')->get();
+            return view('guest/list-artikel', ['data' => $data, 'title' => 'List Pengumuman']);
+        } 
+
+            $data = Artikel::where('id_ketentuan', '!=', 'P1')->get();
+            return view('guest/list-artikel', ['data' => $data, 'title' => 'List Artikel']);
+    }
+
+    public function showArtikel($slug){
+  
+        $data = Artikel::where('slug', $slug)->first();
+        return view('guest/show-artikel', compact('data'));
     }
 
     //TODO : Halaman Admin & Fungsional

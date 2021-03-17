@@ -25,10 +25,6 @@ class PPDBController extends Controller
         return view('guest/pendaftaran');
     }
 
-    public function pengumumanPage() {
-        return view('guest/pengumuman-ppdb');
-    }
-
     public function daftarPesertaDidik(Request $request) {
 
         $valid = Validator::make($request->all(), [
@@ -350,7 +346,7 @@ class PPDBController extends Controller
         ])->where('id_pendaftaran', $id)->first();
 
         $pdf = PDF::loadview('pdf', compact('data'));
-        return $pdf->download('File Data Peserta - '.$data->peserta[0]['nama']);
+        return $pdf->download('File Data Peserta - '.$data->peserta[0]['nama'].'.pdf');
     }
 
     // public function migrateDataPendaftaran($id){

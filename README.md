@@ -36,6 +36,7 @@ Link Syntax mengenai file readme.md [Link](https://www.markdownguide.org/basic-s
 - Penambahan view validasi
 - Penambahan isi Halaman Pendaftaran dan view Pendaftaran Sukses (Guest) 
 - Penambahan Halaman Gagal Pendaftaran (Guest)
+- Perubahan View Info PPDB (Guest)
 
 ## Update Repo Local 
 
