@@ -17,7 +17,7 @@
             <div class="small-box bg-info">
                 <div class="inner">
                     <h3>{{ $data['total_artikel'] }}</h3>
-                    <p>Artikel</p>
+                    <p>Total Artikel</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-bag"></i>
@@ -62,7 +62,7 @@
             <div class="small-box bg-danger">
                 <div class="inner">
                     <h3>{{ $data['total_galeri'] }}</h3>
-                    <p>Galeri</p>
+                    <p>Total Galeri</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
@@ -106,21 +106,25 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="row">
-                        <div class="col-5 m-1">
+                        <div class="col-5 mx-auto">
+                            <a href="/dashboard/galeri-foto">
                             <div class="card">
-                                <img class="mx-auto" src="{{ asset('images-dummy/test-dev/iconfoto.png') }}" style="width: 100px; height: 100px">
+                                <img class="m-auto" src="{{ asset('images-dummy/test-dev/iconfoto.png') }}" style="width: 100px; height: 100px">
                                 <div class="card-body">
-                                    <a href="/dashboard/galeri-foto">Galeri Foto</a>
+                                    <p style="text-align: center;">Galeri Video</p>
                                 </div>
                             </div>
+                        </a>
                         </div>
-                        <div class="col-5 m-1">
+                        <div class="col-5 mx-auto">
+                            <a href="/dashboard/galeri-video">
                             <div class="card">
-                                <img class="mx-auto" src="{{ asset('images-dummy/test-dev/iconvideo.png') }}" style="width: 100px; height: 100px">
+                                <img class="m-auto" src="{{ asset('images-dummy/test-dev/iconvideo.png') }}" style="width: 100px; height: 100px">
                                 <div class="card-body">                                    
-                                    <a href="/dashboard/galeri-video">Galeri Video</a>
+                                    <p style="text-align: center;">Galeri Video</p>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     </div>
                 </div>
