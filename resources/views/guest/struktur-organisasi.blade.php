@@ -27,26 +27,28 @@
                 </section>
                 <div class="container">
                     <div class="announcement-list">
-                        <table id="tabel-organisasi" class="table">
-                            <thead>
-                                <tr>
-                                    <th>NIP</th>
-                                    <th>Nama</th>
-                                    <th>Pendidikan Terakhir</th>
-                                    <th>Jabatan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($pegawai as $item)
-                                <tr>
-                                    <td>{{ $item->nip }}</td>
-                                    <td>{{ $item->nama_pegawai }}</td>
-                                    <td>{{ $item->pendidikan_terakhir }}</td>
-                                    <td>{{ $item->jabatan }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table id="tabel-organisasi" class="table table-hover text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>NIP</th>
+                                        <th>Nama</th>
+                                        <th>Pendidikan Terakhir</th>
+                                        <th>Jabatan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($pegawai as $item)
+                                    <tr>
+                                        <td>{{ $item->nip }}</td>
+                                        <td>{{ $item->nama_pegawai }}</td>
+                                        <td>{{ $item->pendidikan_terakhir }}</td>
+                                        <td>{{ $item->jabatan }}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -5,7 +5,7 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('plugin/dataTables/datatables.css') }}">
 <link rel="stylesheet" href="{{ asset('halaman/guest/profile/profile.styles.css') }}">
-<link rel="stylesheet" href="{{ asset('halaman/guest/index/index.styles.css') }}">
+
 @endsection
 
 @section('script')

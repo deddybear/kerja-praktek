@@ -14,7 +14,7 @@
 @section('content')
 <div class="row">
     @foreach ($galerifoto as $item)
-    <div class="card m-3" style="width: 18rem;">
+    <div class="card m-2" style="width: 18rem;">
         <img src="{{ asset($item->source) }}" class="card-img-top foto" alt="...">
         <div class="card-body">
             <p class="card-text">{{ $item->judul }}</p>

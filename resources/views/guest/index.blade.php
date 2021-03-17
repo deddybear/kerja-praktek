@@ -28,17 +28,17 @@
                     <div class="row">
                         <div class="col-12 col-sm-6 mb-2">
                             <div class="img-announcement">
-                                <img class="img-responsive"
-                                    src="{{ asset('images-dummy/test-dev/hai.jpg') }}">
+                                <img class="img-sambutan" src="{{ asset('images-dummy/test-dev/hai.jpg') }}">
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 ">    
+                        <div class="col-12 col-sm-6 ">
                             <div class="text-announcement">
                                 <p>Assalamu'alaikum Wr. Wb</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                Laboriosam nisi, expedita aut maxime delectus magni perferendis quod 
-                                inventore dolor officia ducimus minus vel est, dolore repudiandae sint. Ad, ullam quidem.</p>
-                            </div>        
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Laboriosam nisi, expedita aut maxime delectus magni perferendis quod
+                                    inventore dolor officia ducimus minus vel est, dolore repudiandae sint. Ad, ullam
+                                    quidem.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,118 +50,30 @@
                         <strong>TULISAN TERBARU</strong>
                     </h4>
                     <div class="text-right mr-3">
-                        <a href="/artikel" class="next text-dark">
+                        <a href="/list-artikel" class="next text-dark">
                             <i class="fa fa-chevron-right"></i>
                             Selengkapnya</a>
-                        </div>
-                    </section>
-                    <div class="owl-carousel owl-theme owl-loaded">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage">
-                                <div class="owl-item">
-                                    <div class="card-container">
-                                        <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
-                                            <div class="card-details">
-                                                <div class="created-at">14 July 2019</div>
-                                                <div class="post-link">
-                                                    <a href="#">Judul</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item">
-                                    <div class="card-container">
-                                        <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar2.jpeg') }}">
-                                            <div class="card-details">
-                                                <div class="created-at">14 July 2019</div>
-                                                <div class="post-link">
-                                                    <a href="#">Judul</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item">
-                                    <div class="card-container">
-                                        <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar3.jpeg') }}">
-                                            <div class="card-details">
-                                                <div class="created-at">14 July 2019</div>
-                                                <div class="post-link">
-                                                    <a href="#">Judul</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item">
-                                    <div class="card-container">
-                                        <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar4.jpeg') }}">
-                                            <div class="card-details">
-                                                <div class="created-at">14 July 2019</div>
-                                                <div class="post-link">
-                                                    <a href="#">Judul</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item">
-                                    <div class="card-container">
-                                        <div class="card-image">
-                                            <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
-                                    <div class="card-details">
-                                        <div class="created-at">14 July 2019</div>
-                                        <div class="post-link">
-                                            <a href="#">Judul</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </section>
+            </section>
+            <div class="owl-carousel owl-theme owl-loaded">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        @foreach ($data['tulisan_terbaru'] as $item)
                         <div class="owl-item">
                             <div class="card-container">
                                 <div class="card-image">
-                                    <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
+                                    <img class="img-fluid" src="{{ $item->sampul_artikel }}">
                                     <div class="card-details">
-                                        <div class="created-at">14 July 2019</div>
+                                        <div class="created-at">{{ $item->created_at }}</div>
                                         <div class="post-link">
-                                            <a href="#">Judul</a>
+                                            <a href="/show/{{ $item->slug }}">{{ $item->nama_artikel }}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="owl-item">
-                            <div class="card-container">
-                                <div class="card-image">
-                                    <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
-                                    <div class="card-details">
-                                        <div class="created-at">14 July 2019</div>
-                                        <div class="post-link">
-                                            <a href="#">Judul</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="owl-item">
-                            <div class="card-container">
-                                <div class="card-image">
-                                    <img class="img-fluid" src="{{ asset('images-dummy/test-dev/gambar5.jpeg') }}">
-                                    <div class="card-details">
-                                        <div class="created-at">14 July 2019</div>
-                                        <div class="post-link">
-                                            <a href="#">Judul</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -170,86 +82,122 @@
             <section class="announcement-section-title">
                 <h4>
                     <i class="fa fa-list"></i>
-                    <strong>PENGUMUMAN</strong>
+                    <strong>PENGUMUMAN SEKOLAH</strong>
                 </h4>
                 <div class="text-right mr-3">
-                    <a href="/ppdb" class="next text-dark">
+                    <a href="/list-artikel" class="next text-dark">
                         <i class="fa fa-chevron-right"></i>
                         Selengkapnya</a>
+                </div>
+            </section>
+            <div class="announcement-list">
+                <div class="container">
+                    <div class="row">
+                        @foreach ($data['artikel_sekolah'] as $item)
+                        <div class="col-12 col-lg-6">
+                            <div class="shadow my-2 p-3 bg-white rounded">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="img-announcement">
+                                            <img class="img-responsive" src="{{ $item->sampul_artikel }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-announcement">
+                                            <a href="/show/{{ $item->slug }}">{{ $item->nama_artikel }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        @endforeach
                     </div>
-                </section>
-                <div class="announcement-list">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-6">
-                                <div class="shadow my-2 p-3 bg-white rounded">
-                                    <div class="row">                                        
-                                        <div class="col-6">
-                                            <div class="img-announcement">
-                                                <img class="img-responsive"
-                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-announcement">
-                                                <a href="#">Give away Panlok</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow my-2 p-3 bg-white rounded">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="img-announcement">
-                                                <img class="img-responsive"
-                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-announcement">
-                                                <a href="#">Give away Panlok</a>
-                                            </div>
+                </div>
+            </div>
+        </section>
+        <section class="announcement-section">
+            <section class="announcement-section-title">
+                <h4>
+                    <i class="fa fa-list"></i>
+                    <strong>BERITA GURU</strong>
+                </h4>
+                <div class="text-right mr-3">
+                    <a href="/list-artikel" class="next text-dark">
+                        <i class="fa fa-chevron-right"></i>
+                        Selengkapnya</a>
+                </div>
+            </section>
+            <div class="announcement-list">
+                <div class="container">
+                    <div class="row">
+                        @forelse ($data['artikel_guru'] as $item)
+                        <div class="col-12 col-lg-6">
+                            <div class="shadow my-2 p-3 bg-white rounded">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="img-announcement">
+                                            <img class="img-responsive" src="{{ $item->sampul_artikel }}">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="shadow my-2 p-3 bg-white rounded">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="img-announcement">
-                                                <img class="img-responsive"
-                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-announcement">
-                                                <a href="#">Give away Panlok</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow my-2 p-3 bg-white rounded">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="img-announcement">
-                                                <img class="img-responsive"
-                                                src="{{ asset('images-dummy/test-dev/gambar1.jpeg') }}">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-announcement">
-                                                <a href="#">Give away Panlok</a>
-                                            </div>
+                                    <div class="col-6">
+                                        <div class="text-announcement">
+                                            <a href="/show/{{ $item->slug }}">{{ $item->nama_artikel }}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @empty
+                            <div class="col-12">
+                                <h1>Data Kosong</h1>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
+        <div class="announcement-section">
+            <section class="announcement-section-title">
+                <h4>
+                    <i class="fa fa-list"></i>
+                    <strong>BERITA SISWA</strong>
+                </h4>
+                <div class="text-right mr-3">
+                    <a href="/list-artikel" class="next text-dark">
+                        <i class="fa fa-chevron-right"></i>
+                        Selengkapnya</a>
+                </div>
+            </section>
+            <div class="announcement-list">
+                <div class="container">
+                    <div class="row">
+                        @forelse ($data['artikel_siswa'] as $item)
+                        <div class="col-12 col-lg-6">
+                            <div class="shadow my-2 p-3 bg-white rounded">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="img-announcement">
+                                            <img class="img-responsive" src="{{ $item->sampul_artikel }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-announcement">
+                                            <a href="/show/{{ $item->slug }}">{{ $item->nama_artikel }}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @empty
+                            <div class="col-12">
+                                <h1>Data Kosong</h1>
+                            </div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </section>
 </div>
 

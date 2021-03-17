@@ -26,7 +26,10 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <p>Hi, Admin</p>
+                </li>
+                {{-- <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <i class="fas fa-th-large"></i>
                     </a>
@@ -39,7 +42,7 @@
                             <p>asda</p>
                         </a>
                     </div>
-                </li>
+                </li> --}}
             </ul>
 
         </nav>

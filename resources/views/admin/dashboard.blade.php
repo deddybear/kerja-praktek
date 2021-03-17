@@ -9,14 +9,14 @@
 @endsection
 
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <h3>23</h3>
-
+                    <h3>{{ $data['total_artikel'] }}</h3>
                     <p>Artikel</p>
                 </div>
                 <div class="icon">
@@ -31,14 +31,14 @@
             <!-- small box -->
             <div class="small-box bg-success">
                 <div class="inner">
-                    <h3>8</h3>
-
-                    <p>PPDB</p>
+                    <h3>{{ $data['total_nonvalid'] }}</h3>
+                    <p>Validasi Data Pendaftar</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-stats-bars"></i>
                 </div>
-                <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/dashboard/data-pendaftaran" class="small-box-footer">Selengkapnya <i
+                        class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -46,14 +46,14 @@
             <!-- small box -->
             <div class="small-box bg-warning">
                 <div class="inner">
-                    <h3>50</h3>
-
-                    <p>Siswa</p>
+                    <h3>{{ $data['total_pegawai'] }}</h3>
+                    <p>Total Pegawai</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-person-add"></i>
                 </div>
-                <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/dashboard/data-pegawai" class="small-box-footer">Selengkapnya <i
+                        class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -61,18 +61,18 @@
             <!-- small box -->
             <div class="small-box bg-danger">
                 <div class="inner">
-                    <h3>60</h3>
-
+                    <h3>{{ $data['total_galeri'] }}</h3>
                     <p>Galeri</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-pie-graph"></i>
                 </div>
-                <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="#" class="small-box-footer" data-toggle="modal" data-target="#modal-pilih-galeri">Selengkapnya
+                    <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
 
-        <div class="card card-danger">
+        {{-- <div class="card card-danger">
             <div class="card-header">
                 <h3 class="card-title">Detail Siswa</h3>
 
@@ -84,14 +84,55 @@
                 </div>
             </div>
             <div class="card-body">
-                <canvas id="donutChart"
-                    style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+
             </div>
             <!-- /.card-body -->
-        </div>
+        </div> --}}
 
     </div>
 
 </div>
+
+<div class="modal fade" id="modal-pilih-galeri" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Pilih Galeri</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-5 m-1">
+                            <div class="card">
+                                <img class="mx-auto" src="{{ asset('images-dummy/test-dev/iconfoto.png') }}" style="width: 100px; height: 100px">
+                                <div class="card-body">
+                                    <a href="/dashboard/galeri-foto">Galeri Foto</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 m-1">
+                            <div class="card">
+                                <img class="mx-auto" src="{{ asset('images-dummy/test-dev/iconvideo.png') }}" style="width: 100px; height: 100px">
+                                <div class="card-body">                                    
+                                    <a href="/dashboard/galeri-video">Galeri Video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
 @endsection

@@ -66,12 +66,25 @@ p{
     text-align: center;
 }
 
-.img-responsive {
-    width: 100%;
+.img-sambutan {
+    width: 80%;
     height: auto;
 }
 
+
+.img-responsive {
+    height: 150px; 
+    width: 200px;
+}
+
 @media only screen and (max-width: 480px) { 
+    
+    .img-responsive {
+        height: 100px; 
+        width: 100px;
+    }
+    
+    
     h4 {
         font-size: 1rem;
     }

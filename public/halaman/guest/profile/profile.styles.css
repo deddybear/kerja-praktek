@@ -1,5 +1,13 @@
 @media only screen and (max-width: 480px) { 
     .form-control-sm {
         width: 150px !important;
-    }   
+    }
+    
+    .table{
+        font-size: 10px !important;
+    }
+
+    td p {
+        font-size: 10px !important;
+    }
 }
