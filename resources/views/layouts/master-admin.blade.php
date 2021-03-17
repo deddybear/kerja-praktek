@@ -26,8 +26,8 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <p>Hi, Admin</p>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <p class="nav-link m-0" > Selamat datang, {{ Auth::user()->nama }} </p>
                 </li>
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
@@ -151,7 +151,7 @@
                                 <li class="nav-item">
                                     <a href="/dashboard/profil-sekolah" class="nav-link">
                                         <i class="fas fa-id-badge nav-icon"></i>
-                                        <p>Profil</p>
+                                        <p>Profil Sekolah</p>
                                     </a>
                                 </li>
                             </ul>
