@@ -1,7 +1,7 @@
 function crossCheck(e) {
  
     if (!$("#setuju").prop("checked")){
-        swal("PERHATIAN !", "Mohon untuk bla bla bla bla", "error")
+        swal("PERHATIAN !", "Mohon untuk menyetujui syarat yang diperlukan", "error")
         return false;
     } 
 

@@ -12,10 +12,10 @@
 
 @section('content')
 @if ($galerivideo->isEmpty())
-    <h1>Data Kosong</h1>
+<h1>Data Kosong</h1>
 @else
+<h1 class="my-5">Galeri Video</h1>
 <div class="row">
-    <h1 class="my-3">isi</h1>
     @foreach ($galerivideo as $item)
     <div class="col-4 mb-3">
         <div class="embed-responsive embed-responsive-16by9">

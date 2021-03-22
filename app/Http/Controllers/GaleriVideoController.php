@@ -28,7 +28,7 @@ class GaleriVideoController extends Controller
     public function embedLinkVideo(Request $request){
         
         $valid = Validator::make($request->all(), [
-            'judul_video' => 'required|between:5,30',
+            'judul_video' => 'required|between:5,50',
             'link_embed'  => 'required|max:255'
         ]);
         

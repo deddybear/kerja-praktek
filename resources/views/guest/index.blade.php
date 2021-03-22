@@ -26,12 +26,12 @@
             <div class="announcement-list">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-sm-6 mb-2">
+                        <div class="col-12 col-sm-4 mb-2">
                             <div class="img-announcement">
-                                <img class="img-sambutan" src="{{ asset('images-dummy/test-dev/hai.jpg') }}">
+                                <img class="img-sambutan" src="{{ asset('images-dummy/test-dev/kepalasekolah.jpg') }}">
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 ">
+                        <div class="col-12 col-sm-7 ">
                             <div class="text-announcement">
                                 <p>Assalamu'alaikum Wr. Wb</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.

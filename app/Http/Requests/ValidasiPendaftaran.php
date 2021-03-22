@@ -134,8 +134,11 @@ class ValidasiPendaftaran extends FormRequest
 
     public function messages() {
         return [
-            'statusPendaftaran.required' => 'ini dibutuhkan gan',
-            'namalengkap.required'       => 'nama butuh juga gan'
+            'statusPendaftaran.required' => 'Mohon untuk di isi terlebih dahulu',
+            'status_paud.required'       => 'Mohon untuk di isi terlebih dahulu',
+            'namalengkap.required'       => 'Mohon untuk di isi terlebih dahulu',
+            ''
+
         ];
     }
 }

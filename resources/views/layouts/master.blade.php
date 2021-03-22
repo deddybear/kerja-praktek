@@ -75,9 +75,10 @@
                         <h2>SD DIPONEGORO SURABAYA</h2>
                         <p>
                             <strong>JL. Kedung Sroko V No. 15 - 21, Tambaksari, Surabaya.<br>
-                                Telepon 031-5124123 | 081124918724</strong>
+                                Telepon 031-5124123 | 081586795252</strong>
                         </p>
-                        <p>Pantang pulang sebelum khatam</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
             </div>
