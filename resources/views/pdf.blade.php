@@ -1,3 +1,4 @@
+ <!-- iki yo digawe ngirim email ati ati -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,6 +60,11 @@
 </style>
 </head>
 <body>
+    <h1>
+        <strong>Mohon Untuk Disimpan dengan baik data pendaftaran ini</strong>
+        <br>
+        <strong>Simpan dengan baik & Jaga kerahasiaan data anda !</strong>
+    </h1>
     <div>
         <h1 class="text-center" style="font-weight: bold; font-size:30px">Data Pendaftaran</h1>
         <div class="corner-merah">

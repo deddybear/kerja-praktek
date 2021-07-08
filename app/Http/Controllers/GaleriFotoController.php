@@ -42,7 +42,7 @@ class GaleriFotoController extends Controller
         $id       = Generate::uuid4();
         $path     = '/images/galeri/' . $id;
         $file     = $request->file('galeri-foto');
-        $namaFile = $file->getClientOriginalName();
+        $namaFile = str_replace(" ", "-", $file->getClientOriginalName());
 
         if (Storage::putFileAs('public'.$path, $file, $namaFile)) {
             $data = array(
@@ -79,7 +79,7 @@ class GaleriFotoController extends Controller
 
         $path     = '/images/galeri/' . $id;
         $file     = $request->file('galeri-foto');
-        $namaFile = $file->getClientOriginalName();
+        $namaFile = str_replace(" ", "-", $file->getClientOriginalName());
 
         if(Storage::exists('public'.$path)){
             Storage::deleteDirectory('public'.$path);

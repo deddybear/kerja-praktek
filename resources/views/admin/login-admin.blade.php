@@ -68,10 +68,6 @@
                     <a href="forgot-password.html" data-toggle="modal" data-target="#modal-lupa-password">Lupa
                         Password</a>
                 </p>
-                <p class="mb-0">
-                    <a id="register" href="#" class="text-center" data-toggle="modal"
-                        data-target="#modal-daftar">Daftar</a>
-                </p>
             </div>
         </div>
     </div>

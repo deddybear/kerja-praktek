@@ -34,10 +34,15 @@
                         <div class="col-12 col-sm-7 ">
                             <div class="text-announcement">
                                 <p>Assalamu'alaikum Wr. Wb</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Laboriosam nisi, expedita aut maxime delectus magni perferendis quod
-                                    inventore dolor officia ducimus minus vel est, dolore repudiandae sint. Ad, ullam
-                                    quidem.</p>
+                                <p>Salam Sejahtera untuk kita semua, semoga rahmat dan hidayah menyertai kita.
+                                     Dengan adanya Website resmi SD Diponegoro Surabaya ini, 
+                                     saya berharap bisa memberikan sedikit informasi 
+                                     tentang informasi yang dibutuhkan masyarakat, wali murid, siswa-siswa, 
+                                     maupun semua warga sekolah SD Diponegoro Surabaya. Untuk kedepannya, 
+                                     kami dari pihak SD Diponegoro akan selalu meningkatkan kualitas pendidikan yang 
+                                     berkarakter. Serta menghadirkan inovasi untuk demi kemajuan bangsa. sekian sambutan 
+                                     dari saya selaku Kepala Sekolah, kami sampaikan terima kasih.</p>
+                                <p>Wassalamu'alaikum Wr. Wb.</p>
                             </div>
                         </div>
                     </div>

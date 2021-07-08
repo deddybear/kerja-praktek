@@ -1,4 +1,5 @@
-@extends('layouts/master-admin')
+ <!-- Halaman pendaftaran yang sudah diverifikasi -->
+ @extends('layouts/master-admin')
 
 @section('title', 'Pengumuman PPDB')
 
@@ -10,8 +11,7 @@
 @section('script')
 <script src="{{ asset('plugin/sweetalert2/sweetalert.min.js') }}"></script>
 <script src="{{ asset('plugin/dataTables/datatables.js') }}"></script>
-
-<script src="{{ asset('halaman/admin/data-pendaftaran/data-pendaftaran.js') }}"></script>
+<script src="{{ asset('halaman/admin/data-ppdb/data-diterima.js') }}"></script>
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="card-title">Data Pendaftaran</h2>
+                    <h2 class="card-title">Data Pendaftaran (Diterima)</h2>
                 </div>
 
                 <!-- /.card-header -->
@@ -39,7 +39,7 @@
                                     <th>Nama Ibu</th>
                                     <th>Waktu Pendaftaran</th>
                                     <th>Status Pendaftaran</th>
-                                    {{-- <th>Aksi</th> --}}
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody id="data-pendaftaran"></tbody>

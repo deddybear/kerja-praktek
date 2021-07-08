@@ -30,6 +30,8 @@ Route::post('/daftar/siswa-baru', 'PPDBController@daftarPesertaDidik');
 Route::get('/pendaftaran/download-data/{id}', 'PPDBController@downloadDataPendaftaran');
 Route::get('/pendaftaran/sukses/{id}', 'PPDBController@pendaftaranSukses');
 
+Route::view('/test/approve', '/email/verify-approve');
+Route::view('/test/reject', '/email/verify-reject');
 
 // TODO : ROUTE HALAMAN ADMIN
 Auth::routes();
@@ -44,7 +46,9 @@ Route::middleware(['auth','verified'])->group(function (){
             Route::get('data-pegawai', 'PegawaiController@masterPegawai');
             Route::get('edit-akun', 'AkunController@settingAkunPage');
             Route::get('profil-sekolah', 'ProfileController@masterProfile');
-            Route::get('data-pendaftaran', 'PPDBController@masterPendaftaran');
+            Route::get('pendaftaran', 'PPDBController@halamanNonVerif');
+            Route::get('pendaftaran/approve', 'PPDBController@halamanApprove');
+            Route::get('pendaftaran/reject', 'PPDBController@halamanReject');
             Route::get('artikel-sekolah', 'ArtikelController@masterArtikel');
         });
         

@@ -3,3 +3,8 @@ img{
     height: 200px;
     border-radius: 20px;
 }
+
+iframe {
+    width: 350px !important;
+    height: 250px !important;
+}

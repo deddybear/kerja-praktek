@@ -12,8 +12,10 @@ use App\Models\PrestasiPeserta as Prestasi;
 use App\Models\Pendaftaran;
 use App\Models\Peserta;
 use App\Models\RincianPeserta;
+use App\Mail\PPDBMail;
 use PDF;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Ramsey\Uuid\Uuid as Generate;
 
@@ -165,6 +167,14 @@ class PPDBController extends Controller
                         Beasiswa::create($dataBeasiswa);
                     }
                 } 
+              
+                $dataPendaftaran = Pendaftaran::with([
+                  'ayah', 'ibu', 'wali', 'peserta', 'peserta.rincianPeserta', 
+                  'peserta.beasiswa', 'peserta.prestasi', 'peserta.rincianPeserta.bantuan'
+                ])->where('id_peserta', $idPeserta)->first();
+
+                Mail::to($request->email_peserta)->send(new PPDBMail($dataPendaftaran));
+
                return redirect('/pendaftaran/sukses/'.$idPeserta);
             }
         }
@@ -172,11 +182,14 @@ class PPDBController extends Controller
         return abort(503, 'Error karena ada kesalahan pada server, mohon dicoba lagi');
     }
 
-    public function pendaftaranSukses($id){
+    public function pendaftaranSukses($id) {
+
+        // test
+        // /pendaftaran/sukses/a87a71e5-20dc-47b1-aa5d-83b5f12821b7
         $data = Pendaftaran::with('peserta')->where('id_peserta', $id)->first();
         if ($data) {
 
-            return view('guest/pendaftaran-sukses', ['id' => $data->id_pendaftaran, 'nama' => $data->peserta[0]->nama]);
+            return view('guest/pendaftaran-sukses', ['id' => $data->id_pendaftaran, 'nama' => $data->peserta[0]->nama, 'email' => $data->peserta[0]->email]);
         
         } else {
 
@@ -187,40 +200,47 @@ class PPDBController extends Controller
 
     //TODO : Halaman Admin & Fugsional Admin
     
-    public function masterPendaftaran(){
-        return view('admin/data-pendaftaran');
+    public function halamanNonVerif(){
+        return view('admin/data-pendaftaran-non-verif');
     }
 
-    public function getData(){
+    public function halamanApprove(){
+        return view('admin/data-pendaftaran-approve');
+    }
+
+    public function halamanReject(){
+        return view('admin/data-pendaftaran-reject');
+    }
+
+    public function getData(Request $request){
+
+        $valid = Validator::make($request->all(), [
+            'status' => 'required|numeric'
+        ]);
+        
+        if ($valid->fails()) {
+            return response()->json(['validasi' => 'Request validasi status tidak sesuai']);
+        }
 
         return json_encode(Pendaftaran::orderBy('created_at')
         ->with('ayah:id_ayah,nama_ayah', 'ibu:id_ibu,nama_ibu', 'peserta:id_peserta,nama,nik,jenis_kelamin,agama,alamat_lengkap')
+        ->where('status_pendaftaran', $request->status)
         ->get());
 
     }
 
     public function changeStatusPendaftaran(Request $request){
         $valid = Validator::make($request->all(), [
-            'id' => 'required|uuid'
+            'id' => 'required|uuid',
+            'status' => 'required|numeric'
         ]);
 
         if ($valid->fails()) {
             return response()->json(['validasi' => 'ID tidak mengandung uuid']);
         }
 
-        $getStatus = Pendaftaran::select('status_pendaftaran')->where('id_pendaftaran', $request->id)->first();
-
-        if ($getStatus) {
-            if (!$getStatus->status_pendaftaran) {
-               
-                Pendaftaran::where('id_pendaftaran', $request->id)->update(['status_pendaftaran' => 1]);
-            
-            } else {
-                
-                Pendaftaran::where('id_pendaftaran', $request->id)->update(['status_pendaftaran' => 0]);
-           
-            }
-
+        if (Pendaftaran::where('id_pendaftaran', $request->id)->update(['status_pendaftaran' => $request->status])) {
+        
             return response()->json(['sukses' => 'Berhasil update status pendaftaran peserta']);
         }
         
@@ -237,10 +257,6 @@ class PPDBController extends Controller
         $pdf = PDF::loadview('pdf', compact('data'));
         return $pdf->download('File Data Peserta - '.$data->peserta[0]['nama'].'.pdf');
     }
-
-    // public function migrateDataPendaftaran($id){
-    //     return response()->json(['id' => $id]);
-    // }
 
     public function hapuDataPendaftaran(Request $request){
 

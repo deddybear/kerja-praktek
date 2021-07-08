@@ -85,21 +85,27 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-user-graduate"></i>
                                 <p>
-                                    PPDB
+                                    Data PPDB
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                {{-- <li class="nav-item">
-                                    <a href="/dashboard/pengumuman-ppdb" class="nav-link">
-                                        <i class="far fa-bell nav-icon"></i>
-                                        <p>Pengumuman PPDB</p>
-                                    </a>
-                                </li> --}}
                                 <li class="nav-item">
-                                    <a href="/dashboard/data-pendaftaran" class="nav-link">
+                                    <a href="/dashboard/pendaftaran" class="nav-link">
                                         <i class="fas fa-clipboard-list nav-icon"></i>
-                                        <p>Data Pendaftar</p>
+                                        <p>Belum diverifikasi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/pendaftaran/approve" class="nav-link">
+                                        <i class="fas fa-clipboard-list nav-icon"></i>
+                                        <p>Diterima</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/dashboard/pendaftaran/reject" class="nav-link">
+                                        <i class="fas fa-clipboard-list nav-icon"></i>
+                                        <p>Ditolak</p>
                                     </a>
                                 </li>
                             </ul>

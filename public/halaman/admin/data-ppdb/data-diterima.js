@@ -21,6 +21,9 @@ $(document).ready(function () {
         $.ajax({
             url: '/admin/pendaftaran/read-data',
             type: 'GET',
+            data: {
+                status: 1,
+            },
             async: true,
             dataType: 'JSON',
             beforeSend :function () {
@@ -43,20 +46,12 @@ $(document).ready(function () {
                         html += `<td>${row.ayah[0].nama_ayah}</td>`
                         html += `<td>${row.ibu[0].nama_ibu}</td>`
                         html += `<td>${moment(row.created_at).format("D MMMM YYYY, H:mm:ss ")}</td>`
-                        if (row.status_pendaftaran == '0') {
-                            html += '<td> <span class="badge bg-warning fs-6" role="alert">Belum diverifikasi</span> </td>'
-                        } else {
-                            html += '<td> <span class="badge bg-success fs-6" role="alert">Sudah diverifikasi</span> </td>'
-                        }
+                        html += '<td> <span class="badge bg-success fs-6" role="alert">Di-terima</span> </td>'
                         html += '<td>'
                             html += `<a href="javascript:;" id="tombol-verifikasi" class="btn btn-xs btn-info mr-1" data="${row.id_pendaftaran}"> Ubah Status </a>`
                             html += `<a href="/pendaftaran/download-data/${row.id_pendaftaran}" class="btn btn-xs btn-secondary mr-1" >Download Data</a>`
                             html += `<a href="javascript:;" id="tombol-hapus" class="btn btn-xs btn-danger mr-1" data="${row.id_pendaftaran}"> Hapus Data</a>`
                         html += '</td>'
-                        // html += '<td>'
-                           
-                        //     html += `<a href="javascript:;" id="tombol-migrate" class="btn btn-xs bg-olive color-palette" data="${row.id_pendaftaran}"> Migrasi Data</a>`
-                        // html += '</td>'
                     html += '</tr>'
                 })
                 $('#table-pendaftaran').DataTable().clear().destroy()
@@ -75,15 +70,33 @@ $(document).ready(function () {
             title: "Apakah kamu yakin merubah status Data Pendaftaran ini?",
             text: "Ini akan merubah Status Pendaftaran tersebut",
             icon: "warning",
-            buttons: true,
-            dangerMode: true,
+            buttons: {
+                reject: {
+                    text: "Ditolak",
+                    value: 2,
+                    visible: true,
+                    className: "btn btn-outline-danger",
+                    closeModal: true,
+                },
+                confirm: {
+                  text: "Verifikasi",
+                  value: 1,
+                  visible: true,
+                  className: "btn btn-outline-primary",
+                  closeModal: true
+                }
+            }
         })
-        .then((willDelete) => {
-            if (willDelete) {
+        .then((pilihan) => {
+            if (pilihan == 1) {
+
                 $.ajax({
                     url: '/admin/pendaftaran/verify-data',
                     type: 'POST',
-                    data: {id :  $(this).attr('data')},
+                    data: {
+                        id :  $(this).attr('data'),
+                        status: 1
+                    },
                     beforeSend :function () {
           
                     },
@@ -107,6 +120,38 @@ $(document).ready(function () {
                     }
                 })
                 
+            } else if (pilihan == 2){
+               
+                $.ajax({
+                    url: '/admin/pendaftaran/verify-data',
+                    type: 'POST',
+                    data: {
+                        id :  $(this).attr('data'),
+                        status: 2
+                    },
+                    beforeSend :function () {
+          
+                    },
+                    complete: function() {
+            
+                    },
+                    success: function (data) {
+                   
+                        if (data.sukses) {
+                            notifSwal('success', 'Yeeey Berhasil', data.sukses)
+                            getData()
+                        } else if (data.gagal){
+                            notifSwal('error', 'Whoooppss ada Kesalahan', data.sukses)
+                            getData()
+                        } else {
+                            notifSwal('error', 'Whoooppss ada Kesalahan', data.validasi)
+                        }
+                    },
+                    error: function (response) {
+                        notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
+                    }
+                })
+
             } else {
                 notifSwal('warning', 'PERHATIAN', 'Aksi dibatalkan')
             }
@@ -157,39 +202,5 @@ $(document).ready(function () {
         
     });
 
-    $('#data-pendaftaran').on('click', '#tombol-migrate', function(){
 
-        swal({
-            title: "Apakah kamu yakin ingin migrasi ke data siswa ?",
-            text: "Data yang telah dimigrasi tidak dapat dikembalikan",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-        .then((willDelete) => {
-            if (willDelete) {
-                $.ajax({
-                    url: '',
-                    type: 'POST',
-                    data: {id : $(this).attr('data')},
-                    beforeSend :function () {
-          
-                    },
-                    complete: function() {
-            
-                    },
-                    success: function (data) {
-                        
-                    },
-                    error: function (response) {
-                        notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
-                    }
-                })
-                notifSwal('warning', 'Tombol Migrate dipencet', `ID : ${id}`)
-            } else {
-                notifSwal('warning', 'PERHATIAN', 'Aksi dibatalkan')
-            }
-        })
-        
-    });
 })

@@ -84,6 +84,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="e-mail">E-mail</label>
+                            <input type="email" class="form-control" name="email_peserta" id="email"
+                                placeholder="E-mail" required>
+                            <span class="text-danger tulisan-cilik">Wajib di-isi karena dipergunakan untuk mengirim data pendaftaran!<br></span>
+                            <span class="tulisan-cilik">Contoh : dimaskahiyang@gmail.com</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             {{-- Card Data Pribadi --}}
@@ -291,13 +300,6 @@
                                 placeholder="Nomor Telepon">
                             <span class="text-danger tulisan-cilik">Keterangan ( * ) = Mohon di isi bila ada <br></span>
                             <span class="tulisan-cilik">Contoh : 031-1****12</span>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="e-mail">E-mail *</label>
-                            <input type="email" class="form-control" name="email_peserta" id="email"
-                                placeholder="E-mail">
-                            <span class="text-danger tulisan-cilik">Keterangan ( * ) = Mohon di isi bila ada <br></span>
-                            <span class="tulisan-cilik">Contoh : dimaskahiyang@gmail.com</span>
                         </div>
                     </div>
                     <div class="form-row">

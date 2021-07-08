@@ -13,6 +13,8 @@
         </div>
         <div class="card-body">
             <h3 class="text-card-body">Pendaftaran siswa atas nama <b>{{ $nama }}</b> telah berhasil dan akan diverifikasi oleh admin</h3>
+            <h3 class="text-card-body">Mohon untuk selalu check dikotak pesan <b>E-Mail</b> anda : {{ $email }}</h3>
+            <h3 class="text-card-body">Untuk Melihat hasil status pendaftaran anda</h3>
             <br>
             <p class="text-isi">ID Pendaftaran anda : <b>{{ $id }}</b></p>
             <p class="text-isi">Nama Peserta : <b>{{ $nama }}</b></p>
