@@ -1,3 +1,0 @@
-cd folder project lewat terminal
-ketikkan "composer update" di terminal
-ketikkan "composer install" di terminal
