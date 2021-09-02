@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>rejected {{ $data }}</h1>
 </body>
 </html>

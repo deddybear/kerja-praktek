@@ -2,14 +2,12 @@
 
 namespace App\Mail;
 
-
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-
-class PPDBMail extends Mailable
+class ApproveMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,9 +16,9 @@ class PPDBMail extends Mailable
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct()
     {
-        $this->data = $data;
+
     }
 
     /**
@@ -30,9 +28,8 @@ class PPDBMail extends Mailable
      */
     public function build()
     {
-
-        return $this->subject('Data Pendaftaran '. $this->data->peserta[0]['nama'])
-               ->view('pdf', ['data' => $this->data])
-               ->from('test@tese.com', 'test1');
+        return $this->subject('isi-subject')
+                ->view('email.verify-approve')
+                ->from('test@test.com', 'test1');
     }
 }

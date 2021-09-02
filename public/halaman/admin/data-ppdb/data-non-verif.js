@@ -14,7 +14,7 @@ $(document).ready(function () {
         })
     }
 
-    setInterval(getData, 5000);
+    setInterval(getData, 10000);
     getData();
 
     function getData() {
@@ -79,7 +79,7 @@ $(document).ready(function () {
                     closeModal: true,
                 },
                 confirm: {
-                  text: "Verifikasi",
+                  text: "Diterima",
                   value: 1,
                   visible: true,
                   className: "btn btn-outline-primary",
@@ -88,7 +88,7 @@ $(document).ready(function () {
             }
         })
         .then((pilihan) => {
-            if (pilihan == 1) {
+            if (pilihan == 1) { // di aprove
 
                 $.ajax({
                     url: '/admin/pendaftaran/verify-data',
@@ -120,36 +120,52 @@ $(document).ready(function () {
                     }
                 })
                 
-            } else if (pilihan == 2){
-               
-                $.ajax({
-                    url: '/admin/pendaftaran/verify-data',
-                    type: 'POST',
-                    data: {
-                        id :  $(this).attr('data'),
-                        status: 2
+            } else if (pilihan == 2){ // di tolak
+                
+                swal({
+                    title: 'Alasan ditolak',
+                    content: {
+                      element: "input",
+                      attributes: {
+                        placeholder: "Type your password",
+                        type: "text",
+                      },
                     },
-                    beforeSend :function () {
-          
-                    },
-                    complete: function() {
-            
-                    },
-                    success: function (data) {
-                   
-                        if (data.sukses) {
-                            notifSwal('success', 'Yeeey Berhasil', data.sukses)
-                            getData()
-                        } else if (data.gagal){
-                            notifSwal('error', 'Whoooppss ada Kesalahan', data.sukses)
-                            getData()
-                        } else {
-                            notifSwal('error', 'Whoooppss ada Kesalahan', data.validasi)
+                })
+                .then((input) => {
+                    //console.log(input);
+
+                    $.ajax({
+                        url: '/admin/pendaftaran/verify-data',
+                        type: 'POST',
+                        data: {
+                            id :  $(this).attr('data'),
+                            status: 2,
+                            reason: input
+                        },
+                        beforeSend :function () {
+              
+                        },
+                        complete: function() {
+                
+                        },
+                        success: function (data) {
+                            console.log(data)
+                            if (data.sukses) {
+                                notifSwal('success', 'Yeeey Berhasil', data.sukses)
+                                getData()
+                            } else if (data.gagal){
+                                notifSwal('error', 'Whoooppss ada Kesalahan', data.sukses)
+                                getData()
+                            } else {
+                                notifSwal('error', 'Whoooppss ada Kesalahan', data.validasi)
+                            }
+                        },
+                        error: function (response) {
+                            notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
                         }
-                    },
-                    error: function (response) {
-                        notifSwal('error', 'Whoopss ada kesalahan', 'Error : ' + response.responseJSON.message)
-                    }
+                    })
+
                 })
 
             } else {

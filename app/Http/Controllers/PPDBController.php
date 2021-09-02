@@ -13,6 +13,8 @@ use App\Models\Pendaftaran;
 use App\Models\Peserta;
 use App\Models\RincianPeserta;
 use App\Mail\PPDBMail;
+use App\Mail\ApproveMail;
+use App\Mail\RejectMail;
 use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -55,6 +57,7 @@ class PPDBController extends Controller
             'hobi'              => $hobi,
             'cita'              => $cita,
             'status_pendaftaran'=> 0,
+            'email_pendaftaran' => $request->email_peserta
         );
 
         $dataAyah = array(
@@ -230,18 +233,30 @@ class PPDBController extends Controller
     }
 
     public function changeStatusPendaftaran(Request $request){
+
         $valid = Validator::make($request->all(), [
-            'id' => 'required|uuid',
-            'status' => 'required|numeric'
+            'id'     => 'required|uuid',
+            'status' => 'required|numeric',
+            'reason' => 'sometimes|required|alpha_dash'
         ]);
 
+        
         if ($valid->fails()) {
-            return response()->json(['validasi' => 'ID tidak mengandung uuid']);
+            return response()->json(['validasi' => 'Ada Kesalan dari ID atau pengisian Alasan Ditolak']);
+        }
+
+        $email = Pendaftaran::select('email_pendaftaran')->where('id_pendaftaran', $request->id)->first();
+
+
+        if (!empty($request->reason)) {
+            Mail::to($email->email_pendaftaran)->send(new RejectMail($request->reason));
+        } else {
+            Mail::to($email->email_pendaftaran)->send(new ApproveMail());
         }
 
         if (Pendaftaran::where('id_pendaftaran', $request->id)->update(['status_pendaftaran' => $request->status])) {
         
-            return response()->json(['sukses' => 'Berhasil update status pendaftaran peserta']);
+            return response()->json(['sukses' => 'Berhasil update status pendaftaran peserta & mengirim surat email']);
         }
         
         return response()->json(['gagal' => 'ID Pendaftaran tidak dikenali !']);

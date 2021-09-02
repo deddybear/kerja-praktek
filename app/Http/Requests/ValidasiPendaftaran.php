@@ -51,7 +51,7 @@ class ValidasiPendaftaran extends FormRequest
             'transportasi_lainnya' => 'required_if:moda_transportasi,Lainnya|string|max:30',
             'nmr_hp_peserta'    => 'digits_between:0,15',
             'nmr_tlp_peserta'   => 'digits_between:0,15',
-            'email_peserta'     => 'max:70',
+            'email_peserta'     => 'required|email|max:70',
             'status_kps'        => 'required|alpha_num|digits:1',
             'jenis_bantuan'     => 'required_if:status_kps,1|max:3',
             'nomer_bantuan'     => 'required_if:status_kps,1|numeric|digits_between:1, 30',
